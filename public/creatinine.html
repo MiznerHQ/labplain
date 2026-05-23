@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creatinine – LabPlain</title>
-  <meta name="description" content="What does your Creatinine result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
+  <title>Creatinine Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your creatinine result mean? Plain-English guide to normal ranges, high and low values, kidney function, eGFR, and what to ask your doctor.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://labplain.co/creatinine">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +12,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
     nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
@@ -26,27 +29,61 @@
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
     .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
     .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
+    .range-box.low .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .info-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .info-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .info-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .egfr-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
+    .egfr-table th { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); padding: 8px 12px; text-align: left; border-bottom: 2px solid var(--border); }
+    .egfr-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--ink); line-height: 1.5; }
+    .egfr-table tr:last-child td { border-bottom: none; }
+    .egfr-table tr td:first-child { font-family: 'DM Mono', monospace; font-weight: 500; color: var(--accent); }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -59,43 +96,153 @@
     <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Creatinine</em> result mean?</h1>
     <span class="category-tag">Kidney</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
-
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>Creatinine</strong> test measures a waste product your kidneys filter out — it's one of the best indicators of how well your kidneys are working.</p>
+      <p>Creatinine is a waste product that forms naturally when your muscles break down a molecule called creatine for energy. Healthy kidneys filter creatinine out of your blood efficiently and excrete it in your urine. When kidney function declines, creatinine builds up in the blood — making it one of the most reliable markers of kidney health.</p>
+      <p>Because creatinine is produced at a fairly constant rate by your muscles, it serves as a steady baseline your doctor can use to track kidney performance over time. A single creatinine result is useful, but a trend across multiple tests tells an even more important story.</p>
+      <p>Creatinine is usually ordered as part of a Basic Metabolic Panel (BMP) or Comprehensive Metabolic Panel (CMP) during routine checkups, or when your doctor wants to monitor kidney function if you have diabetes, high blood pressure, or are taking medications that affect the kidneys.</p>
     </div>
-
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">0.6–1.2 mg/dL (men); 0.5–1.1 mg/dL (women)</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+      <div class="normal-range">Men: 0.6–1.2 mg/dL &nbsp;|&nbsp; Women: 0.5–1.1 mg/dL</div>
+      <p class="range-note">Women and older adults naturally have slightly lower creatinine because they tend to have less muscle mass. Athletes and people with high muscle mass may have creatinine at the higher end of normal without any kidney problem. Always compare your result to the range printed on your own lab report.</p>
+      <div class="info-box">
+        <h3>📊 Creatinine vs. eGFR — what's the difference?</h3>
+        <p>Creatinine alone doesn't tell the full story. Your doctor will often calculate your eGFR (estimated Glomerular Filtration Rate) using your creatinine level, age, sex, and race. eGFR estimates how many milliliters of blood your kidneys filter per minute — a much more complete picture of kidney function than creatinine alone.</p>
+      </div>
     </div>
-
     <div class="card">
       <div class="section-label">What your result might indicate</div>
       <div class="two-col">
         <div class="range-box high">
           <div class="range-box-label">↑ If High</div>
-          <p>Your kidneys may not be filtering as efficiently as they should. Dehydration, intense exercise, or kidney disease can all cause this.</p>
+          <p>Elevated creatinine suggests your kidneys may not be filtering as efficiently as they should. This can be temporary (dehydration, intense exercise, certain medications) or may indicate chronic kidney disease that needs monitoring.</p>
         </div>
         <div class="range-box low">
           <div class="range-box-label">↓ If Low</div>
-          <p>Low creatinine is usually not concerning and often reflects low muscle mass, pregnancy, or a plant-based diet.</p>
+          <p>Low creatinine is usually not a concern. It often reflects low muscle mass, pregnancy, a plant-based diet, or simply being older or female. It rarely signals a medical problem on its own.</p>
         </div>
       </div>
     </div>
-
+    <div class="card">
+      <div class="section-label">Symptoms of poor kidney function</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High Creatinine Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Swelling in legs, ankles, or feet</li>
+            <li>Fatigue and weakness</li>
+            <li>Shortness of breath</li>
+            <li>Decreased urine output</li>
+            <li>Foamy or dark urine</li>
+            <li>Nausea or vomiting</li>
+            <li>Confusion or difficulty concentrating</li>
+            <li>Itchy skin</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>↓ Low Creatinine — usually no symptoms</h3>
+          <ul class="symptom-list">
+            <li>Often found incidentally on routine labs</li>
+            <li>May accompany muscle wasting conditions</li>
+            <li>Common during pregnancy (normal)</li>
+            <li>Associated with low protein or vegan diets</li>
+            <li>Seen in elderly patients with low muscle mass</li>
+            <li>Rarely requires treatment on its own</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Understanding eGFR stages</div>
+      <p>If your creatinine is elevated, your doctor will likely calculate your eGFR to stage kidney function. Here's what the numbers mean:</p>
+      <table class="egfr-table">
+        <thead>
+          <tr><th>eGFR</th><th>Stage</th><th>What it means</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>90+</td><td>Stage 1</td><td>Normal or high kidney function — monitor if other signs of kidney disease</td></tr>
+          <tr><td>60–89</td><td>Stage 2</td><td>Mildly decreased — often normal in older adults, monitor closely</td></tr>
+          <tr><td>45–59</td><td>Stage 3a</td><td>Mild to moderate decrease — lifestyle changes and closer monitoring recommended</td></tr>
+          <tr><td>30–44</td><td>Stage 3b</td><td>Moderate to severe decrease — nephrology referral often recommended</td></tr>
+          <tr><td>15–29</td><td>Stage 4</td><td>Severely decreased — preparing for kidney replacement therapy</td></tr>
+          <tr><td>&lt;15</td><td>Stage 5</td><td>Kidney failure — dialysis or transplant typically required</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div class="section-label">Common causes of high creatinine</div>
+      <h2>Temporary causes</h2>
+      <p>Creatinine can spike temporarily without indicating kidney disease. Dehydration is one of the most common culprits — when you're not drinking enough water, your kidneys concentrate urine and creatinine rises. Intense exercise (especially weightlifting or endurance sports) causes muscle breakdown that temporarily raises creatinine. Eating a large amount of cooked meat right before a blood draw can also bump it up, since cooking converts creatine in meat to creatinine.</p>
+      <h2 style="margin-top:24px;">Ongoing causes</h2>
+      <p>Persistently elevated creatinine most commonly results from chronic kidney disease (CKD), which is often caused by uncontrolled diabetes or high blood pressure over many years. Other causes include kidney infections, blockages in the urinary tract, certain medications (like NSAIDs, ACE inhibitors, or some antibiotics), autoimmune conditions like lupus, and reduced blood flow to the kidneys from heart failure or severe dehydration.</p>
+    </div>
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside creatinine</div>
+      <p>Creatinine is rarely reviewed in isolation. Your doctor will typically also look at:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>eGFR</strong> — calculated from creatinine to estimate overall kidney filtration rate</li>
+        <li><strong>BUN (Blood Urea Nitrogen)</strong> — another kidney waste product; the BUN-to-creatinine ratio helps distinguish kidney disease from dehydration</li>
+        <li><strong>Urine albumin or protein</strong> — checks if the kidneys are leaking protein, an early sign of damage</li>
+        <li><strong>Electrolytes (sodium, potassium, bicarbonate)</strong> — kidneys regulate these; imbalances indicate how severely function is affected</li>
+        <li><strong>Complete blood count (CBC)</strong> — anemia is common in chronic kidney disease</li>
+      </ul>
+    </div>
     <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">Ask your doctor to also check your eGFR, which gives a fuller picture of kidney function. Staying well-hydrated supports healthy kidney filtration.</div>
+      <div class="next-steps">A mildly elevated creatinine doesn't automatically mean kidney disease — dehydration and recent exercise are common culprits. Your doctor will look at your eGFR, trends over time, and your full clinical picture before drawing conclusions. If your result is significantly elevated or trending upward, a nephrology referral may be recommended. Only your doctor can interpret your specific result in context of your full health picture.</div>
     </div>
-
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>What is my eGFR, and what does it say about my kidney function?</li>
+        <li><span class="q-num">02</span>Is my creatinine trending up, down, or staying stable over time?</li>
+        <li><span class="q-num">03</span>Could dehydration, exercise, or my diet have affected this result?</li>
+        <li><span class="q-num">04</span>Are any of my medications affecting my kidneys?</li>
+        <li><span class="q-num">05</span>Should I be checking my urine for protein?</li>
+        <li><span class="q-num">06</span>Do I need to see a nephrologist (kidney specialist)?</li>
+        <li><span class="q-num">07</span>What lifestyle changes — diet, hydration, blood pressure control — would help protect my kidneys?</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can drinking more water lower my creatinine?</div>
+        <div class="faq-a">If dehydration is the cause, yes — proper hydration can bring creatinine back into the normal range quickly. However, if elevated creatinine is due to underlying kidney disease, drinking more water helps but won't fully normalize the result on its own. It's still one of the best things you can do to support kidney health.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does creatinine level 1.3 mean kidney disease?</div>
+        <div class="faq-a">Not necessarily. A result of 1.3 mg/dL is only slightly above the typical male range and may be normal for someone with high muscle mass, or may be temporarily elevated from dehydration or exercise. Your doctor will look at your eGFR, symptoms, and whether the level is stable or rising before making any diagnosis.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is creatinine the same as creatine?</div>
+        <div class="faq-a">No, though they're related. Creatine is a molecule your muscles use for energy. Creatinine is the waste product left over after creatine is broken down — it has no function and is filtered out by the kidneys. Taking creatine supplements can temporarily raise your blood creatinine level.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Should I avoid eating meat before a creatinine test?</div>
+        <div class="faq-a">It can help to avoid a large meat-heavy meal the night before. Cooked meat contains creatinine that gets absorbed into your blood and can temporarily elevate your result. For the most accurate reading, eat normally but skip the large steak dinner the night before your blood draw.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between serum creatinine and urine creatinine?</div>
+        <div class="faq-a">Serum creatinine (the standard blood test) measures how much creatinine is in your blood — an indicator of how well kidneys are filtering. Urine creatinine measures how much is being excreted and is used in calculations like the creatinine clearance test, which gives an even more precise estimate of kidney filtration rate.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/glucose" class="related-chip">Glucose →</a>
+        <a href="/cortisol" class="related-chip">Cortisol →</a>
+        <a href="/hemoglobin" class="related-chip">Hemoglobin →</a>
+        <a href="/triglycerides" class="related-chip">Triglycerides →</a>
+        <a href="/tsh" class="related-chip">TSH →</a>
+        <a href="/ferritin" class="related-chip">Ferritin →</a>
+      </div>
+    </div>
     <div class="tool-cta">
       <h3>Decode any lab test instantly</h3>
       <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
-
     <footer>
       <span>labplain.co</span>
       <span>Not a substitute for professional medical advice.</span>
