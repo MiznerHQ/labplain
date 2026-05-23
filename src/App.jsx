@@ -6,19 +6,27 @@ const STYLE = `
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --cream: #F7F4EF;
-    --ink: #1A1A18;
-    --muted: #7A7A72;
-    --accent: #2E6B4F;
-    --accent-light: #EAF3EE;
-    --warn: #B85C2A;
-    --warn-light: #FDF0E8;
-    --border: #DDD9D0;
+    --bg: #F4F7FB;
     --white: #FFFFFF;
+    --ink: #0D1B2A;
+    --muted: #6B7A8D;
+    --accent: #185FA5;
+    --accent-light: #E6F1FB;
+    --accent-border: #B5D4F4;
+    --warn: #993C1D;
+    --warn-light: #FAECE7;
+    --warn-border: #F5C4B3;
+    --success-light: #EAF3DE;
+    --success-border: #C0DD97;
+    --success-text: #27500A;
+    --amber: #92400E;
+    --amber-light: #FEF3C7;
+    --amber-border: #F59E0B;
+    --border: #DDE3EC;
   }
 
   body {
-    background: var(--cream);
+    background: var(--bg);
     color: var(--ink);
     font-family: 'DM Sans', sans-serif;
     min-height: 100vh;
@@ -30,7 +38,7 @@ const STYLE = `
     padding: 48px 24px 80px;
   }
 
-  .header { margin-bottom: 52px; }
+  .header { margin-bottom: 48px; }
 
   .logo {
     display: flex;
@@ -40,10 +48,10 @@ const STYLE = `
   }
 
   .logo-mark {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     background: var(--accent);
-    border-radius: 8px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +72,7 @@ const STYLE = `
 
   .headline {
     font-family: 'DM Serif Display', serif;
-    font-size: clamp(32px, 6vw, 48px);
+    font-size: clamp(30px, 6vw, 46px);
     line-height: 1.1;
     letter-spacing: -1px;
     color: var(--ink);
@@ -82,8 +90,8 @@ const STYLE = `
   }
 
   .disclaimer {
-    background: var(--warn-light);
-    border: 1px solid #E8C9B0;
+    background: var(--amber-light);
+    border: 1px solid var(--amber-border);
     border-radius: 10px;
     padding: 14px 18px;
     margin-bottom: 36px;
@@ -93,8 +101,7 @@ const STYLE = `
   }
 
   .disclaimer-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
-
-  .disclaimer p { font-size: 13px; color: var(--warn); line-height: 1.5; }
+  .disclaimer p { font-size: 13px; color: var(--amber); line-height: 1.5; }
 
   .search-section { margin-bottom: 36px; }
 
@@ -126,7 +133,7 @@ const STYLE = `
   }
 
   .search-input:focus { border-color: var(--accent); }
-  .search-input::placeholder { color: #B0ADA6; }
+  .search-input::placeholder { color: #B0BAC8; }
 
   .search-btn {
     padding: 14px 24px;
@@ -143,7 +150,7 @@ const STYLE = `
     flex-shrink: 0;
   }
 
-  .search-btn:hover { background: #255C42; }
+  .search-btn:hover { background: #0C447C; }
   .search-btn:active { transform: scale(0.98); }
   .search-btn:disabled { background: var(--border); color: var(--muted); cursor: not-allowed; transform: none; }
 
@@ -193,7 +200,7 @@ const STYLE = `
 
   .result-header {
     background: var(--accent-light);
-    border-bottom: 1px solid #C8DDD3;
+    border-bottom: 1px solid var(--accent-border);
     padding: 20px 24px;
     display: flex;
     align-items: center;
@@ -201,21 +208,21 @@ const STYLE = `
   }
 
   .result-icon {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     background: var(--accent);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .result-test-name {
     font-family: 'DM Serif Display', serif;
     font-size: 22px;
-    color: var(--ink);
+    color: #042C53;
     line-height: 1.2;
   }
 
@@ -244,11 +251,18 @@ const STYLE = `
 
   .section-content { font-size: 15px; line-height: 1.7; color: var(--ink); }
 
+  .range-value {
+    font-family: 'DM Mono', monospace;
+    font-size: 15px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
   .range-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
 
-  .range-box { padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border); }
-  .range-box.normal { background: var(--accent-light); border-color: #C8DDD3; }
-  .range-box.abnormal { background: var(--warn-light); border-color: #E8C9B0; }
+  .range-box { padding: 12px 16px; border-radius: 8px; }
+  .range-box.high { background: var(--accent-light); border: 1px solid var(--accent-border); }
+  .range-box.low { background: var(--warn-light); border: 1px solid var(--warn-border); }
 
   .range-box-label {
     font-family: 'DM Mono', monospace;
@@ -256,21 +270,20 @@ const STYLE = `
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 4px;
-    color: var(--muted);
   }
 
-  .range-box.normal .range-box-label { color: var(--accent); }
-  .range-box.abnormal .range-box-label { color: var(--warn); }
-  .range-box-value { font-size: 14px; font-weight: 500; color: var(--ink); }
+  .range-box.high .range-box-label { color: var(--accent); }
+  .range-box.low .range-box-label { color: var(--warn); }
+  .range-box-value { font-size: 14px; color: var(--ink); line-height: 1.5; }
 
   .what-to-do {
-    background: #F0F7FF;
-    border: 1px solid #C5DAFA;
+    background: var(--success-light);
+    border: 1px solid var(--success-border);
     border-radius: 10px;
     padding: 16px;
     font-size: 14px;
     line-height: 1.65;
-    color: #2C4A6E;
+    color: var(--success-text);
   }
 
   .loading-card {
@@ -302,7 +315,7 @@ const STYLE = `
 
   .error-card {
     background: var(--warn-light);
-    border: 1.5px solid #E8C9B0;
+    border: 1.5px solid var(--warn-border);
     border-radius: 14px;
     padding: 24px;
     color: var(--warn);
@@ -406,8 +419,8 @@ export default function LabPlain() {
             </div>
             <span className="logo-text">lab<span>plain</span></span>
           </div>
-          <h1 className="headline">Your lab results,<br /><em>finally explained.</em></h1>
-          <p className="subline">Type any lab test name and get a plain-English breakdown — what it measures, what's normal, and what to ask your doctor.</p>
+          <h1 className="headline">Understand your labs.<br /><em>No medical degree required.</em></h1>
+          <p className="subline">Type any lab test name and get a clear, calm explanation — what it measures, what's normal, and what to ask your doctor.</p>
         </header>
 
         <div className="disclaimer">
@@ -469,17 +482,17 @@ export default function LabPlain() {
               <div className="divider" />
               <div className="result-section">
                 <div className="section-label">Normal range</div>
-                <div className="section-content" style={{fontFamily:"'DM Mono',monospace", fontSize:"15px", color:"var(--accent)", fontWeight:500}}>{result.normalRange}</div>
+                <div className="range-value">{result.normalRange}</div>
               </div>
               <div className="divider" />
               <div className="result-section">
                 <div className="section-label">What your result might mean</div>
                 <div className="range-grid">
-                  <div className="range-box normal">
+                  <div className="range-box high">
                     <div className="range-box-label">↑ If High</div>
                     <div className="range-box-value">{result.highMeans}</div>
                   </div>
-                  <div className="range-box abnormal">
+                  <div className="range-box low">
                     <div className="range-box-label">↓ If Low</div>
                     <div className="range-box-value">{result.lowMeans}</div>
                   </div>
