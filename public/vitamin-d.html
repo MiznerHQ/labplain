@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vitamin D (25-OH) – LabPlain</title>
-  <meta name="description" content="What does your Vitamin D (25-OH) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
+  <title>Vitamin D Test – What Your Result Means | LabPlain</title>
+  <meta name="description" content="What does your Vitamin D result mean? Plain-English explanation of normal ranges, deficiency, toxicity, symptoms, causes, and what to ask your doctor.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://labplain.co/vitamin-d">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,8 +13,9 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
+      --accent: #1B3A6B; --accent-light: #EAF0FB; --warn: #B85C2A;
       --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --low: #EEF3FF; --low-border: #C5CEFA; --low-text: #3A5BAB;
     }
     body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
@@ -26,27 +27,56 @@
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); margin-bottom: 14px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
     .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C5CEFA; margin-bottom: 12px; }
+    .range-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 16px; }
+    .range-pill { padding: 14px 16px; border-radius: 10px; border: 1px solid var(--border); }
+    .range-pill-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+    .range-pill.deficient { background: #EEF3FF; border-color: var(--low-border); }
+    .range-pill.deficient .range-pill-label { color: var(--low-text); }
+    .range-pill.insufficient { background: var(--warn-light); border-color: #E8C9B0; }
+    .range-pill.insufficient .range-pill-label { color: var(--warn); }
+    .range-pill.optimal { background: #EAF3EE; border-color: #C8DDD3; }
+    .range-pill.optimal .range-pill-label { color: #2E6B4F; }
+    .range-pill.high { background: #FFF3EE; border-color: #F5C4A0; }
+    .range-pill.high .range-pill-label { color: #993C1D; }
+    .range-pill p { font-size: 14px; line-height: 1.5; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
     .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
+    .range-box.low { background: var(--low); border-color: var(--low-border); }
     .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
     .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
+    .range-box.low .range-box-label { color: var(--low-text); }
     .range-box p { font-size: 14px; line-height: 1.65; }
+    ul { padding-left: 20px; margin-top: 10px; }
+    ul li { font-size: 15px; line-height: 1.8; color: var(--ink); }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+    .symptom-box { background: #F9F7F4; border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+    .symptom-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .faq-item { border-top: 1px solid var(--border); padding: 18px 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--border); }
+    .faq-q { font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .faq-a { font-size: 15px; line-height: 1.75; color: #444; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 12px; }
+    .related-card { background: var(--accent-light); border: 1px solid #C5CEFA; border-radius: 10px; padding: 14px 16px; text-decoration: none; }
+    .related-card-name { font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500; color: var(--accent); margin-bottom: 4px; }
+    .related-card-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .doctor-list { margin-top: 12px; }
+    .doctor-list li { font-size: 15px; line-height: 1.8; color: var(--ink); padding: 6px 0; border-bottom: 1px solid var(--border); list-style: none; padding-left: 0; }
+    .doctor-list li::before { content: "→ "; color: var(--accent); font-weight: 500; }
     .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
     .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
     .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -55,39 +85,154 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Vitamin D (25-OH)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Vitamin D (25-OH)</em> result mean?</h1>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Vitamin D</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Vitamin D</em> result mean?</h1>
     <span class="category-tag">Vitamins & Minerals</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>Vitamin D (25-OH)</strong> test measures the form of vitamin D stored in your body — essential for bones, immunity, and mood regulation.</p>
+      <p>The <strong>Vitamin D (25-hydroxyvitamin D)</strong> test measures the main form of vitamin D circulating in your blood. Vitamin D is essential for calcium absorption, bone strength, immune function, and muscle health. Most people get it from sunlight exposure and fortified foods, but deficiency is extremely common — especially in northern climates, older adults, and people with darker skin.</p>
     </div>
 
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">30–100 ng/mL (sufficient); 20–29 (insufficient); below 20 (deficient)</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
-    </div>
-
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>Very high vitamin D is rare from sun or food alone and usually only occurs from excessive supplementation.</p>
+      <div class="normal-range">Optimal: 40–60 ng/mL &nbsp;|&nbsp; Sufficient: 20–39 ng/mL</div>
+      <p style="font-size:14px;color:var(--muted);margin-bottom:16px;">Reference ranges vary by lab. Always compare your result to the range on your own report.</p>
+      <div class="range-grid">
+        <div class="range-pill deficient">
+          <div class="range-pill-label">↓ Deficient</div>
+          <p>Below 20 ng/mL — clinically low, treatment usually recommended</p>
         </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Low vitamin D is extremely common, especially in people who spend little time outdoors or live in northern climates.</p>
+        <div class="range-pill insufficient">
+          <div class="range-pill-label">⚠ Insufficient</div>
+          <p>20–29 ng/mL — borderline, supplementation often advised</p>
+        </div>
+        <div class="range-pill optimal">
+          <div class="range-pill-label">✓ Optimal</div>
+          <p>30–60 ng/mL — adequate for most adults</p>
+        </div>
+        <div class="range-pill high">
+          <div class="range-pill-label">↑ Elevated</div>
+          <p>Above 100 ng/mL — potential toxicity range</p>
         </div>
       </div>
     </div>
 
     <div class="card">
+      <div class="section-label">Symptoms of low Vitamin D</div>
+      <p>Deficiency often develops silently, but common symptoms include:</p>
+      <div class="symptom-grid">
+        <div class="symptom-box">
+          <div class="symptom-box-label">Physical</div>
+          <ul>
+            <li>Bone pain or tenderness</li>
+            <li>Muscle weakness or cramps</li>
+            <li>Frequent infections</li>
+            <li>Hair loss</li>
+          </ul>
+        </div>
+        <div class="symptom-box">
+          <div class="symptom-box-label">Mental & Energy</div>
+          <ul>
+            <li>Fatigue and low energy</li>
+            <li>Depression or low mood</li>
+            <li>Brain fog</li>
+            <li>Poor sleep quality</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal results</div>
+      <div class="two-col">
+        <div class="range-box low">
+          <div class="range-box-label">↓ Causes of Low Vitamin D</div>
+          <ul>
+            <li>Limited sun exposure</li>
+            <li>Dark skin pigmentation</li>
+            <li>Older age (reduced skin synthesis)</li>
+            <li>Obesity (vitamin D stored in fat)</li>
+            <li>Malabsorption conditions (Crohn's, celiac)</li>
+            <li>Strict vegan diet</li>
+            <li>Kidney or liver disease</li>
+          </ul>
+        </div>
+        <div class="range-box high">
+          <div class="range-box-label">↑ Causes of High Vitamin D</div>
+          <ul>
+            <li>Over-supplementation (most common cause)</li>
+            <li>Granulomatous diseases (sarcoidosis)</li>
+            <li>Certain lymphomas</li>
+            <li>Excessive fortified food intake</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can I get enough Vitamin D from sunlight alone?</div>
+        <div class="faq-a">Maybe — but it depends on where you live, your skin tone, age, and how much time you spend outdoors. People in northern latitudes (above 35°N) produce almost no Vitamin D from sunlight between October and March, making supplementation essential for many.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is Vitamin D3 better than D2?</div>
+        <div class="faq-a">Yes, for most purposes. Vitamin D3 (cholecalciferol) raises blood levels more effectively and maintains them longer than D2 (ergocalciferol). Most doctors now recommend D3 supplements when treating deficiency.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does it take to correct a deficiency?</div>
+        <div class="faq-a">With supplementation, it typically takes 3–6 months to restore levels to the optimal range. Your doctor may recommend a higher loading dose initially, followed by a maintenance dose. Retesting after 3 months is standard practice.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can Vitamin D be toxic?</div>
+        <div class="faq-a">Yes, but only from supplements — not sun exposure. Toxicity (hypervitaminosis D) typically occurs above 100 ng/mL and can cause nausea, weakness, kidney damage, and dangerous calcium buildup. This is why testing before high-dose supplementation matters.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Should I take Vitamin D with food?</div>
+        <div class="faq-a">Yes. Vitamin D is fat-soluble, meaning it absorbs significantly better when taken with a meal that contains fat. Taking it with breakfast or your largest meal of the day is ideal.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related tests to ask about</div>
+      <div class="related-grid">
+        <a href="/calcium.html" class="related-card">
+          <div class="related-card-name">Calcium</div>
+          <div class="related-card-desc">Vitamin D directly controls calcium absorption — these two always go together.</div>
+        </a>
+        <a href="/pth.html" class="related-card">
+          <div class="related-card-name">PTH</div>
+          <div class="related-card-desc">Parathyroid hormone rises when Vitamin D is low, helping diagnose the cause.</div>
+        </a>
+        <a href="/magnesium.html" class="related-card">
+          <div class="related-card-name">Magnesium</div>
+          <div class="related-card-desc">Magnesium is required to activate Vitamin D — deficiency blocks its effects.</div>
+        </a>
+        <a href="/phosphorus.html" class="related-card">
+          <div class="related-card-name">Phosphorus</div>
+          <div class="related-card-desc">Works with calcium and Vitamin D in bone metabolism.</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="doctor-list">
+        <li>Is my Vitamin D level low enough to require prescription-strength treatment?</li>
+        <li>What dose of Vitamin D3 do you recommend for my specific level?</li>
+        <li>Should I also check my calcium, PTH, and magnesium?</li>
+        <li>How soon should I retest after starting supplementation?</li>
+        <li>Could a medication I'm taking be affecting my Vitamin D levels?</li>
+        <li>Is there an underlying condition causing my deficiency?</li>
+      </ul>
+    </div>
+
+    <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">If you're deficient, your doctor may recommend a higher-dose supplement for a period of time, then retest to confirm levels have improved.</div>
+      <div class="next-steps">If your Vitamin D is low, don't self-treat with mega-doses without testing first. Over-supplementation is a real risk. Ask your doctor for a specific dosing plan and schedule a retest in 3 months to confirm your levels are trending up.</div>
     </div>
 
     <div class="tool-cta">
