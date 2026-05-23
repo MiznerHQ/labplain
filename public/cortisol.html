@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cortisol – LabPlain</title>
-  <meta name="description" content="What does your Cortisol result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
+  <title>Cortisol Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your cortisol result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://labplain.co/cortisol">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +12,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
     nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
@@ -26,27 +29,56 @@
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
     .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
     .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
+    .range-box.low .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -59,43 +91,139 @@
     <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Cortisol</em> result mean?</h1>
     <span class="category-tag">Hormones</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
-
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>Cortisol</strong> test measures your main stress hormone, made by the adrenal glands — it helps regulate metabolism, immune response, and blood pressure.</p>
+      <p>Cortisol is your body's primary stress hormone, produced by the adrenal glands — two small glands that sit on top of your kidneys. When you face stress, danger, or even just wake up in the morning, your brain signals the adrenal glands to release cortisol.</p>
+      <p>Beyond stress, cortisol plays a critical role in regulating your metabolism (how your body uses fat, protein, and carbohydrates for energy), controlling blood pressure, reducing inflammation, and managing your sleep-wake cycle. It's also essential for your immune system — too much suppresses it, too little leaves you vulnerable.</p>
+      <p>Doctors order a cortisol test when they suspect problems with the adrenal glands or pituitary gland, or when evaluating conditions like Cushing's syndrome or Addison's disease.</p>
     </div>
-
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">6–23 mcg/dL (morning draw)</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+      <div class="normal-range">Morning (8 AM): 6–23 mcg/dL &nbsp;|&nbsp; Afternoon (4 PM): 2–11 mcg/dL</div>
+      <p class="range-note">Cortisol follows a strong daily rhythm called a diurnal pattern — it peaks in the early morning and drops to its lowest point around midnight. This is why the timing of your blood draw is critical. A result that looks "high" in the afternoon may be perfectly normal in the morning, and vice versa.</p>
+      <p class="range-note" style="margin-top:8px;">Reference ranges also vary between labs. Always compare your result to the range printed on your specific lab report.</p>
+      <div class="timing-box">
+        <h3>⏰ Why timing matters</h3>
+        <p>Most cortisol tests are done at 8 AM — when levels are naturally highest and most consistent between people. If your test was done at a different time, your doctor will interpret the result differently. Always note the time of your blood draw when discussing results.</p>
+      </div>
     </div>
-
     <div class="card">
       <div class="section-label">What your result might indicate</div>
       <div class="two-col">
         <div class="range-box high">
           <div class="range-box-label">↑ If High</div>
-          <p>High cortisol can cause weight gain (especially belly fat), high blood pressure, and blood sugar issues. Chronic stress is a common cause.</p>
+          <p>Elevated cortisol may point to chronic stress, Cushing's syndrome, obesity, depression, or overuse of steroid medications. A single high result doesn't confirm a diagnosis — your doctor will likely order follow-up testing.</p>
         </div>
         <div class="range-box low">
           <div class="range-box-label">↓ If Low</div>
-          <p>Low cortisol may indicate adrenal insufficiency (Addison's disease) — a condition where the adrenal glands don't produce enough hormones.</p>
+          <p>Low cortisol may suggest adrenal insufficiency (Addison's disease), hypopituitarism, or recent use of corticosteroid medications that suppressed natural production. Low cortisol can be serious and usually warrants further investigation.</p>
         </div>
       </div>
     </div>
-
+    <div class="card">
+      <div class="section-label">Symptoms associated with abnormal cortisol</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High Cortisol Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Weight gain, especially in the abdomen and face</li>
+            <li>High blood pressure</li>
+            <li>Easy bruising or thin skin</li>
+            <li>Muscle weakness</li>
+            <li>High blood sugar or diabetes</li>
+            <li>Anxiety, irritability, or depression</li>
+            <li>Poor sleep or insomnia</li>
+            <li>Frequent infections</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>↓ Low Cortisol Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Severe fatigue and weakness</li>
+            <li>Unexplained weight loss</li>
+            <li>Low blood pressure</li>
+            <li>Dizziness when standing up</li>
+            <li>Salt cravings</li>
+            <li>Nausea, vomiting, or stomach pain</li>
+            <li>Darkening of skin (Addison's)</li>
+            <li>Brain fog or difficulty concentrating</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Common causes of abnormal cortisol</div>
+      <h2>What can raise cortisol?</h2>
+      <p>The most common cause of mildly elevated cortisol is everyday psychological and physical stress — your body can't tell the difference between a work deadline and a genuine threat. Other causes include Cushing's syndrome (where a tumor causes the adrenal glands to overproduce cortisol), long-term use of corticosteroid medications like prednisone, obesity, depression, alcoholism, and poorly controlled type 2 diabetes.</p>
+      <p>Temporary spikes are also normal — illness, surgery, intense exercise, and even fasting can raise cortisol levels for hours or days.</p>
+      <h2 style="margin-top:24px;">What can lower cortisol?</h2>
+      <p>Low cortisol most commonly results from Addison's disease (primary adrenal insufficiency), where the adrenal glands are damaged and can't produce enough cortisol. It can also result from hypopituitarism — a problem with the pituitary gland that fails to signal the adrenals properly. Stopping long-term steroid medication abruptly can also cause a sudden drop in cortisol, which is why doctors always taper these medications slowly.</p>
+    </div>
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside cortisol</div>
+      <p>Cortisol is rarely interpreted in isolation. Your doctor may also order:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>ACTH (Adrenocorticotropic Hormone)</strong> — helps determine if the problem is in the adrenal glands or the pituitary gland</li>
+        <li><strong>24-hour urine cortisol</strong> — measures cortisol output over a full day, more accurate than a single blood draw</li>
+        <li><strong>Dexamethasone suppression test</strong> — used to diagnose Cushing's syndrome</li>
+        <li><strong>Aldosterone</strong> — another adrenal hormone often checked alongside cortisol</li>
+        <li><strong>Blood glucose (fasting)</strong> — cortisol affects blood sugar regulation</li>
+      </ul>
+    </div>
     <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">Cortisol levels vary significantly throughout the day — highest in the morning, lowest at night. The timing of your blood draw matters a lot for interpreting this result.</div>
+      <div class="next-steps">A single abnormal cortisol result is rarely the whole story. Cortisol fluctuates throughout the day and is affected by stress, sleep, exercise, and medications — so your doctor will consider your result in context of your symptoms, medical history, and the time of your blood draw. Don't panic over a single number. Only your doctor can interpret your specific result in context of your full health picture.</div>
     </div>
-
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Was my cortisol drawn at the right time of day, and does the timing affect how you're interpreting it?</li>
+        <li><span class="q-num">02</span>Do my symptoms match what you'd expect from this result?</li>
+        <li><span class="q-num">03</span>Do I need a 24-hour urine cortisol test or an ACTH stimulation test for a more complete picture?</li>
+        <li><span class="q-num">04</span>Could any medications I'm taking be affecting my cortisol level?</li>
+        <li><span class="q-num">05</span>Should I be referred to an endocrinologist?</li>
+        <li><span class="q-num">06</span>If stress is a factor, what lifestyle changes would actually make a difference?</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can stress alone cause high cortisol on a blood test?</div>
+        <div class="faq-a">Yes. Psychological stress, poor sleep, intense exercise, and even anxiety about the blood draw itself can temporarily raise cortisol. A mildly elevated result doesn't automatically mean a medical condition — your doctor will consider your lifestyle and order repeat testing if needed.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is a morning cortisol test more accurate?</div>
+        <div class="faq-a">Morning tests (around 8 AM) are the gold standard because cortisol is most predictable and consistently highest at that time. Afternoon or evening draws are harder to interpret because normal levels vary much more between individuals later in the day.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I lower my cortisol naturally?</div>
+        <div class="faq-a">Lifestyle factors that consistently help reduce cortisol include regular moderate exercise (intense exercise can temporarily raise it), quality sleep, stress reduction techniques like meditation or deep breathing, reducing caffeine and alcohol, and maintaining a healthy weight. These won't fix a medical condition but can help if stress is the primary driver.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between a cortisol blood test and a saliva test?</div>
+        <div class="faq-a">Blood tests are the standard in medical settings and give a precise snapshot of cortisol at a specific moment. Saliva tests (often used in functional medicine) can measure cortisol at multiple points throughout the day to track the daily rhythm, but they're less standardized and not typically used for diagnosing adrenal disorders.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is Addison's disease serious?</div>
+        <div class="faq-a">Yes, but it's manageable with the right treatment. Addison's disease is a chronic condition where the adrenal glands don't produce enough cortisol (and often aldosterone). It requires lifelong hormone replacement therapy, but most people with Addison's live full, normal lives with proper treatment and monitoring.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/glucose" class="related-chip">Glucose →</a>
+        <a href="/hemoglobin" class="related-chip">Hemoglobin →</a>
+        <a href="/creatinine" class="related-chip">Creatinine →</a>
+        <a href="/triglycerides" class="related-chip">Triglycerides →</a>
+        <a href="/tsh" class="related-chip">TSH →</a>
+        <a href="/ferritin" class="related-chip">Ferritin →</a>
+      </div>
+    </div>
     <div class="tool-cta">
       <h3>Decode any lab test instantly</h3>
       <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
-
     <footer>
       <span>labplain.co</span>
       <span>Not a substitute for professional medical advice.</span>
