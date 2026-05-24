@@ -1,105 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Total Cholesterol – LabPlain</title>
-  <meta name="description" content="What does your Total Cholesterol result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/total-cholesterol">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Total Cholesterol Levels Explained | LabPlain</title>
+  <meta name="description" content="What does your total cholesterol number mean? Learn what's normal, what's high, symptoms, causes, and what to ask your doctor." />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f0f4f8;
+      color: #1a202c;
+      line-height: 1.6;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+
+    /* ── NAV ── */
+    nav {
+      background: #0f2044;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .nav-logo span { color: #60a5fa; }
+    .nav-tagline {
+      color: #93c5fd;
+      font-size: 0.75rem;
+      display: none;
+    }
+    @media(min-width:600px){ .nav-tagline { display: block; } }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0f2044 0%, #1e3a6e 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(96,165,250,0.2);
+      color: #93c5fd;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .hero p {
+      font-size: 1rem;
+      color: #bfdbfe;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 32px 16px 64px;
+    }
+
+    /* ── CARDS ── */
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    }
+    .card h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0f2044;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card h2 .icon {
+      font-size: 1.2rem;
+    }
+
+    /* ── RANGE TABLE ── */
+    .range-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    .range-table th {
+      background: #0f2044;
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+    }
+    .range-table th:first-child { border-radius: 8px 0 0 0; }
+    .range-table th:last-child  { border-radius: 0 8px 0 0; }
+    .range-table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; }
+    .range-table tr:last-child td { border-bottom: none; }
+    .range-table tr:nth-child(even) td { background: #f8fafc; }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .badge-green  { background: #dcfce7; color: #166534; }
+    .badge-yellow { background: #fef9c3; color: #854d0e; }
+    .badge-orange { background: #ffedd5; color: #9a3412; }
+    .badge-red    { background: #fee2e2; color: #991b1b; }
+
+    /* ── SYMPTOM / CAUSE GRID ── */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media(max-width:520px){ .grid-2 { grid-template-columns: 1fr; } }
+
+    .grid-item {
+      background: #f0f4f8;
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 0.9rem;
+    }
+    .grid-item strong {
+      display: block;
+      font-size: 0.82rem;
+      color: #0f2044;
+      font-weight: 700;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    /* ── FAQ ── */
+    .faq-item { margin-bottom: 18px; }
+    .faq-item:last-child { margin-bottom: 0; }
+    .faq-q {
+      font-weight: 700;
+      color: #0f2044;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+    .faq-a { font-size: 0.92rem; color: #374151; }
+
+    /* ── RELATED TESTS ── */
+    .related-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .related-chip {
+      background: #eff6ff;
+      color: #1e40af;
+      border: 1px solid #bfdbfe;
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .related-chip:hover { background: #dbeafe; }
+
+    /* ── DOCTOR QUESTIONS ── */
+    .doctor-list { list-style: none; }
+    .doctor-list li {
+      padding: 10px 0 10px 28px;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 0.92rem;
+      position: relative;
+      color: #374151;
+    }
+    .doctor-list li:last-child { border-bottom: none; }
+    .doctor-list li::before {
+      content: "?";
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 20px;
+      height: 20px;
+      background: #0f2044;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.72rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    /* ── AI DECODER ── */
+    .decoder-card {
+      background: linear-gradient(135deg, #0f2044 0%, #1e3a6e 100%);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 24px;
+      color: #fff;
+    }
+    .decoder-card h2 { color: #fff; margin-bottom: 8px; font-size: 1.15rem; }
+    .decoder-card p  { color: #bfdbfe; font-size: 0.9rem; margin-bottom: 18px; }
+
+    .decoder-input-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .decoder-input {
+      flex: 1;
+      min-width: 160px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: none;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .decoder-btn {
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 22px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+    .decoder-btn:hover:not(:disabled) { background: #1d4ed8; }
+    .decoder-btn:disabled { background: #4b6cb7; cursor: not-allowed; }
+
+    .decoder-result {
+      margin-top: 16px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #e0eaff;
+      display: none;
+    }
+    .decoder-result.visible { display: block; }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 0.82rem;
+      color: #78350f;
+      margin-bottom: 24px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.8rem;
+      color: #6b7280;
+      border-top: 1px solid #e2e8f0;
+    }
+    footer a { color: #2563eb; text-decoration: none; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Total Cholesterol</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Total Cholesterol</em> result mean?</h1>
-    <span class="category-tag">Heart Health</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
-    <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>The <strong>Total Cholesterol</strong> test measures all the cholesterol in your blood combined — HDL, LDL, and other types.</p>
-    </div>
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">Lab<span>Plain</span></a>
+  <span class="nav-tagline">Understand your labs. No medical degree required.</span>
+</nav>
 
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Below 200 mg/dL (desirable); 200–239 mg/dL (borderline high)</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
-    </div>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">Lab Result Guide</div>
+  <h1>Total Cholesterol Explained</h1>
+  <p>What your number actually means, why it matters, and what to do next.</p>
+</div>
 
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>High total cholesterol increases heart disease risk, but the breakdown into HDL and LDL matters more than the total number alone.</p>
-        </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Very low total cholesterol is uncommon and can sometimes be associated with nutritional issues or hyperthyroidism.</p>
-        </div>
+<div class="container">
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    ⚠️ <strong>For informational purposes only.</strong> This page does not constitute medical advice. Always discuss your lab results with your doctor.
+  </div>
+
+  <!-- WHAT IS IT -->
+  <div class="card">
+    <h2><span class="icon">🩺</span> What Is Total Cholesterol?</h2>
+    <p style="font-size:0.93rem;color:#374151;margin-bottom:12px;">
+      Total cholesterol is a snapshot of all the cholesterol circulating in your blood. It combines four components: LDL ("bad" cholesterol), HDL ("good" cholesterol), VLDL (very low-density lipoprotein), and a small amount of other lipids. The number alone tells only part of the story — your doctor looks at all four pieces to assess your true cardiovascular risk.
+    </p>
+    <p style="font-size:0.93rem;color:#374151;">
+      Cholesterol itself is not evil — your body needs it to build cell membranes, make hormones, and produce vitamin D. The problem arises when LDL levels are too high and HDL levels too low, leading to plaque buildup in artery walls.
+    </p>
+  </div>
+
+  <!-- RANGES -->
+  <div class="card">
+    <h2><span class="icon">📊</span> Total Cholesterol Reference Ranges</h2>
+    <table class="range-table">
+      <thead>
+        <tr>
+          <th>Level (mg/dL)</th>
+          <th>Category</th>
+          <th>What It Means</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Below 200</strong></td>
+          <td><span class="badge badge-green">Desirable</span></td>
+          <td>Low cardiovascular risk in most people</td>
+        </tr>
+        <tr>
+          <td><strong>200 – 239</strong></td>
+          <td><span class="badge badge-yellow">Borderline High</span></td>
+          <td>Moderate risk; lifestyle changes often recommended</td>
+        </tr>
+        <tr>
+          <td><strong>240 – 279</strong></td>
+          <td><span class="badge badge-orange">High</span></td>
+          <td>Elevated risk; medication may be discussed</td>
+        </tr>
+        <tr>
+          <td><strong>280 and above</strong></td>
+          <td><span class="badge badge-red">Very High</span></td>
+          <td>Significantly elevated; active management needed</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.82rem;color:#6b7280;margin-top:12px;">
+      * Reference ranges are for adults. Children, adolescents, and people with existing heart disease may have different targets. Always interpret with your full lipid panel.
+    </p>
+  </div>
+
+  <!-- SYMPTOMS -->
+  <div class="card">
+    <h2><span class="icon">⚠️</span> Symptoms of High Cholesterol</h2>
+    <p style="font-size:0.9rem;color:#374151;margin-bottom:16px;">
+      High cholesterol is often called a "silent" condition — most people have <strong>no symptoms at all</strong> until a serious event like a heart attack or stroke occurs. That's why routine blood testing is so important. A small number of people with very high cholesterol do develop visible signs:
+    </p>
+    <div class="grid-2">
+      <div class="grid-item">
+        <strong>Xanthomas</strong>
+        Fatty yellow deposits under the skin, often on elbows, knees, or tendons
+      </div>
+      <div class="grid-item">
+        <strong>Xanthelasma</strong>
+        Yellow plaques on or around the eyelids — a sign of very elevated LDL
+      </div>
+      <div class="grid-item">
+        <strong>Corneal Arcus</strong>
+        A grey-white ring around the iris of the eye; more significant in people under 45
+      </div>
+      <div class="grid-item">
+        <strong>Chest Pain (Angina)</strong>
+        Can occur if cholesterol plaques have already begun narrowing coronary arteries
+      </div>
+      <div class="grid-item">
+        <strong>Leg Pain or Cramping</strong>
+        Peripheral artery disease from plaque buildup in leg arteries can cause pain during walking
+      </div>
+      <div class="grid-item">
+        <strong>No Symptoms (Most Common)</strong>
+        The vast majority of people with high cholesterol feel completely fine
       </div>
     </div>
-
-    <div class="card">
-      <div class="section-label">What to do next</div>
-      <div class="next-steps">Never panic over total cholesterol alone — always ask your doctor for the full lipid panel breakdown.</div>
-    </div>
-
-    <div class="tool-cta">
-      <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
-
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
-    </footer>
   </div>
+
+  <!-- CAUSES -->
+  <div class="card">
+    <h2><span class="icon">🔍</span> Common Causes of High Total Cholesterol</h2>
+    <div class="grid-2">
+      <div class="grid-item">
+        <strong>Diet High in Saturated Fat</strong>
+        Red meat, full-fat dairy, tropical oils, and ultra-processed foods raise LDL
+      </div>
+      <div class="grid-item">
+        <strong>Genetics (FH)</strong>
+        Familial hypercholesterolemia causes very high cholesterol regardless of lifestyle
+      </div>
+      <div class="grid-item">
+        <strong>Physical Inactivity</strong>
+        Regular aerobic exercise raises HDL and helps lower LDL and total cholesterol
+      </div>
+      <div class="grid-item">
+        <strong>Obesity</strong>
+        Excess body weight, especially abdominal fat, raises LDL and triglycerides
+      </div>
+      <div class="grid-item">
+        <strong>Hypothyroidism</strong>
+        Low thyroid hormone slows cholesterol metabolism, raising total and LDL levels
+      </div>
+      <div class="grid-item">
+        <strong>Type 2 Diabetes</strong>
+        Insulin resistance alters lipid metabolism, often raising LDL and triglycerides
+      </div>
+      <div class="grid-item">
+        <strong>Kidney or Liver Disease</strong>
+        Both organs play key roles in cholesterol processing; disease disrupts this
+      </div>
+      <div class="grid-item">
+        <strong>Smoking</strong>
+        Damages blood vessel walls and lowers HDL, worsening the overall cholesterol ratio
+      </div>
+    </div>
+  </div>
+
+  <!-- LOW CHOLESTEROL NOTE -->
+  <div class="card">
+    <h2><span class="icon">📉</span> Can Cholesterol Be Too Low?</h2>
+    <p style="font-size:0.93rem;color:#374151;margin-bottom:10px;">
+      While less common, total cholesterol below 120–130 mg/dL has been associated with certain health concerns including increased risk of hemorrhagic stroke, depression, and anxiety. Very low cholesterol is sometimes a sign of an underlying condition such as:
+    </p>
+    <div class="grid-2">
+      <div class="grid-item"><strong>Malnutrition / Malabsorption</strong>Not enough dietary fat or poor fat absorption</div>
+      <div class="grid-item"><strong>Hyperthyroidism</strong>Overactive thyroid speeds cholesterol breakdown</div>
+      <div class="grid-item"><strong>Liver Disease</strong>A failing liver can't produce normal cholesterol levels</div>
+      <div class="grid-item"><strong>Cancer or Chronic Illness</strong>Rapid cell turnover or metabolic disruption can lower cholesterol</div>
+    </div>
+  </div>
+
+  <!-- AI DECODER -->
+  <div class="decoder-card">
+    <h2>🤖 Decode Your Total Cholesterol Result</h2>
+    <p>Enter your number and we'll explain what it means in plain English.</p>
+    <div class="decoder-input-row">
+      <input
+        class="decoder-input"
+        id="cholInput"
+        type="number"
+        placeholder="e.g. 215"
+        min="50"
+        max="500"
+      />
+      <button class="decoder-btn" id="decodeBtn" onclick="decodeCholesterol()">Explain My Result</button>
+    </div>
+    <div class="decoder-result" id="decoderResult"></div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h2><span class="icon">❓</span> Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Is total cholesterol the most important number on my lipid panel?</div>
+      <div class="faq-a">Not really. Most cardiologists pay more attention to the LDL-to-HDL ratio and your non-HDL cholesterol. A high total cholesterol driven by high HDL is very different from one driven by high LDL. Always look at the full picture.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How fast can I lower my cholesterol?</div>
+      <div class="faq-a">Diet and exercise changes typically show results within 6–12 weeks. Statins, if prescribed, can lower LDL by 30–50% within 4–6 weeks. Most doctors retest after 3–6 months of lifestyle or medication changes.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Do I need to fast before a cholesterol test?</div>
+      <div class="faq-a">For a full lipid panel (which includes triglycerides), fasting for 9–12 hours is usually recommended. For total cholesterol and HDL alone, fasting may not be required — ask your lab or doctor beforehand.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What foods raise cholesterol the most?</div>
+      <div class="faq-a">Saturated fats (red meat, butter, cheese, palm oil) and trans fats (partially hydrogenated oils in some packaged foods) have the largest impact on raising LDL. Dietary cholesterol itself (eggs, shellfish) has less effect than once thought for most people.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can stress raise my cholesterol?</div>
+      <div class="faq-a">Yes. Chronic stress raises cortisol, which can increase LDL production and reduce HDL. Stress also tends to drive poor diet and exercise habits, compounding the effect. Managing stress is a legitimate part of cholesterol management.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">My total cholesterol is 210 — should I be on medication?</div>
+      <div class="faq-a">Probably not based on that number alone. Medication decisions are based on your full risk profile: age, blood pressure, smoking status, diabetes, family history, and your LDL/HDL breakdown. Many people at 210 manage fine with lifestyle changes.</div>
+    </div>
+  </div>
+
+  <!-- RELATED TESTS -->
+  <div class="card">
+    <h2><span class="icon">🔗</span> Related Lab Tests</h2>
+    <p style="font-size:0.9rem;color:#374151;margin-bottom:14px;">Total cholesterol is always interpreted alongside these tests for a full cardiovascular picture:</p>
+    <div class="related-list">
+      <a href="/ldl.html" class="related-chip">LDL Cholesterol</a>
+      <a href="/hdl.html" class="related-chip">HDL Cholesterol</a>
+      <a href="/triglycerides.html" class="related-chip">Triglycerides</a>
+      <a href="/glucose.html" class="related-chip">Fasting Glucose</a>
+      <a href="/hba1c.html" class="related-chip">HbA1c</a>
+      <a href="/tsh.html" class="related-chip">TSH (Thyroid)</a>
+    </div>
+  </div>
+
+  <!-- DOCTOR QUESTIONS -->
+  <div class="card">
+    <h2><span class="icon">👨‍⚕️</span> Questions to Ask Your Doctor</h2>
+    <ul class="doctor-list">
+      <li>My total cholesterol is [X] — what does my full lipid panel say, and what's my actual risk?</li>
+      <li>Should I be calculating my non-HDL cholesterol or LDL-to-HDL ratio instead of focusing on total?</li>
+      <li>Do I need a coronary artery calcium (CAC) scan to get a better picture of my cardiovascular risk?</li>
+      <li>Could an underlying condition like hypothyroidism or diabetes be contributing to my levels?</li>
+      <li>What specific dietary changes would make the most difference for my situation?</li>
+      <li>At what point would you consider prescribing a statin, and what are the risks?</li>
+      <li>How often should I retest, and what target number are we aiming for?</li>
+    </ul>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  <p>© 2025 LabPlain. Understand your labs. No medical degree required.</p>
+  <p style="margin-top:6px;"><a href="/">← Back to all lab tests</a></p>
+</footer>
+
+<script>
+  async function decodeCholesterol() {
+    const val = document.getElementById('cholInput').value.trim();
+    if (!val || isNaN(val) || val < 50 || val > 500) {
+      alert('Please enter a valid cholesterol value between 50 and 500 mg/dL.');
+      return;
+    }
+
+    const btn = document.getElementById('decodeBtn');
+    const resultDiv = document.getElementById('decoderResult');
+
+    btn.disabled = true;
+    btn.textContent = 'Analyzing...';
+    resultDiv.classList.remove('visible');
+    resultDiv.textContent = '';
+
+    try {
+      const response = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: 'claude-sonnet-4-20250514',
+          max_tokens: 1000,
+          messages: [{
+            role: 'user',
+            content: `A patient has a total cholesterol level of ${val} mg/dL. 
+Please explain in 3–4 clear, plain-English paragraphs:
+1. What this number means and what category it falls into (desirable/borderline/high/very high).
+2. What risks or health implications this level may carry.
+3. What lifestyle or medical steps are typically recommended at this level.
+Keep the tone calm, informative, and empowering — not alarming. End with a reminder to discuss results with their doctor.`
+          }]
+        })
+      });
+
+      const data = await response.json();
+      const text = data.content?.[0]?.text || 'Unable to generate explanation. Please try again.';
+
+      resultDiv.innerHTML = text.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
+      resultDiv.classList.add('visible');
+    } catch (err) {
+      resultDiv.textContent = 'Something went wrong. Please try again in a moment.';
+      resultDiv.classList.add('visible');
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Explain My Result';
+  }
+</script>
+
 </body>
 </html>
