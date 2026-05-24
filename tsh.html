@@ -1,105 +1,713 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TSH (Thyroid Stimulating Hormone) – LabPlain</title>
-  <meta name="description" content="What does your TSH (Thyroid Stimulating Hormone) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/tsh">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TSH (Thyroid-Stimulating Hormone) Test: What Your Results Mean | LabPlain</title>
+  <meta name="description" content="TSH test results explained in plain English. Learn what high and low TSH levels mean, symptoms, causes, and when to talk to your doctor." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://labplain.co/articles/tsh.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TSH Test Results Explained | LabPlain" />
+  <meta property="og:description" content="Understand your TSH results without a medical degree. Plain-English explanations of high and low thyroid-stimulating hormone levels." />
+  <meta property="og:url" content="https://labplain.co/articles/tsh.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "TSH (Thyroid-Stimulating Hormone) Test Explained",
+    "description": "A comprehensive guide to understanding TSH test results, including normal ranges, high and low values, symptoms, causes, and FAQ.",
+    "url": "https://labplain.co/articles/tsh.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "LabPlain",
+      "url": "https://labplain.co"
+    },
+    "about": {
+      "@type": "MedicalTest",
+      "name": "TSH Test",
+      "usesDevice": {
+        "@type": "MedicalDevice",
+        "name": "Blood Test"
+      }
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+  }
+  </script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    nav {
+      background: #0f172a;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav a.logo {
+      color: #60a5fa;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    nav a.logo span { color: #fff; }
+    nav .nav-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    nav .nav-links a:hover { color: #fff; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      color: white;
+      padding: 3.5rem 2rem 3rem;
+      text-align: center;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: rgba(96,165,250,0.15);
+      color: #93c5fd;
+      border: 1px solid rgba(96,165,250,0.3);
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #93c5fd;
+      max-width: 620px;
+      margin: 0 auto 1.5rem;
+    }
+    .hero .meta {
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+
+    /* LAYOUT */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    /* QUICK FACTS BAR */
+    .quick-facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .quick-facts .fact { text-align: center; }
+    .quick-facts .fact .label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #64748b;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .quick-facts .fact .value {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .quick-facts .fact .value.green { color: #16a34a; }
+    .quick-facts .fact .value.amber { color: #d97706; }
+    .quick-facts .fact .value.red { color: #dc2626; }
+
+    /* SECTION HEADERS */
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin: 1.5rem 0 0.5rem;
+    }
+    p { margin-bottom: 1rem; color: #374151; }
+
+    /* RANGE TABLE */
+    .range-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0 2rem;
+      font-size: 0.92rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    }
+    .range-table thead tr {
+      background: #0f172a;
+      color: white;
+    }
+    .range-table th {
+      padding: 0.85rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .range-table tbody tr { background: #fff; }
+    .range-table tbody tr:nth-child(even) { background: #f8fafc; }
+    .range-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+    .tag {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .tag.normal { background: #dcfce7; color: #166534; }
+    .tag.low { background: #fef3c7; color: #92400e; }
+    .tag.high { background: #fee2e2; color: #991b1b; }
+    .tag.critical { background: #fecaca; color: #7f1d1d; }
+
+    /* SYMPTOM CARDS */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 2rem;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1.2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .card.high-card { border-left: 4px solid #dc2626; }
+    .card.low-card { border-left: 4px solid #d97706; }
+    .card h3 {
+      margin-top: 0;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0;
+    }
+    .card ul li {
+      font-size: 0.88rem;
+      color: #475569;
+      padding: 0.25rem 0;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+    .card ul li:last-child { border-bottom: none; }
+    .card ul li::before { content: "•"; color: #94a3b8; flex-shrink: 0; }
+
+    /* CAUSES */
+    .causes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0 2rem;
+    }
+    @media (max-width: 560px) { .causes-grid { grid-template-columns: 1fr; } }
+    .cause-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1.2rem;
+    }
+    .cause-card.high { border-top: 3px solid #dc2626; }
+    .cause-card.low { border-top: 3px solid #f59e0b; }
+    .cause-card h3 { margin-top: 0; font-size: 0.95rem; }
+    .cause-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.6rem 0 0;
+    }
+    .cause-card ul li {
+      font-size: 0.88rem;
+      color: #475569;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid #f1f5f9;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .cause-card ul li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #94a3b8;
+      font-size: 0.8rem;
+    }
+    .cause-card ul li:last-child { border-bottom: none; }
+
+    /* CALLOUT BOX */
+    .callout {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .callout.warning {
+      background: #fffbeb;
+      border-color: #f59e0b;
+    }
+    .callout.danger {
+      background: #fef2f2;
+      border-color: #ef4444;
+    }
+    .callout strong { color: #0f172a; }
+    .callout p { margin: 0; font-size: 0.92rem; color: #374151; }
+
+    /* FAQ */
+    .faq-item {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      margin-bottom: 0.8rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .faq-item .q {
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+      font-size: 0.97rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .faq-item .q span { color: #3b82f6; }
+    .faq-item .a { font-size: 0.9rem; color: #475569; margin: 0; }
+
+    /* RELATED TESTS */
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.8rem;
+      margin: 1rem 0 2rem;
+    }
+    .related-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1rem;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .related-card:hover {
+      box-shadow: 0 4px 12px rgba(15,23,42,0.1);
+      border-color: #3b82f6;
+    }
+    .related-card .test-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #0f172a;
+      margin-bottom: 0.3rem;
+    }
+    .related-card .test-desc {
+      font-size: 0.8rem;
+      color: #64748b;
+      line-height: 1.4;
+    }
+
+    /* DOCTOR QUESTIONS */
+    .questions-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 2rem;
+    }
+    .questions-list li {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.92rem;
+      color: #374151;
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+    }
+    .questions-list li .num {
+      background: #0f172a;
+      color: white;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* DISCLAIMER */
+    .disclaimer {
+      background: #f1f5f9;
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      margin-top: 3rem;
+      font-size: 0.82rem;
+      color: #64748b;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+    }
+    .disclaimer strong { color: #475569; }
+
+    /* FOOTER */
+    footer {
+      background: #0f172a;
+      color: #64748b;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+    }
+    footer a { color: #3b82f6; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 2.5rem 1.2rem 2rem; }
+      .container { padding: 1.5rem 1rem 3rem; }
+      .quick-facts { grid-template-columns: repeat(2, 1fr); }
+    }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; TSH (Thyroid Stimulating Hormone)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">TSH (Thyroid Stimulating Hormone)</em> result mean?</h1>
-    <span class="category-tag">Thyroid</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
-    <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>The <strong>TSH (Thyroid Stimulating Hormone)</strong> test measures how hard your pituitary gland is working to tell your thyroid what to do.</p>
-    </div>
-
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">0.4–4.0 mIU/L</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
-    </div>
-
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>Your thyroid may be underactive (hypothyroidism) — your pituitary is calling louder because the thyroid isn't responding well.</p>
-        </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Your thyroid may be overactive (hyperthyroidism) — it's working so hard the pituitary barely needs to signal.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="section-label">What to do next</div>
-      <div class="next-steps">Ask your doctor about thyroid function trends over time and whether a Free T4 test should be run alongside this one.</div>
-    </div>
-
-    <div class="tool-cta">
-      <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
-
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
-    </footer>
+<!-- NAV -->
+<nav>
+  <a class="logo" href="https://labplain.co"><span>Lab</span>Plain</a>
+  <div class="nav-links">
+    <a href="https://labplain.co/#decoder">Decoder</a>
+    <a href="https://labplain.co/#articles">Articles</a>
   </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="badge">Lab Test Guide</div>
+  <h1>TSH (Thyroid-Stimulating Hormone) Test</h1>
+  <p>What your TSH result actually means — explained in plain English, not medical jargon.</p>
+  <div class="meta">Updated May 2025 &nbsp;·&nbsp; 8 min read &nbsp;·&nbsp; Reviewed for accuracy</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <!-- QUICK FACTS -->
+  <div class="quick-facts">
+    <div class="fact">
+      <div class="label">Normal Range</div>
+      <div class="value green">0.4 – 4.0 mIU/L</div>
+    </div>
+    <div class="fact">
+      <div class="label">Low TSH = </div>
+      <div class="value amber">Overactive Thyroid</div>
+    </div>
+    <div class="fact">
+      <div class="label">High TSH = </div>
+      <div class="value red">Underactive Thyroid</div>
+    </div>
+    <div class="fact">
+      <div class="label">Test Type</div>
+      <div class="value">Blood Draw</div>
+    </div>
+  </div>
+
+  <!-- WHAT IS TSH -->
+  <h2>What Is TSH?</h2>
+  <p>TSH stands for <strong>Thyroid-Stimulating Hormone</strong>. It is produced by your pituitary gland — a small gland at the base of your brain — and its job is to tell your thyroid gland how much hormone to make.</p>
+  <p>Think of TSH as the thermostat and your thyroid as the furnace. When the body needs more thyroid hormone, the pituitary turns up the TSH signal. When there's already plenty of thyroid hormone in your blood, TSH drops to tell the thyroid to slow down.</p>
+  <p>This is why the relationship feels <em>backwards</em> to most people: a <strong>high TSH</strong> usually means your thyroid is underperforming (hypothyroidism), while a <strong>low TSH</strong> usually means your thyroid is overperforming (hyperthyroidism).</p>
+
+  <div class="callout">
+    <p><strong>💡 The Backwards Rule:</strong> High TSH = your pituitary is screaming at an underactive thyroid. Low TSH = your pituitary has backed off because an overactive thyroid is already making too much hormone.</p>
+  </div>
+
+  <!-- NORMAL RANGES -->
+  <h2>TSH Reference Ranges</h2>
+  <p>Most labs use a standard reference range, but ranges can shift slightly depending on the lab, your age, and whether you are pregnant.</p>
+
+  <table class="range-table">
+    <thead>
+      <tr>
+        <th>TSH Level</th>
+        <th>Range (mIU/L)</th>
+        <th>Status</th>
+        <th>What It Suggests</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Very Low</td>
+        <td>&lt; 0.1</td>
+        <td><span class="tag critical">Critical Low</span></td>
+        <td>Severe hyperthyroidism or thyroid storm risk</td>
+      </tr>
+      <tr>
+        <td>Low</td>
+        <td>0.1 – 0.39</td>
+        <td><span class="tag low">Low</span></td>
+        <td>Possible hyperthyroidism; often needs follow-up</td>
+      </tr>
+      <tr>
+        <td>Normal</td>
+        <td>0.4 – 4.0</td>
+        <td><span class="tag normal">Normal</span></td>
+        <td>Thyroid function appears healthy</td>
+      </tr>
+      <tr>
+        <td>Mildly High</td>
+        <td>4.1 – 10.0</td>
+        <td><span class="tag high">High</span></td>
+        <td>Subclinical hypothyroidism; may or may not need treatment</td>
+      </tr>
+      <tr>
+        <td>Very High</td>
+        <td>&gt; 10.0</td>
+        <td><span class="tag critical">Critical High</span></td>
+        <td>Overt hypothyroidism; treatment typically recommended</td>
+      </tr>
+      <tr>
+        <td>Pregnancy (1st trimester)</td>
+        <td>0.1 – 2.5</td>
+        <td><span class="tag normal">Special Range</span></td>
+        <td>Tighter control needed; different thresholds apply</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout warning">
+    <p><strong>⚠️ Lab ranges vary.</strong> Always compare your result to the reference range printed on your own lab report — not internet averages. Your doctor's interpretation of your result matters more than any number alone.</p>
+  </div>
+
+  <!-- SYMPTOMS -->
+  <h2>Symptoms by TSH Direction</h2>
+  <p>Your symptoms often tell the story before the lab result does. Here's what each direction of abnormal TSH typically feels like:</p>
+
+  <div class="card-grid">
+    <div class="card high-card">
+      <h3>🔴 High TSH — Underactive Thyroid</h3>
+      <ul>
+        <li>Fatigue and sluggishness</li>
+        <li>Unexplained weight gain</li>
+        <li>Feeling cold all the time</li>
+        <li>Constipation</li>
+        <li>Dry skin and brittle nails</li>
+        <li>Hair thinning or loss</li>
+        <li>Brain fog, poor memory</li>
+        <li>Depression or low mood</li>
+        <li>Slow heart rate (bradycardia)</li>
+        <li>Puffy face, especially around eyes</li>
+        <li>Muscle aches or weakness</li>
+        <li>Heavy or irregular periods</li>
+      </ul>
+    </div>
+    <div class="card low-card">
+      <h3>🟡 Low TSH — Overactive Thyroid</h3>
+      <ul>
+        <li>Rapid or irregular heartbeat</li>
+        <li>Unexplained weight loss</li>
+        <li>Feeling hot and sweating excessively</li>
+        <li>Anxiety, nervousness, irritability</li>
+        <li>Trembling hands or fingers</li>
+        <li>Diarrhea or frequent bowel movements</li>
+        <li>Insomnia or difficulty sleeping</li>
+        <li>Muscle weakness</li>
+        <li>Bulging eyes (Graves' disease sign)</li>
+        <li>Goiter (enlarged neck)</li>
+        <li>Light or missed periods</li>
+        <li>Fatigue despite feeling wired</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>📌 Note:</strong> Many people with mildly abnormal TSH have <em>no symptoms at all</em>. This is called subclinical thyroid disease and is very common, especially in older adults. Your doctor will weigh whether treatment makes sense.</p>
+  </div>
+
+  <!-- CAUSES -->
+  <h2>What Causes Abnormal TSH?</h2>
+  <p>There are many reasons your TSH can fall outside the normal range — some are serious, many are manageable.</p>
+
+  <div class="causes-grid">
+    <div class="cause-card high">
+      <h3>🔴 Causes of HIGH TSH</h3>
+      <ul>
+        <li>Hashimoto's thyroiditis (autoimmune)</li>
+        <li>After radioactive iodine treatment</li>
+        <li>Post-thyroid surgery</li>
+        <li>Certain medications (lithium, amiodarone)</li>
+        <li>Iodine deficiency</li>
+        <li>Pituitary tumor (TSH-secreting)</li>
+        <li>Recovery from recent illness</li>
+        <li>Congenital hypothyroidism</li>
+      </ul>
+    </div>
+    <div class="cause-card low">
+      <h3>🟡 Causes of LOW TSH</h3>
+      <ul>
+        <li>Graves' disease (autoimmune)</li>
+        <li>Toxic nodular goiter</li>
+        <li>Thyroiditis (temporary inflammation)</li>
+        <li>Too much thyroid medication</li>
+        <li>Pituitary gland damage or tumor</li>
+        <li>High-dose biotin supplements</li>
+        <li>Early pregnancy (normal in 1st trimester)</li>
+        <li>Excessive iodine intake</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout warning">
+    <p><strong>💊 Medication note:</strong> If you take levothyroxine (Synthroid, Tirosint), your TSH result is the primary tool your doctor uses to adjust your dose. A single off result doesn't always mean a dose change — trends over time matter more.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <div class="q"><span>Q</span> My TSH is slightly high but I feel fine. Do I need treatment?</div>
+    <div class="a">Not necessarily. Subclinical hypothyroidism (TSH 4–10 with normal T4) is often monitored rather than treated immediately, especially if you have no symptoms. Your doctor will consider your age, other risk factors, and trends over time before recommending medication.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="q"><span>Q</span> Can TSH levels change from day to day?</div>
+    <div class="a">Yes. TSH naturally fluctuates — it follows a circadian rhythm and is highest in the early morning hours. Illness, stress, poor sleep, and recent food intake can also affect the result. That's why one slightly abnormal reading often prompts a repeat test before any diagnosis is made.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="q"><span>Q</span> What's the difference between TSH, T3, and T4?</div>
+    <div class="a">TSH tells your thyroid what to do. T4 (thyroxine) is the main hormone the thyroid produces, and T3 (triiodothyronine) is the active form the body converts T4 into. TSH is usually the first test ordered because it's the most sensitive indicator of thyroid function. T3 and T4 are added when TSH is abnormal to get the full picture.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="q"><span>Q</span> I'm pregnant. Are my TSH results interpreted differently?</div>
+    <div class="a">Yes — significantly. During the first trimester, TSH naturally drops due to rising hCG levels. Most guidelines use a lower upper limit of around 2.5 mIU/L for the first trimester. Unmanaged thyroid disease during pregnancy carries real risks, so be sure your OB knows about any thyroid conditions.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="q"><span>Q</span> Can I take biotin supplements before my TSH test?</div>
+    <div class="a">No — you should stop biotin (vitamin B7) for at least 48–72 hours before a thyroid panel. High-dose biotin interferes with the lab assay and can produce falsely low TSH results, which has led to unnecessary treatment. Many people taking beauty supplements are getting biotin without realizing it.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="q"><span>Q</span> Is a TSH of 3.5 considered normal?</div>
+    <div class="a">Technically yes — 3.5 falls within the standard reference range of 0.4–4.0. However, some endocrinologists prefer TSH under 2.5 for optimal thyroid function, especially in women trying to conceive. This is an area of ongoing debate in medicine. If you feel symptomatic at 3.5, it's worth discussing with your doctor.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="q"><span>Q</span> Do I need to fast before a TSH test?</div>
+    <div class="a">Not usually. TSH results are not significantly affected by food intake, unlike glucose or cholesterol tests. However, if your test includes a broader metabolic panel, your doctor may ask you to fast anyway. When in doubt, ask your provider's office before the appointment.</div>
+  </div>
+
+  <!-- RELATED TESTS -->
+  <h2>Related Tests Often Ordered Together</h2>
+  <p>When TSH is abnormal, your doctor will usually follow up with one or more of these tests to complete the picture:</p>
+
+  <div class="related-grid">
+    <a class="related-card" href="https://labplain.co/articles/t4.html">
+      <div class="test-name">Free T4</div>
+      <div class="test-desc">The main thyroid hormone; confirms whether the thyroid is actually underperforming</div>
+    </a>
+    <a class="related-card" href="https://labplain.co/articles/t3.html">
+      <div class="test-name">Free T3</div>
+      <div class="test-desc">The active form of thyroid hormone; helps diagnose T3 toxicosis and monitor treatment</div>
+    </a>
+    <a class="related-card" href="#">
+      <div class="test-name">TPO Antibodies</div>
+      <div class="test-desc">Detects Hashimoto's (hypothyroid) and Graves' disease (hyperthyroid)</div>
+    </a>
+    <a class="related-card" href="#">
+      <div class="test-name">Thyroglobulin Ab</div>
+      <div class="test-desc">Another autoimmune marker; often ordered alongside TPO antibodies</div>
+    </a>
+    <a class="related-card" href="https://labplain.co/articles/glucose.html">
+      <div class="test-name">Glucose</div>
+      <div class="test-desc">Thyroid dysfunction can affect blood sugar regulation</div>
+    </a>
+    <a class="related-card" href="https://labplain.co/articles/hemoglobin.html">
+      <div class="test-name">Hemoglobin / CBC</div>
+      <div class="test-desc">Hypothyroidism is a common cause of unexplained anemia</div>
+    </a>
+  </div>
+
+  <!-- DOCTOR QUESTIONS -->
+  <h2>Questions to Ask Your Doctor</h2>
+  <p>Walk into your appointment prepared. Here are the most important questions to ask when your TSH result is abnormal:</p>
+
+  <ol class="questions-list">
+    <li><div class="num">1</div>Is my TSH result high or low enough to explain my symptoms, or could something else be causing them?</li>
+    <li><div class="num">2</div>Should we also check my Free T4, Free T3, or thyroid antibodies to get the complete picture?</li>
+    <li><div class="num">3</div>Is this likely to be a temporary fluctuation, or does the trend suggest a chronic condition?</li>
+    <li><div class="num">4</div>Do I need treatment now, or should we retest in 3–6 months and monitor first?</li>
+    <li><div class="num">5</div>If I start thyroid medication, what TSH range are we aiming for?</li>
+    <li><div class="num">6</div>Are any of my current medications or supplements affecting my thyroid or this test result?</li>
+    <li><div class="num">7</div>Should I see an endocrinologist, or is this something you can manage?</li>
+    <li><div class="num">8</div>How often should I retest, and what symptoms should prompt me to call sooner?</li>
+  </ol>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <strong>Medical Disclaimer:</strong> This article is for informational and educational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider with questions about your lab results or medical conditions. Never disregard professional medical advice based on something you read here.
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  <p>© 2025 <a href="https://labplain.co">LabPlain</a> · Understand your labs. No medical degree required.</p>
+  <p style="margin-top:0.5rem"><a href="https://labplain.co/#decoder">AI Lab Decoder</a> &nbsp;·&nbsp; <a href="https://labplain.co/#articles">All Articles</a></p>
+</footer>
+
 </body>
 </html>
