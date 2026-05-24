@@ -1,105 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALT (Alanine Aminotransferase) – LabPlain</title>
-  <meta name="description" content="What does your ALT (Alanine Aminotransferase) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/alt">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALT (Alanine Aminotransferase) | LabPlain</title>
+  <meta name="description" content="Understand your ALT blood test results. Learn what high or low ALT levels mean, causes, symptoms, and when to talk to your doctor." />
+  <link rel="canonical" href="https://labplain.co/alt" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f8fafc; color: #1e293b; }
+    header { background: #1e3a5f; color: white; padding: 16px 24px; display: flex; align-items: center; gap: 12px; }
+    header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: 700; }
+    header span { font-size: 0.85rem; opacity: 0.75; }
+    .hero { background: linear-gradient(135deg, #1e3a5f 0%, #2d5986 100%); color: white; padding: 48px 24px 40px; text-align: center; }
+    .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+    .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+    .container { max-width: 860px; margin: 0 auto; padding: 32px 24px; }
+    .card { background: white; border-radius: 12px; padding: 28px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+    .card h2 { font-size: 1.3rem; font-weight: 700; color: #1e3a5f; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #e2e8f0; }
+    .range-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 4px; }
+    .range-box { border-radius: 10px; padding: 16px; text-align: center; }
+    .range-box .label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+    .range-box .value { font-size: 1.15rem; font-weight: 800; margin-bottom: 4px; }
+    .range-box .note { font-size: 0.78rem; }
+    .low { background: #eff6ff; color: #1d4ed8; }
+    .normal { background: #f0fdf4; color: #15803d; }
+    .high { background: #fff7ed; color: #c2410c; }
+    .critical { background: #fef2f2; color: #991b1b; }
+    ul { padding-left: 20px; }
+    ul li { margin-bottom: 8px; line-height: 1.6; }
+    .symptom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .symptom-box { background: #f8fafc; border-left: 4px solid #1e3a5f; border-radius: 6px; padding: 14px 16px; }
+    .symptom-box .symptom-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 4px; color: #1e3a5f; }
+    .symptom-box p { font-size: 0.88rem; color: #475569; line-height: 1.5; }
+    .cause-list { list-style: none; padding: 0; }
+    .cause-list li { padding: 10px 0; border-bottom: 1px solid #f1f5f9; font-size: 0.95rem; line-height: 1.6; }
+    .cause-list li:last-child { border-bottom: none; }
+    .cause-list li strong { color: #1e3a5f; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { font-size: 1rem; font-weight: 700; color: #1e3a5f; margin-bottom: 6px; }
+    .faq-item p { font-size: 0.93rem; line-height: 1.7; color: #475569; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+    .related-link { background: #f0f7ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px 14px; text-align: center; text-decoration: none; color: #1e3a5f; font-weight: 600; font-size: 0.88rem; transition: background 0.2s; }
+    .related-link:hover { background: #dbeafe; }
+    .doctor-list { list-style: none; padding: 0; }
+    .doctor-list li { padding: 10px 14px; background: #f0f7ff; border-radius: 8px; margin-bottom: 8px; font-size: 0.93rem; color: #1e3a5f; font-weight: 500; }
+    .disclaimer { background: #fefce8; border: 1px solid #fde68a; border-radius: 10px; padding: 16px 20px; font-size: 0.85rem; color: #78350f; line-height: 1.6; margin-top: 8px; }
+    footer { text-align: center; padding: 32px 16px; color: #94a3b8; font-size: 0.85rem; }
+    footer a { color: #1e3a5f; text-decoration: none; }
+    @media (max-width: 600px) { .hero h1 { font-size: 1.6rem; } }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; ALT (Alanine Aminotransferase)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">ALT (Alanine Aminotransferase)</em> result mean?</h1>
-    <span class="category-tag">Liver</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+  <header>
+    <a href="/">🧪 LabPlain</a>
+    <span>Understand your labs. No medical degree required.</span>
+  </header>
+
+  <div class="hero">
+    <h1>ALT (Alanine Aminotransferase)</h1>
+    <p>A key liver enzyme — when it's elevated, your liver is waving a flag. Here's what it means in plain English.</p>
+  </div>
+
+  <div class="container">
 
     <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>The <strong>ALT (Alanine Aminotransferase)</strong> test measures an enzyme found mainly in your liver — when liver cells are stressed or damaged, they release ALT into the bloodstream.</p>
-    </div>
-
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">7–56 U/L</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
-    </div>
-
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>Elevated ALT suggests liver cell stress or damage. Common causes include fatty liver, alcohol use, certain medications, or viral hepatitis.</p>
-        </div>
+      <h2>📊 Reference Ranges</h2>
+      <div class="range-grid">
         <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Low ALT is generally not a concern and has no clinical significance on its own.</p>
+          <div class="label">Low</div>
+          <div class="value">&lt; 7 U/L</div>
+          <div class="note">Rarely concerning</div>
+        </div>
+        <div class="range-box normal">
+          <div class="label">Normal</div>
+          <div class="value">7 – 56 U/L</div>
+          <div class="note">Typical healthy range</div>
+        </div>
+        <div class="range-box high">
+          <div class="label">Elevated</div>
+          <div class="value">57 – 200 U/L</div>
+          <div class="note">Warrants investigation</div>
+        </div>
+        <div class="range-box critical">
+          <div class="label">Significantly High</div>
+          <div class="value">&gt; 200 U/L</div>
+          <div class="note">Possible liver injury</div>
+        </div>
+      </div>
+      <p style="margin-top:14px; font-size:0.85rem; color:#64748b;">Ranges vary slightly by lab and sex. Always compare against your lab's printed reference range.</p>
+    </div>
+
+    <div class="card">
+      <h2>🤔 What Is ALT?</h2>
+      <p style="line-height:1.75; font-size:0.97rem;">ALT (Alanine Aminotransferase) is an enzyme found mainly in liver cells. When liver cells are damaged or inflamed, they release ALT into the bloodstream — so a blood test can detect the spill. It's one of the most specific markers for liver health and is almost always included in a <strong>comprehensive metabolic panel (CMP)</strong>.</p>
+      <p style="margin-top:12px; line-height:1.75; font-size:0.97rem;">ALT is often measured alongside <strong>AST</strong> (another liver enzyme). The ratio between the two helps doctors distinguish between different types of liver disease.</p>
+    </div>
+
+    <div class="card">
+      <h2>⚠️ Symptoms of High ALT</h2>
+      <p style="margin-bottom:16px; font-size:0.93rem; color:#475569;">Mildly elevated ALT often causes <em>no symptoms at all</em>. When symptoms do appear, they usually indicate more significant liver stress:</p>
+      <div class="symptom-grid">
+        <div class="symptom-box">
+          <div class="symptom-title">Fatigue</div>
+          <p>Persistent tiredness or low energy, even with adequate sleep.</p>
+        </div>
+        <div class="symptom-box">
+          <div class="symptom-title">Abdominal Discomfort</div>
+          <p>Dull ache or fullness in the upper right side of the abdomen.</p>
+        </div>
+        <div class="symptom-box">
+          <div class="symptom-title">Jaundice</div>
+          <p>Yellowing of the skin or whites of the eyes — a serious sign.</p>
+        </div>
+        <div class="symptom-box">
+          <div class="symptom-title">Nausea or Poor Appetite</div>
+          <p>Feeling queasy, especially after meals or with fatty foods.</p>
+        </div>
+        <div class="symptom-box">
+          <div class="symptom-title">Dark Urine</div>
+          <p>Urine that looks brown or tea-colored can indicate liver stress.</p>
+        </div>
+        <div class="symptom-box">
+          <div class="symptom-title">Easy Bruising</div>
+          <p>The liver produces clotting proteins — damage can affect this.</p>
         </div>
       </div>
     </div>
 
     <div class="card">
-      <div class="section-label">What to do next</div>
-      <div class="next-steps">If ALT is elevated, your doctor may want to repeat the test and check other liver markers like AST, ALP, and bilirubin to get the full picture.</div>
+      <h2>🔍 Common Causes of High ALT</h2>
+      <ul class="cause-list">
+        <li><strong>Non-Alcoholic Fatty Liver Disease (NAFLD):</strong> The most common cause in Western countries. Fat accumulation in the liver triggers inflammation and enzyme release.</li>
+        <li><strong>Alcohol Use:</strong> Regular or heavy alcohol consumption damages liver cells directly, causing ALT to leak into the blood.</li>
+        <li><strong>Viral Hepatitis (A, B, or C):</strong> Hepatitis viruses infect and inflame liver tissue, dramatically raising ALT levels.</li>
+        <li><strong>Medications:</strong> Statins, acetaminophen (Tylenol), NSAIDs, antibiotics, and some supplements can elevate ALT — even at normal doses in some people.</li>
+        <li><strong>Thyroid Disorders:</strong> Both hypothyroidism and hyperthyroidism can mildly elevate liver enzymes.</li>
+        <li><strong>Celiac Disease:</strong> Undiagnosed gluten intolerance can cause mild liver enzyme elevation that resolves with a gluten-free diet.</li>
+        <li><strong>Strenuous Exercise:</strong> Intense workouts can briefly raise ALT (and AST), particularly in athletes.</li>
+        <li><strong>Autoimmune Hepatitis:</strong> The immune system mistakenly attacks liver cells, causing chronic inflammation.</li>
+      </ul>
     </div>
 
-    <div class="tool-cta">
-      <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-      <a href="/">Open the Decoder →</a>
+    <div class="card">
+      <h2>💊 Causes of Low ALT</h2>
+      <p style="line-height:1.75; font-size:0.95rem;">Low ALT is usually not a concern. However, very low levels have been associated with:</p>
+      <ul style="margin-top:12px;">
+        <li><strong>Vitamin B6 deficiency</strong> — ALT requires B6 to function; deficiency lowers enzyme activity.</li>
+        <li><strong>Advanced liver disease or cirrhosis</strong> — when so few liver cells remain that enzyme output drops.</li>
+        <li><strong>Older age</strong> — ALT naturally tends to decrease with aging.</li>
+      </ul>
     </div>
 
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
-    </footer>
+    <div class="card">
+      <h2>❓ Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>My ALT is slightly above normal. Should I panic?</h3>
+        <p>Not necessarily. A mildly elevated ALT (just above the upper limit) is common and can result from recent exercise, a heavy meal, a new medication, or even normal lab variation. Your doctor will likely retest in a few weeks to see if it normalizes.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is ALT different from AST?</h3>
+        <p>Both are liver enzymes, but ALT is more specific to the liver. AST is also found in muscle, heart, and other tissues. If both are elevated, the ALT/AST ratio helps narrow down the cause — a ratio above 2:1 often suggests alcohol-related liver disease.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I lower my ALT without medication?</h3>
+        <p>Yes, in many cases. Reducing alcohol intake, losing weight if overweight, avoiding unnecessary supplements or medications that stress the liver, and eating a balanced diet can all help bring ALT down over time — especially with NAFLD.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What level of ALT requires immediate attention?</h3>
+        <p>ALT above 200–300 U/L warrants prompt evaluation. Levels in the thousands suggest acute liver injury — from a medication overdose, acute hepatitis, or other serious cause — and require urgent medical care.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Will my ALT be affected by what I ate before the test?</h3>
+        <p>A large fatty meal can mildly affect results. For the most accurate reading, most labs recommend fasting for 8–12 hours before a comprehensive metabolic panel.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🔗 Related Tests to Know</h2>
+      <div class="related-grid">
+        <a class="related-link" href="/ast">AST</a>
+        <a class="related-link" href="/alp">ALP</a>
+        <a class="related-link" href="/bilirubin">Bilirubin</a>
+        <a class="related-link" href="/ggt">GGT</a>
+        <a class="related-link" href="/albumin">Albumin</a>
+        <a class="related-link" href="/comprehensive-metabolic-panel">CMP</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🩺 Questions to Ask Your Doctor</h2>
+      <ul class="doctor-list">
+        <li>💬 "Is my ALT elevation likely related to a medication I'm taking?"</li>
+        <li>💬 "Should I be tested for hepatitis B or C?"</li>
+        <li>💬 "Do I need an ultrasound to check for fatty liver?"</li>
+        <li>💬 "How soon should I retest to see if this is improving?"</li>
+        <li>💬 "Are there lifestyle changes that could bring this number down?"</li>
+      </ul>
+    </div>
+
+    <div class="disclaimer">
+      <strong>⚕️ Medical Disclaimer:</strong> This content is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your doctor or a qualified healthcare provider about your specific lab results.
+    </div>
+
   </div>
+
+  <footer>
+    <p><a href="/">← Back to LabPlain Home</a> &nbsp;|&nbsp; © 2025 LabPlain. All rights reserved.</p>
+  </footer>
 </body>
 </html>
