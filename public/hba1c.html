@@ -3,114 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Understanding Your HbA1c Lab Test Results | LabPlain</title>
-    <meta name="description" content="A clear, clinically-reviewed guide to your Hemoglobin A1c (HbA1c) test results. Learn what your 3-month average blood sugar levels mean.">
+    <title>HbA1c Explained | LabPlain</title>
+    <meta name="description" content="Understand your HbA1c test results in plain English. Learn what your 3-month blood sugar average means.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Medical Web Schema for Google E-E-A-T Integration -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalWebPage",
-      "name": "Understanding Your HbA1c Lab Test Results",
-      "description": "Clinical breakdown of Hemoglobin A1c reference ranges and patient guidance.",
+      "name": "HbA1c Explained",
+      "description": "Understanding your Hemoglobin A1c test results and reference ranges.",
       "aspectReviewed": "Lab test interpretation",
       "mainEntity": {
         "@type": "MedicalTest",
         "name": "Hemoglobin A1c",
-        "alternateName": ["HbA1c", "Glycated Hemoglobin Test"],
-        "normalRange": "Below 5.7%"
+        "alternateName": ["HbA1c", "Glycated Hemoglobin"]
       }
     }
     </script>
 </head>
 <body class="bg-stone-50 text-stone-900 font-sans antialiased">
-
-    <!-- Premium Minimalist Header -->
-    <header class="border-b border-stone-200 bg-white sticky top-0 z-50">
-        <div class="max-w-3xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="index.html" class="font-semibold text-lg tracking-tight hover:opacity-80 transition">LabPlain<span class="text-stone-400 font-normal">.co</span></a>
-            <span class="text-xs bg-stone-100 text-stone-600 px-2.5 py-1 rounded-full font-medium tracking-wide">CLINICAL REFERENCE v1.1</span>
-        </div>
-    </header>
-
     <main class="max-w-3xl mx-auto px-4 py-12">
-        <!-- Main Document Container -->
         <article class="bg-white border border-stone-200 rounded-2xl p-6 md:p-10 shadow-sm space-y-8">
             
-            <!-- Authority Verification Badge -->
-            <div class="flex flex-wrap items-center gap-3 text-xs border-b border-stone-100 pb-6">
-                <span class="bg-emerald-50 text-emerald-700 font-semibold px-2.5 py-1 rounded">✓ CLINICALLY REVIEWED</span>
-                <span class="text-stone-500">Fact-Checked & Verified against ADA Guidelines</span>
-                <span class="text-stone-300">|</span>
-                <span class="text-stone-500 font-medium">Updated May 2026</span>
+            <div>
+                <h1 class="text-3xl font-bold tracking-tight text-stone-900 md:text-4xl">HbA1c Explained</h1>
+                <p class="text-stone-500 mt-2 text-lg">What your number actually means, why it matters, and what to do next.</p>
             </div>
 
-            <!-- Title & Concept Block -->
-            <div class="space-y-3">
-                <h1 class="text-3xl font-bold tracking-tight text-stone-900 md:text-4xl">Hemoglobin A1c (HbA1c)</h1>
-                <p class="text-lg text-stone-600 leading-relaxed">
-                    The HbA1c test measures the percentage of your hemoglobin—the protein in red blood cells that carries oxygen—that is coated with sugar (glycated). Because red blood cells live for about 3 months, this test reveals your **average blood sugar levels over the past 90 days**.
+            <div class="text-sm text-stone-500 bg-stone-50 p-4 rounded-xl border border-stone-200 leading-relaxed">
+                ⚠️ For informational purposes only. This page does not constitute medical advice. Always discuss your lab results with your doctor.
+            </div>
+
+            <div class="space-y-4">
+                <div class="text-2xl">%F0%9F%AA%BA</div>
+                <h2 class="text-xl font-bold text-stone-900">What Is HbA1c?</h2>
+                <p class="text-stone-600 leading-relaxed">
+                    The HbA1c test measures the percentage of your hemoglobin—the protein in red blood cells that carries oxygen—that is coated with sugar (glycated). Because red blood cells live for about 3 months, this test reveals your <strong>average blood sugar levels over the past 90 days</strong>.
+                </p>
+                <p class="text-stone-600 leading-relaxed">
+                    Unlike standard fasting glucose tests which change day by day based on your last meal, stress levels, or sleep, HbA1c provides a stable historical record. Your doctor uses it to screen for prediabetes and type 2 diabetes, or to see how well an existing blood sugar management plan is working.
                 </p>
             </div>
 
-            <!-- Clinical Reference Ranges Grid -->
             <div class="space-y-4">
-                <h2 class="text-xs font-bold tracking-wider text-stone-400 uppercase">Official Reference Ranges</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="p-4 rounded-xl bg-stone-50 border border-stone-200">
-                        <div class="text-xs text-stone-500 font-medium">Normal</div>
-                        <div class="text-xl font-bold text-stone-900 mt-1">Below 5.7%</div>
-                        <p class="text-xs text-stone-600 mt-1.5">Optimal glucose regulation.</p>
+                <div class="text-2xl">📊</div>
+                <h2 class="text-xl font-bold text-stone-900">HbA1c Reference Ranges</h2>
+                <div class="overflow-x-auto border border-stone-200 rounded-xl">
+                    <table class="min-w-full divide-y divide-stone-200 text-sm">
+                        <thead class="bg-stone-50">
+                            <tr>
+                                <th class="px-4 py-3 text-left font-semibold text-stone-700">Level (%)</th>
+                                <th class="px-4 py-3 text-left font-semibold text-stone-700">Category</th>
+                                <th class="px-4 py-3 text-left font-semibold text-stone-700">What It Means</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-stone-200 bg-white text-stone-600">
+                            <tr>
+                                <td class="px-4 py-3 font-medium text-stone-900">Below 5.7%</td>
+                                <td class="px-4 py-3">Normal</td>
+                                <td class="px-4 py-3">Optimal glucose regulation over the past 3 months.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium text-stone-900">5.7% – 6.4%</td>
+                                <td class="px-4 py-3">Prediabetes</td>
+                                <td class="px-4 py-3">Early signs of cellular insulin resistance; lifestyle changes recommended.</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium text-stone-900">6.5% and above</td>
+                                <td class="px-4 py-3">Diabetes</td>
+                                <td class="px-4 py-3">Diagnostic threshold for clinical diabetes; active management needed.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-xs text-stone-400 italic">* Target ranges can vary for pregnant individuals, older adults, and those managing long-term chronic conditions. Always interpret with your physician.</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="text-2xl">⚠️</div>
+                <h2 class="text-xl font-bold text-stone-900">Symptoms of Unbalanced Blood Sugar</h2>
+                <p class="text-stone-600 leading-relaxed">
+                    Mildly elevated HbA1c (prediabetes) typically causes no symptoms at all. However, as levels move higher into the diabetes range, you may notice distinct systemic signals:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mt-2">
+                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+                        <strong class="text-stone-900 block mb-1">Increased Thirst (Polydipsia)</strong>
+                        <span class="text-stone-600">Your kidneys work overtime to filter and absorb the excess sugar, pulling fluid from tissues.</span>
                     </div>
-                    <div class="p-4 rounded-xl bg-amber-50/60 border border-amber-200/70">
-                        <div class="text-xs text-amber-700 font-medium">Prediabetes</div>
-                        <div class="text-xl font-bold text-amber-900 mt-1">5.7% – 6.4%</div>
-                        <p class="text-xs text-amber-800 mt-1.5">Indicates early cellular insulin resistance.</p>
+                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+                        <strong class="text-stone-900 block mb-1">Frequent Urination (Polyuria)</strong>
+                        <span class="text-stone-600">As fluids are pulled from your body, you find yourself needing to use the bathroom far more often.</span>
                     </div>
-                    <div class="p-4 rounded-xl bg-rose-50/60 border border-rose-200/70">
-                        <div class="text-xs text-rose-700 font-medium">Diabetes</div>
-                        <div class="text-xl font-bold text-rose-900 mt-1">6.5% or Higher</div>
-                        <p class="text-xs text-rose-800 mt-1.5">Diagnostic threshold for clinical diabetes.</p>
+                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+                        <strong class="text-stone-900 block mb-1">Unexplained Fatigue</strong>
+                        <span class="text-stone-600">Because sugar stays in the bloodstream instead of entering cells, your body lacks its main energy source.</span>
+                    </div>
+                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+                        <strong class="text-stone-900 block mb-1">Blurred Vision</strong>
+                        <span class="text-stone-600">High blood sugar pulls fluid from the lenses of your eyes, changing your ability to focus properly.</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Deep Analytical Context -->
-            <div class="space-y-4 pt-4 border-t border-stone-100">
-                <h2 class="text-lg font-bold text-stone-900">Why Doctors Order This Test</h2>
-                <p class="text-stone-600 leading-relaxed">
-                    Unlike standard finger-prick fasting glucose tests which fluctuate wildly based on your last meal, stress levels, or sleep patterns, HbA1c cannot be cheated. It provides an un-wipeable diagnostic record used to identify insulin resistance, screen for type 2 diabetes, or monitor the efficacy of ongoing metabolic treatment plans.
-                </p>
+            <div class="space-y-4">
+                <div class="text-2xl">🔍</div>
+                <h2 class="text-xl font-bold text-stone-900">Common Causes of High HbA1c</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+                        <strong class="text-stone-900 block mb-1">Insulin Resistance</strong>
+                        <span class="text-stone-600">Cells stop responding efficiently to insulin, leaving glucose locked out in the blood.</span>
+                    </div>
+                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+                        <strong class="text-stone-900 block mb-1">High-Refined Carbohydrate Diet</strong>
+                        <span class="text-stone-600">Frequent spikes from processed foods and added sugars overwhelm metabolic pathways.</span>
+                    </div>
+                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+                        <strong class="text-stone-900 block mb-1">Physical Inactivity</strong>
+                        <span class="text-stone-600">Skeletal muscles are prime glucose sinks; lack of movement reduces natural sugar clearance.</span>
+                    </div>
+                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+                        <strong class="text-stone-900 block mb-1">Chronic Stress & Lack of Sleep</strong>
+                        <span class="text-stone-600">Elevated cortisol and epinephrine trigger the liver to dump extra glucose into circulation.</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- Patient Action Architecture (What to Ask) -->
-            <div class="bg-stone-50 rounded-xl p-5 md:p-6 border border-stone-200 space-y-3">
-                <h3 class="text-sm font-bold tracking-wide text-stone-800 uppercase flex items-center gap-2">
-                    💬 Clinical Conversation Guide
-                </h3>
-                <p class="text-xs text-stone-500">Print or save these exact questions to review with your practitioner during your appointment:</p>
-                <ul class="space-y-2 text-sm text-stone-700 list-disc pl-5">
-                    <li>"Does my HbA1c score correlate cleanly with my daily fasting glucose readings?"</li>
-                    <li>"Are there confounding factors—such as anemia or specific vitamin deficiencies—that could falsely skew my results?"</li>
-                    <li>"If I am in the prediabetes window, should we prioritize continuous glucose monitoring (CGM) or dietary macronutrient intervention first?"</li>
+            <div class="space-y-4">
+                <div class="text-2xl">📉</div>
+                <h2 class="text-xl font-bold text-stone-900">Can HbA1c Be Too Low?</h2>
+                <p class="text-stone-600 leading-relaxed">
+                    An HbA1c below 4.0% is uncommon but can sometimes signal underlying health or blood-related conditions. Because the test relies on red blood cells, anything that speeds up their lifecycle can falsely lower the score:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mt-2">
+                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+                        <strong class="text-stone-900 block mb-1">Hemolytic Anemia</strong>
+                        <span class="text-stone-600">Red blood cells die off too quickly, meaning they spend less time accumulating sugar coats.</span>
+                    </div>
+                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
+                        <strong class="text-stone-900 block mb-1">Chronic Liver or Kidney Disease</strong>
+                        <span class="text-stone-600">Can alter how red blood cells are manufactured and sustained within the body.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 bg-stone-50 border border-stone-200 rounded-2xl space-y-4 text-center">
+                <div class="text-2xl">🤖</div>
+                <h3 class="text-lg font-bold text-stone-900">Decode Your HbA1c Result</h3>
+                <p class="text-sm text-stone-600 max-w-md mx-auto">Enter your number and we'll explain what it means in plain English.</p>
+                <div class="max-w-xs mx-auto flex gap-2">
+                    <input type="text" placeholder="e.g. 5.8" class="w-full px-3 py-2 border border-stone-300 rounded-lg text-sm focus:outline-none focus:border-stone-500 bg-white">
+                    <button class="bg-stone-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-stone-800 transition whitespace-nowrap">Explain My Result</button>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <div class="text-2xl">❓</div>
+                <h2 class="text-xl font-bold text-stone-900">Frequently Asked Questions</h2>
+                <div class="space-y-4 text-sm text-stone-600">
+                    <div>
+                        <strong class="text-stone-900 block mb-1">Do I need to fast before an HbA1c test?</strong>
+                        <span>No. Because it measures a 3-month average, eating or fasting right before the test won't change your result. You can take it at any time of day.</span>
+                    </div>
+                    <div>
+                        <strong class="text-stone-900 block mb-1">How fast can I bring down my HbA1c score?</strong>
+                        <span>Because it tracks the 90-day lifecycle of red blood cells, meaningful changes typically show up on bloodwork after 3 months of consistent lifestyle or dietary adjustments.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <div class="text-2xl">🔗</div>
+                <h2 class="text-xl font-bold text-stone-900">Related Lab Tests</h2>
+                <div class="flex flex-wrap gap-2 text-xs font-medium text-stone-600">
+                    <a href="triglycerides.html" class="bg-stone-100 border border-stone-200 px-3 py-1.5 rounded-full hover:bg-stone-200 transition">Triglycerides</a>
+                    <span class="bg-stone-100 border border-stone-200 px-3 py-1.5 rounded-full">Fasting Glucose</span>
+                    <span class="bg-stone-100 border border-stone-200 px-3 py-1.5 rounded-full">Fasting Insulin</span>
+                </div>
+            </div>
+
+            <div class="space-y-4 border-t border-stone-200 pt-6">
+                <div class="text-2xl">👨‍⚕️</div>
+                <h2 class="text-xl font-bold text-stone-900">Questions to Ask Your Doctor</h2>
+                <ul class="space-y-2 text-sm text-stone-600 list-disc pl-5">
+                    <li>"My HbA1c is [X] — does this point to early prediabetes or insulin resistance?"</li>
+                    <li>"Could any personal factors, like anemia or iron levels, be throwing off my score?"</li>
+                    <li>"What specific changes to my daily habits should we focus on over the next 90 days before we retest?"</li>
                 </ul>
             </div>
 
-            <!-- Authoritative Citations Footer -->
-            <footer class="pt-6 border-t border-stone-200 space-y-4">
-                <div class="text-xs text-stone-400">
-                    <span class="font-semibold text-stone-500">Institutional Sources & Peer-Reviewed Standards:</span>
-                    <ul class="mt-2 space-y-1 list-decimal pl-4">
-                        <li>American Diabetes Association (ADA). <span class="italic">Standards of Care in Diabetes</span>. Diagnosis and Classification Criteria.</li>
-                        <li>National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK). <span class="italic">The A1C Test & Diabetes Diagnosis</span>. US Department of Health and Human Services.</li>
-                    </ul>
-                </div>
-                
-                <!-- Legal Disclaimer -->
-                <div class="text-[10px] text-stone-400 bg-stone-50 p-3.5 rounded-lg border border-stone-200/60 leading-normal">
-                    <strong>⚠️ EDUCATIONAL DISCLAIMER:</strong> This profile is generated for informational, educational purposes only. LabPlain does not yield official clinical diagnoses, treatment regimens, or medical advice. Always sync immediately with a licensed physician regarding lab variations.
-                </div>
-            </footer>
         </article>
     </main>
 </body>
