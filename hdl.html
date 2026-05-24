@@ -1,105 +1,655 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HDL Cholesterol – LabPlain</title>
-  <meta name="description" content="What does your HDL Cholesterol result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/hdl">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HDL Cholesterol Test: What Your Results Mean | LabPlain</title>
+  <meta name="description" content="HDL cholesterol test results explained in plain English. Learn what high and low HDL levels mean, optimal ranges, lifestyle factors, and how it protects your heart." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://labplain.co/articles/hdl.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="HDL Cholesterol Test Results Explained | LabPlain" />
+  <meta property="og:description" content="Understand your HDL results without a medical degree. Plain-English explanations of the 'good' cholesterol and what your numbers say about heart health." />
+  <meta property="og:url" content="https://labplain.co/articles/hdl.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "HDL Cholesterol Test Explained",
+    "description": "A comprehensive guide to understanding HDL cholesterol test results, including optimal ranges, low and high values, cardiovascular protection, and FAQ.",
+    "url": "https://labplain.co/articles/hdl.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "LabPlain",
+      "url": "https://labplain.co"
+    },
+    "about": {
+      "@type": "MedicalTest",
+      "name": "HDL Cholesterol Test",
+      "usesDevice": {
+        "@type": "MedicalDevice",
+        "name": "Blood Test"
+      }
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+  }
+  </script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    /* NAV */
+    nav {
+      background: #0f172a;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav a.logo {
+      color: #60a5fa;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    nav a.logo span { color: #fff; }
+    nav .nav-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    nav .nav-links a:hover { color: #fff; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+      color: white;
+      padding: 3.5rem 2rem 3rem;
+      text-align: center;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: rgba(96,165,250,0.15);
+      color: #93c5fd;
+      border: 1px solid rgba(96,165,250,0.3);
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #93c5fd;
+      max-width: 620px;
+      margin: 0 auto 1.5rem;
+    }
+    .hero .meta {
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+
+    /* LAYOUT */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    /* QUICK FACTS BAR */
+    .quick-facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .quick-facts .fact { text-align: center; }
+    .quick-facts .fact .label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #64748b;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .quick-facts .fact .value {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .quick-facts .fact .value.green { color: #16a34a; }
+    .quick-facts .fact .value.amber { color: #d97706; }
+    .quick-facts .fact .value.red { color: #dc2626; }
+
+    /* SECTION HEADERS */
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin: 1.5rem 0 0.5rem;
+    }
+    p { margin-bottom: 1rem; color: #374151; }
+
+    /* RANGE TABLE */
+    .range-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.2rem 0 2rem;
+      font-size: 0.92rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    }
+    .range-table thead tr {
+      background: #0f172a;
+      color: white;
+    }
+    .range-table th {
+      padding: 0.85rem 1rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .range-table tbody tr { background: #fff; }
+    .range-table tbody tr:nth-child(even) { background: #f8fafc; }
+    .range-table td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+    .tag {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .tag.normal { background: #dcfce7; color: #166534; }
+    .tag.low { background: #fee2e2; color: #991b1b; }
+    .tag.high { background: #e0f2fe; color: #0369a1; }
+    .tag.neutral { background: #f1f5f9; color: #475569; }
+
+    /* SYMPTOM CARDS */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0 2rem;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1.2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .card.high-card { border-left: 4px solid #0284c7; }
+    .card.low-card { border-left: 4px solid #dc2626; }
+    .card h3 {
+      margin-top: 0;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0;
+    }
+    .card ul li {
+      font-size: 0.88rem;
+      color: #475569;
+      padding: 0.25rem 0;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+    .card ul li:last-child { border-bottom: none; }
+    .card ul li::before { content: "•"; color: #94a3b8; flex-shrink: 0; }
+
+    /* CAUSES */
+    .causes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1rem 0 2rem;
+    }
+    @media (max-width: 560px) { .causes-grid { grid-template-columns: 1fr; } }
+    .cause-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1.2rem;
+    }
+    .cause-card.high { border-top: 3px solid #0284c7; }
+    .cause-card.low { border-top: 3px solid #dc2626; }
+    .cause-card h3 { margin-top: 0; font-size: 0.95rem; }
+    .cause-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.6rem 0 0;
+    }
+    .cause-card ul li {
+      font-size: 0.88rem;
+      color: #475569;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid #f1f5f9;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .cause-card ul li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #94a3b8;
+      font-size: 0.8rem;
+    }
+    .cause-card ul li:last-child { border-bottom: none; }
+
+    /* CALLOUT BOX */
+    .callout {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      border-radius: 0 8px 8px 0;
+      padding: 1rem 1.2rem;
+      margin: 1.5rem 0;
+    }
+    .callout.warning {
+      background: #fffbeb;
+      border-color: #f59e0b;
+    }
+    .callout.danger {
+      background: #fef2f2;
+      border-color: #ef4444;
+    }
+    .callout strong { color: #0f172a; }
+    .callout p { margin: 0; font-size: 0.92rem; color: #374151; }
+
+    /* FAQ */
+    .faq-item {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      margin-bottom: 0.8rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+    .faq-item .q {
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 0.5rem;
+      font-size: 0.97rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .faq-item .q span { color: #3b82f6; }
+    .faq-item .a { font-size: 0.9rem; color: #475569; margin: 0; }
+
+    /* RELATED TESTS */
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.8rem;
+      margin: 1rem 0 2rem;
+    }
+    .related-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 1rem;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .related-card:hover {
+      box-shadow: 0 4px 12px rgba(15,23,42,0.1);
+      border-color: #3b82f6;
+    }
+    .related-card .test-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #0f172a;
+      margin-bottom: 0.3rem;
+    }
+    .related-card .test-desc {
+      font-size: 0.8rem;
+      color: #64748b;
+      line-height: 1.4;
+    }
+
+    /* DOCTOR QUESTIONS */
+    .questions-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 2rem;
+    }
+    .questions-list li {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+      margin-bottom: 0.6rem;
+      font-size: 0.92rem;
+      color: #374151;
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+    }
+    .questions-list li .num {
+      background: #0f172a;
+      color: white;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* DISCLAIMER */
+    .disclaimer {
+      background: #f1f5f9;
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      margin-top: 3rem;
+      font-size: 0.82rem;
+      color: #64748b;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+    }
+    .disclaimer strong { color: #475569; }
+
+    /* FOOTER */
+    footer {
+      background: #0f172a;
+      color: #64748b;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+    }
+    footer a { color: #3b82f6; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 2.5rem 1.2rem 2rem; }
+      .container { padding: 1.5rem 1rem 3rem; }
+      .quick-facts { grid-template-columns: repeat(2, 1fr); }
+    }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; HDL Cholesterol</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">HDL Cholesterol</em> result mean?</h1>
-    <span class="category-tag">Heart Health</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
-    <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>The <strong>HDL Cholesterol</strong> test measures 'good' cholesterol — the type that helps carry cholesterol away from arteries and back to the liver.</p>
-    </div>
-
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Above 60 mg/dL (protective); below 40 mg/dL (concern)</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
-    </div>
-
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>High HDL is actually protective and generally a good sign. It's associated with lower heart disease risk.</p>
-        </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Low HDL is a risk factor for heart disease, especially when combined with high LDL or triglycerides.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="section-label">What to do next</div>
-      <div class="next-steps">Exercise and healthy fats (like those in olive oil and nuts) are among the best ways to naturally raise HDL.</div>
-    </div>
-
-    <div class="tool-cta">
-      <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
-
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
-    </footer>
+<!-- NAV -->
+<nav>
+  <a class="logo" href="https://labplain.co"><span>Lab</span>Plain</a>
+  <div class="nav-links">
+    <a href="https://labplain.co/#decoder">Decoder</a>
+    <a href="https://labplain.co/#articles">Articles</a>
   </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="badge">Lab Test Guide</div>
+  <h1>HDL Cholesterol Test</h1>
+  <p>What your HDL cholesterol level means — explained in plain English, not medical jargon.</p>
+  <div class="meta">Updated May 2026 &nbsp;·&nbsp; 7 min read &nbsp;·&nbsp; Reviewed for accuracy</div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <!-- QUICK FACTS -->
+  <div class="quick-facts">
+    <div class="fact">
+      <div class="label">Optimal Range</div>
+      <div class="value green">&gt; 50 mg/dL (Women) <br> &gt; 40 mg/dL (Men)</div>
+    </div>
+    <div class="fact">
+      <div class="label">High HDL =</div>
+      <div class="value green">More Protection</div>
+    </div>
+    <div class="fact">
+      <div class="label">Low HDL =</div>
+      <div class="value red">Higher Heart Risk</div>
+    </div>
+    <div class="fact">
+      <div class="label">Test Type</div>
+      <div class="value">Lipid Panel</div>
+    </div>
+  </div>
+
+  <!-- WHAT IS HDL -->
+  <h2>What Is HDL Cholesterol?</h2>
+  <p>HDL stands for <strong>High-Density Lipoprotein</strong>. It is widely known as the "good" cholesterol because it protects your cardiovascular system. Unlike other forms of cholesterol that deposit fats into your blood vessels, HDL works actively to keep your plumbing clean.</p>
+  <p>If you think of LDL (the bad cholesterol) as delivery trucks dropping off fats into your arteries, think of HDL as the **metabolic garbage trucks**. HDL particles cruise through your bloodstream, scoop up excess, unneeded cholesterol from your arterial walls, and carry it back to your liver.</p>
+  <p>Once inside the liver, this recycled cholesterol is safely broken down and removed from your body as bile. Because of this cleanup loop, having a healthy level of HDL significantly minimizes your risk of forming the arterial plaques that lead to heart attacks and strokes.</p>
+
+  <div class="callout">
+    <p><strong>💡 The Garbage Truck Rule:</strong> With LDL cholesterol, lower numbers are typically safer. But with HDL cholesterol, **higher numbers are generally better** because you want a robust cleanup crew monitoring your blood vessels.</p>
+  </div>
+
+  <!-- REFERENCE RANGES -->
+  <h2>HDL Reference Ranges</h2>
+  <p>Unlike standard lab metrics where targets are identical for everyone, ideal HDL thresholds vary by sex due to the natural protective qualities of estrogen in women.</p>
+
+  <table class="range-table">
+    <thead>
+      <tr>
+        <th>HDL Level</th>
+        <th>Range (mg/dL)</th>
+        <th>Status</th>
+        <th>What It Suggests</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Low (Men)</td>
+        <td>&lt; 40</td>
+        <td><span class="tag low">At Risk</span></td>
+        <td>Higher risk of cardiovascular plaque build-up; weak arterial cleanup</td>
+      </tr>
+      <tr>
+        <td>Low (Women)</td>
+        <td>&lt; 50</td>
+        <td><span class="tag low">At Risk</span></td>
+        <td>Increased risk of heart disease; diagnostic marker for metabolic syndrome</td>
+      </tr>
+      <tr>
+        <td>Acceptable</td>
+        <td>40 – 59</td>
+        <td><span class="tag neutral">Normal</span></td>
+        <td>Baseline cardio-protection; standard for healthy adults</td>
+      </tr>
+      <tr>
+        <td>Optimal & Protective</td>
+        <td>&gt; 60</td>
+        <td><span class="tag normal">Optimal</span></td>
+        <td>Excellent protection; actively helps reduce existing cardiovascular risk</td>
+      </tr>
+      <tr>
+        <td>Extremely High</td>
+        <td>&gt; 90 – 100</td>
+        <td><span class="tag high">Caution</span></td>
+        <td>Rare; extreme elevations can sometimes alter HDL properties, losing protective benefits</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout warning">
+    <p><strong>⚠️ The Total Picture.</strong> A low HDL value is particularly dangerous if your LDL or Triglyceride levels are high. Doctors calculate your **Total Cholesterol to HDL ratio** to better evaluate your actual cardiovascular vulnerability.</p>
+  </div>
+
+  <!-- SYMPTOMS -->
+  <h2>Symptoms of Abnormal HDL</h2>
+  <p>Just like high LDL, having a low or abnormal HDL level **carries absolutely no physical signs or warning symptoms**. You cannot feel your blood vessels' cleanup capacity dropping.</p>
+
+  <div class="card-grid">
+    <div class="card low-card">
+      <h3>🔴 Low HDL Vulnerabilities (No Early Symptoms)</h3>
+      <ul>
+        <li>Accelerated accumulation of plaque in your arteries</li>
+        <li>Unexplained fatigue if tied to wider Metabolic Syndrome</li>
+        <li>Higher incidence of unexpected chest pressure (angina)</li>
+        <li>Increased vulnerability to premature stroke or heart complications</li>
+      </ul>
+    </div>
+    <div class="card high-card">
+      <h3>🔵 High HDL Dynamics (Typically Asymptomatic)</h3>
+      <ul>
+        <li>Provides a protective buffer against general heart conditions</li>
+        <li>No early or noticeable physical sensations</li>
+        <li>If caused by genetic mutations: may carry paradoxically higher inflammation</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CAUSES -->
+  <h2>What Causes Low or High HDL?</h2>
+  <p>Your HDL score serves as a direct mirror of your daily systemic health, showing how factors like sleep, nutrition, activity, and genetics interact.</p>
+
+  <div class="causes-grid">
+    <div class="cause-card low">
+      <h3>🔴 Common Causes of LOW HDL</h3>
+      <ul>
+        <li>Sedentary lifestyle and lack of aerobic exercise</li>
+        <li>Smoking and tobacco use (directly suppresses HDL production)</li>
+        <li>Diets high in refined carbohydrates, sugars, and trans fats</li>
+        <li>Type 2 Diabetes, insulin resistance, or Metabolic Syndrome</li>
+        <li>Genetics (conditions like Tangier disease or familial hypoalphalipoproteinemia)</li>
+        <li>Certain medications (beta-blockers, anabolic steroids, progestins)</li>
+      </ul>
+    </div>
+    <div class="cause-card high">
+      <h3>🔵 Common Causes of HIGH HDL</h3>
+      <ul>
+        <li>Regular vigorous cardiovascular exercise (running, cycling, swimming)</li>
+        <li>Diets rich in healthy monounsaturated fats (olive oil, avocados, nuts)</li>
+        <li>Moderate alcohol consumption (though not recommended as a medical therapy)</li>
+        <li>Genetic variations causing overproduction of clear-out particles</li>
+        <li>High-dose niacin supplementation</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout warning">
+    <p><strong>💊 The Medication Reality:</strong> Interestingly, drugs engineered explicitly to raise HDL levels have failed to show a clear reduction in heart attacks in clinical trials. This means **how** you achieve your HDL (via lifestyle, movement, and nutrition) matters much more than simply forcing the number up with a pill.</p>
+  </div>
+
+  <!-- FAQ -->
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <div class="q"><span>Q</span> How can I naturally raise my HDL cholesterol levels?</div>
+    <div class="a">The single most effective tool to boost HDL is consistent aerobic exercise (getting your heart rate up for 30 minutes, 4–5 days a week). Additionally, quitting smoking can raise your HDL by up to 10%, and swapping trans fats for healthy monounsaturated options like olive oil and avocados provides excellent support.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="q"><span>Q</span> My total cholesterol is high, but my HDL is very high. Is that safe?</div>
+    <div class="a">Often, yes. If your total cholesterol is elevated primarily because your protective HDL cleanup crew is unusually large (e.g., an HDL of 85 mg/dL), your actual heart risk may be quite low. Your physician will review your complete lipid profile to calculate your specific risk ratios.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="q"><span>Q</span> Can losing weight improve my HDL score?</div>
+    <div class="a">Yes. Shedding excess body fat—especially visceral abdominal weight—improves your overall insulin sensitivity. This optimization helps reverse the metabolic processes that stall your liver's production of high-density lipoproteins, boosting your HDL numbers.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="q"><span>Q</span> Is it possible for my HDL cholesterol to be too high?</div>
+    <div class="a">Yes, though it is quite rare. When HDL climbs past 90 or 100 mg/dL (frequently due to specific genetic traits), the particles can alter structurally. In these cases, they can become dysfunctional or pro-inflammatory, losing their protective, garbage-truck qualities.</div>
+  </div>
+
+  <!-- RELATED TESTS -->
+  <h2>Related Tests Often Ordered Together</h2>
+  <p>Because HDL represents one half of your body's cholesterol balancing act, it is interpreted as part of a broader lipid panel:</p>
+
+  <div class="related-grid">
+    <a class="related-card" href="https://labplain.co/articles/ldl.html">
+      <div class="test-name">LDL Cholesterol</div>
+      <div class="test-desc">The "bad" cholesterol delivery trucks that drop off fat particles along artery walls</div>
+    </a>
+    <a class="related-card" href="https://labplain.co/articles/triglycerides.html">
+      <div class="test-name">Triglycerides</div>
+      <div class="test-desc">Circulating energy storage fats; high levels combined with low HDL signal metabolic risk</div>
+    </a>
+    <a class="related-card" href="https://labplain.co/articles/total-cholesterol.html">
+      <div class="test-name">Total Cholesterol</div>
+      <div class="test-desc">The absolute sum of all your dynamic fat carrier vehicles moving through your blood</div>
+    </a>
+    <a class="related-card" href="https://labplain.co/articles/hba1c.html">
+      <div class="test-name">HbA1c</div>
+      <div class="test-desc">Your 3-month blood sugar average; high glucose directly damages the vessels HDL protects</div>
+    </a>
+  </div>
+
+  <!-- DOCTOR QUESTIONS -->
+  <h2>Questions to Ask Your Doctor</h2>
+  <p>Walk into your next appointment prepared with these core questions regarding your HDL level:</p>
+
+  <ol class="questions-list">
+    <li><div class="num">1</div>Is my low HDL level an isolated finding, or does it point toward metabolic syndrome or insulin resistance?</li>
+    <li><div class="num">2</div>What is my Total Cholesterol-to-HDL ratio, and what does it indicate about my actual cardiovascular health?</li>
+    <li><div class="num">3</div>Are there specific structural or prescription changes I should prioritize to help optimize my HDL performance?</li>
+    <li><div class="num">4</div>Could any of my current medications or underlying hormone levels be driving down my HDL score?</li>
+    <li><div class="num">5</div>Given my HDL level, do you recommend advanced markers like ApoA-1 or an ApoB test to get a more accurate picture?</li>
+  </ol>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <strong>Medical Disclaimer:</strong> This article is for informational and educational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider with questions about your lab results or medical conditions. Never disregard professional medical advice based on something you read here.
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  <p>© 2026 <a href="https://labplain.co">LabPlain</a> · Understand your labs. No medical degree required.</p>
+  <p style="margin-top:0.5rem"><a href="https://labplain.co/#decoder">AI Lab Decoder</a> &nbsp;·&nbsp; <a href="https://labplain.co/#articles">All Articles</a></p>
+</footer>
+
 </body>
 </html>
