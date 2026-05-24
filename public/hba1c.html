@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HbA1c (Glycated Hemoglobin) – LabPlain</title>
-  <meta name="description" content="What does your HbA1c (Glycated Hemoglobin) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
+  <title>HbA1c (Hemoglobin A1c) – LabPlain</title>
+  <meta name="description" content="What does your HbA1c result mean? Plain-English explanation of normal ranges, prediabetes, diabetes thresholds, and what to ask your doctor. No medical jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://labplain.co/hba1c">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,9 +43,33 @@
     .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
     .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
     .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .info-box { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 16px 20px; margin-top: 16px; font-size: 14px; line-height: 1.7; color: #2C4A6E; }
+    .info-box strong { display: block; margin-bottom: 4px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 14px; color: var(--ink); }
+    h3 { font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    ul { padding-left: 20px; margin-top: 8px; }
+    ul li { font-size: 15px; line-height: 1.8; color: var(--ink); }
+    .a1c-table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 14px; }
+    .a1c-table th { background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 10px 14px; text-align: left; }
+    .a1c-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+    .a1c-table tr:last-child td { border-bottom: none; }
+    .a1c-table tr.normal td { background: var(--accent-light); }
+    .a1c-table tr.prediabetes td { background: #FFF8E8; }
+    .a1c-table tr.diabetes td { background: var(--warn-light); }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 18px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h3 { font-size: 15px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .faq-item p { font-size: 14px; line-height: 1.7; color: #444; }
+    .doctor-q { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .doctor-q:last-child { border-bottom: none; }
+    .doctor-q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); background: var(--accent-light); border-radius: 6px; padding: 4px 8px; flex-shrink: 0; font-weight: 500; }
+    .doctor-q p { font-size: 15px; line-height: 1.6; margin: 0; }
+    .related-tests { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .related-tests a { display: inline-block; background: var(--white); border: 1.5px solid var(--border); border-radius: 8px; padding: 8px 16px; font-size: 14px; color: var(--accent); text-decoration: none; font-family: 'DM Mono', monospace; transition: border-color 0.2s; }
+    .related-tests a:hover { border-color: var(--accent); }
     @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -55,39 +79,208 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; HbA1c (Glycated Hemoglobin)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">HbA1c (Glycated Hemoglobin)</em> result mean?</h1>
-    <span class="category-tag">Diabetes</span>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; HbA1c</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">HbA1c</em> result mean?</h1>
+    <span class="category-tag">Diabetes &amp; Blood Sugar</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
+    <!-- WHAT IT MEASURES -->
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>HbA1c (Glycated Hemoglobin)</strong> test shows your average blood sugar over the past 2–3 months — think of it as a blood sugar report card.</p>
+      <p>The <strong>HbA1c test</strong> (also called Hemoglobin A1c, glycated hemoglobin, or simply A1c) measures the percentage of hemoglobin in your red blood cells that has glucose attached to it. Unlike a fasting blood glucose test that shows your sugar level at one moment in time, HbA1c reflects your <em>average</em> blood sugar over the past 2 to 3 months.</p>
+      <p style="margin-top:12px;">Here's why: red blood cells live for about 90 days. As they circulate, glucose in your blood slowly sticks to hemoglobin. The more glucose in your blood on average, the higher the percentage of glycated hemoglobin — and the higher your A1c result.</p>
+      <p style="margin-top:12px;">This makes HbA1c one of the most powerful tools doctors have for diagnosing diabetes, identifying prediabetes, and monitoring how well blood sugar is being managed over time. It's routinely ordered at annual physicals and every 3–6 months for people already managing diabetes.</p>
+      <div class="info-box">
+        <strong>💡 A1c vs. fasting glucose — what's the difference?</strong>
+        Fasting glucose is a snapshot — it tells you your blood sugar right now. HbA1c is the full movie — it shows what your blood sugar has been doing for the past 90 days. Both tests matter, and doctors often use them together for the most complete picture.
+      </div>
     </div>
 
+    <!-- NORMAL RANGE -->
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Below 5.7% (normal); 5.7–6.4% (prediabetes); 6.5%+ (diabetes)</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+      <div class="normal-range">Normal: Below 5.7%</div>
+      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges are consistent across most labs for HbA1c. Always compare your result to the range printed on your own lab report.</p>
+      <table class="a1c-table" style="margin-top:20px;">
+        <thead>
+          <tr>
+            <th>HbA1c Result</th>
+            <th>Category</th>
+            <th>What It Means</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="normal">
+            <td>Below 5.7%</td>
+            <td>Normal</td>
+            <td>Blood sugar is in a healthy range</td>
+          </tr>
+          <tr class="prediabetes">
+            <td>5.7% – 6.4%</td>
+            <td>Prediabetes</td>
+            <td>Higher than normal — lifestyle changes can reverse this</td>
+          </tr>
+          <tr class="diabetes">
+            <td>6.5% or above</td>
+            <td>Diabetes</td>
+            <td>Consistent with a diabetes diagnosis (confirmed with repeat testing)</td>
+          </tr>
+          <tr>
+            <td>Below 7.0%</td>
+            <td>Managed Diabetes</td>
+            <td>Target goal for most people already diagnosed with diabetes</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
+    <!-- HIGH / LOW -->
     <div class="card">
       <div class="section-label">What your result might indicate</div>
       <div class="two-col">
         <div class="range-box high">
           <div class="range-box-label">↑ If High</div>
-          <p>Your average blood sugar has been elevated. This can indicate prediabetes or diabetes depending on the level.</p>
+          <p>A result of 5.7% or above suggests blood sugar has been running higher than normal. At 6.5%+, diabetes is likely. High A1c means glucose has been sticking to red blood cells at an elevated rate over the past 3 months.</p>
         </div>
         <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Very low levels are rare but can occur in certain blood disorders or if you've had recent blood loss.</p>
+          <div class="range-box-label">↓ If Low / Normal</div>
+          <p>A result below 5.7% means blood sugar has been well-controlled. Very low A1c (below 4%) is rare and may warrant investigation for conditions affecting red blood cell turnover.</p>
         </div>
       </div>
     </div>
 
+    <!-- SYMPTOMS -->
+    <div class="card">
+      <div class="section-label">Symptoms of high blood sugar</div>
+      <p style="margin-bottom:16px;">Many people with prediabetes or early type 2 diabetes have <strong>no symptoms at all</strong> — which is exactly why the A1c test is so valuable as a screening tool. When symptoms do appear, they can include:</p>
+      <div class="two-col">
+        <div>
+          <h3>Common symptoms</h3>
+          <ul>
+            <li>Increased thirst</li>
+            <li>Frequent urination</li>
+            <li>Unexplained fatigue</li>
+            <li>Blurred vision</li>
+            <li>Slow-healing cuts or sores</li>
+            <li>Tingling or numbness in hands/feet</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Less obvious signs</h3>
+          <ul>
+            <li>Recurring infections (skin, gum, bladder)</li>
+            <li>Increased hunger even after eating</li>
+            <li>Unexplained weight loss</li>
+            <li>Darkened skin in armpits or neck (acanthosis nigricans)</li>
+            <li>Brain fog or difficulty concentrating</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAUSES -->
+    <div class="card">
+      <div class="section-label">Common causes of high HbA1c</div>
+      <h3 style="margin-bottom:8px;">Type 2 diabetes and prediabetes</h3>
+      <p>The most common cause. Type 2 diabetes develops when the body becomes resistant to insulin or doesn't produce enough of it to keep blood sugar in check. Prediabetes is the stage before this — blood sugar is elevated but not yet high enough for a diabetes diagnosis. Both are strongly linked to diet, physical inactivity, obesity, and family history.</p>
+      <h3 style="margin-top:20px;margin-bottom:8px;">Type 1 diabetes</h3>
+      <p>An autoimmune condition where the pancreas produces little or no insulin. People with type 1 diabetes require insulin therapy to survive and use A1c closely to monitor blood sugar management.</p>
+      <h3 style="margin-top:20px;margin-bottom:8px;">Other factors that can affect A1c accuracy</h3>
+      <p>Certain conditions can make the A1c result misleading. Iron deficiency anemia, hemolytic anemia, sickle cell disease, and recent blood transfusions can all falsely raise or lower the result. If your doctor suspects any of these, they may order a fructosamine test instead, which measures a shorter 2–3 week window of blood sugar control.</p>
+    </div>
+
+    <!-- RELATED TESTS -->
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside HbA1c</div>
+      <p>HbA1c is rarely the only test your doctor reviews. You'll often see it alongside:</p>
+      <ul style="margin-top:12px;">
+        <li style="margin-bottom:8px;"><strong>Fasting glucose</strong> — a same-day snapshot of blood sugar; used alongside A1c to confirm a diabetes diagnosis</li>
+        <li style="margin-bottom:8px;"><strong>Glucose tolerance test (GTT)</strong> — measures how your body processes a sugar load over 2 hours; used to diagnose gestational diabetes and confirm type 2</li>
+        <li style="margin-bottom:8px;"><strong>Fasting insulin</strong> — helps assess insulin resistance before blood sugar has fully risen</li>
+        <li style="margin-bottom:8px;"><strong>Lipid panel (cholesterol)</strong> — diabetes and high cholesterol often travel together; cardiovascular risk assessment is key</li>
+        <li style="margin-bottom:8px;"><strong>Kidney function (creatinine, eGFR)</strong> — diabetes is the leading cause of kidney disease; early monitoring is critical</li>
+        <li><strong>Urine albumin</strong> — checks for protein in urine, an early sign that diabetes is affecting the kidneys</li>
+      </ul>
+    </div>
+
+    <!-- WHAT TO DO NEXT -->
     <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">If your result is in the prediabetes range, ask about lifestyle changes — diet and exercise can significantly lower HbA1c. Always discuss medication adjustments with your doctor.</div>
+      <div class="next-steps">
+        If your A1c is in the prediabetes range (5.7%–6.4%), this is genuinely good news in one sense — you caught it early, and research consistently shows that lifestyle changes can bring A1c back into the normal range. Losing 5–7% of body weight, walking 150 minutes per week, and reducing refined carbohydrates and sugar can make a measurable difference within months. If your result is 6.5% or higher, your doctor will likely confirm with a repeat test before making a formal diagnosis. Only your doctor can interpret your specific result in the context of your full health picture.
+      </div>
+    </div>
+
+    <!-- DOCTOR QUESTIONS -->
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <div class="doctor-q">
+        <span class="doctor-q-num">01</span>
+        <p>What does my A1c result mean specifically for me, given my age, weight, and family history?</p>
+      </div>
+      <div class="doctor-q">
+        <span class="doctor-q-num">02</span>
+        <p>Is my result trending up, down, or staying stable compared to previous tests?</p>
+      </div>
+      <div class="doctor-q">
+        <span class="doctor-q-num">03</span>
+        <p>Should I also have a fasting glucose test to get a more complete picture?</p>
+      </div>
+      <div class="doctor-q">
+        <span class="doctor-q-num">04</span>
+        <p>If I'm in the prediabetes range, what specific lifestyle changes would have the biggest impact?</p>
+      </div>
+      <div class="doctor-q">
+        <span class="doctor-q-num">05</span>
+        <p>Could any condition I have (anemia, thyroid issues) be affecting the accuracy of this result?</p>
+      </div>
+      <div class="doctor-q">
+        <span class="doctor-q-num">06</span>
+        <p>How often should I be retesting my A1c?</p>
+      </div>
+      <div class="doctor-q">
+        <span class="doctor-q-num">07</span>
+        <p>Should I be referred to a diabetes educator or dietitian?</p>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <h3>What is a dangerous HbA1c level?</h3>
+        <p>An A1c above 9% indicates very poorly controlled blood sugar and significantly raises the risk of diabetes complications including nerve damage, kidney disease, vision loss, and cardiovascular disease. Above 10–11%, short-term risks including diabetic ketoacidosis (DKA) become a concern. If your result is above 9%, your doctor will likely recommend prompt intervention.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I lower my A1c in 3 months?</h3>
+        <p>Yes — because A1c reflects 90 days of blood sugar, meaningful improvements can show up in the next test if you make consistent changes. The most impactful steps are reducing refined carbohydrates and added sugars, increasing physical activity (even walking 30 minutes a day helps significantly), losing weight if overweight, and following any medication plan your doctor has prescribed.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is an A1c of 5.9% bad?</h3>
+        <p>An A1c of 5.9% falls in the prediabetes range (5.7%–6.4%). It's not diabetes, but it's a clear signal that blood sugar is running higher than ideal. The encouraging news is that prediabetes is reversible with lifestyle changes — many people bring their A1c back below 5.7% within a year through diet, exercise, and weight management.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does A1c differ by age?</h3>
+        <p>The diagnostic thresholds are the same regardless of age, but doctors may set slightly different management targets for older adults. Very aggressive blood sugar control (very low A1c) in elderly patients can increase the risk of dangerous low blood sugar episodes, so a target of 7.5%–8% may be appropriate for some older individuals rather than the standard below 7%.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I have a normal A1c and still have diabetes?</h3>
+        <p>In rare cases, yes. Certain conditions — particularly those that affect red blood cell lifespan, like hemolytic anemia or sickle cell trait — can produce a falsely low A1c even when blood sugar is elevated. If your doctor suspects this, they may order a fructosamine test instead, which measures blood sugar control over a shorter 2–3 week window.</p>
+      </div>
+    </div>
+
+    <!-- RELATED TESTS -->
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related-tests">
+        <a href="/glucose.html">Glucose →</a>
+        <a href="/creatinine.html">Creatinine →</a>
+        <a href="/cholesterol.html">Cholesterol →</a>
+        <a href="/triglycerides.html">Triglycerides →</a>
+        <a href="/insulin.html">Insulin →</a>
+        <a href="/cortisol.html">Cortisol →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
