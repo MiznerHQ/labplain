@@ -1,197 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HbA1c Explained | LabPlain</title>
-    <meta name="description" content="Understand your HbA1c test results in plain English. Learn what your 3-month blood sugar average means.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "name": "HbA1c Explained",
-      "description": "Understanding your Hemoglobin A1c test results and reference ranges.",
-      "aspectReviewed": "Lab test interpretation",
-      "mainEntity": {
-        "@type": "MedicalTest",
-        "name": "Hemoglobin A1c",
-        "alternateName": ["HbA1c", "Glycated Hemoglobin"]
-      }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HbA1c (Hemoglobin A1c) – What Your Result Means | LabPlain</title>
+  <meta name="description" content="What does your HbA1c result mean? Plain-English guide to normal ranges, prediabetes and diabetes values, symptoms, causes, and questions to ask your doctor.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://labplain.co/hba1c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
+      --accent: #1B3A6B; --accent-light: #E8EEF8; --warn: #B85C2A;
+      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --low-bg: #EEF3FF; --low-border: #C5CEFA; --low-text: #3A5BAB;
     }
-    </script>
+    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    h2 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 14px; color: var(--ink); }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 15px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C5CEFA; margin-bottom: 12px; }
+    .range-table { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 8px; }
+    .range-table th { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+    .range-table td { padding: 10px 12px; border-bottom: 1px solid #EDEBE6; font-size: 14px; }
+    .range-table tr:last-child td { border-bottom: none; }
+    .badge { display: inline-block; font-family: 'DM Mono', monospace; font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 500; }
+    .badge.normal { background: #E6F4ED; color: #2E6B4F; }
+    .badge.borderline { background: #FFF6E0; color: #9A6800; }
+    .badge.high { background: var(--warn-light); color: var(--warn); }
+    .badge.critical { background: #FFE8E8; color: #A02020; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 18px; border-radius: 10px; border: 1px solid var(--border); }
+    .symptom-box.high { background: var(--warn-light); border-color: #E8C9B0; }
+    .symptom-box.low { background: var(--low-bg); border-color: var(--low-border); }
+    .symptom-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; font-weight: 500; }
+    .symptom-box.high .symptom-box-label { color: var(--warn); }
+    .symptom-box.low .symptom-box-label { color: var(--low-text); }
+    .symptom-box ul { padding-left: 18px; }
+    .symptom-box ul li { font-size: 14px; line-height: 1.8; color: var(--ink); }
+    .cause-list { list-style: none; padding: 0; margin-top: 4px; }
+    .cause-list li { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #EDEBE6; font-size: 15px; line-height: 1.6; }
+    .cause-list li:last-child { border-bottom: none; }
+    .cause-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
+    .related-item { background: var(--accent-light); border: 1px solid #C5CEFA; border-radius: 10px; padding: 14px 16px; }
+    .related-item strong { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--accent); display: block; margin-bottom: 4px; }
+    .related-item span { font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
+    .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .faq-q { font-weight: 500; font-size: 15px; margin-bottom: 6px; color: var(--ink); }
+    .faq-a { font-size: 14px; line-height: 1.7; color: #444; }
+    .doctor-q-list { list-style: none; padding: 0; margin-top: 4px; }
+    .doctor-q-list li { padding: 10px 0 10px 28px; position: relative; border-bottom: 1px solid #EDEBE6; font-size: 15px; line-height: 1.6; }
+    .doctor-q-list li:last-child { border-bottom: none; }
+    .doctor-q-list li::before { content: "?"; position: absolute; left: 0; top: 10px; font-family: 'DM Mono', monospace; font-size: 13px; color: var(--accent); font-weight: 500; }
+    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col, .related-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
-<body class="bg-stone-50 text-stone-900 font-sans antialiased">
-    <main class="max-w-3xl mx-auto px-4 py-12">
-        <article class="bg-white border border-stone-200 rounded-2xl p-6 md:p-10 shadow-sm space-y-8">
-            
-            <div>
-                <h1 class="text-3xl font-bold tracking-tight text-stone-900 md:text-4xl">HbA1c Explained</h1>
-                <p class="text-stone-500 mt-2 text-lg">What your number actually means, why it matters, and what to do next.</p>
-            </div>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg>
+      </div>
+      <a href="/" class="logo-text">lab<span>plain</span></a>
+    </nav>
 
-            <div class="text-sm text-stone-500 bg-stone-50 p-4 rounded-xl border border-stone-200 leading-relaxed">
-                ⚠️ For informational purposes only. This page does not constitute medical advice. Always discuss your lab results with your doctor.
-            </div>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; HbA1c</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">HbA1c</em> result mean?</h1>
+    <span class="category-tag">Blood Sugar</span>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
-            <div class="space-y-4">
-                <div class="text-2xl">%F0%9F%AA%BA</div>
-                <h2 class="text-xl font-bold text-stone-900">What Is HbA1c?</h2>
-                <p class="text-stone-600 leading-relaxed">
-                    The HbA1c test measures the percentage of your hemoglobin—the protein in red blood cells that carries oxygen—that is coated with sugar (glycated). Because red blood cells live for about 3 months, this test reveals your <strong>average blood sugar levels over the past 90 days</strong>.
-                </p>
-                <p class="text-stone-600 leading-relaxed">
-                    Unlike standard fasting glucose tests which change day by day based on your last meal, stress levels, or sleep, HbA1c provides a stable historical record. Your doctor uses it to screen for prediabetes and type 2 diabetes, or to see how well an existing blood sugar management plan is working.
-                </p>
-            </div>
+    <div class="card">
+      <div class="section-label">What this test measures</div>
+      <p>The <strong>HbA1c</strong> (Hemoglobin A1c or glycated hemoglobin) test measures your average blood sugar level over the past 2–3 months. Unlike a fasting glucose test that shows your sugar right now, HbA1c reflects how much glucose has been sticking to your red blood cells over time — giving your doctor a much longer window into your blood sugar control.</p>
+      <p style="margin-top:12px;">It's the primary test used to diagnose and monitor <strong>prediabetes and type 2 diabetes</strong>.</p>
+    </div>
 
-            <div class="space-y-4">
-                <div class="text-2xl">📊</div>
-                <h2 class="text-xl font-bold text-stone-900">HbA1c Reference Ranges</h2>
-                <div class="overflow-x-auto border border-stone-200 rounded-xl">
-                    <table class="min-w-full divide-y divide-stone-200 text-sm">
-                        <thead class="bg-stone-50">
-                            <tr>
-                                <th class="px-4 py-3 text-left font-semibold text-stone-700">Level (%)</th>
-                                <th class="px-4 py-3 text-left font-semibold text-stone-700">Category</th>
-                                <th class="px-4 py-3 text-left font-semibold text-stone-700">What It Means</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-stone-200 bg-white text-stone-600">
-                            <tr>
-                                <td class="px-4 py-3 font-medium text-stone-900">Below 5.7%</td>
-                                <td class="px-4 py-3">Normal</td>
-                                <td class="px-4 py-3">Optimal glucose regulation over the past 3 months.</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3 font-medium text-stone-900">5.7% – 6.4%</td>
-                                <td class="px-4 py-3">Prediabetes</td>
-                                <td class="px-4 py-3">Early signs of cellular insulin resistance; lifestyle changes recommended.</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3 font-medium text-stone-900">6.5% and above</td>
-                                <td class="px-4 py-3">Diabetes</td>
-                                <td class="px-4 py-3">Diagnostic threshold for clinical diabetes; active management needed.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="text-xs text-stone-400 italic">* Target ranges can vary for pregnant individuals, older adults, and those managing long-term chronic conditions. Always interpret with your physician.</p>
-            </div>
+    <div class="card">
+      <div class="section-label">Reference ranges</div>
+      <table class="range-table">
+        <thead>
+          <tr>
+            <th>HbA1c Level</th>
+            <th>What It Means</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Below 5.7%</td>
+            <td>Normal blood sugar control</td>
+            <td><span class="badge normal">Normal</span></td>
+          </tr>
+          <tr>
+            <td>5.7% – 6.4%</td>
+            <td>Higher than ideal — prediabetes range</td>
+            <td><span class="badge borderline">Prediabetes</span></td>
+          </tr>
+          <tr>
+            <td>6.5% or higher</td>
+            <td>Consistent with a diabetes diagnosis</td>
+            <td><span class="badge high">Diabetes</span></td>
+          </tr>
+          <tr>
+            <td>Above 8.0% (if diabetic)</td>
+            <td>Poor blood sugar control, increased risk of complications</td>
+            <td><span class="badge critical">Action Needed</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:14px;font-size:13px;color:var(--muted)">Reference ranges may vary slightly by lab. Always compare your result to the range printed on your own report.</p>
+    </div>
 
-            <div class="space-y-4">
-                <div class="text-2xl">⚠️</div>
-                <h2 class="text-xl font-bold text-stone-900">Symptoms of Unbalanced Blood Sugar</h2>
-                <p class="text-stone-600 leading-relaxed">
-                    Mildly elevated HbA1c (prediabetes) typically causes no symptoms at all. However, as levels move higher into the diabetes range, you may notice distinct systemic signals:
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mt-2">
-                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
-                        <strong class="text-stone-900 block mb-1">Increased Thirst (Polydipsia)</strong>
-                        <span class="text-stone-600">Your kidneys work overtime to filter and absorb the excess sugar, pulling fluid from tissues.</span>
-                    </div>
-                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
-                        <strong class="text-stone-900 block mb-1">Frequent Urination (Polyuria)</strong>
-                        <span class="text-stone-600">As fluids are pulled from your body, you find yourself needing to use the bathroom far more often.</span>
-                    </div>
-                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
-                        <strong class="text-stone-900 block mb-1">Unexplained Fatigue</strong>
-                        <span class="text-stone-600">Because sugar stays in the bloodstream instead of entering cells, your body lacks its main energy source.</span>
-                    </div>
-                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
-                        <strong class="text-stone-900 block mb-1">Blurred Vision</strong>
-                        <span class="text-stone-600">High blood sugar pulls fluid from the lenses of your eyes, changing your ability to focus properly.</span>
-                    </div>
-                </div>
-            </div>
+    <div class="card">
+      <div class="section-label">Symptoms associated with abnormal levels</div>
+      <div class="two-col">
+        <div class="symptom-box high">
+          <div class="symptom-box-label">↑ If High (Elevated Blood Sugar)</div>
+          <ul>
+            <li>Excessive thirst and urination</li>
+            <li>Unexplained fatigue</li>
+            <li>Blurred vision</li>
+            <li>Slow-healing wounds or cuts</li>
+            <li>Frequent infections</li>
+            <li>Tingling or numbness in hands/feet</li>
+            <li>Increased hunger despite eating</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <div class="symptom-box-label">↓ If Very Low (Hypoglycemia Risk)</div>
+          <ul>
+            <li>Shakiness or trembling</li>
+            <li>Sweating and chills</li>
+            <li>Dizziness or lightheadedness</li>
+            <li>Rapid heartbeat</li>
+            <li>Irritability or mood changes</li>
+            <li>Confusion or difficulty concentrating</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:14px;font-size:13px;color:var(--muted)">Many people with prediabetes or early type 2 diabetes have <em>no symptoms at all</em> — which is why routine testing matters.</p>
+    </div>
 
-            <div class="space-y-4">
-                <div class="text-2xl">🔍</div>
-                <h2 class="text-xl font-bold text-stone-900">Common Causes of High HbA1c</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
-                        <strong class="text-stone-900 block mb-1">Insulin Resistance</strong>
-                        <span class="text-stone-600">Cells stop responding efficiently to insulin, leaving glucose locked out in the blood.</span>
-                    </div>
-                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
-                        <strong class="text-stone-900 block mb-1">High-Refined Carbohydrate Diet</strong>
-                        <span class="text-stone-600">Frequent spikes from processed foods and added sugars overwhelm metabolic pathways.</span>
-                    </div>
-                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
-                        <strong class="text-stone-900 block mb-1">Physical Inactivity</strong>
-                        <span class="text-stone-600">Skeletal muscles are prime glucose sinks; lack of movement reduces natural sugar clearance.</span>
-                    </div>
-                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
-                        <strong class="text-stone-900 block mb-1">Chronic Stress & Lack of Sleep</strong>
-                        <span class="text-stone-600">Elevated cortisol and epinephrine trigger the liver to dump extra glucose into circulation.</span>
-                    </div>
-                </div>
-            </div>
+    <div class="card">
+      <div class="section-label">Common causes of a high HbA1c</div>
+      <ul class="cause-list">
+        <li><span class="cause-icon">🍞</span><div><strong>Diet high in refined carbs and sugar</strong> — Frequent blood sugar spikes from processed foods, sugary drinks, and white bread gradually raise your A1c over time.</div></li>
+        <li><span class="cause-icon">🛋️</span><div><strong>Physical inactivity</strong> — Muscles use glucose for energy. Less movement means less glucose is cleared from the bloodstream.</div></li>
+        <li><span class="cause-icon">⚖️</span><div><strong>Excess body weight (especially belly fat)</strong> — Visceral fat increases insulin resistance, making it harder for your cells to absorb sugar.</div></li>
+        <li><span class="cause-icon">💊</span><div><strong>Certain medications</strong> — Corticosteroids (like prednisone), some antipsychotics, and diuretics can raise blood sugar levels.</div></li>
+        <li><span class="cause-icon">😓</span><div><strong>Chronic stress</strong> — Stress hormones like cortisol raise blood glucose, and chronic stress can push A1c higher over time.</div></li>
+        <li><span class="cause-icon">🧬</span><div><strong>Family history and genetics</strong> — Type 2 diabetes has a strong hereditary component. A family history significantly increases risk.</div></li>
+      </ul>
+    </div>
 
-            <div class="space-y-4">
-                <div class="text-2xl">📉</div>
-                <h2 class="text-xl font-bold text-stone-900">Can HbA1c Be Too Low?</h2>
-                <p class="text-stone-600 leading-relaxed">
-                    An HbA1c below 4.0% is uncommon but can sometimes signal underlying health or blood-related conditions. Because the test relies on red blood cells, anything that speeds up their lifecycle can falsely lower the score:
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mt-2">
-                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
-                        <strong class="text-stone-900 block mb-1">Hemolytic Anemia</strong>
-                        <span class="text-stone-600">Red blood cells die off too quickly, meaning they spend less time accumulating sugar coats.</span>
-                    </div>
-                    <div class="p-4 bg-stone-50 rounded-xl border border-stone-200">
-                        <strong class="text-stone-900 block mb-1">Chronic Liver or Kidney Disease</strong>
-                        <span class="text-stone-600">Can alter how red blood cells are manufactured and sustained within the body.</span>
-                    </div>
-                </div>
-            </div>
+    <div class="card">
+      <div class="section-label">Related tests your doctor may order</div>
+      <div class="related-grid">
+        <div class="related-item">
+          <strong>Fasting Glucose</strong>
+          <span>Measures blood sugar after an 8-hour fast. Used alongside A1c to diagnose diabetes.</span>
+        </div>
+        <div class="related-item">
+          <strong>Fasting Insulin</strong>
+          <span>Checks how much insulin your pancreas is producing — helps identify insulin resistance early.</span>
+        </div>
+        <div class="related-item">
+          <strong>Oral Glucose Tolerance Test (OGTT)</strong>
+          <span>Tests how your body processes a sugar drink over 2 hours. Used to diagnose gestational diabetes.</span>
+        </div>
+        <div class="related-item">
+          <strong>C-Peptide</strong>
+          <span>Measures insulin production by the pancreas — helps distinguish type 1 from type 2 diabetes.</span>
+        </div>
+        <div class="related-item">
+          <strong>Comprehensive Metabolic Panel</strong>
+          <span>Checks kidney function, liver enzymes, and electrolytes — often ordered with A1c to assess diabetes complications.</span>
+        </div>
+        <div class="related-item">
+          <strong>Lipid Panel</strong>
+          <span>High blood sugar is closely linked to high triglycerides and low HDL — these often appear together.</span>
+        </div>
+      </div>
+    </div>
 
-            <div class="p-6 bg-stone-50 border border-stone-200 rounded-2xl space-y-4 text-center">
-                <div class="text-2xl">🤖</div>
-                <h3 class="text-lg font-bold text-stone-900">Decode Your HbA1c Result</h3>
-                <p class="text-sm text-stone-600 max-w-md mx-auto">Enter your number and we'll explain what it means in plain English.</p>
-                <div class="max-w-xs mx-auto flex gap-2">
-                    <input type="text" placeholder="e.g. 5.8" class="w-full px-3 py-2 border border-stone-300 rounded-lg text-sm focus:outline-none focus:border-stone-500 bg-white">
-                    <button class="bg-stone-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-stone-800 transition whitespace-nowrap">Explain My Result</button>
-                </div>
-            </div>
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Do I need to fast before an HbA1c test?</div>
+        <div class="faq-a">No. Unlike a fasting glucose test, HbA1c doesn't require fasting. You can eat and drink normally before the blood draw. This makes it a very convenient test for routine monitoring.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How quickly can I lower my HbA1c?</div>
+        <div class="faq-a">Since A1c reflects a 2–3 month average, meaningful changes typically show up after 3 months of sustained effort. Diet changes, regular exercise, weight loss, and medication (if prescribed) can all help lower it. Dropping 0.5–1% per 3-month period is a realistic goal for many people.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can conditions other than diabetes affect my HbA1c?</div>
+        <div class="faq-a">Yes. Iron-deficiency anemia, hemolytic anemia, kidney disease, and certain genetic variants of hemoglobin (like sickle cell trait) can all give falsely high or falsely low A1c readings. If your result seems inconsistent with your symptoms, ask your doctor about alternative tests.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between HbA1c and blood glucose?</div>
+        <div class="faq-a">Blood glucose (fingerstick or fasting lab test) is a snapshot of your sugar level at one moment. HbA1c is the long-term average — it tells you about patterns, not just the moment of the test. Both are useful; they give different information.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is a 5.8% A1c something I should worry about?</div>
+        <div class="faq-a">A 5.8% falls in the prediabetes range (5.7–6.4%). It's not diabetes yet, but it is a signal that blood sugar control is slipping. The good news: prediabetes is reversible with lifestyle changes in many people. This is the best time to act — before it becomes full diabetes.</div>
+      </div>
+    </div>
 
-            <div class="space-y-4">
-                <div class="text-2xl">❓</div>
-                <h2 class="text-xl font-bold text-stone-900">Frequently Asked Questions</h2>
-                <div class="space-y-4 text-sm text-stone-600">
-                    <div>
-                        <strong class="text-stone-900 block mb-1">Do I need to fast before an HbA1c test?</strong>
-                        <span>No. Because it measures a 3-month average, eating or fasting right before the test won't change your result. You can take it at any time of day.</span>
-                    </div>
-                    <div>
-                        <strong class="text-stone-900 block mb-1">How fast can I bring down my HbA1c score?</strong>
-                        <span>Because it tracks the 90-day lifecycle of red blood cells, meaningful changes typically show up on bloodwork after 3 months of consistent lifestyle or dietary adjustments.</span>
-                    </div>
-                </div>
-            </div>
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="doctor-q-list">
+        <li>What exactly does my A1c number mean for my health right now?</li>
+        <li>Am I in the prediabetes range, and if so, what's my risk of progressing to type 2?</li>
+        <li>What A1c target should I be aiming for, given my age and health history?</li>
+        <li>Should I also test my fasting glucose or get an oral glucose tolerance test?</li>
+        <li>Are there specific diet or exercise changes that would help my numbers the most?</li>
+        <li>How often should I retest — every 3 months or once a year?</li>
+        <li>Could any of my medications be affecting this result?</li>
+      </ul>
+    </div>
 
-            <div class="space-y-3">
-                <div class="text-2xl">🔗</div>
-                <h2 class="text-xl font-bold text-stone-900">Related Lab Tests</h2>
-                <div class="flex flex-wrap gap-2 text-xs font-medium text-stone-600">
-                    <a href="triglycerides.html" class="bg-stone-100 border border-stone-200 px-3 py-1.5 rounded-full hover:bg-stone-200 transition">Triglycerides</a>
-                    <span class="bg-stone-100 border border-stone-200 px-3 py-1.5 rounded-full">Fasting Glucose</span>
-                    <span class="bg-stone-100 border border-stone-200 px-3 py-1.5 rounded-full">Fasting Insulin</span>
-                </div>
-            </div>
+    <div class="card">
+      <div class="section-label">What to do next</div>
+      <div class="next-steps">
+        If your A1c is in the prediabetes or diabetes range, don't panic — this is actionable information. Even modest lifestyle changes (cutting refined carbs, adding 30 minutes of walking most days, losing 5–7% of body weight) can meaningfully lower your A1c. If you're already diagnosed with diabetes, consistent monitoring every 3 months helps your care team adjust your treatment plan to keep your numbers in range.
+      </div>
+    </div>
 
-            <div class="space-y-4 border-t border-stone-200 pt-6">
-                <div class="text-2xl">👨‍⚕️</div>
-                <h2 class="text-xl font-bold text-stone-900">Questions to Ask Your Doctor</h2>
-                <ul class="space-y-2 text-sm text-stone-600 list-disc pl-5">
-                    <li>"My HbA1c is [X] — does this point to early prediabetes or insulin resistance?"</li>
-                    <li>"Could any personal factors, like anemia or iron levels, be throwing off my score?"</li>
-                    <li>"What specific changes to my daily habits should we focus on over the next 90 days before we retest?"</li>
-                </ul>
-            </div>
+    <div class="tool-cta">
+      <h3>Decode any lab test instantly</h3>
+      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
 
-        </article>
-    </main>
+    <footer>
+      <span>labplain.co</span>
+      <span>Not a substitute for professional medical advice.</span>
+    </footer>
+  </div>
 </body>
 </html>
