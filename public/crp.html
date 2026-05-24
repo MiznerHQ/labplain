@@ -1,105 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRP (C-Reactive Protein) – LabPlain</title>
-  <meta name="description" content="What does your CRP (C-Reactive Protein) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/crp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRP (C-Reactive Protein) Test: What Your Results Mean | LabPlain</title>
+  <meta name="description" content="High CRP levels explained — what causes elevated C-reactive protein, symptoms of inflammation, normal ranges, and when to worry. Plain-English guide." />
+  <link rel="canonical" href="https://labplain.co/crp" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.7; }
+    header { background: #0f172a; color: white; padding: 16px 24px; display: flex; align-items: center; gap: 12px; }
+    header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: 700; }
+    header span { font-size: 0.85rem; opacity: 0.6; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); color: white; padding: 56px 24px 48px; text-align: center; }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 16px; }
+    .hero p { font-size: 1.1rem; opacity: 0.85; max-width: 600px; margin: 0 auto 28px; }
+    .badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 6px 16px; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 48px 0 32px; }
+    h2 { font-size: 1.6rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #3b82f6; display: inline-block; }
+    h3 { font-size: 1.15rem; font-weight: 700; color: #1e3a5f; margin: 24px 0 8px; }
+    p { margin-bottom: 14px; color: #374151; }
+    ul, ol { margin: 0 0 16px 20px; }
+    li { margin-bottom: 8px; color: #374151; }
+
+    .range-table { width: 100%; border-collapse: collapse; margin: 24px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    .range-table th { background: #0f172a; color: white; padding: 14px 18px; text-align: left; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .range-table td { padding: 13px 18px; border-bottom: 1px solid #e2e8f0; font-size: 0.95rem; }
+    .range-table tr:last-child td { border-bottom: none; }
+    .range-table tr:nth-child(even) td { background: #f8fafc; }
+    .tag-normal { background: #dcfce7; color: #166534; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; }
+    .tag-elevated { background: #fef3c7; color: #92400e; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; }
+    .tag-high { background: #fee2e2; color: #991b1b; padding: 3px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; }
+
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 24px 0; }
+    .card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.07); border-top: 4px solid #3b82f6; }
+    .card h3 { margin-top: 0; font-size: 1rem; color: #0f172a; }
+    .card p { font-size: 0.9rem; margin: 0; }
+
+    .symptom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 20px 0; }
+    .symptom-item { background: white; border-radius: 10px; padding: 14px 16px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); border-left: 4px solid #f59e0b; display: flex; align-items: center; gap: 10px; }
+    .symptom-item .icon { font-size: 1.3rem; }
+    .symptom-item span { font-size: 0.9rem; color: #374151; font-weight: 500; }
+
+    .faq-list { margin: 20px 0; }
+    .faq-item { background: white; border-radius: 10px; margin-bottom: 12px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); overflow: hidden; }
+    .faq-q { padding: 16px 20px; font-weight: 600; color: #0f172a; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+    .faq-q:hover { background: #f1f5f9; }
+    .faq-a { padding: 0 20px 16px; color: #374151; font-size: 0.95rem; display: none; }
+    .faq-a.open { display: block; }
+
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 20px 0; }
+    .related-card { background: white; border-radius: 10px; padding: 16px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); text-align: center; text-decoration: none; color: #1e3a5f; font-weight: 600; font-size: 0.9rem; border: 2px solid transparent; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: #3b82f6; transform: translateY(-2px); }
+
+    .doctor-box { background: linear-gradient(135deg, #1e3a5f, #0f172a); color: white; border-radius: 16px; padding: 32px; margin: 32px 0; }
+    .doctor-box h2 { color: white; border-bottom-color: rgba(255,255,255,0.3); }
+    .doctor-box li { color: rgba(255,255,255,0.9); margin-bottom: 10px; }
+
+    .warning-box { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 20px 24px; margin: 24px 0; }
+    .warning-box strong { color: #c2410c; }
+
+    .ai-widget { background: white; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 32px; margin: 40px 0; border: 2px solid #e2e8f0; }
+    .ai-widget h2 { border-bottom-color: #3b82f6; }
+    textarea { width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 10px; font-size: 0.95rem; font-family: inherit; resize: vertical; min-height: 100px; transition: border-color 0.2s; }
+    textarea:focus { outline: none; border-color: #3b82f6; }
+    button.analyze-btn { background: linear-gradient(135deg, #1e3a5f, #3b82f6); color: white; border: none; padding: 14px 32px; border-radius: 10px; font-size: 1rem; font-weight: 600; cursor: pointer; margin-top: 12px; width: 100%; transition: opacity 0.2s; }
+    button.analyze-btn:hover { opacity: 0.9; }
+    button.analyze-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .result-box { margin-top: 20px; padding: 20px; background: #f8fafc; border-radius: 10px; border: 1px solid #e2e8f0; font-size: 0.95rem; white-space: pre-wrap; display: none; }
+
+    footer { background: #0f172a; color: rgba(255,255,255,0.5); text-align: center; padding: 32px 20px; font-size: 0.85rem; margin-top: 60px; }
+    footer a { color: rgba(255,255,255,0.6); text-decoration: none; }
+    .disclaimer { background: #f1f5f9; border-left: 4px solid #94a3b8; padding: 16px 20px; border-radius: 6px; font-size: 0.85rem; color: #64748b; margin: 32px 0 0; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; CRP (C-Reactive Protein)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">CRP (C-Reactive Protein)</em> result mean?</h1>
-    <span class="category-tag">Inflammation</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
-    <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>The <strong>CRP (C-Reactive Protein)</strong> test measures a protein your liver makes in response to inflammation — it rises quickly when the body is fighting infection or injury.</p>
+<header>
+  <a href="/">🧪 LabPlain</a>
+  <span>/ CRP Test</span>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <div class="badge">Lab Result Guide</div>
+    <h1>CRP (C-Reactive Protein) Test</h1>
+    <p>Your body's inflammation alarm — what high CRP means, what causes it, and what to do next. In plain English.</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- WHAT IS IT -->
+  <section>
+    <h2>What Is CRP?</h2>
+    <p>C-reactive protein (CRP) is a protein your liver produces in response to inflammation anywhere in your body. Think of it as your body's general-purpose alarm signal — when something is wrong, CRP shoots up fast.</p>
+    <p>CRP doesn't tell your doctor <em>where</em> the inflammation is coming from, but it confirms that inflammation is happening. That makes it one of the most useful initial screening markers in medicine. It rises within hours of an inflammatory trigger and can double every 8 hours.</p>
+    <p>There are two versions of the test: <strong>Standard CRP</strong> (used to detect acute infection or illness) and <strong>High-Sensitivity CRP (hs-CRP)</strong> (used to assess heart disease and chronic inflammation risk). Make sure you know which one was ordered.</p>
+  </section>
+
+  <!-- NORMAL RANGES -->
+  <section>
+    <h2>CRP Reference Ranges</h2>
+    <p>Results vary slightly between labs. Here are general guidelines:</p>
+
+    <h3>Standard CRP</h3>
+    <table class="range-table">
+      <thead><tr><th>Result</th><th>What It Means</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Below 1.0 mg/L</td><td>No significant inflammation detected</td><td><span class="tag-normal">Normal</span></td></tr>
+        <tr><td>1.0 – 10.0 mg/L</td><td>Mild elevation — minor infection, injury, or chronic condition</td><td><span class="tag-elevated">Elevated</span></td></tr>
+        <tr><td>Above 10.0 mg/L</td><td>Significant inflammation or infection — warrants investigation</td><td><span class="tag-high">High</span></td></tr>
+        <tr><td>Above 100 mg/L</td><td>Severe acute infection, sepsis, or major trauma</td><td><span class="tag-high">Very High</span></td></tr>
+      </tbody>
+    </table>
+
+    <h3>High-Sensitivity CRP (hs-CRP) — Cardiovascular Risk</h3>
+    <table class="range-table">
+      <thead><tr><th>hs-CRP Level</th><th>Cardiovascular Risk Category</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Below 1.0 mg/L</td><td>Low cardiovascular risk</td><td><span class="tag-normal">Low Risk</span></td></tr>
+        <tr><td>1.0 – 3.0 mg/L</td><td>Average cardiovascular risk</td><td><span class="tag-elevated">Average Risk</span></td></tr>
+        <tr><td>Above 3.0 mg/L</td><td>High cardiovascular risk</td><td><span class="tag-high">High Risk</span></td></tr>
+      </tbody>
+    </table>
+
+    <div class="warning-box">
+      <strong>⚠️ Important:</strong> A single CRP result is rarely definitive. Your doctor will interpret it alongside your symptoms, other labs, and medical history. Recent exercise, a minor cold, or even a bad night's sleep can elevate CRP temporarily.
     </div>
+  </section>
 
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Below 1.0 mg/dL (standard); below 1.0 mg/L for high-sensitivity CRP (hs-CRP)</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+  <!-- SYMPTOMS -->
+  <section>
+    <h2>Symptoms of High Inflammation</h2>
+    <p>Elevated CRP is a lab finding — not a symptom itself. But the inflammation causing it often produces:</p>
+    <div class="symptom-grid">
+      <div class="symptom-item"><span class="icon">🔥</span><span>Fever or chills</span></div>
+      <div class="symptom-item"><span class="icon">😩</span><span>Fatigue or weakness</span></div>
+      <div class="symptom-item"><span class="icon">💪</span><span>Joint pain or swelling</span></div>
+      <div class="symptom-item"><span class="icon">🤕</span><span>Muscle aches</span></div>
+      <div class="symptom-item"><span class="icon">🫁</span><span>Chest pain or tightness</span></div>
+      <div class="symptom-item"><span class="icon">🌡️</span><span>Redness or warmth at a site</span></div>
+      <div class="symptom-item"><span class="icon">🤢</span><span>Nausea or loss of appetite</span></div>
+      <div class="symptom-item"><span class="icon">🧠</span><span>Brain fog or confusion</span></div>
     </div>
+    <p>In some people — especially with chronic, low-grade inflammation — there are <strong>no obvious symptoms</strong>. This is why hs-CRP is particularly valuable for silent cardiovascular risk.</p>
+  </section>
 
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>High CRP signals active inflammation somewhere in the body — from infection, autoimmune disease, or chronic low-grade inflammation linked to heart disease risk.</p>
-        </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Very low CRP simply means no significant inflammation is detected — a reassuring result.</p>
-        </div>
+  <!-- CAUSES -->
+  <section>
+    <h2>What Causes High CRP?</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>🦠 Infections</h3>
+        <p>Bacterial infections cause the sharpest CRP spikes. Viral infections raise it too, but usually less dramatically.</p>
+      </div>
+      <div class="card">
+        <h3>🦴 Autoimmune Conditions</h3>
+        <p>Rheumatoid arthritis, lupus, IBD, and other autoimmune diseases chronically activate the inflammatory response.</p>
+      </div>
+      <div class="card">
+        <h3>❤️ Heart Disease</h3>
+        <p>Atherosclerosis involves chronic vascular inflammation. Elevated hs-CRP is an independent predictor of heart attack risk.</p>
+      </div>
+      <div class="card">
+        <h3>🩸 Tissue Injury</h3>
+        <p>Surgery, trauma, burns, or even intense exercise can spike CRP as the body repairs itself.</p>
+      </div>
+      <div class="card">
+        <h3>🫀 Chronic Disease</h3>
+        <p>Diabetes, obesity, kidney disease, and metabolic syndrome are all linked to persistently elevated CRP levels.</p>
+      </div>
+      <div class="card">
+        <h3>🚬 Lifestyle Factors</h3>
+        <p>Smoking, poor sleep, high-stress lifestyle, and a poor diet all contribute to baseline inflammation.</p>
       </div>
     </div>
+  </section>
 
-    <div class="card">
-      <div class="section-label">What to do next</div>
-      <div class="next-steps">Standard CRP detects significant inflammation; high-sensitivity CRP (hs-CRP) is used to assess cardiovascular risk in people who appear otherwise healthy.</div>
-    </div>
+  <!-- LOW CRP -->
+  <section>
+    <h2>What About Low CRP?</h2>
+    <p>A low CRP (below 1.0 mg/L) is generally reassuring — it suggests no significant active inflammation. However:</p>
+    <ul>
+      <li>Some inflammatory conditions (like lupus) occasionally show normal CRP despite active disease</li>
+      <li>CRP is not a cancer screening marker on its own</li>
+      <li>Low CRP does not rule out all serious conditions — it must be interpreted with clinical context</li>
+    </ul>
+    <p>If your CRP is low but you still feel unwell, your doctor will look at other markers to investigate further.</p>
+  </section>
 
-    <div class="tool-cta">
-      <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
-
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
-    </footer>
+  <!-- AI WIDGET -->
+  <div class="ai-widget">
+    <h2>Decode Your CRP Result</h2>
+    <p style="margin-bottom:16px; color:#64748b;">Paste your CRP value and any context (symptoms, other results) and get a plain-English explanation.</p>
+    <textarea id="userInput" placeholder="Example: My CRP came back at 18 mg/L. I've had knee pain for a few weeks. Is this serious?"></textarea>
+    <button class="analyze-btn" id="analyzeBtn" onclick="analyzeResult()">🔬 Explain My Result</button>
+    <div class="result-box" id="resultBox"></div>
   </div>
+
+  <!-- FAQ -->
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What's the difference between CRP and hs-CRP? <span>+</span></div>
+        <div class="faq-a">Standard CRP measures larger elevations typical of active infection or illness (range: 0–350 mg/L). High-sensitivity CRP (hs-CRP) detects smaller elevations in the 0–10 mg/L range, used specifically to assess cardiovascular disease risk in people who appear healthy. The test measures the same molecule — just at different sensitivity levels.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can I lower my CRP? <span>+</span></div>
+        <div class="faq-a">Yes. For chronically elevated CRP, lifestyle changes are highly effective: regular moderate exercise, a Mediterranean-style diet, quitting smoking, reducing alcohol, improving sleep quality, and managing stress all reduce systemic inflammation. Statins are sometimes prescribed specifically to lower hs-CRP in high-risk cardiovascular patients, even when cholesterol is normal.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How quickly does CRP change? <span>+</span></div>
+        <div class="faq-a">CRP is one of the fastest-responding inflammatory markers. It can double every 8 hours, peaking at 24–72 hours after an inflammatory trigger. Once the trigger resolves, CRP typically returns to normal within 3–7 days. This rapid response makes it useful for monitoring treatment effectiveness.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Does high CRP mean I have cancer? <span>+</span></div>
+        <div class="faq-a">Not necessarily. While some cancers can cause elevated CRP (especially those involving tissue destruction or immune activation), CRP elevation is far more commonly caused by infection, autoimmune conditions, or injury. CRP alone is not a cancer screening test. If your doctor suspects cancer, they'll order specific tumor markers and imaging.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Should I fast before a CRP test? <span>+</span></div>
+        <div class="faq-a">No fasting is required for a standard CRP test. However, for hs-CRP (cardiovascular risk assessment), it's sometimes done alongside a fasting lipid panel. Follow your doctor's specific instructions. Avoiding intense exercise 24 hours before the test is a good idea, as strenuous physical activity can temporarily elevate CRP.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What if my CRP is very high — over 100 mg/L? <span>+</span></div>
+        <div class="faq-a">CRP above 100 mg/L almost always indicates a serious bacterial infection, sepsis, or major tissue injury. This level of elevation typically prompts urgent medical attention and often requires hospitalization for investigation and treatment. If you received a result this high, contact your doctor immediately if you haven't already.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED TESTS -->
+  <section>
+    <h2>Related Lab Tests</h2>
+    <p>CRP is often ordered alongside these markers to get a full picture of inflammation and health:</p>
+    <div class="related-grid">
+      <a class="related-card" href="/esr">ESR (Sed Rate)</a>
+      <a class="related-card" href="/ferritin">Ferritin</a>
+      <a class="related-card" href="/cbc">CBC (Complete Blood Count)</a>
+      <a class="related-card" href="/albumin">Albumin</a>
+      <a class="related-card" href="/ldl">LDL Cholesterol</a>
+      <a class="related-card" href="/egfr">eGFR (Kidney)</a>
+    </div>
+  </section>
+
+  <!-- DOCTOR QUESTIONS -->
+  <div class="doctor-box">
+    <h2>Questions to Ask Your Doctor</h2>
+    <ul>
+      <li>Is this standard CRP or high-sensitivity CRP — and what was it ordered to evaluate?</li>
+      <li>What level of concern does my result warrant given my symptoms and history?</li>
+      <li>Do I need follow-up testing to find the source of inflammation?</li>
+      <li>Should we retest in a few weeks to see if this is a temporary spike or a trend?</li>
+      <li>Are there lifestyle changes I should make to reduce my chronic inflammation?</li>
+      <li>Does my CRP result change anything about my heart disease risk assessment?</li>
+    </ul>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Medical Disclaimer:</strong> LabPlain is for educational purposes only and does not constitute medical advice. Always consult a qualified healthcare provider about your lab results and health decisions.
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2025 LabPlain · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms of Use</a></p>
+  <p style="margin-top:8px;">Understand your labs. No medical degree required.</p>
+</footer>
+
+<script>
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(a => { a.classList.remove('open'); a.previousElementSibling.querySelector('span').textContent = '+'; });
+    if (!isOpen) { answer.classList.add('open'); el.querySelector('span').textContent = '−'; }
+  }
+
+  async function analyzeResult() {
+    const input = document.getElementById('userInput').value.trim();
+    if (!input) return;
+    const btn = document.getElementById('analyzeBtn');
+    const resultBox = document.getElementById('resultBox');
+    btn.disabled = true;
+    btn.textContent = '🔬 Analyzing...';
+    resultBox.style.display = 'block';
+    resultBox.textContent = 'Reading your result...';
+    try {
+      const response = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: 'claude-sonnet-4-20250514',
+          max_tokens: 1000,
+          system: 'You are a friendly, knowledgeable medical educator helping people understand their CRP (C-reactive protein) lab results. Explain results in plain English — what the number means, whether it is concerning, and what might cause it. Always remind the user to follow up with their doctor. Be warm, clear, and reassuring without downplaying real concerns.',
+          messages: [{ role: 'user', content: input }]
+        })
+      });
+      const data = await response.json();
+      resultBox.textContent = data.content?.[0]?.text || 'Unable to get a response. Please try again.';
+    } catch (err) {
+      resultBox.textContent = 'Something went wrong. Please try again.';
+    }
+    btn.disabled = false;
+    btn.textContent = '🔬 Explain My Result';
+  }
+</script>
+
 </body>
 </html>
