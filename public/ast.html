@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AST (Aspartate Aminotransferase) – LabPlain</title>
-  <meta name="description" content="What does your AST (Aspartate Aminotransferase) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
+  <title>AST Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your AST result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, liver health, and what to ask your doctor.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://labplain.co/ast">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +12,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
     nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
@@ -26,27 +29,56 @@
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
     .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
     .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
+    .range-box.low .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -55,20 +87,27 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; AST (Aspartate Aminotransferase)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">AST (Aspartate Aminotransferase)</em> result mean?</h1>
-    <span class="category-tag">Liver</span>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; AST</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">AST</em> result mean?</h1>
+    <span class="category-tag">Liver Function</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>AST (Aspartate Aminotransferase)</strong> test measures an enzyme found in the liver and muscles — it rises when these tissues are under stress.</p>
+      <p>AST stands for Aspartate Aminotransferase — an enzyme found mainly in the liver, but also in the heart, muscles, kidneys, and brain. Under normal conditions, AST stays inside cells and only a small amount enters the bloodstream. When cells are damaged or destroyed, AST leaks out and blood levels rise.</p>
+      <p>Doctors use the AST test primarily to check for liver damage or disease. It's almost always ordered alongside ALT (alanine aminotransferase), another liver enzyme. Because AST is also found in muscle and heart tissue, an elevated AST alone isn't always a liver problem — the ratio of AST to ALT helps pinpoint the cause.</p>
+      <p>AST is a standard part of a Comprehensive Metabolic Panel (CMP) and Liver Function Tests (LFTs), and is routinely checked during annual physicals, before starting certain medications, and when monitoring known liver conditions.</p>
     </div>
 
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">10–40 U/L</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+      <div class="normal-range">Adults: 10–40 U/L &nbsp;|&nbsp; Women may run slightly lower than men</div>
+      <p class="range-note">Reference ranges vary between laboratories based on the equipment and methods used. Always compare your result to the specific range printed on your lab report, not a number you find online.</p>
+      <p class="range-note" style="margin-top:8px;">Results are typically expressed in units per liter (U/L). Mild elevations (up to 3x the upper limit of normal) are common and often explained by medications, alcohol, or recent intense exercise. Values more than 10x the upper limit suggest significant liver injury and usually require urgent evaluation.</p>
+      <div class="timing-box">
+        <h3>💡 AST vs ALT — why both matter</h3>
+        <p>AST and ALT are almost always ordered together. If both are elevated, the AST:ALT ratio helps identify the cause. A ratio above 2:1 (AST twice as high as ALT) is a classic pattern for alcohol-related liver disease. When ALT is higher than AST, fatty liver disease or viral hepatitis is more likely. Your doctor will look at the pattern, not just the individual numbers.</p>
+      </div>
     </div>
 
     <div class="card">
@@ -76,18 +115,119 @@
       <div class="two-col">
         <div class="range-box high">
           <div class="range-box-label">↑ If High</div>
-          <p>Elevated AST can point to liver damage, but also muscle injury, heart problems, or intense exercise. It's rarely looked at alone.</p>
+          <p>Elevated AST most commonly points to liver cell damage from fatty liver disease, alcohol use, viral hepatitis, or medications. It can also rise after intense exercise, heart attack, or muscle injury — which is why ALT is checked at the same time to narrow down the source.</p>
         </div>
         <div class="range-box low">
           <div class="range-box-label">↓ If Low</div>
-          <p>Low AST has no clinical significance and is typically not a concern.</p>
+          <p>Very low AST is generally not a clinical concern. Occasionally, very low levels are seen in patients with severe chronic liver disease (where so much liver tissue is lost there's little AST left to release), or in people with vitamin B6 deficiency, which the enzyme requires to function.</p>
         </div>
       </div>
     </div>
 
     <div class="card">
+      <div class="section-label">Symptoms associated with elevated AST</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High AST Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Fatigue and general weakness</li>
+            <li>Nausea or loss of appetite</li>
+            <li>Abdominal pain or tenderness (upper right)</li>
+            <li>Yellowing of skin or eyes (jaundice)</li>
+            <li>Dark urine or pale stools</li>
+            <li>Itchy skin</li>
+            <li>Easy bruising or bleeding</li>
+            <li>Swelling in legs or abdomen</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>⚠️ Important Note</h3>
+          <ul class="symptom-list">
+            <li>Mild AST elevation often causes NO symptoms</li>
+            <li>Fatty liver disease is frequently asymptomatic</li>
+            <li>Many patients learn of elevated AST only from routine bloodwork</li>
+            <li>Symptoms tend to appear with more advanced liver damage</li>
+            <li>Don't assume you're fine because you feel fine</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of elevated AST</div>
+      <h2>Liver-related causes</h2>
+      <p>The most common liver causes include non-alcoholic fatty liver disease (NAFLD), alcohol-related liver disease, viral hepatitis (A, B, or C), autoimmune hepatitis, and medication-induced liver injury. Even common over-the-counter drugs like acetaminophen (Tylenol) can significantly elevate AST when taken in high doses or combined with alcohol.</p>
+      <p>More advanced liver conditions — cirrhosis, liver cancer, or bile duct obstruction — also raise AST, though in late-stage cirrhosis levels can paradoxically be lower because so few functioning liver cells remain.</p>
+      <h2 style="margin-top:24px;">Non-liver causes</h2>
+      <p>Because AST is also present in heart and muscle tissue, elevated levels don't always mean liver trouble. Heart attacks cause significant AST release. Strenuous exercise, muscle inflammation (myositis), rhabdomyolysis (severe muscle breakdown), thyroid disease, and celiac disease can all raise AST without any liver involvement. This is exactly why doctors compare AST to ALT — ALT is much more specific to the liver, so if ALT is also elevated, a liver cause is far more likely.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside AST</div>
+      <p>AST is rarely evaluated in isolation. Your doctor will typically look at:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>ALT (Alanine Aminotransferase)</strong> — the most liver-specific enzyme; the AST:ALT ratio helps identify the cause</li>
+        <li><strong>Alkaline Phosphatase (ALP)</strong> — elevated when bile ducts are blocked or in bone disorders</li>
+        <li><strong>Bilirubin</strong> — a waste product processed by the liver; high levels cause jaundice</li>
+        <li><strong>GGT (Gamma-glutamyl transferase)</strong> — sensitive marker for alcohol use and bile duct problems</li>
+        <li><strong>Albumin and Total Protein</strong> — reflect the liver's ability to produce proteins; low levels suggest severe liver disease</li>
+        <li><strong>PT/INR (Prothrombin Time)</strong> — measures clotting ability; the liver makes clotting factors, so a prolonged PT suggests significant liver dysfunction</li>
+        <li><strong>Complete Blood Count (CBC)</strong> — low platelets can indicate portal hypertension from liver disease</li>
+      </ul>
+    </div>
+
+    <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">Doctors usually compare AST to ALT together. If both are elevated, the ratio helps pinpoint whether the issue is liver- or muscle-related.</div>
+      <div class="next-steps">A mildly elevated AST — especially on a single test — is common and often explained by something temporary like recent exercise, a new medication, or a few nights of heavy drinking. It doesn't automatically mean liver disease. Your doctor will typically repeat the test, compare it to your ALT, review your medications and lifestyle, and decide if further workup (imaging, additional blood tests, or specialist referral) is needed. Don't make dietary changes or stop medications without talking to your doctor first.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>How high is my AST, and how does it compare to my ALT result?</li>
+        <li><span class="q-num">02</span>Could any of my medications or supplements be causing this elevation?</li>
+        <li><span class="q-num">03</span>Do I need a repeat test, and if so, how soon?</li>
+        <li><span class="q-num">04</span>Should I have an ultrasound or other imaging to look at my liver?</li>
+        <li><span class="q-num">05</span>Do I need to be tested for hepatitis B or C?</li>
+        <li><span class="q-num">06</span>Are there lifestyle changes — diet, alcohol, exercise — that would help bring this number down?</li>
+        <li><span class="q-num">07</span>At what point would you refer me to a gastroenterologist or hepatologist?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can exercise raise my AST?</div>
+        <div class="faq-a">Yes. AST is present in muscle tissue, so intense or prolonged exercise can cause a temporary rise — sometimes lasting 24–72 hours. If your AST is mildly elevated and you recently did a hard workout, your doctor may ask you to repeat the test after a few days of rest before drawing any conclusions.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is a mildly elevated AST dangerous?</div>
+        <div class="faq-a">Not necessarily. Mild elevations (1–3x the upper limit of normal) are very common and frequently caused by reversible factors like fatty liver, alcohol, exercise, or medications. The concern rises significantly when AST is more than 5–10 times the upper limit of normal, or when it's accompanied by symptoms like jaundice, abdominal pain, or abnormal bilirubin.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between AST and ALT?</div>
+        <div class="faq-a">Both are liver enzymes, but ALT is far more liver-specific. AST is also found in heart, muscle, kidney, and brain cells — so an isolated high AST could come from multiple sources. ALT is almost exclusively a liver marker, which is why the two are always ordered together. When both are elevated, liver disease is the leading explanation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can Tylenol (acetaminophen) cause elevated AST?</div>
+        <div class="faq-a">Yes — acetaminophen is one of the most common causes of drug-induced liver injury in the US. At normal doses it's safe for most people, but exceeding the recommended dose (especially combined with alcohol or in someone with existing liver disease) can cause dramatic AST elevations and serious liver damage. Always follow dosing instructions carefully.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does it take for AST to return to normal?</div>
+        <div class="faq-a">It depends on the cause. If the trigger is removed — stopping a medication, cutting back on alcohol, or losing weight — AST levels often normalize within weeks to a few months. Viral hepatitis recovery varies by type. Ongoing damage from untreated conditions will keep AST elevated until the underlying issue is addressed.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/alt" class="related-chip">ALT →</a>
+        <a href="/albumin" class="related-chip">Albumin →</a>
+        <a href="/bilirubin" class="related-chip">Bilirubin →</a>
+        <a href="/glucose" class="related-chip">Glucose →</a>
+        <a href="/creatinine" class="related-chip">Creatinine →</a>
+        <a href="/ana" class="related-chip">ANA →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
