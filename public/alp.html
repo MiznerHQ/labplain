@@ -1,105 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALP (Alkaline Phosphatase) – LabPlain</title>
-  <meta name="description" content="What does your ALP (Alkaline Phosphatase) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/alp">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALP (Alkaline Phosphatase) Blood Test | LabPlain</title>
+  <meta name="description" content="Understand your ALP (alkaline phosphatase) blood test results. Learn what high or low levels mean, causes, symptoms, and when to talk to your doctor." />
+  <link rel="canonical" href="https://labplain.co/alp" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.7;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    header {
+      background: #0f2557;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header a { text-decoration: none; }
+    header .logo { color: #ffffff; font-size: 1.4rem; font-weight: 700; letter-spacing: -0.5px; }
+    header .logo span { color: #60a5fa; }
+    header .tagline { color: #93c5fd; font-size: 0.78rem; margin-top: 2px; }
+    nav a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-left: 20px;
+    }
+    nav a:hover { color: #ffffff; }
+
+    .hero {
+      background: linear-gradient(135deg, #0f2557 0%, #1e3a8a 100%);
+      color: white;
+      padding: 52px 24px 44px;
+      text-align: center;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: rgba(96,165,250,0.2);
+      color: #93c5fd;
+      border: 1px solid rgba(96,165,250,0.4);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; margin-bottom: 12px; }
+    .hero p { font-size: 1.05rem; color: #bfdbfe; max-width: 580px; margin: 0 auto 28px; }
+    .range-bar-wrap { max-width: 480px; margin: 0 auto; }
+    .range-label { display: flex; justify-content: space-between; font-size: 0.8rem; color: #93c5fd; margin-bottom: 6px; }
+    .range-bar {
+      height: 12px;
+      border-radius: 6px;
+      background: linear-gradient(to right, #3b82f6 0%, #22c55e 30%, #22c55e 70%, #f59e0b 85%, #ef4444 100%);
+    }
+    .range-sub { display: flex; justify-content: space-between; font-size: 0.75rem; color: #93c5fd; margin-top: 6px; }
+
+    .container { max-width: 780px; margin: 0 auto; padding: 0 20px 60px; }
+
+    .quick-facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin: 36px 0 0;
+    }
+    .qf-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .qf-card .label { font-size: 0.72rem; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+    .qf-card .value { font-size: 1.2rem; font-weight: 800; color: #0f2557; }
+    .qf-card .sub { font-size: 0.75rem; color: #94a3b8; margin-top: 3px; }
+
+    section { margin-top: 44px; }
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #0f2557;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    p { margin-bottom: 14px; color: #374151; }
+
+    .symptom-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 4px;
+    }
+    .symptom-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #0f2557;
+      border-radius: 8px;
+      padding: 14px 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .symptom-card.high { border-left-color: #ef4444; }
+    .symptom-card.low { border-left-color: #3b82f6; }
+    .symptom-card h3 { font-size: 0.85rem; font-weight: 700; color: #0f2557; margin-bottom: 6px; }
+    .symptom-card ul { padding-left: 16px; }
+    .symptom-card ul li { font-size: 0.88rem; color: #475569; margin-bottom: 4px; }
+
+    .cause-list { list-style: none; padding: 0; }
+    .cause-list li {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 12px 16px 12px 44px;
+      margin-bottom: 10px;
+      font-size: 0.92rem;
+      color: #374151;
+      position: relative;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .cause-list li::before {
+      content: attr(data-icon);
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.1rem;
+    }
+    .cause-list li strong { color: #0f2557; display: block; font-size: 0.82rem; margin-bottom: 1px; }
+
+    .faq-item {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .faq-item h3 { font-size: 0.97rem; font-weight: 700; color: #0f2557; margin-bottom: 8px; }
+    .faq-item p { font-size: 0.9rem; margin: 0; color: #475569; }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .related-card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px;
+      text-align: center;
+      text-decoration: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .related-card:hover { border-color: #0f2557; box-shadow: 0 2px 8px rgba(15,37,87,0.12); }
+    .related-card .icon { font-size: 1.5rem; margin-bottom: 6px; }
+    .related-card .name { font-size: 0.85rem; font-weight: 700; color: #0f2557; }
+    .related-card .desc { font-size: 0.75rem; color: #64748b; margin-top: 3px; }
+
+    .doctor-box {
+      background: linear-gradient(135deg, #eff6ff, #dbeafe);
+      border: 1px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .doctor-box h3 { font-size: 1rem; font-weight: 700; color: #1e3a8a; margin-bottom: 14px; }
+    .doctor-box ol { padding-left: 20px; }
+    .doctor-box ol li { font-size: 0.91rem; color: #1e3a8a; margin-bottom: 8px; }
+
+    .disclaimer {
+      background: #f1f5f9;
+      border-left: 4px solid #94a3b8;
+      border-radius: 6px;
+      padding: 14px 18px;
+      font-size: 0.82rem;
+      color: #64748b;
+      margin-top: 44px;
+    }
+
+    footer {
+      background: #0f2557;
+      color: #93c5fd;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 0.82rem;
+    }
+    footer a { color: #60a5fa; text-decoration: none; margin: 0 10px; }
+    footer a:hover { color: white; }
+    footer .copy { margin-top: 8px; color: #475569; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; ALP (Alkaline Phosphatase)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">ALP (Alkaline Phosphatase)</em> result mean?</h1>
-    <span class="category-tag">Liver</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
-    <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>The <strong>ALP (Alkaline Phosphatase)</strong> test measures an enzyme found in the liver, bones, and other tissues — it rises when these are stressed or damaged.</p>
+<header>
+  <a href="/">
+    <div class="logo">Lab<span>Plain</span></div>
+    <div class="tagline">Understand your labs. No medical degree required.</div>
+  </a>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/#tests">All Tests</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="badge">Liver &amp; Bone Health</div>
+  <h1>ALP (Alkaline Phosphatase)</h1>
+  <p>An enzyme found in your liver, bones, kidneys, and digestive tract. Elevated levels can signal liver disease, bone disorders, or bile duct problems.</p>
+  <div class="range-bar-wrap">
+    <div class="range-label"><span>Low</span><span>Normal</span><span>High</span></div>
+    <div class="range-bar"></div>
+    <div class="range-sub"><span>&lt;44 U/L</span><span>44–147 U/L</span><span>&gt;147 U/L</span></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="quick-facts">
+    <div class="qf-card">
+      <div class="label">Normal Range</div>
+      <div class="value">44–147</div>
+      <div class="sub">U/L (adults)</div>
     </div>
-
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">44–147 U/L</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+    <div class="qf-card">
+      <div class="label">Also Called</div>
+      <div class="value">ALP, Alk Phos</div>
+      <div class="sub">Alkaline Phosphatase</div>
     </div>
+    <div class="qf-card">
+      <div class="label">Test Type</div>
+      <div class="value">Blood Panel</div>
+      <div class="sub">CMP / LFT</div>
+    </div>
+    <div class="qf-card">
+      <div class="label">Turnaround</div>
+      <div class="value">24–72 hrs</div>
+      <div class="sub">Typical lab time</div>
+    </div>
+  </div>
 
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>High ALP can indicate liver or bile duct problems, or rapid bone growth/turnover. In children and teens, mildly elevated ALP is often normal during growth.</p>
-        </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Low ALP is uncommon but can be seen with hypothyroidism, zinc deficiency, or a rare genetic condition.</p>
-        </div>
+  <section>
+    <h2>What Is ALP?</h2>
+    <p>Alkaline phosphatase (ALP) is an enzyme produced mainly in the liver, bones, kidneys, and intestines. It plays a role in breaking down proteins and is essential for bone mineralization and liver function.</p>
+    <p>ALP is routinely measured as part of a <strong>comprehensive metabolic panel (CMP)</strong> or <strong>liver function test (LFT)</strong>. Because it's found in multiple organs, an abnormal result often requires follow-up tests to pinpoint the source.</p>
+    <p>Normal ALP ranges vary by age and sex — children and teenagers naturally have much higher ALP levels because their bones are actively growing. Pregnancy also raises ALP significantly during the third trimester due to placental production.</p>
+  </section>
+
+  <section>
+    <h2>Symptoms Associated With Abnormal ALP</h2>
+    <div class="symptom-grid">
+      <div class="symptom-card high">
+        <h3>🔴 High ALP Symptoms</h3>
+        <ul>
+          <li>Jaundice (yellowing of skin/eyes)</li>
+          <li>Dark urine or pale stools</li>
+          <li>Upper right abdominal pain</li>
+          <li>Itchy skin (pruritus)</li>
+          <li>Fatigue and nausea</li>
+          <li>Bone pain or tenderness</li>
+          <li>Unexplained weight loss</li>
+        </ul>
+      </div>
+      <div class="symptom-card low">
+        <h3>🔵 Low ALP Symptoms</h3>
+        <ul>
+          <li>Stress fractures or weak bones</li>
+          <li>Dental abnormalities</li>
+          <li>Muscle weakness</li>
+          <li>Joint pain</li>
+          <li>Often no obvious symptoms</li>
+        </ul>
       </div>
     </div>
+    <p style="margin-top:14px; font-size:0.88rem; color:#64748b;">⚠️ Many people with abnormal ALP have no symptoms at all. The number alone doesn't tell the full story — context and follow-up tests matter.</p>
+  </section>
 
-    <div class="card">
-      <div class="section-label">What to do next</div>
-      <div class="next-steps">ALP is usually interpreted alongside other liver tests (ALT, AST, bilirubin) to distinguish between liver and bone-related causes.</div>
+  <section>
+    <h2>What Causes High ALP?</h2>
+    <ul class="cause-list">
+      <li data-icon="🫀"><strong>Liver Disease</strong>Hepatitis, cirrhosis, fatty liver disease, or liver damage from medications or alcohol.</li>
+      <li data-icon="🟡"><strong>Bile Duct Obstruction</strong>Gallstones, tumors, or strictures blocking bile flow — one of the most common causes of dramatically elevated ALP.</li>
+      <li data-icon="🦴"><strong>Bone Disorders</strong>Paget's disease, bone cancer, fractures healing, or osteomalacia can all elevate ALP from the bone source.</li>
+      <li data-icon="💊"><strong>Medications</strong>Statins, antibiotics, antiseizure drugs, NSAIDs, and many others can raise ALP as a side effect.</li>
+      <li data-icon="🤰"><strong>Pregnancy</strong>ALP rises naturally during the third trimester — this is normal and not a cause for concern on its own.</li>
+      <li data-icon="🧒"><strong>Normal Growth (Children)</strong>Children and teens have naturally elevated ALP due to rapid bone growth. This is expected and healthy.</li>
+      <li data-icon="🔬"><strong>Thyroid or Parathyroid Issues</strong>Hyperthyroidism and hyperparathyroidism can both cause elevated ALP.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What Causes Low ALP?</h2>
+    <ul class="cause-list">
+      <li data-icon="🧬"><strong>Hypophosphatasia</strong>A rare inherited condition where the body can't make enough ALP, affecting bone and tooth development.</li>
+      <li data-icon="🥗"><strong>Nutritional Deficiencies</strong>Low zinc, magnesium, or vitamin B12 can reduce ALP production.</li>
+      <li data-icon="🩺"><strong>Hypothyroidism</strong>An underactive thyroid can lower ALP levels.</li>
+      <li data-icon="❤️"><strong>Cardiac Surgery (bypass)</strong>Temporarily low ALP can appear after open-heart surgery — typically resolves on its own.</li>
+      <li data-icon="⚗️"><strong>Pernicious Anemia</strong>A B12-deficiency anemia that can reduce ALP alongside other abnormalities.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h3>Should I fast before an ALP test?</h3>
+      <p>Eating a fatty meal can temporarily raise ALP (especially the intestinal form), so many labs recommend fasting for 8–12 hours before the test. If it's part of a CMP, fasting is almost always required. Check with your lab or doctor to be sure.</p>
     </div>
 
-    <div class="tool-cta">
-      <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-      <a href="/">Open the Decoder →</a>
+    <div class="faq-item">
+      <h3>My ALP is high — does that mean my liver is damaged?</h3>
+      <p>Not necessarily. High ALP comes from the liver, bones, kidneys, or placenta. Doctors usually order additional tests — like GGT, ALT, AST, or bilirubin — to figure out whether the liver or bones (or something else) is the source.</p>
     </div>
 
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
-    </footer>
+    <div class="faq-item">
+      <h3>What is GGT and why is it ordered with ALP?</h3>
+      <p>GGT (gamma-glutamyl transferase) is almost exclusively elevated by liver or bile duct problems, not bone. So if your ALP is high and your GGT is also high, the liver is likely the source. If GGT is normal, the elevated ALP is probably coming from bone.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can exercise raise my ALP?</h3>
+      <p>Yes — intense exercise can temporarily elevate ALP, particularly the bone-derived form. Strenuous activity in the 24–48 hours before a blood draw may slightly skew results.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How quickly can ALP levels change?</h3>
+      <p>ALP can rise quickly in response to liver stress or bile duct obstruction but tends to normalize slowly — often over weeks to months — even after the underlying issue is treated. Don't panic if one follow-up test still shows elevation; your doctor will track the trend.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is it possible to have liver disease with normal ALP?</h3>
+      <p>Yes. Conditions like hepatitis C or early cirrhosis may not elevate ALP, especially if ALT and AST are the more affected enzymes. ALP is just one piece of the liver function picture.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Related Tests to Know</h2>
+    <div class="related-grid">
+      <a class="related-card" href="/alt">
+        <div class="icon">🧪</div>
+        <div class="name">ALT</div>
+        <div class="desc">Liver enzyme partner</div>
+      </a>
+      <a class="related-card" href="/ast">
+        <div class="icon">🧪</div>
+        <div class="name">AST</div>
+        <div class="desc">Liver &amp; muscle marker</div>
+      </a>
+      <a class="related-card" href="/albumin">
+        <div class="icon">🩸</div>
+        <div class="name">Albumin</div>
+        <div class="desc">Liver protein production</div>
+      </a>
+      <a class="related-card" href="/bilirubin">
+        <div class="icon">🟡</div>
+        <div class="name">Bilirubin</div>
+        <div class="desc">Bile duct health</div>
+      </a>
+      <a class="related-card" href="/calcium">
+        <div class="icon">🦴</div>
+        <div class="name">Calcium</div>
+        <div class="desc">Bone &amp; mineral balance</div>
+      </a>
+      <a class="related-card" href="/vitamin-d">
+        <div class="icon">☀️</div>
+        <div class="name">Vitamin D</div>
+        <div class="desc">Bone health support</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Questions to Ask Your Doctor</h2>
+    <div class="doctor-box">
+      <h3>📋 Bring this list to your next appointment:</h3>
+      <ol>
+        <li>Is my ALP coming from my liver, bones, or somewhere else? Should we check GGT to find out?</li>
+        <li>Do I need an ultrasound or imaging to check for gallstones or bile duct issues?</li>
+        <li>Should I stop or change any medications that might be affecting my ALP?</li>
+        <li>If this is bone-related, do I need a DEXA scan or bone density evaluation?</li>
+        <li>How often should I recheck this, and what trend would concern you?</li>
+        <li>Are my other liver enzymes (ALT, AST, bilirubin) consistent with this result?</li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="disclaimer">
+    <strong>Medical Disclaimer:</strong> This content is for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your doctor or qualified healthcare provider with questions about your lab results or medical conditions.
   </div>
+
+</div>
+
+<footer>
+  <div>
+    <a href="/">Home</a>
+    <a href="/#tests">All Tests</a>
+    <a href="/privacy">Privacy Policy</a>
+  </div>
+  <div class="copy">© 2025 LabPlain. Understand your labs. No medical degree required.</div>
+</footer>
+
 </body>
 </html>
