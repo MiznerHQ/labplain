@@ -1,105 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Total Cholesterol – LabPlain</title>
-  <meta name="description" content="What does your Total Cholesterol result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/total-cholesterol">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Cholesterol Lab Results Decoder | LabPlain</title>
+    <meta name="description" content="Understand your Total Cholesterol blood test numbers in plain English. Learn what optimal, borderline, and high values mean for your heart health.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://labplain.co/total-cholesterol.html">
+    
+    <!-- Fonts matching established system -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Design System Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #F7F4EF;
+            color: #1E293B;
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        .navbar {
+            background-color: #0B1F3A;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+        .logo .blue { color: #38BDF8; }
+        .logo .white { color: #FFFFFF; }
+        .nav-links a {
+            color: #F1F5F9;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .nav-links a:hover { color: #38BDF8; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0B1F3A 0%, #1E3A8A 100%);
+            color: #FFFFFF;
+            padding: 3.5rem 2rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .badge {
+            background-color: rgba(56, 189, 248, 0.2);
+            color: #38BDF8;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .hero p {
+            color: #E2E8F0;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content & Grid System */
+        .main-content {
+            padding: 3rem 0;
+        }
+        .card {
+            background: #FFFFFF;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            font-family: 'DM Serif Display', serif;
+            color: #0B1F3A;
+            font-size: 1.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Quick Facts Bar / Grid */
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .fact-box {
+            background: #FFFFFF;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 8px;
+            padding: 1.25rem;
+            text-align: center;
+        }
+        .fact-box .label {
+            font-size: 0.85rem;
+            color: #64748B;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .fact-box .value {
+            font-family: 'DM Mono', monospace;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        .status-green { color: #16A34A; }
+        .status-amber { color: #D97706; }
+        .status-red { color: #DC2626; }
+        .status-blue { color: #2563EB; }
+
+        /* Two Column Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+        }
+        .grid-2 h3 {
+            font-size: 1.2rem;
+            color: #0B1F3A;
+            margin-bottom: 0.75rem;
+        }
+        .grid-2 ul {
+            padding-left: 1.25rem;
+        }
+        .grid-2 li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Callout Box */
+        .callout {
+            background-color: #FEF2F2;
+            border-left: 4px solid #EF4444;
+            padding: 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        .callout h4 {
+            color: #991B1B;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            font-weight: 700;
+        }
+        .callout p {
+            color: #7F1D1D;
+            font-size: 0.95rem;
+        }
+
+        /* Table Styles */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        th, td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1.5px solid #E2E8F0;
+        }
+        th {
+            background-color: #F8FAFC;
+            color: #0B1F3A;
+            font-weight: 600;
+        }
+
+        /* Accordion / FAQ Section */
+        .faq-item {
+            border-bottom: 1.5px solid #E2E8F0;
+            padding: 1rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #0B1F3A;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+        }
+        .faq-answer {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        /* Disclaimer & Footer */
+        .medical-disclaimer {
+            font-size: 0.8rem;
+            color: #64748B;
+            border-top: 1.5px solid #E2E8F0;
+            padding-top: 1.5rem;
+            margin-top: 3rem;
+            text-align: justify;
+        }
+        .footer {
+            background-color: #0B1F3A;
+            color: #94A3B8;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+        .footer a {
+            color: #F1F5F9;
+            text-decoration: none;
+            margin: 0 0.75rem;
+        }
+        .footer a:hover { color: #38BDF8; }
+        .footer p { margin-top: 1rem; }
+    </style>
+
+    <!-- MedicalWebPage JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "name": "Total Cholesterol Lab Results Decoder",
+      "description": "Understand your total cholesterol blood test levels, including optimal, borderline high, and high risk ranges.",
+      "url": "https://labplain.co/total-cholesterol.html",
+      "mainEntity": {
+        "@type": "MedicalTest",
+        "name": "Total Cholesterol Test",
+        "alternateName": "Serum Total Cholesterol",
+        "description": "A blood test measuring the total amount of cholesterol in your blood, including HDL and LDL."
+      }
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-  </style>
+    </script>
 </head>
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="https://labplain.co" class="logo"><span class="blue">Lab</span><span class="white">Plain</span></a>
+        <div class="nav-links">
+            <a href="https://labplain.co">Decoder</a>
+            <a href="https://labplain.co/articles.html">Articles</a>
+        </div>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Total Cholesterol</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Total Cholesterol</em> result mean?</h1>
-    <span class="category-tag">Heart Health</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
-    <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>The <strong>Total Cholesterol</strong> test measures all the cholesterol in your blood combined — HDL, LDL, and other types.</p>
-    </div>
-
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Below 200 mg/dL (desirable); 200–239 mg/dL (borderline high)</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
-    </div>
-
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>High total cholesterol increases heart disease risk, but the breakdown into HDL and LDL matters more than the total number alone.</p>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <span class="badge">Lab Test Guide</span>
+            <h1>Total Cholesterol</h1>
+            <p>The total accumulation of cholesterol circulating in your bloodstream, combining both your "good" and "bad" carrier particles.</p>
         </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Very low total cholesterol is uncommon and can sometimes be associated with nutritional issues or hyperthyroidism.</p>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container main-content">
+
+        <!-- Quick Facts Grid System -->
+        <section class="grid-4">
+            <div class="fact-box">
+                <div class="label">Optimal Range</div>
+                <div class="value status-green">&lt; 200 mg/dL</div>
+            </div>
+            <div class="fact-box">
+                <div class="label">Borderline High</div>
+                <div class="value status-amber">200 - 239</div>
+            </div>
+            <div class="fact-box">
+                <div class="label">High Risk Value</div>
+                <div class="value status-red">&ge; 240 mg/dL</div>
+            </div>
+            <div class="fact-box">
+                <div class="label">Test Type</div>
+                <div class="value status-blue">Lipid Panel</div>
+            </div>
+        </section>
+
+        <!-- Detailed Breakdown -->
+        <section class="card">
+            <h2 class="section-title">What is Total Cholesterol?</h2>
+            <p>Your Total Cholesterol score is a composite number. It is calculated by adding your HDL (high-density lipoprotein), your LDL (low-density lipoprotein), and 20% of your Triglyceride levels together. While it gives a solid baseline reading of your overall lipid health, it is always best interpreted alongside your standalone HDL and LDL metrics.</p>
+            
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Result Range</th>
+                            <th>Classification</th>
+                            <th>What It Means</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="status-green" style="font-weight:600;">Under 200 mg/dL</td>
+                            <td>Optimal</td>
+                            <td>Indicates a lower baseline risk for cardiovascular disease.</td>
+                        </tr>
+                        <tr>
+                            <td class="status-amber" style="font-weight:600;">200 – 239 mg/dL</td>
+                            <td>Borderline High</td>
+                            <td>A clear signal to review dietary choices, exercise habits, and lifestyle factors.</td>
+                        </tr>
+                        <tr>
+                            <td class="status-red" style="font-weight:600;">240 mg/dL and above</td>
+                            <td>High Risk</td>
+                            <td>Associated with double the risk of heart disease compared to optimal levels. Requires medical review.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Symptoms and Causes Grid Layout -->
+        <section class="card grid-2">
+            <div>
+                <h3>Common Causes of High Levels</h3>
+                <ul>
+                    <li>Diets rich in trans fats, saturated fats, and processed sugars.</li>
+                    <li>Sedentary lifestyle or lack of routine cardiovascular exercise.</li>
+                    <li>Genetic predispositions (such as Familial Hypercholesterolemia).</li>
+                    <li>Underlying metabolic changes, smoking, or chronic stress.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Associated Symptoms</h3>
+                <div class="callout">
+                    <h4>The Silent Number</h4>
+                    <p>High total cholesterol typically carries absolutely zero physical symptoms. Most individuals feel perfectly fine until a regular blood draw reveals an elevation.</p>
+                </div>
+                <p>In extremely rare, severe genetic cases, physical deposits of fat called xanthomas might form around tendons or skin surfaces.</p>
+            </div>
+        </section>
+
+        <!-- Interlinking Loop with HDL and LDL -->
+        <section class="card">
+            <h2 class="section-title">The Complete Lipid Picture</h2>
+            <p>Total cholesterol shouldn't be analyzed in isolation. To truly grasp what your numbers mean, you must review the individual components that make up this total score:</p>
+            <p style="margin-top: 0.5rem;">
+                👉 View your <strong>Good Cholesterol</strong> guidelines: <a href="https://labplain.co/hdl.html" style="color:#2563EB; font-weight:600;">HDL Results Decoder</a><br>
+                👉 View your <strong>Bad Cholesterol</strong> guidelines: <a href="https://labplain.co/ldl.html" style="color:#2563EB; font-weight:600;">LDL Results Decoder</a>
+            </p>
+        </section>
+
+        <!-- FAQ Accordion Section -->
+        <section class="card">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">Do I need to fast before this test?</div>
+                <div class="faq-answer">Traditionally, a 9 to 12-hour fast is requested before a full lipid panel to ensure triglycerides don't temporarily skew the final calculation. However, modern medical guidelines frequently allow non-fasting tests. Check with your doctor's specific lab instructions.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can a high total cholesterol score be safe?</div>
+                <div class="faq-answer">Occasionally, yes. If an individual has exceptionally high levels of protective HDL ("good") cholesterol, it can artificially inflate the overall total score despite a perfectly healthy, low LDL profile. Always assess the specific ratios.</div>
+            </div>
+        </section>
+
+        <!-- Absolute Medical Disclaimer -->
+        <footer class="medical-disclaimer">
+            <strong>Medical Disclaimer:</strong> LabPlain is a digital educational resource designed to aid in the conceptual understanding of common laboratory terminology. Content provided here does not constitute professional medical advice, diagnostic evaluations, treatment protocols, or healthcare recommendations. Laboratory reference ranges vary drastically depending on individual diagnostic equipment, clinical settings, geographic locations, and testing methodology. Always present raw test outputs directly to qualified healthcare professionals or licensed physicians for authorized clinical interpretations.
+        </footer>
+
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="footer">
+        <div class="container">
+            <a href="https://labplain.co">Home Decoder</a> | 
+            <a href="https://labplain.co/articles.html">Articles Archive</a> | 
+            <a href="https://vercel.com/dashboard" target="_blank" rel="noopener">System Control</a>
+            <p>&copy; 2026 LabPlain. All rights reserved. Building utility infrastructure for open patient literacy.</p>
         </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="section-label">What to do next</div>
-      <div class="next-steps">Never panic over total cholesterol alone — always ask your doctor for the full lipid panel breakdown.</div>
-    </div>
-
-    <div class="tool-cta">
-      <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
-
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
     </footer>
-  </div>
+
 </body>
 </html>
