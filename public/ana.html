@@ -1,105 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ANA (Antinuclear Antibodies) – LabPlain</title>
-  <meta name="description" content="What does your ANA (Antinuclear Antibodies) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/ana">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANA Test (Antinuclear Antibody) | labplain.co</title>
+  <meta name="description" content="ANA test explained: what antinuclear antibody results mean, what causes a positive ANA, and when to follow up with your doctor." />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f0f4f8; color: #1a1a2e; }
+    header { background: #0a1628; color: white; padding: 16px 24px; display: flex; align-items: center; gap: 12px; }
+    header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: 700; }
+    header span { font-size: 0.85rem; color: #94a3b8; }
+    .hero { background: linear-gradient(135deg, #0a1628 0%, #1e3a5f 100%); color: white; padding: 48px 24px; text-align: center; }
+    .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+    .hero p { font-size: 1.1rem; color: #94a3b8; max-width: 600px; margin: 0 auto; }
+    .container { max-width: 860px; margin: 0 auto; padding: 32px 24px; }
+    .card { background: white; border-radius: 12px; padding: 28px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+    .card h2 { font-size: 1.3rem; font-weight: 700; color: #0a1628; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #e2e8f0; }
+    .range-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+    .range-box { border-radius: 8px; padding: 16px; text-align: center; }
+    .range-box .label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+    .range-box .value { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+    .range-box .desc { font-size: 0.8rem; }
+    .negative { background: #dcfce7; color: #166534; }
+    .weak-pos { background: #fef9c3; color: #854d0e; }
+    .positive { background: #fee2e2; color: #991b1b; }
+    .section-intro { color: #475569; margin-bottom: 16px; line-height: 1.7; }
+    ul.plain { list-style: none; padding: 0; }
+    ul.plain li { padding: 8px 0; border-bottom: 1px solid #f1f5f9; color: #374151; line-height: 1.6; }
+    ul.plain li:last-child { border-bottom: none; }
+    ul.plain li::before { content: "→ "; color: #1e3a5f; font-weight: bold; }
+    .faq-item { margin-bottom: 18px; }
+    .faq-item .q { font-weight: 700; color: #0a1628; margin-bottom: 6px; }
+    .faq-item .a { color: #475569; line-height: 1.7; }
+    .titer-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+    .titer-table th { background: #0a1628; color: white; padding: 10px 14px; text-align: left; font-size: 0.85rem; }
+    .titer-table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; color: #374151; font-size: 0.9rem; }
+    .titer-table tr:last-child td { border-bottom: none; }
+    .titer-table tr:nth-child(even) td { background: #f8fafc; }
+    .highlight-box { background: #eff6ff; border-left: 4px solid #1e3a5f; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; }
+    .highlight-box p { color: #1e40af; font-size: 0.95rem; line-height: 1.6; }
+    footer { background: #0a1628; color: #94a3b8; text-align: center; padding: 24px; font-size: 0.85rem; margin-top: 32px; }
+    footer a { color: #94a3b8; text-decoration: none; }
+    @media (max-width: 600px) { .hero h1 { font-size: 1.6rem; } }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; ANA (Antinuclear Antibodies)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">ANA (Antinuclear Antibodies)</em> result mean?</h1>
-    <span class="category-tag">Autoimmune</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
-    <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>The <strong>ANA (Antinuclear Antibodies)</strong> test tests for antinuclear antibodies — immune proteins that mistakenly target the cell's nucleus, a hallmark of autoimmune diseases.</p>
+<header>
+  <a href="/">🧪 labplain.co</a>
+  <span>/ ANA Test</span>
+</header>
+
+<div class="hero">
+  <h1>ANA Test (Antinuclear Antibody)</h1>
+  <p>A positive ANA doesn't mean you have lupus — here's what it actually means and what comes next.</p>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <h2>What Is the ANA Test?</h2>
+    <p class="section-intro">The ANA (antinuclear antibody) test checks whether your immune system is producing antibodies that attack your own cell nuclei. It's a screening tool — not a diagnosis — used when doctors suspect an autoimmune condition like lupus, Sjögren's syndrome, or rheumatoid arthritis.</p>
+    <div class="highlight-box">
+      <p><strong>Key point:</strong> About 15–20% of healthy people have a low positive ANA. A positive result alone means very little without symptoms and follow-up testing.</p>
     </div>
+  </div>
 
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Negative (below 1:40 titer)</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
-    </div>
-
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>A positive ANA means your immune system is producing these self-targeting antibodies. This is seen in lupus, rheumatoid arthritis, Sjögren's syndrome, and other autoimmune conditions — but can also appear in healthy people.</p>
-        </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>A negative ANA makes most autoimmune diseases less likely, which is often reassuring.</p>
-        </div>
+  <div class="card">
+    <h2>Understanding Your Result</h2>
+    <p class="section-intro">ANA results are reported as a titer (a ratio) and a pattern. Both matter.</p>
+    <div class="range-grid">
+      <div class="range-box negative">
+        <div class="label">Negative</div>
+        <div class="value">&lt; 1:40</div>
+        <div class="desc">Autoimmune disease unlikely</div>
+      </div>
+      <div class="range-box weak-pos">
+        <div class="label">Low Positive</div>
+        <div class="value">1:40 – 1:80</div>
+        <div class="desc">Common in healthy people</div>
+      </div>
+      <div class="range-box positive">
+        <div class="label">Significant Positive</div>
+        <div class="value">≥ 1:160</div>
+        <div class="desc">Warrants further evaluation</div>
       </div>
     </div>
-
-    <div class="card">
-      <div class="section-label">What to do next</div>
-      <div class="next-steps">A positive ANA alone doesn't diagnose any disease. Your doctor will order additional specific antibody tests (like anti-dsDNA or anti-Smith) to identify the exact condition.</div>
-    </div>
-
-    <div class="tool-cta">
-      <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
-
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
-    </footer>
   </div>
+
+  <div class="card">
+    <h2>ANA Titer Guide</h2>
+    <p class="section-intro">The higher the titer, the more antibodies present — but higher doesn't always mean sicker.</p>
+    <table class="titer-table">
+      <thead>
+        <tr><th>Titer</th><th>Significance</th><th>Next Step</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1:40</td><td>Borderline, often normal</td><td>Watch and wait</td></tr>
+        <tr><td>1:80</td><td>Low positive</td><td>Correlate with symptoms</td></tr>
+        <tr><td>1:160</td><td>Moderate — clinically relevant</td><td>Additional antibody tests</td></tr>
+        <tr><td>1:320+</td><td>High — strong autoimmune signal</td><td>Rheumatology referral</td></tr>
+        <tr><td>1:640+</td><td>Very high</td><td>Active workup needed</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>ANA Patterns and What They Suggest</h2>
+    <p class="section-intro">The lab also reports a staining pattern, which hints at which specific antibody might be involved.</p>
+    <ul class="plain">
+      <li><strong>Homogeneous (diffuse):</strong> Most common — associated with lupus and drug-induced lupus</li>
+      <li><strong>Speckled:</strong> Associated with Sjögren's, mixed connective tissue disease, scleroderma</li>
+      <li><strong>Nucleolar:</strong> Most strongly associated with scleroderma (systemic sclerosis)</li>
+      <li><strong>Centromere:</strong> Associated with limited scleroderma (CREST syndrome)</li>
+      <li><strong>Peripheral (rim):</strong> Rare — highly specific for lupus when present</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Symptoms That Make a Positive ANA Meaningful</h2>
+    <p class="section-intro">A positive ANA paired with these symptoms is much more significant than a positive result alone.</p>
+    <ul class="plain">
+      <li>Persistent joint pain, swelling, or stiffness — especially in multiple joints</li>
+      <li>Butterfly-shaped rash across the cheeks and nose (malar rash)</li>
+      <li>Extreme fatigue that doesn't improve with rest</li>
+      <li>Fever without a clear cause</li>
+      <li>Sensitivity to sunlight causing rashes or flares</li>
+      <li>Dry eyes and dry mouth (suggests Sjögren's syndrome)</li>
+      <li>Raynaud's phenomenon — fingers/toes turn white or blue in the cold</li>
+      <li>Hair loss or mouth sores</li>
+      <li>Chest pain or shortness of breath</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>What Can Cause a Positive ANA?</h2>
+    <p class="section-intro">Many things can trigger a positive result — autoimmune disease is only one of them.</p>
+    <ul class="plain">
+      <li><strong>Autoimmune diseases:</strong> Lupus (SLE), Sjögren's syndrome, rheumatoid arthritis, scleroderma, polymyositis</li>
+      <li><strong>Infections:</strong> Epstein-Barr virus (mono), hepatitis C, parvovirus, HIV</li>
+      <li><strong>Medications:</strong> Hydralazine, procainamide, isoniazid, minocycline, TNF inhibitors</li>
+      <li><strong>Thyroid disease:</strong> Hashimoto's or Graves' disease can trigger a low positive</li>
+      <li><strong>Healthy individuals:</strong> Up to 20% of normal people — especially women over 65 — test positive at low titers</li>
+      <li><strong>Cancer:</strong> Rarely, some cancers produce ANA-like antibodies</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Follow-Up Tests Your Doctor May Order</h2>
+    <p class="section-intro">A positive ANA is the beginning of a workup, not the end. These more specific tests help narrow down the cause.</p>
+    <ul class="plain">
+      <li><strong>Anti-dsDNA:</strong> Highly specific for lupus — also used to monitor disease activity</li>
+      <li><strong>Anti-Smith (anti-Sm):</strong> Very specific for lupus, less sensitive</li>
+      <li><strong>Anti-SSA/SSB (Ro/La):</strong> Associated with Sjögren's syndrome and neonatal lupus</li>
+      <li><strong>Anti-Scl-70 (anti-topoisomerase I):</strong> Associated with diffuse scleroderma</li>
+      <li><strong>Anti-centromere:</strong> Associated with limited scleroderma/CREST</li>
+      <li><strong>Anti-Jo-1:</strong> Associated with polymyositis and dermatomyositis</li>
+      <li><strong>Complement levels (C3, C4):</strong> Low levels can indicate active lupus</li>
+      <li><strong>CBC, CMP, urinalysis:</strong> Check for organ involvement (kidney, liver, blood)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="q">Does a positive ANA mean I have lupus?</div>
+      <div class="a">No. A positive ANA is one criterion for lupus — but you need several clinical and lab findings to receive a lupus diagnosis. Many people with positive ANAs never develop any autoimmune disease.</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">Can ANA levels change over time?</div>
+      <div class="a">Yes. ANA titers can fluctuate — they may rise during illness or stress and fall when you're well. In people with autoimmune disease, titers don't always correlate with how active or severe the disease is.</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">Should I be worried about a 1:80 result?</div>
+      <div class="a">Probably not on its own. A 1:80 is considered low positive and found in roughly 10–15% of healthy people. Your doctor will evaluate it alongside your symptoms and medical history.</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">Why did my doctor order this test?</div>
+      <div class="a">ANA is typically ordered when someone has unexplained joint pain, rashes, fatigue, or other symptoms that suggest an autoimmune process. It's a broad screening test, not a definitive diagnosis.</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">Can medications cause a false positive?</div>
+      <div class="a">Yes — this is called drug-induced lupus. Common culprits include hydralazine (blood pressure), procainamide (heart rhythm), isoniazid (tuberculosis), and some biologics. It typically resolves after stopping the medication.</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">Do I need to see a specialist?</div>
+      <div class="a">If your ANA is 1:160 or higher and you have symptoms, a referral to a rheumatologist is usually appropriate. If your result is low positive and you feel well, your primary care doctor may simply monitor you over time.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Questions to Ask Your Doctor</h2>
+    <ul class="plain">
+      <li>What titer and pattern did my ANA come back as?</li>
+      <li>Do my symptoms match any autoimmune condition?</li>
+      <li>What follow-up tests do you recommend based on this result?</li>
+      <li>Should I see a rheumatologist?</li>
+      <li>Could any of my medications have caused this positive result?</li>
+      <li>How often should I retest if we're monitoring this?</li>
+      <li>What symptoms should prompt me to call you before my next appointment?</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <p>labplain.co — Understand your labs. No medical degree required.</p>
+  <p style="margin-top:8px;"><a href="/">← Back to all lab tests</a></p>
+  <p style="margin-top:12px; font-size:0.78rem;">For informational purposes only. Always consult a qualified healthcare provider.</p>
+</footer>
+
 </body>
 </html>
