@@ -1,105 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ESR (Erythrocyte Sedimentation Rate) – LabPlain</title>
-  <meta name="description" content="What does your ESR (Erythrocyte Sedimentation Rate) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/esr">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESR (Erythrocyte Sedimentation Rate) | Labplain</title>
+  <meta name="description" content="ESR test explained — what high or low erythrocyte sedimentation rate means, causes of abnormal results, symptoms, and when to follow up with your doctor." />
+  <link rel="canonical" href="https://labplain.co/esr" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f8fafc; color: #1e293b; }
+    header { background: #0f2a4a; padding: 16px 24px; display: flex; align-items: center; gap: 12px; }
+    header a { text-decoration: none; }
+    header .logo { color: #fff; font-size: 1.4rem; font-weight: 700; letter-spacing: -0.5px; }
+    header .logo span { color: #38bdf8; }
+    header .tagline { color: #94a3b8; font-size: 0.8rem; margin-top: 2px; }
+    .hero { background: linear-gradient(135deg, #0f2a4a 0%, #1e4976 100%); color: white; padding: 48px 24px 40px; text-align: center; }
+    .hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+    .hero p { font-size: 1.05rem; color: #bfdbfe; max-width: 600px; margin: 0 auto; }
+    .container { max-width: 780px; margin: 0 auto; padding: 32px 20px 64px; }
+    .card { background: white; border-radius: 12px; padding: 28px; margin-bottom: 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
+    .card h2 { font-size: 1.2rem; font-weight: 700; color: #0f2a4a; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #e2e8f0; }
+    .range-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .range-box { padding: 14px 16px; border-radius: 8px; }
+    .range-box.normal { background: #f0fdf4; border-left: 4px solid #22c55e; }
+    .range-box.high { background: #fff7ed; border-left: 4px solid #f97316; }
+    .range-box.low { background: #eff6ff; border-left: 4px solid #3b82f6; }
+    .range-box .label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #64748b; margin-bottom: 4px; }
+    .range-box .value { font-size: 1.1rem; font-weight: 700; color: #0f2a4a; margin-bottom: 2px; }
+    .range-box .note { font-size: 0.82rem; color: #475569; }
+    .info-block { margin-bottom: 16px; }
+    .info-block h3 { font-size: 1rem; font-weight: 700; color: #1e4976; margin-bottom: 6px; }
+    .info-block p { font-size: 0.93rem; color: #475569; line-height: 1.65; }
+    ul.symptom-list { list-style: none; padding: 0; }
+    ul.symptom-list li { padding: 8px 0 8px 24px; position: relative; font-size: 0.93rem; color: #475569; border-bottom: 1px solid #f1f5f9; }
+    ul.symptom-list li:last-child { border-bottom: none; }
+    ul.symptom-list li::before { content: "→"; position: absolute; left: 0; color: #38bdf8; font-weight: 700; }
+    .cause-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .cause-box { background: #f8fafc; border-radius: 8px; padding: 14px 16px; }
+    .cause-box h4 { font-size: 0.85rem; font-weight: 700; color: #0f2a4a; margin-bottom: 6px; }
+    .cause-box ul { list-style: none; padding: 0; }
+    .cause-box ul li { font-size: 0.85rem; color: #475569; padding: 3px 0 3px 14px; position: relative; }
+    .cause-box ul li::before { content: "•"; position: absolute; left: 0; color: #38bdf8; }
+    .faq-item { border-bottom: 1px solid #f1f5f9; padding: 14px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item h3 { font-size: 0.97rem; font-weight: 700; color: #0f2a4a; margin-bottom: 6px; }
+    .faq-item p { font-size: 0.91rem; color: #475569; line-height: 1.65; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+    .related-link { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 12px 14px; text-decoration: none; color: #0f2a4a; font-size: 0.88rem; font-weight: 600; transition: background 0.2s; }
+    .related-link:hover { background: #e0f2fe; }
+    .questions-list { list-style: none; padding: 0; counter-reset: q; }
+    .questions-list li { counter-increment: q; padding: 10px 0 10px 36px; position: relative; font-size: 0.93rem; color: #475569; border-bottom: 1px solid #f1f5f9; line-height: 1.6; }
+    .questions-list li:last-child { border-bottom: none; }
+    .questions-list li::before { content: counter(q); position: absolute; left: 0; top: 10px; background: #0f2a4a; color: white; width: 22px; height: 22px; border-radius: 50%; font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .disclaimer { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 10px; padding: 16px 20px; margin-top: 32px; font-size: 0.83rem; color: #92400e; line-height: 1.6; }
+    footer { background: #0f2a4a; color: #94a3b8; text-align: center; padding: 24px; font-size: 0.82rem; margin-top: 40px; }
+    footer a { color: #38bdf8; text-decoration: none; }
+    @media (max-width: 600px) {
+      .range-grid, .cause-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.5rem; }
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; ESR (Erythrocyte Sedimentation Rate)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">ESR (Erythrocyte Sedimentation Rate)</em> result mean?</h1>
-    <span class="category-tag">Inflammation</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
-    <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>The <strong>ESR (Erythrocyte Sedimentation Rate)</strong> test measures how quickly red blood cells sink in a test tube — a non-specific marker that rises with inflammation.</p>
+<header>
+  <a href="/">
+    <div class="logo">Lab<span>plain</span></div>
+    <div class="tagline">Understand your labs. No medical degree required.</div>
+  </a>
+</header>
+
+<div class="hero">
+  <h1>ESR (Erythrocyte Sedimentation Rate)</h1>
+  <p>Your body's inflammation signal — what this test measures, what abnormal results mean, and when to take action.</p>
+</div>
+
+<div class="container">
+
+  <!-- What It Is -->
+  <div class="card">
+    <h2>What Is ESR?</h2>
+    <div class="info-block">
+      <p>The erythrocyte sedimentation rate (ESR) measures how quickly your red blood cells sink to the bottom of a test tube over one hour. When inflammation is present in the body, certain proteins cause red blood cells to clump together and fall faster — resulting in a higher ESR reading.</p>
     </div>
-
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">0–22 mm/hr (men); 0–29 mm/hr (women)</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+    <div class="info-block">
+      <h3>Why Doctors Order It</h3>
+      <p>ESR is a broad-based inflammation marker. It doesn't pinpoint where inflammation is coming from, but it helps doctors detect that something is wrong, monitor known conditions like rheumatoid arthritis or lupus, or track whether treatment is working. It's often ordered alongside CRP (C-reactive protein) for a fuller picture.</p>
     </div>
+    <div class="info-block">
+      <h3>How It's Measured</h3>
+      <p>A standard blood draw. Results are reported in millimeters per hour (mm/hr). The test is inexpensive, widely available, and has been used in medicine for over a century.</p>
+    </div>
+  </div>
 
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>High ESR indicates inflammation somewhere in the body, but doesn't pinpoint where. It's elevated in infections, autoimmune diseases, and some cancers.</p>
-        </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Very low ESR has no clinical significance.</p>
-        </div>
+  <!-- Reference Ranges -->
+  <div class="card">
+    <h2>Reference Ranges</h2>
+    <div class="range-grid">
+      <div class="range-box normal">
+        <div class="label">Normal — Men</div>
+        <div class="value">0–15 mm/hr</div>
+        <div class="note">Under 50 years old</div>
+      </div>
+      <div class="range-box normal">
+        <div class="label">Normal — Women</div>
+        <div class="value">0–20 mm/hr</div>
+        <div class="note">Under 50 years old</div>
+      </div>
+      <div class="range-box high">
+        <div class="label">Elevated — Men</div>
+        <div class="value">&gt;15 mm/hr</div>
+        <div class="note">May indicate inflammation or infection</div>
+      </div>
+      <div class="range-box high">
+        <div class="label">Elevated — Women</div>
+        <div class="value">&gt;20 mm/hr</div>
+        <div class="note">May indicate inflammation or infection</div>
+      </div>
+      <div class="range-box normal">
+        <div class="label">Normal — Men 50+</div>
+        <div class="value">0–20 mm/hr</div>
+        <div class="note">Range widens with age</div>
+      </div>
+      <div class="range-box normal">
+        <div class="label">Normal — Women 50+</div>
+        <div class="value">0–30 mm/hr</div>
+        <div class="note">Range widens with age</div>
       </div>
     </div>
-
-    <div class="card">
-      <div class="section-label">What to do next</div>
-      <div class="next-steps">ESR is often paired with CRP. If both are elevated, inflammation is more likely to be significant. ESR changes more slowly than CRP and can stay elevated longer.</div>
-    </div>
-
-    <div class="tool-cta">
-      <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
-
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
-    </footer>
+    <p style="font-size:0.82rem; color:#64748b; margin-top:14px;">Note: Lab ranges can vary slightly. Always compare your result to the reference range on your specific lab report.</p>
   </div>
+
+  <!-- Symptoms of High ESR -->
+  <div class="card">
+    <h2>Symptoms Associated With High ESR</h2>
+    <p style="font-size:0.9rem; color:#64748b; margin-bottom:14px;">A high ESR doesn't cause symptoms directly — it reflects inflammation happening elsewhere. These are common symptoms that accompany the conditions driving a high ESR:</p>
+    <ul class="symptom-list">
+      <li>Persistent fatigue or feeling generally unwell</li>
+      <li>Unexplained fever or low-grade temperature</li>
+      <li>Joint pain, stiffness, or swelling</li>
+      <li>Muscle aches or tenderness (especially in the shoulders/hips)</li>
+      <li>Headaches, particularly new or worsening ones</li>
+      <li>Unintentional weight loss</li>
+      <li>Rashes or skin changes</li>
+      <li>Prolonged illness that isn't improving</li>
+    </ul>
+  </div>
+
+  <!-- Causes -->
+  <div class="card">
+    <h2>What Causes Abnormal ESR?</h2>
+    <div class="cause-grid">
+      <div class="cause-box">
+        <h4>🔴 High ESR — Common Causes</h4>
+        <ul>
+          <li>Rheumatoid arthritis</li>
+          <li>Lupus (SLE)</li>
+          <li>Polymyalgia rheumatica</li>
+          <li>Giant cell arteritis</li>
+          <li>Infections (bacterial, viral)</li>
+          <li>Inflammatory bowel disease</li>
+          <li>Thyroid disease</li>
+          <li>Kidney disease</li>
+          <li>Anemia</li>
+          <li>Certain cancers (lymphoma, myeloma)</li>
+        </ul>
+      </div>
+      <div class="cause-box">
+        <h4>🔵 Low ESR — What It Means</h4>
+        <ul>
+          <li>Polycythemia vera (too many red blood cells)</li>
+          <li>Sickle cell disease</li>
+          <li>High dose corticosteroid use</li>
+          <li>Congestive heart failure</li>
+          <li>Hypofibrinogenemia</li>
+          <li>Extreme leukocytosis</li>
+        </ul>
+      </div>
+      <div class="cause-box">
+        <h4>⚠️ Non-Disease Factors That Raise ESR</h4>
+        <ul>
+          <li>Pregnancy</li>
+          <li>Older age</li>
+          <li>Female sex (naturally higher baseline)</li>
+          <li>Obesity</li>
+          <li>Recent surgery</li>
+        </ul>
+      </div>
+      <div class="cause-box">
+        <h4>📋 Often Ordered With</h4>
+        <ul>
+          <li>CRP (C-reactive protein)</li>
+          <li>CBC (complete blood count)</li>
+          <li>ANA (antinuclear antibody)</li>
+          <li>Rheumatoid factor (RF)</li>
+          <li>Ferritin</li>
+          <li>Comprehensive metabolic panel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>My ESR is slightly elevated. Should I be worried?</h3>
+      <p>A mildly elevated ESR — especially in older adults or women — doesn't always mean something serious. Many people have slightly elevated ESRs without any significant disease. Context matters: your doctor will weigh your symptoms, medical history, and other lab values before drawing conclusions.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What's the difference between ESR and CRP?</h3>
+      <p>Both measure inflammation, but CRP responds faster — it rises within hours of inflammation and drops quickly when it resolves. ESR is slower to rise and fall, taking days to weeks. CRP is better for detecting acute infection; ESR is better for monitoring chronic inflammatory conditions over time.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can ESR be elevated without any disease?</h3>
+      <p>Yes. Pregnancy, older age, obesity, and female biology can all push ESR above the standard reference range with no underlying disease present. That's why ESR is always interpreted alongside clinical findings — not in isolation.</p>
+    </div>
+    <div class="faq-item">
+      <h3>A very high ESR — above 100 mm/hr — what does that mean?</h3>
+      <p>An ESR over 100 mm/hr is considered markedly elevated and warrants urgent investigation. Common causes include serious infection (like osteomyelitis or endocarditis), giant cell arteritis, multiple myeloma, or vasculitis. Your doctor will likely order additional tests immediately.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I lower a high ESR?</h3>
+      <p>You treat the underlying cause. If inflammation is from an autoimmune condition, medications like NSAIDs, steroids, or disease-modifying drugs reduce it. If from infection, antibiotics or antivirals address the source. As the underlying problem resolves, ESR typically normalizes.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does diet affect ESR?</h3>
+      <p>Indirectly. An anti-inflammatory diet (rich in omega-3s, vegetables, and low in processed foods) can reduce systemic inflammation over time. Obesity also raises ESR, so weight management helps. But diet alone won't normalize a significantly elevated ESR driven by disease.</p>
+    </div>
+  </div>
+
+  <!-- Related Tests -->
+  <div class="card">
+    <h2>Related Lab Tests</h2>
+    <div class="related-grid">
+      <a href="/crp" class="related-link">CRP</a>
+      <a href="/ferritin" class="related-link">Ferritin</a>
+      <a href="/cbc" class="related-link">CBC</a>
+      <a href="/albumin" class="related-link">Albumin</a>
+      <a href="/ana" class="related-link">ANA</a>
+      <a href="/rheumatoid-factor" class="related-link">Rheumatoid Factor</a>
+      <a href="/hemoglobin" class="related-link">Hemoglobin</a>
+      <a href="/wbc" class="related-link">WBC</a>
+    </div>
+  </div>
+
+  <!-- Doctor Questions -->
+  <div class="card">
+    <h2>Questions to Ask Your Doctor</h2>
+    <ol class="questions-list">
+      <li>My ESR is [X] — is that mildly or significantly outside the normal range for my age and sex?</li>
+      <li>What do you think is causing this elevated ESR based on my symptoms and history?</li>
+      <li>Should I also get a CRP test to compare the two inflammation markers?</li>
+      <li>Do I need to see a rheumatologist, or can this be managed by my primary care doctor?</li>
+      <li>Will we retest ESR in a few weeks to see if it changes?</li>
+      <li>What warning signs or symptoms should prompt me to call your office before my next appointment?</li>
+    </ol>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Medical Disclaimer:</strong> This content is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your doctor or a qualified healthcare provider with questions about your lab results or medical condition.
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2025 <a href="/">Labplain</a> — Understand your labs. No medical degree required.</p>
+</footer>
+
 </body>
 </html>
