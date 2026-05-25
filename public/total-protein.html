@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Total Protein – LabPlain</title>
-  <meta name="description" content="What does your Total Protein result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
+  <title>Total Protein Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your total protein result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://labplain.co/total-protein">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +12,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
     nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
@@ -26,27 +29,56 @@
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
     .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
     .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
+    .range-box.low .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -57,18 +89,25 @@
     </nav>
     <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Total Protein</p>
     <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Total Protein</em> result mean?</h1>
-    <span class="category-tag">Liver & Nutrition</span>
+    <span class="category-tag">Liver &amp; Kidney Panel</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>Total Protein</strong> test measures all proteins in your blood combined, including albumin and globulins.</p>
+      <p>Total protein measures the combined amount of two major types of protein circulating in your blood: albumin and globulin. Albumin is made by the liver and keeps fluid from leaking out of your blood vessels. Globulins are a diverse group of proteins that include immune antibodies, clotting factors, and transport proteins that carry hormones and nutrients through the bloodstream.</p>
+      <p>Together, they reflect how well your liver is making proteins, whether your kidneys are losing protein into urine, whether your immune system is overactive, and whether your body is getting enough nutrition to maintain basic function. It's a broad snapshot test — when it's abnormal, it tells doctors where to look next, not the final diagnosis.</p>
+      <p>Total protein is almost always run as part of a comprehensive metabolic panel (CMP) or liver function panel, so you'll rarely see it as a standalone result.</p>
     </div>
 
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">6.0–8.3 g/dL</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+      <div class="normal-range">6.0 – 8.3 g/dL (grams per deciliter)</div>
+      <p class="range-note">This range applies to adults. Values are slightly lower in children and pregnant women. Albumin typically accounts for about 60% of total protein (3.5–5.0 g/dL), with globulins making up the rest (2.0–3.5 g/dL).</p>
+      <p class="range-note" style="margin-top:8px;">Reference ranges can vary slightly between laboratories. Always compare your result to the range printed on your specific lab report.</p>
+      <div class="timing-box">
+        <h3>💧 Hydration affects results</h3>
+        <p>Dehydration concentrates your blood, which can falsely elevate total protein. Being well-hydrated before the draw gives the most accurate picture. Prolonged standing or use of a tourniquet during blood draw can also temporarily raise values — this is why the result is always interpreted alongside your full clinical picture.</p>
+      </div>
     </div>
 
     <div class="card">
@@ -76,18 +115,121 @@
       <div class="two-col">
         <div class="range-box high">
           <div class="range-box-label">↑ If High</div>
-          <p>High total protein can indicate dehydration or certain conditions involving abnormal protein production.</p>
+          <p>Elevated total protein is most often caused by dehydration (concentrating the blood) or by conditions that cause the immune system to over-produce globulins, such as chronic infections, autoimmune diseases, or multiple myeloma. A high result warrants further testing — particularly protein electrophoresis — to identify which proteins are elevated.</p>
         </div>
         <div class="range-box low">
           <div class="range-box-label">↓ If Low</div>
-          <p>Low total protein often reflects poor nutrition, liver disease, or a condition causing protein loss through the kidneys.</p>
+          <p>Low total protein typically signals that the liver isn't making enough protein (liver disease), the kidneys are leaking protein into urine (nephrotic syndrome), or the body isn't absorbing enough nutrients (malnutrition or malabsorption). It can also occur in inflammatory states where the body diverts protein resources.</p>
         </div>
       </div>
     </div>
 
     <div class="card">
+      <div class="section-label">Symptoms associated with abnormal total protein</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High Protein Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Fatigue and weakness</li>
+            <li>Bone pain or fractures</li>
+            <li>Frequent infections</li>
+            <li>Swollen lymph nodes</li>
+            <li>Night sweats</li>
+            <li>Unexplained weight loss</li>
+            <li>Thickened blood (rare, in severe cases)</li>
+            <li>Kidney problems or foamy urine</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>↓ Low Protein Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Edema (swelling in legs, ankles, abdomen)</li>
+            <li>Fatigue and muscle weakness</li>
+            <li>Slow wound healing</li>
+            <li>Hair thinning or loss</li>
+            <li>Jaundice (if liver-related)</li>
+            <li>Frequent infections</li>
+            <li>Brittle nails</li>
+            <li>Unintentional weight loss</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal total protein</div>
+      <h2>What can raise total protein?</h2>
+      <p>The most common cause of a mildly high total protein is simple dehydration — when you have less water in your blood, everything in it becomes more concentrated, including proteins. Beyond that, elevated globulin proteins can occur with chronic infections (HIV, hepatitis, tuberculosis), autoimmune diseases (lupus, rheumatoid arthritis), or blood cancers like multiple myeloma, which causes plasma cells to overproduce abnormal antibodies.</p>
+      <p>A high total protein with a normal albumin level is a strong clue that globulins are the issue — your doctor will likely order a serum protein electrophoresis (SPEP) test to identify which proteins are elevated and whether any abnormal protein bands are present.</p>
+      <h2 style="margin-top:24px;">What can lower total protein?</h2>
+      <p>Low albumin is the most common driver of a low total protein result. Liver disease (cirrhosis, hepatitis) reduces albumin production. Kidney disease — particularly nephrotic syndrome — causes massive protein loss into the urine. Malnutrition and malabsorption disorders like Crohn's disease or celiac disease reduce the raw materials available to make proteins.</p>
+      <p>Severe burns, major surgery, or prolonged critical illness can also lower total protein as the body redirects resources to healing. Pregnancy causes a natural, modest decrease due to increased blood volume diluting protein concentrations.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside total protein</div>
+      <p>Total protein is a starting point. When results are abnormal, your doctor will likely follow up with:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>Albumin</strong> — the main component of total protein; low albumin is the most common cause of low total protein</li>
+        <li><strong>A/G ratio (albumin-to-globulin ratio)</strong> — helps distinguish liver disease from immune system causes</li>
+        <li><strong>Serum protein electrophoresis (SPEP)</strong> — separates proteins into bands to detect abnormal patterns like M-proteins in myeloma</li>
+        <li><strong>Liver function tests (ALT, AST, bilirubin, ALP)</strong> — to assess liver disease if albumin is low</li>
+        <li><strong>Urinalysis or urine protein</strong> — to check whether the kidneys are leaking protein</li>
+        <li><strong>Comprehensive metabolic panel (CMP)</strong> — total protein is typically already part of this panel</li>
+      </ul>
+    </div>
+
+    <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">Doctors usually look at the albumin-to-globulin ratio alongside total protein for more diagnostic detail.</div>
+      <div class="next-steps">A mildly abnormal total protein result on its own rarely tells the full story — it's a signal, not a diagnosis. Your doctor will interpret it alongside albumin, globulin, kidney function, liver enzymes, and your symptoms. If you're dehydrated or recently ill, a repeat test after recovery is often the first step. Don't try to interpret the number in isolation. Only your healthcare provider can put it in context with your full health picture.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Is the abnormality in my albumin, my globulins, or both — and what does that suggest?</li>
+        <li><span class="q-num">02</span>Could dehydration explain this result, and should I repeat the test?</li>
+        <li><span class="q-num">03</span>Do I need a protein electrophoresis test to look for abnormal protein patterns?</li>
+        <li><span class="q-num">04</span>Should we check my kidneys to see if protein is leaking into my urine?</li>
+        <li><span class="q-num">05</span>Are my liver enzymes normal, and could liver disease be a factor?</li>
+        <li><span class="q-num">06</span>Does my diet or nutritional status need to be evaluated?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can a high-protein diet raise my total protein blood test?</div>
+        <div class="faq-a">Generally no — dietary protein intake has very little effect on serum total protein levels in healthy people. Your liver tightly regulates albumin production, and globulins are produced by immune cells independent of what you eat. A high total protein result almost always reflects a medical condition or dehydration rather than diet.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the A/G ratio and why does it matter?</div>
+        <div class="faq-a">The albumin-to-globulin (A/G) ratio divides your albumin level by your globulin level. A normal ratio is roughly 1.0–2.0. A low ratio (more globulin than albumin) can suggest liver disease, kidney disease, or immune system conditions. A high ratio (very high albumin relative to globulin) is less common and may indicate certain genetic conditions. The ratio gives more information than total protein alone.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is low total protein dangerous?</div>
+        <div class="faq-a">It depends on the cause and severity. Mildly low total protein is common and often not immediately dangerous, but it warrants investigation. Severely low albumin (below 2.0 g/dL) is associated with significant fluid shifts, poor wound healing, and worse outcomes in hospitalized patients. The underlying cause — liver disease, kidney disease, or malnutrition — determines the urgency and treatment approach.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can total protein be high in multiple myeloma?</div>
+        <div class="faq-a">Yes. Multiple myeloma causes abnormal plasma cells to overproduce a single type of antibody called an M-protein (monoclonal protein). This can push total protein well above normal. If your doctor suspects myeloma, they'll order a serum protein electrophoresis (SPEP) and immunofixation test to look for the characteristic M-protein spike, along with other tests like urine protein electrophoresis and a CBC.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why is total protein lower during pregnancy?</div>
+        <div class="faq-a">During pregnancy, blood volume expands significantly — up to 50% more than pre-pregnancy. This dilutes everything in the blood, including proteins, causing total protein and albumin to appear lower than normal even when production is perfectly normal. This is an expected, physiologic change and not a sign of disease in an otherwise healthy pregnancy.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/albumin" class="related-chip">Albumin →</a>
+        <a href="/alt" class="related-chip">ALT →</a>
+        <a href="/ast" class="related-chip">AST →</a>
+        <a href="/bilirubin" class="related-chip">Bilirubin →</a>
+        <a href="/egfr" class="related-chip">eGFR →</a>
+        <a href="/creatinine" class="related-chip">Creatinine →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
