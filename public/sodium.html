@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sodium – LabPlain</title>
-  <meta name="description" content="What does your Sodium result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
+  <title>Sodium Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your sodium result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://labplain.co/sodium">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +12,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
     nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
@@ -26,27 +29,56 @@
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
     .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
     .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
+    .range-box.low .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -62,32 +94,141 @@
 
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>Sodium</strong> test measures the main electrolyte in your blood that regulates fluid balance and nerve/muscle function.</p>
+      <p>Sodium is the most abundant electrolyte in your blood and the fluid surrounding your cells. It plays a central role in controlling the amount of water in your body, maintaining blood pressure, and enabling your nerves and muscles — including your heart — to fire properly.</p>
+      <p>Your kidneys are the primary regulators of sodium, constantly filtering and reabsorbing it in response to hormones like aldosterone and ADH (antidiuretic hormone). When this balance is disrupted — by illness, dehydration, medications, or kidney disease — sodium levels fall outside the normal range.</p>
+      <p>A sodium test is almost always included in a Basic Metabolic Panel (BMP) or Comprehensive Metabolic Panel (CMP), which means most people get their sodium checked routinely at annual physicals or during hospital stays.</p>
     </div>
 
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">136–145 mEq/L</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+      <div class="normal-range">135–145 mEq/L (or mmol/L)</div>
+      <p class="range-note">This range applies to adults. Most labs use the same reference range, though the units may appear as mEq/L or mmol/L — these are numerically identical for sodium.</p>
+      <p class="range-note" style="margin-top:8px;">Sodium outside this range — especially below 125 or above 155 mEq/L — is considered a medical emergency. Even modest deviations (below 130 or above 150) can cause serious symptoms and usually require prompt medical attention.</p>
+      <div class="timing-box">
+        <h3>💧 Hydration affects your result</h3>
+        <p>Sodium is measured relative to the water in your blood. Drinking an unusually large amount of water before your draw can dilute sodium and push it slightly low. Dehydration from not drinking enough — or from sweating, vomiting, or diarrhea — can push it slightly high. If your result is borderline, your doctor may repeat the test under more controlled conditions.</p>
+      </div>
     </div>
 
     <div class="card">
       <div class="section-label">What your result might indicate</div>
       <div class="two-col">
         <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>High sodium (hypernatremia) is usually caused by dehydration or not drinking enough water.</p>
+          <div class="range-box-label">↑ If High (Hypernatremia)</div>
+          <p>High sodium (above 145 mEq/L) usually means the body has too little water relative to sodium — from dehydration, excessive sweating, diabetes insipidus, or not drinking enough fluids. It can also result from consuming too much sodium, though this is less common.</p>
         </div>
         <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Low sodium (hyponatremia) can cause headaches, confusion, and fatigue. It may be linked to medications, kidney issues, or drinking too much water.</p>
+          <div class="range-box-label">↓ If Low (Hyponatremia)</div>
+          <p>Low sodium (below 135 mEq/L) is the most common electrolyte disorder. It can result from drinking too much water, heart failure, cirrhosis, kidney disease, hypothyroidism, Addison's disease, certain medications (especially diuretics and antidepressants), or SIADH — a condition where the body retains too much water.</p>
         </div>
       </div>
     </div>
 
     <div class="card">
+      <div class="section-label">Symptoms associated with abnormal sodium</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High Sodium Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Intense thirst</li>
+            <li>Dry mouth and sticky saliva</li>
+            <li>Dark-colored urine</li>
+            <li>Confusion or restlessness</li>
+            <li>Muscle twitching or spasms</li>
+            <li>Rapid heartbeat</li>
+            <li>Seizures (severe cases)</li>
+            <li>Coma (extreme cases)</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>↓ Low Sodium Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Headache</li>
+            <li>Nausea and vomiting</li>
+            <li>Fatigue and low energy</li>
+            <li>Confusion or difficulty concentrating</li>
+            <li>Muscle cramps or weakness</li>
+            <li>Irritability or mood changes</li>
+            <li>Seizures (severe cases)</li>
+            <li>Loss of consciousness (extreme cases)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal sodium</div>
+      <h2>What causes high sodium?</h2>
+      <p>The most common cause of elevated sodium is dehydration — when you lose more water than you take in through sweating, fever, vomiting, diarrhea, or simply not drinking enough. Diabetes insipidus (a condition affecting ADH that is separate from diabetes mellitus) causes the kidneys to excrete too much water, concentrating the sodium that remains. In hospitalized patients, receiving excessive sodium through IV fluids is another cause.</p>
+      <p>Rarely, high sodium results from a brain or kidney problem that disrupts the hormonal signals controlling fluid balance.</p>
+      <h2 style="margin-top:24px;">What causes low sodium?</h2>
+      <p>Low sodium is more common and has more varied causes. Drinking excessive amounts of water (overhydration) dilutes sodium in the blood. Heart failure, cirrhosis, and kidney disease cause the body to retain water, diluting sodium. Diuretic medications (water pills) cause the kidneys to excrete sodium along with water. SIADH (syndrome of inappropriate antidiuretic hormone secretion) causes the kidneys to hold onto too much water. Hypothyroidism and adrenal insufficiency (Addison's disease) can also cause low sodium by disrupting the hormones that regulate fluid balance.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside sodium</div>
+      <p>Sodium is almost always interpreted alongside other electrolytes and kidney markers. Your doctor may also review:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>Potassium</strong> — the other major intracellular electrolyte; often imbalanced alongside sodium</li>
+        <li><strong>Chloride and bicarbonate (CO2)</strong> — complete the electrolyte picture and help evaluate acid-base balance</li>
+        <li><strong>BUN and creatinine</strong> — assess kidney function, which directly controls sodium regulation</li>
+        <li><strong>Glucose</strong> — very high blood sugar can cause a falsely low sodium reading (pseudohyponatremia)</li>
+        <li><strong>Urine sodium and osmolality</strong> — help determine whether low sodium is due to excess water or true sodium loss</li>
+        <li><strong>TSH</strong> — hypothyroidism is a reversible cause of low sodium</li>
+      </ul>
+    </div>
+
+    <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">Sodium levels can shift quickly with illness or medication changes. Your doctor will interpret this in context of your symptoms and other labs.</div>
+      <div class="next-steps">A mildly abnormal sodium result is common and doesn't automatically signal a serious problem — but it always deserves a conversation with your doctor. The cause matters as much as the number: low sodium from drinking too much water before your draw is very different from low sodium caused by heart failure. Your doctor will interpret your result alongside your symptoms, medications, kidney function tests, and hydration status before deciding on next steps.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Is my sodium result clinically significant, or is it a mild variation that just needs monitoring?</li>
+        <li><span class="q-num">02</span>Could any of my current medications — especially diuretics or antidepressants — be affecting my sodium?</li>
+        <li><span class="q-num">03</span>Do I need to check my urine sodium or osmolality to figure out the underlying cause?</li>
+        <li><span class="q-num">04</span>Should I change how much water I'm drinking, or adjust my salt intake?</li>
+        <li><span class="q-num">05</span>Could a thyroid or adrenal problem be contributing to this result?</li>
+        <li><span class="q-num">06</span>How quickly does this need to be corrected, and what's the plan?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can eating too much salt cause high sodium on a blood test?</div>
+        <div class="faq-a">In healthy people with normal kidneys, no — the kidneys are very efficient at excreting excess sodium, so a salty meal alone rarely raises blood sodium. High dietary sodium is more likely to raise blood pressure than blood sodium levels. Elevated blood sodium usually points to a water deficit (dehydration) rather than excess salt intake.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is low sodium dangerous?</div>
+        <div class="faq-a">It depends on the level and how quickly it developed. Mild, chronic low sodium (130–134 mEq/L) may cause subtle symptoms like fatigue and brain fog. Severe low sodium (below 125 mEq/L) or a rapid drop can cause brain swelling, seizures, and is a medical emergency. Correction must be done carefully — correcting sodium too quickly can itself cause serious neurological damage.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why do endurance athletes sometimes have low sodium?</div>
+        <div class="faq-a">This is called exercise-associated hyponatremia, and it happens when athletes — especially marathon runners — drink large volumes of plain water without replacing the sodium lost in sweat. The excess water dilutes blood sodium. Sports drinks containing electrolytes help prevent this, which is why they're recommended for prolonged exercise rather than plain water alone.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is SIADH and why does it cause low sodium?</div>
+        <div class="faq-a">SIADH stands for syndrome of inappropriate antidiuretic hormone secretion. ADH is the hormone that tells your kidneys to hold onto water. In SIADH, ADH is released when it shouldn't be — often due to lung disease, brain injury, certain cancers, or medications — causing the kidneys to retain too much water, which dilutes sodium in the blood. Treatment focuses on fluid restriction and addressing the underlying cause.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can low sodium cause falls in older adults?</div>
+        <div class="faq-a">Yes — this is a well-documented and often underappreciated risk. Even mildly low sodium (130–134 mEq/L) can cause subtle impairments in balance, attention, and reaction time that significantly increase fall risk in older adults, even without obvious symptoms. This is one reason doctors take even borderline low sodium more seriously in elderly patients.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/potassium" class="related-chip">Potassium →</a>
+        <a href="/creatinine" class="related-chip">Creatinine →</a>
+        <a href="/glucose" class="related-chip">Glucose →</a>
+        <a href="/tsh" class="related-chip">TSH →</a>
+        <a href="/cortisol" class="related-chip">Cortisol →</a>
+        <a href="/egfr" class="related-chip">eGFR →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
