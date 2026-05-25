@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PSA (Prostate-Specific Antigen) – LabPlain</title>
-  <meta name="description" content="What does your PSA (Prostate-Specific Antigen) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
+  <title>PSA Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your PSA result mean? Plain-English guide to normal ranges, high values, prostate cancer screening, and what to ask your doctor. No medical jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://labplain.co/psa">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +12,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
     nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
@@ -26,27 +29,56 @@
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
     .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
     .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
+    .range-box.low .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -55,20 +87,27 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; PSA (Prostate-Specific Antigen)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">PSA (Prostate-Specific Antigen)</em> result mean?</h1>
-    <span class="category-tag">Cancer Markers</span>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; PSA</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">PSA</em> result mean?</h1>
+    <span class="category-tag">Prostate Health</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>PSA (Prostate-Specific Antigen)</strong> test measures a protein made by prostate cells — used to screen for prostate cancer and monitor prostate health.</p>
+      <p>PSA stands for Prostate-Specific Antigen — a protein produced exclusively by the prostate gland, a walnut-sized gland in men that sits below the bladder and surrounds the urethra. Small amounts of PSA normally enter the bloodstream, but elevated levels can be a sign that something is affecting the prostate.</p>
+      <p>The PSA test measures the total amount of PSA in your blood in nanograms per milliliter (ng/mL). It's used primarily as a prostate cancer screening tool, but it's important to understand that a high PSA does not automatically mean cancer — many non-cancerous conditions can raise it just as significantly.</p>
+      <p>Doctors order PSA tests for routine prostate cancer screening (typically starting at age 50, or earlier for high-risk groups), to monitor men already diagnosed with prostate cancer, and to evaluate prostate symptoms like difficulty urinating or frequent nighttime urination.</p>
     </div>
 
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Below 4.0 ng/mL (general guideline; varies with age)</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+      <div class="normal-range">General guideline: &lt; 4.0 ng/mL &nbsp;|&nbsp; Age-adjusted ranges apply</div>
+      <p class="range-note">PSA reference ranges are not one-size-fits-all. A result under 4.0 ng/mL is considered normal for most men, but age matters significantly — PSA naturally rises as the prostate grows with age, so what's acceptable at 70 is different from what's expected at 50.</p>
+      <p class="range-note" style="margin-top:8px;">Age-adjusted reference ranges commonly used by labs: Ages 40–49: &lt; 2.5 ng/mL &nbsp;|&nbsp; Ages 50–59: &lt; 3.5 ng/mL &nbsp;|&nbsp; Ages 60–69: &lt; 4.5 ng/mL &nbsp;|&nbsp; Ages 70+: &lt; 6.5 ng/mL</p>
+      <div class="timing-box">
+        <h3>⚠️ What can falsely raise your PSA</h3>
+        <p>Several things can temporarily elevate PSA unrelated to disease: ejaculation within 48 hours of the test, vigorous cycling or horseback riding, a prostate exam (DRE) performed just before the blood draw, a urinary tract infection, or a recent prostate biopsy. Your doctor should ask about these factors before interpreting your result.</p>
+      </div>
     </div>
 
     <div class="card">
@@ -76,18 +115,131 @@
       <div class="two-col">
         <div class="range-box high">
           <div class="range-box-label">↑ If High</div>
-          <p>High PSA doesn't automatically mean cancer. BPH (enlarged prostate), prostatitis, or recent physical activity can all raise PSA.</p>
+          <p>Elevated PSA can indicate prostate cancer, but more commonly it reflects benign prostatic hyperplasia (BPH — an enlarged prostate), prostatitis (prostate inflammation or infection), or temporary factors like recent sexual activity or physical pressure on the prostate. Only further testing can distinguish between these causes.</p>
         </div>
         <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Very low PSA is generally reassuring, though PSA screening guidelines vary — discuss the pros and cons with your doctor.</p>
+          <div class="range-box-label">✓ If Normal / Low</div>
+          <p>A PSA within the normal range is reassuring but not a guarantee. A small percentage of prostate cancers occur in men with PSA below 4.0 ng/mL. Your doctor will consider your age, family history, race, and any symptoms alongside the number — not the number alone.</p>
         </div>
       </div>
     </div>
 
     <div class="card">
+      <div class="section-label">Symptoms that may accompany an elevated PSA</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ Possible Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Frequent urination, especially at night</li>
+            <li>Difficulty starting or stopping urination</li>
+            <li>Weak or interrupted urine stream</li>
+            <li>Burning or pain during urination</li>
+            <li>Blood in urine or semen</li>
+            <li>Painful ejaculation</li>
+            <li>Pelvic, hip, or lower back pain</li>
+            <li>Erectile dysfunction</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>✓ Often No Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Early prostate cancer often has zero symptoms</li>
+            <li>Elevated PSA is frequently found on routine screening</li>
+            <li>BPH symptoms can mimic cancer symptoms</li>
+            <li>Prostatitis may cause fever or pelvic pain</li>
+            <li>Many men with high PSA feel completely normal</li>
+            <li>Symptoms alone cannot diagnose the cause</li>
+            <li>This is why regular screening matters</li>
+            <li>Always report urinary changes to your doctor</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of an elevated PSA</div>
+      <h2>Non-cancerous causes (most common)</h2>
+      <p>The majority of elevated PSA results are not caused by cancer. Benign prostatic hyperplasia (BPH) — the natural enlargement of the prostate that affects most men over 50 — is the single most common cause. The larger the prostate, the more PSA it produces, regardless of whether cancer is present. Prostatitis (inflammation or infection of the prostate) can cause dramatic PSA spikes, sometimes into the double digits, that resolve entirely with antibiotic treatment.</p>
+      <p>Temporary factors like recent ejaculation, a prostate exam, cycling, or a urinary tract infection can also raise PSA levels for 24–72 hours without indicating any underlying condition.</p>
+      <h2 style="margin-top:24px;">Prostate cancer</h2>
+      <p>Prostate cancer does cause PSA to rise, and PSA remains the best available blood-based screening marker for it. However, PSA cannot confirm or rule out cancer on its own. The rate of PSA rise over time (called PSA velocity), the ratio of free to total PSA, and the patient's age and risk factors all inform how aggressively a doctor pursues follow-up. A biopsy is the only way to definitively diagnose prostate cancer.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Understanding PSA velocity and PSA density</div>
+      <p>Two concepts help doctors get more meaning out of PSA numbers beyond the single result:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>PSA velocity</strong> — how quickly your PSA is rising over time. A rise of more than 0.75 ng/mL per year is considered significant and may warrant further evaluation, even if the absolute level is still "normal"</li>
+        <li><strong>PSA density</strong> — your PSA level divided by the volume of your prostate (measured by ultrasound). A higher density suggests the PSA is coming from a smaller prostate, which is more suspicious for cancer than the same PSA from a larger prostate</li>
+        <li><strong>Free PSA ratio</strong> — PSA in the blood comes in two forms: bound to proteins and free. A higher percentage of free PSA suggests BPH; a lower percentage is more associated with cancer. Doctors often use this ratio when total PSA is borderline (4–10 ng/mL)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside PSA</div>
+      <p>An elevated PSA typically triggers a series of follow-up steps:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>Free PSA (% free PSA)</strong> — helps assess cancer risk when total PSA is in the 4–10 ng/mL "gray zone"</li>
+        <li><strong>Digital rectal exam (DRE)</strong> — physical exam of the prostate to check for lumps or hardness</li>
+        <li><strong>Prostate MRI</strong> — imaging to look for suspicious areas before or instead of biopsy</li>
+        <li><strong>Prostate biopsy</strong> — the definitive test; takes small tissue samples to check for cancer cells</li>
+        <li><strong>Urinalysis</strong> — to rule out urinary tract infection as a cause of elevated PSA</li>
+        <li><strong>Repeat PSA</strong> — often ordered 4–6 weeks later to confirm whether the elevation is persistent</li>
+      </ul>
+    </div>
+
+    <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">PSA is a screening tool, not a diagnostic test. An elevated result typically leads to further evaluation, which may include a biopsy. Discuss your personal risk factors before acting on results.</div>
+      <div class="next-steps">An elevated PSA is a signal worth taking seriously — but not a reason to panic. The majority of men with elevated PSA do not have prostate cancer, and even when cancer is found, prostate cancer is often slow-growing and highly treatable when caught early. Work with your doctor to understand your full picture: your age, your PSA trend over time, your prostate size, your family history, and your symptoms. Together, those factors determine the right next step — not the number alone.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>How does my PSA compare to my previous results — is it rising, stable, or new?</li>
+        <li><span class="q-num">02</span>Is my result high for my age specifically, or just above the general cutoff?</li>
+        <li><span class="q-num">03</span>Should we check my free PSA ratio to better assess cancer risk?</li>
+        <li><span class="q-num">04</span>Would a prostate MRI be appropriate before considering a biopsy?</li>
+        <li><span class="q-num">05</span>Could BPH, prostatitis, or another non-cancerous cause explain this result?</li>
+        <li><span class="q-num">06</span>What PSA level or rate of change would prompt you to recommend a biopsy?</li>
+        <li><span class="q-num">07</span>Given my family history and risk factors, how aggressively should we monitor this?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Does a high PSA mean I have prostate cancer?</div>
+        <div class="faq-a">Not necessarily. The majority of men with elevated PSA — even significantly elevated PSA — do not have prostate cancer. BPH (enlarged prostate) and prostatitis are far more common causes of high PSA. Cancer is one possibility that must be evaluated, but it is not the automatic conclusion. Only a biopsy can confirm or rule out cancer.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">At what age should I start getting PSA tests?</div>
+        <div class="faq-a">Most guidelines recommend discussing PSA screening with your doctor starting at age 50 for average-risk men. Men with a first-degree relative (father or brother) diagnosed with prostate cancer, or Black men who have a higher baseline risk, are typically advised to start the conversation at age 40–45. The decision to screen is a shared one between you and your doctor — not all guidelines agree on routine screening for all men.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I do anything to lower my PSA before the test?</div>
+        <div class="faq-a">Avoid ejaculation for 48 hours before the test, avoid vigorous cycling or horseback riding, and make sure no prostate exam (DRE) is done immediately before the blood draw — all of these can temporarily raise PSA. Beyond avoiding these factors, there's no reliable way to "lower" PSA artificially before testing. Accurate results are more useful than artificially low ones.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What happens after a high PSA result?</div>
+        <div class="faq-a">Your doctor will likely repeat the PSA test in 4–6 weeks to confirm it's genuinely elevated. If it remains high, next steps typically include a free PSA ratio test, a digital rectal exam, and possibly a prostate MRI. A biopsy is usually recommended only when multiple indicators point to significant cancer risk — not after a single elevated PSA alone.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is prostate cancer always serious?</div>
+        <div class="faq-a">Prostate cancer ranges widely in aggressiveness. Many prostate cancers are slow-growing and may never cause symptoms or require treatment during a man's lifetime — a strategy called active surveillance is appropriate for low-risk cases. Others are aggressive and require prompt treatment. The Gleason score from a biopsy is the key tool for determining how aggressive a cancer is and what treatment, if any, is needed.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/testosterone" class="related-chip">Testosterone →</a>
+        <a href="/creatinine" class="related-chip">Creatinine →</a>
+        <a href="/urinalysis" class="related-chip">Urinalysis →</a>
+        <a href="/calcium" class="related-chip">Calcium →</a>
+        <a href="/albumin" class="related-chip">Albumin →</a>
+        <a href="/crp" class="related-chip">CRP →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
