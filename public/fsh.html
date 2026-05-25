@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FSH (Follicle Stimulating Hormone) – LabPlain</title>
-  <meta name="description" content="What does your FSH (Follicle Stimulating Hormone) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
+  <title>FSH Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your FSH result mean? Plain-English guide to follicle-stimulating hormone levels, normal ranges, fertility, menopause, symptoms, causes, and next steps.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://labplain.co/fsh">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +12,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
     nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
@@ -26,27 +29,56 @@
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
     .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
     .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
+    .range-box.low .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -55,39 +87,180 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; FSH (Follicle Stimulating Hormone)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">FSH (Follicle Stimulating Hormone)</em> result mean?</h1>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; FSH</p>
+
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">FSH</em> result mean?</h1>
+
     <span class="category-tag">Hormones</span>
+
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>FSH (Follicle Stimulating Hormone)</strong> test measures a hormone from the pituitary gland that signals the ovaries or testes to produce eggs or sperm.</p>
+      <p>FSH stands for follicle-stimulating hormone. It's a hormone made by the pituitary gland — a small gland at the base of the brain that controls many other hormones in the body.</p>
+
+      <p>In women, FSH helps regulate the menstrual cycle and stimulates the ovaries to mature eggs before ovulation. In men, FSH supports sperm production in the testes. Because of this, FSH is commonly checked during fertility evaluations, menstrual problems, menopause workups, and hormone testing.</p>
+
+      <p>Doctors may order an FSH test if someone has irregular periods, infertility, symptoms of menopause, low testosterone symptoms, delayed puberty, or concerns about pituitary gland function.</p>
     </div>
 
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Varies by sex and cycle phase; elevated in menopause: above 25 mIU/mL</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+
+      <div class="normal-range">Women (varies by cycle): 4–30 mIU/mL &nbsp;|&nbsp; Men: 1.5–12.4 mIU/mL</div>
+
+      <p class="range-note">FSH levels naturally fluctuate throughout the menstrual cycle in women, so the timing of the blood test matters. Levels also rise significantly after menopause because the ovaries become less responsive to hormone signals.</p>
+
+      <p class="range-note" style="margin-top:8px;">Reference ranges vary between labs and depend heavily on age, sex, and menstrual status. Always compare your result to the range printed on your specific lab report.</p>
+
+      <div class="timing-box">
+        <h3>⏰ Why timing matters</h3>
+        <p>For fertility testing, FSH is often measured on day 3 of the menstrual cycle because that's when doctors can best evaluate ovarian reserve and reproductive hormone balance. Testing at other times may produce very different results.</p>
+      </div>
     </div>
 
     <div class="card">
       <div class="section-label">What your result might indicate</div>
+
       <div class="two-col">
         <div class="range-box high">
           <div class="range-box-label">↑ If High</div>
-          <p>High FSH in women suggests the ovaries are less responsive — common in perimenopause, menopause, or premature ovarian insufficiency.</p>
+          <p>High FSH may suggest menopause, diminished ovarian reserve, primary ovarian insufficiency, testicular failure, or damage to the ovaries or testes. Higher levels often mean the body is working harder to stimulate the reproductive organs.</p>
         </div>
+
         <div class="range-box low">
           <div class="range-box-label">↓ If Low</div>
-          <p>Low FSH may indicate a pituitary problem or conditions affecting reproductive hormone signaling.</p>
+          <p>Low FSH may point to pituitary gland problems, hypothalamic dysfunction, severe stress, eating disorders, or conditions that suppress hormone production. Low levels can affect fertility and normal reproductive function.</p>
         </div>
       </div>
     </div>
 
     <div class="card">
+      <div class="section-label">Symptoms associated with abnormal FSH</div>
+
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High FSH Symptoms</h3>
+
+          <ul class="symptom-list">
+            <li>Irregular or absent periods</li>
+            <li>Hot flashes and night sweats</li>
+            <li>Difficulty getting pregnant</li>
+            <li>Low sex drive</li>
+            <li>Vaginal dryness</li>
+            <li>Fatigue</li>
+            <li>Erectile dysfunction in men</li>
+            <li>Reduced sperm count</li>
+          </ul>
+        </div>
+
+        <div class="symptom-box low">
+          <h3>↓ Low FSH Symptoms</h3>
+
+          <ul class="symptom-list">
+            <li>Infertility</li>
+            <li>Missed or irregular periods</li>
+            <li>Delayed puberty</li>
+            <li>Low testosterone symptoms</li>
+            <li>Low sperm production</li>
+            <li>Reduced libido</li>
+            <li>Fatigue and weakness</li>
+            <li>Difficulty ovulating</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal FSH</div>
+
+      <h2>What can raise FSH?</h2>
+
+      <p>The most common reason for elevated FSH in women is menopause or declining ovarian function with age. When the ovaries produce less estrogen, the pituitary gland releases more FSH in an attempt to stimulate them. High FSH can also occur with premature ovarian insufficiency, ovarian surgery, chemotherapy, radiation treatment, or certain genetic conditions.</p>
+
+      <p>In men, high FSH may point to testicular damage, infection, injury, or conditions that reduce sperm production.</p>
+
+      <h2 style="margin-top:24px;">What can lower FSH?</h2>
+
+      <p>Low FSH often results from problems involving the pituitary gland or hypothalamus — the brain regions that control hormone signaling. Severe stress, rapid weight loss, eating disorders, excessive exercise, chronic illness, and some medications can also suppress FSH production.</p>
+
+      <p>Hormonal birth control and testosterone therapy may temporarily lower FSH because they reduce the body's need to produce reproductive hormones naturally.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside FSH</div>
+
+      <p>FSH is usually interpreted together with other reproductive hormones and fertility-related tests:</p>
+
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>LH (Luteinizing Hormone)</strong> — helps evaluate ovulation, fertility, and pituitary function</li>
+        <li><strong>Estradiol</strong> — measures estrogen levels and ovarian activity</li>
+        <li><strong>Testosterone</strong> — often checked in men with fertility or hormone symptoms</li>
+        <li><strong>Prolactin</strong> — elevated prolactin can disrupt FSH and fertility</li>
+        <li><strong>TSH (Thyroid Stimulating Hormone)</strong> — thyroid problems can affect menstrual cycles and fertility</li>
+      </ul>
+    </div>
+
+    <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">FSH is often tested alongside LH and estradiol to evaluate fertility or menopausal status.</div>
+
+      <div class="next-steps">An abnormal FSH result doesn't automatically mean infertility, menopause, or a serious hormone disorder. FSH levels must be interpreted alongside your age, sex, menstrual cycle timing, symptoms, and other hormone tests. Your doctor may repeat testing or order additional labs before making a diagnosis.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Was my FSH tested at the correct point in my menstrual cycle?</li>
+        <li><span class="q-num">02</span>Do my symptoms match what you'd expect from this result?</li>
+        <li><span class="q-num">03</span>Should I have LH, estradiol, or testosterone checked too?</li>
+        <li><span class="q-num">04</span>Could medications or birth control be affecting my hormone levels?</li>
+        <li><span class="q-num">05</span>Does this result suggest menopause, fertility problems, or pituitary issues?</li>
+        <li><span class="q-num">06</span>Would repeating the test at a different time give more accurate information?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+
+      <div class="faq-item">
+        <div class="faq-q">Does high FSH always mean menopause?</div>
+        <div class="faq-a">No. While high FSH is common during menopause, levels can also rise with infertility, ovarian dysfunction, or temporary hormonal changes. Doctors interpret FSH together with age, symptoms, and other hormone tests.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can stress affect FSH levels?</div>
+        <div class="faq-a">Yes. Severe physical or emotional stress can disrupt hormone signaling from the brain and temporarily suppress FSH production, which may affect menstrual cycles or fertility.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Why is FSH tested on day 3 of the cycle?</div>
+        <div class="faq-a">Day 3 testing provides a more stable baseline for evaluating ovarian reserve and fertility. FSH naturally changes throughout the cycle, so testing on different days may produce different results.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can men have abnormal FSH levels too?</div>
+        <div class="faq-a">Yes. In men, FSH helps regulate sperm production. High or low FSH may indicate fertility problems, pituitary disorders, or testicular dysfunction.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Does birth control affect FSH testing?</div>
+        <div class="faq-a">Yes. Hormonal birth control can suppress natural hormone production and change FSH levels, which is why doctors often consider medication use when interpreting results.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+
+      <div class="related">
+        <a href="/lh" class="related-chip">LH →</a>
+        <a href="/estradiol" class="related-chip">Estradiol →</a>
+        <a href="/testosterone" class="related-chip">Testosterone →</a>
+        <a href="/prolactin" class="related-chip">Prolactin →</a>
+        <a href="/tsh" class="related-chip">TSH →</a>
+        <a href="/free-t4" class="related-chip">Free T4 →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
