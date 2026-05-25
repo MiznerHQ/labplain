@@ -1,255 +1,235 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Triglycerides Blood Test: What Your Results Mean | LabPlain</title>
-  <meta name="description" content="Understand your triglycerides blood test results. Learn what high and low triglycerides mean, symptoms, causes, normal ranges, and when to talk to your doctor." />
-  <link rel="canonical" href="https://labplain.co/triglycerides" />
-  <link rel="icon" href="/favicon.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triglycerides Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your triglycerides result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://labplain.co/triglycerides">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
-      line-height: 1.7;
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    header {
-      background: #0f2557;
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header a { text-decoration: none; }
-    header .logo { color: #fff; font-size: 1.4rem; font-weight: 700; letter-spacing: -0.5px; }
-    header .logo span { color: #60a5fa; }
-    header .tagline { color: #93c5fd; font-size: 0.78rem; margin-top: 2px; }
-    .hero {
-      background: linear-gradient(135deg, #0f2557 0%, #1e3a8a 100%);
-      color: white;
-      padding: 48px 24px 40px;
-      text-align: center;
-    }
-    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 12px; }
-    .hero p { font-size: 1.05rem; color: #bfdbfe; max-width: 600px; margin: 0 auto; }
-    .container { max-width: 820px; margin: 0 auto; padding: 0 20px 60px; }
-    .section { background: #fff; border-radius: 12px; padding: 32px; margin-top: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
-    .section h2 { font-size: 1.25rem; font-weight: 700; color: #0f2557; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e7ef; }
-    .section h3 { font-size: 1rem; font-weight: 700; color: #1e3a8a; margin: 18px 0 8px; }
-    .section p { margin-bottom: 12px; color: #374151; }
-    .section ul { padding-left: 20px; margin-bottom: 12px; }
-    .section ul li { margin-bottom: 7px; color: #374151; }
-    .range-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.93rem; }
-    .range-table th { background: #0f2557; color: #fff; padding: 10px 14px; text-align: left; }
-    .range-table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; }
-    .range-table tr:last-child td { border-bottom: none; }
-    .range-table tr:nth-child(even) td { background: #f1f5f9; }
-    .badge { display: inline-block; padding: 2px 10px; border-radius: 99px; font-size: 0.78rem; font-weight: 600; }
-    .badge-low { background: #dbeafe; color: #1d4ed8; }
-    .badge-normal { background: #dcfce7; color: #15803d; }
-    .badge-borderline { background: #fef9c3; color: #854d0e; }
-    .badge-high { background: #fee2e2; color: #b91c1c; }
-    .badge-very-high { background: #fce7f3; color: #9d174d; }
-    .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px; }
-    @media (max-width: 560px) { .card-grid { grid-template-columns: 1fr; } }
-    .card { border-radius: 10px; padding: 18px; }
-    .card-high { background: #fff7ed; border-left: 4px solid #f97316; }
-    .card-low { background: #eff6ff; border-left: 4px solid #3b82f6; }
-    .card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; margin-top: 0; }
-    .card-high h3 { color: #c2410c; }
-    .card-low h3 { color: #1d4ed8; }
-    .card ul { padding-left: 18px; margin: 0; }
-    .card ul li { font-size: 0.9rem; margin-bottom: 5px; color: #374151; }
-    .faq-item { border-bottom: 1px solid #e2e8f0; padding: 16px 0; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.high .range-box-label { color: var(--warn); }
+    .range-box.low .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
     .faq-item:last-child { border-bottom: none; }
-    .faq-item .q { font-weight: 700; color: #0f2557; margin-bottom: 6px; }
-    .faq-item .a { color: #374151; font-size: 0.95rem; }
-    .question-list { list-style: none; padding: 0; }
-    .question-list li { padding: 10px 14px; margin-bottom: 8px; background: #f1f5f9; border-radius: 8px; font-size: 0.94rem; color: #1e293b; }
-    .question-list li::before { content: "❓ "; }
-    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-top: 8px; }
-    .related-card { background: #f1f5f9; border-radius: 8px; padding: 14px; text-align: center; text-decoration: none; color: #0f2557; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
-    .related-card:hover { background: #dbeafe; }
-    .disclaimer { background: #fef9c3; border: 1px solid #fde047; border-radius: 10px; padding: 16px 20px; margin-top: 28px; font-size: 0.85rem; color: #713f12; }
-    .cta-box { background: linear-gradient(135deg, #0f2557, #1e3a8a); color: white; border-radius: 12px; padding: 32px; text-align: center; margin-top: 28px; }
-    .cta-box h2 { color: white; border: none; font-size: 1.2rem; margin-bottom: 10px; }
-    .cta-box p { color: #bfdbfe; margin-bottom: 20px; }
-    .cta-btn { display: inline-block; background: #60a5fa; color: #0f2557; font-weight: 700; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-size: 1rem; transition: background 0.2s; }
-    .cta-btn:hover { background: #93c5fd; }
-    footer { text-align: center; padding: 24px; font-size: 0.82rem; color: #94a3b8; }
-    footer a { color: #60a5fa; text-decoration: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-
-<header>
-  <a href="/">
-    <div class="logo">Lab<span>Plain</span></div>
-    <div class="tagline">Understand your labs. No medical degree required.</div>
-  </a>
-</header>
-
-<div class="hero">
-  <h1>Triglycerides Blood Test</h1>
-  <p>What your results mean, what causes abnormal levels, and when to talk to your doctor.</p>
-</div>
-
-<div class="container">
-
-  <div class="section">
-    <h2>What Are Triglycerides?</h2>
-    <p>Triglycerides are the most common type of fat in your body. When you eat, your body converts any calories it doesn't need right away into triglycerides, which are stored in fat cells and released for energy between meals.</p>
-    <p>Triglycerides are measured as part of a standard lipid panel (cholesterol test). High triglycerides — called hypertriglyceridemia — are a major risk factor for heart disease, stroke, and pancreatitis.</p>
-    <p>Results are measured in milligrams per deciliter (mg/dL).</p>
-  </div>
-
-  <div class="section">
-    <h2>Normal Triglyceride Ranges</h2>
-    <p>The American Heart Association and NIH use these standard categories for adults:</p>
-    <table class="range-table">
-      <thead>
-        <tr><th>Category</th><th>Level (mg/dL)</th><th>Status</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Normal</td><td>Less than 150</td><td><span class="badge badge-normal">Normal</span></td></tr>
-        <tr><td>Borderline high</td><td>150 – 199</td><td><span class="badge badge-borderline">Borderline</span></td></tr>
-        <tr><td>High</td><td>200 – 499</td><td><span class="badge badge-high">High</span></td></tr>
-        <tr><td>Very high</td><td>500 or above</td><td><span class="badge badge-very-high">Very High</span></td></tr>
-        <tr><td>Optimal</td><td>Less than 100</td><td><span class="badge badge-normal">Optimal</span></td></tr>
-      </tbody>
-    </table>
-    <p style="margin-top:14px; font-size:0.88rem; color:#64748b;">Triglycerides must be measured after fasting for 9–12 hours for accurate results. Eating before the test can cause falsely elevated numbers.</p>
-  </div>
-
-  <div class="section">
-    <h2>Symptoms of Abnormal Triglycerides</h2>
-    <p>High triglycerides usually cause no symptoms on their own — which is why regular testing matters. However, very high levels or associated conditions can cause noticeable signs.</p>
-    <div class="card-grid">
-      <div class="card card-high">
-        <h3>⬆ High Triglycerides</h3>
-        <ul>
-          <li>Usually no symptoms (silent)</li>
-          <li>Xanthomas — fatty deposits under skin</li>
-          <li>Xanthelasmas — yellowish patches near eyes</li>
-          <li>Abdominal pain (if very high)</li>
-          <li>Nausea or vomiting</li>
-          <li>Pancreatitis (levels above 500)</li>
-          <li>Enlarged liver or spleen</li>
-          <li>Milky-appearing blood (extreme levels)</li>
-        </ul>
-      </div>
-      <div class="card card-low">
-        <h3>⬇ Low Triglycerides</h3>
-        <ul>
-          <li>Rarely causes symptoms alone</li>
-          <li>May signal malnutrition</li>
-          <li>Associated with hyperthyroidism</li>
-          <li>Seen with very low-fat diets</li>
-          <li>Can occur with malabsorption disorders</li>
-          <li>May appear with certain medications</li>
-        </ul>
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+      <a href="/" class="logo-text">lab<span>plain</span></a>
+    </nav>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Triglycerides</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Triglycerides</em> result mean?</h1>
+    <span class="category-tag">Cholesterol & Lipids</span>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+    <div class="card">
+      <div class="section-label">What this test measures</div>
+      <p>Triglycerides are a type of fat found in your blood. After you eat, your body converts extra calories it doesn't immediately need into triglycerides and stores them in fat cells for future energy use.</p>
+      <p>When your body needs energy between meals, hormones release triglycerides from storage. Some triglycerides are normal and necessary — but high levels over time increase your risk of heart disease, stroke, fatty liver disease, and pancreatitis.</p>
+      <p>Doctors usually measure triglycerides as part of a standard lipid panel alongside cholesterol tests like LDL, HDL, and total cholesterol.</p>
+    </div>
+    <div class="card">
+      <div class="section-label">Normal reference range</div>
+      <div class="normal-range">Normal: Less than 150 mg/dL &nbsp;|&nbsp; High: 200+ mg/dL</div>
+      <p class="range-note">Most labs classify triglycerides as: normal under 150 mg/dL, borderline high between 150–199 mg/dL, high between 200–499 mg/dL, and very high at 500 mg/dL or higher.</p>
+      <p class="range-note" style="margin-top:8px;">Triglyceride levels can rise significantly after eating, so many doctors prefer a fasting blood test for the most accurate result.</p>
+      <div class="timing-box">
+        <h3>⏰ Why fasting matters</h3>
+        <p>Eating before a triglycerides test can temporarily raise levels for several hours. That's why many lipid panels are done after fasting for 9–12 hours. Water is usually allowed, but food, alcohol, and sugary drinks can affect the result.</p>
       </div>
     </div>
-  </div>
-
-  <div class="section">
-    <h2>What Causes Abnormal Triglyceride Levels?</h2>
-    <h3>Causes of High Triglycerides</h3>
-    <ul>
-      <li><strong>Diet high in refined carbs and sugar</strong> — white bread, soda, pastries, and alcohol are the most common dietary culprits</li>
-      <li><strong>Obesity</strong> — excess body fat, especially around the abdomen, drives up triglyceride production</li>
-      <li><strong>Type 2 diabetes or insulin resistance</strong> — impaired insulin function allows fat to accumulate in the bloodstream</li>
-      <li><strong>Hypothyroidism</strong> — low thyroid hormone slows the breakdown of triglycerides</li>
-      <li><strong>Kidney disease</strong> — reduced kidney function impairs lipid metabolism</li>
-      <li><strong>Liver disease</strong> — the liver plays a central role in processing fats</li>
-      <li><strong>Medications</strong> — beta-blockers, steroids, diuretics, antipsychotics, estrogen, and tamoxifen can all raise levels</li>
-      <li><strong>Familial hypertriglyceridemia</strong> — a genetic condition causing chronically elevated levels</li>
-      <li><strong>Pregnancy</strong> — triglycerides naturally rise during the third trimester</li>
-    </ul>
-    <h3>Causes of Low Triglycerides</h3>
-    <ul>
-      <li><strong>Very low-fat diet</strong> — extreme dietary fat restriction reduces triglyceride production</li>
-      <li><strong>Hyperthyroidism</strong> — an overactive thyroid accelerates fat breakdown</li>
-      <li><strong>Malnutrition or malabsorption</strong> — conditions like celiac disease or Crohn's disease can impair fat absorption</li>
-      <li><strong>Certain medications</strong> — statins, fibrates, niacin, and fish oil supplements actively lower triglycerides</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <div class="q">Do I need to fast before a triglyceride test?</div>
-      <div class="a">Yes — ideally 9 to 12 hours of fasting before the blood draw. Eating beforehand, especially carbohydrates or fat, can temporarily spike your triglycerides by 20–30% and give a false result. Water is fine to drink.</div>
+    <div class="card">
+      <div class="section-label">What your result might indicate</div>
+      <div class="two-col">
+        <div class="range-box high">
+          <div class="range-box-label">↑ If High</div>
+          <p>High triglycerides are commonly linked to obesity, diabetes, insulin resistance, alcohol use, poor diet, metabolic syndrome, or genetic lipid disorders. Very high levels increase the risk of pancreatitis.</p>
+        </div>
+        <div class="range-box low">
+          <div class="range-box-label">↓ If Low</div>
+          <p>Low triglycerides are usually not dangerous and are often seen in people with healthy diets, regular exercise habits, or low body fat. Occasionally, very low levels may reflect malnutrition or an overactive thyroid.</p>
+        </div>
+      </div>
     </div>
-    <div class="faq-item">
-      <div class="q">Can I lower my triglycerides without medication?</div>
-      <div class="a">Yes, lifestyle changes are often very effective. Cutting sugar and refined carbs, reducing alcohol, losing even 5–10% of body weight, exercising regularly, and eating more omega-3 rich foods (salmon, sardines, flaxseed) can significantly lower levels — sometimes by 50% or more.</div>
+    <div class="card">
+      <div class="section-label">Symptoms associated with abnormal triglycerides</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High Triglycerides Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Often no symptoms at all</li>
+            <li>Abdominal pain in severe cases</li>
+            <li>Fatty liver disease</li>
+            <li>Weight gain around the abdomen</li>
+            <li>High blood sugar or diabetes</li>
+            <li>Skin deposits called xanthomas</li>
+            <li>Increased risk of heart disease</li>
+            <li>Pancreatitis if extremely elevated</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>↓ Low Triglycerides Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Usually no symptoms</li>
+            <li>Low body weight</li>
+            <li>Poor calorie intake</li>
+            <li>Nutritional deficiencies</li>
+            <li>Hyperthyroidism symptoms</li>
+            <li>Unintentional weight loss</li>
+            <li>Fatigue or weakness</li>
+            <li>Digestive absorption problems</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="faq-item">
-      <div class="q">What's the difference between triglycerides and cholesterol?</div>
-      <div class="a">Both are fats (lipids) in your blood, but they serve different roles. Triglycerides store unused calories for energy. Cholesterol is used to build cells and hormones. Both are measured on a lipid panel, and both can contribute to heart disease when elevated.</div>
+    <div class="card">
+      <div class="section-label">Common causes of abnormal triglycerides</div>
+      <h2>What can raise triglycerides?</h2>
+      <p>The most common causes of elevated triglycerides are diets high in sugar and refined carbohydrates, obesity, insulin resistance, poorly controlled diabetes, excessive alcohol use, and lack of exercise. Certain medications — including steroids, estrogen therapy, beta blockers, and some HIV medications — can also raise triglycerides.</p>
+      <p>Genetics also play a role. Some people inherit conditions that make it difficult for the body to process fats properly, leading to very high triglyceride levels even with a healthy lifestyle.</p>
+      <h2 style="margin-top:24px;">What can lower triglycerides?</h2>
+      <p>Low triglycerides are often seen in people who exercise regularly, maintain a healthy weight, or eat balanced diets low in processed carbohydrates. Less commonly, low levels may be linked to malnutrition, malabsorption disorders, or hyperthyroidism.</p>
     </div>
-    <div class="faq-item">
-      <div class="q">How dangerous are very high triglycerides?</div>
-      <div class="a">Levels above 500 mg/dL significantly raise the risk of acute pancreatitis — a painful and potentially life-threatening inflammation of the pancreas. Levels above 1,000 mg/dL are a medical emergency requiring immediate treatment.</div>
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside triglycerides</div>
+      <p>Triglycerides are usually interpreted alongside other heart and metabolic health markers. Your doctor may also order:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>Total cholesterol</strong> — measures overall cholesterol in the blood</li>
+        <li><strong>LDL cholesterol</strong> — often called "bad" cholesterol linked to artery buildup</li>
+        <li><strong>HDL cholesterol</strong> — the "good" cholesterol that helps remove excess cholesterol</li>
+        <li><strong>Hemoglobin A1C</strong> — screens for diabetes and blood sugar control</li>
+        <li><strong>Liver enzymes (ALT/AST)</strong> — high triglycerides are associated with fatty liver disease</li>
+      </ul>
     </div>
-    <div class="faq-item">
-      <div class="q">Can alcohol affect my triglyceride test?</div>
-      <div class="a">Yes — even moderate alcohol consumption can significantly raise triglycerides, sometimes doubling them. You should avoid alcohol for at least 24 hours before a triglyceride test for an accurate result.</div>
+    <div class="card">
+      <div class="section-label">What to do next</div>
+      <div class="next-steps">A mildly elevated triglycerides result is very common and often improves with lifestyle changes like reducing sugar and alcohol intake, losing weight, increasing exercise, and improving blood sugar control. Extremely high levels are more serious because they can increase the risk of pancreatitis. Your doctor will interpret your result alongside your cholesterol levels, medical history, medications, and overall cardiovascular risk.</div>
     </div>
-    <div class="faq-item">
-      <div class="q">How quickly can triglycerides improve with diet changes?</div>
-      <div class="a">Triglycerides respond relatively quickly to dietary changes — some people see significant improvement within 4–6 weeks of cutting sugar and alcohol. They're more diet-responsive than LDL cholesterol, so lifestyle changes can make a big difference fast.</div>
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Was my triglycerides test done fasting, and does that affect the interpretation?</li>
+        <li><span class="q-num">02</span>How do my triglycerides compare to my LDL and HDL cholesterol levels?</li>
+        <li><span class="q-num">03</span>Could diabetes or insulin resistance be contributing to this result?</li>
+        <li><span class="q-num">04</span>Could any medications or alcohol use be affecting my triglycerides?</li>
+        <li><span class="q-num">05</span>What lifestyle changes would have the biggest impact on lowering my levels?</li>
+        <li><span class="q-num">06</span>Do I need medication, or should we repeat the test later?</li>
+      </ul>
     </div>
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can eating before the test raise triglycerides?</div>
+        <div class="faq-a">Yes. Triglycerides can rise significantly after eating, especially after meals high in sugar, carbohydrates, or fat. That's why many doctors recommend fasting before a lipid panel.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How can I lower triglycerides naturally?</div>
+        <div class="faq-a">The most effective lifestyle changes are reducing added sugar and alcohol, losing excess weight, exercising regularly, improving diabetes control, and eating more fiber-rich foods. Even modest weight loss can lower triglycerides significantly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Are high triglycerides dangerous?</div>
+        <div class="faq-a">Moderately elevated triglycerides increase long-term cardiovascular risk. Very high levels — especially above 500 mg/dL — can trigger pancreatitis, which is a serious and painful inflammation of the pancreas.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does alcohol affect triglycerides?</div>
+        <div class="faq-a">Yes. Alcohol can significantly raise triglycerides, especially in people who are already prone to elevated levels. Even moderate drinking may worsen triglycerides in some individuals.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between triglycerides and cholesterol?</div>
+        <div class="faq-a">Triglycerides store unused calories for energy, while cholesterol is used to build cells and hormones. Both circulate in the blood, but they serve different roles and contribute differently to heart disease risk.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/total-cholesterol" class="related-chip">Total Cholesterol →</a>
+        <a href="/hdl" class="related-chip">HDL Cholesterol →</a>
+        <a href="/ldl" class="related-chip">LDL Cholesterol →</a>
+        <a href="/glucose" class="related-chip">Glucose →</a>
+        <a href="/a1c" class="related-chip">Hemoglobin A1C →</a>
+        <a href="/alt" class="related-chip">ALT →</a>
+      </div>
+    </div>
+    <div class="tool-cta">
+      <h3>Decode any lab test instantly</h3>
+      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+    <footer>
+      <span>labplain.co</span>
+      <span>Understand your labs. No medical degree required.</span>
+    </footer>
   </div>
-
-  <div class="section">
-    <h2>Related Tests to Know About</h2>
-    <p>Triglycerides are always interpreted alongside other lipid values:</p>
-    <div class="related-grid">
-      <a href="/cholesterol" class="related-card">Total Cholesterol</a>
-      <a href="/ldl" class="related-card">LDL Cholesterol</a>
-      <a href="/hdl" class="related-card">HDL Cholesterol</a>
-      <a href="/glucose" class="related-card">Glucose</a>
-      <a href="/hba1c" class="related-card">HbA1c</a>
-      <a href="/creatinine" class="related-card">Creatinine</a>
-      <a href="/tsh" class="related-card">TSH (Thyroid)</a>
-      <a href="/liver-panel" class="related-card">Liver Panel</a>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Questions to Ask Your Doctor</h2>
-    <p>Bring this list to your next appointment:</p>
-    <ul class="question-list">
-      <li>What is causing my triglycerides to be elevated?</li>
-      <li>Do I need to make dietary changes, and what specifically?</li>
-      <li>Should I be concerned about my heart disease risk?</li>
-      <li>Do I need medication, or can lifestyle changes be enough?</li>
-      <li>How often should I retest my lipid panel?</li>
-      <li>Could any of my current medications be raising my triglycerides?</li>
-      <li>Should I be tested for diabetes or insulin resistance?</li>
-      <li>Is my level high enough to risk pancreatitis?</li>
-    </ul>
-  </div>
-
-  <div class="cta-box">
-    <h2>Still Confused About Your Results?</h2>
-    <p>Paste your full lab report into our free AI decoder and get a plain-English explanation in seconds.</p>
-    <a href="/" class="cta-btn">Decode My Lab Results →</a>
-  </div>
-
-  <div class="disclaimer">
-    <strong>Medical Disclaimer:</strong> This content is for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your doctor or a qualified healthcare provider with questions about your lab results or medical conditions.
-  </div>
-
-</div>
-
-<footer>
-  <p>&copy; 2025 LabPlain &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms">Terms of Use</a></p>
-</footer>
-
 </body>
 </html>
+```
