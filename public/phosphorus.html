@@ -1,677 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Phosphorus Blood Test Explained | High vs Low Phosphorus Levels | LabPlain</title>
-  <meta name="description" content="Understand your phosphorus blood test results. Learn what high or low phosphorus means, symptoms, causes, normal ranges, kidney links, and next steps." />
-  <meta name="keywords" content="phosphorus blood test, low phosphorus, high phosphorus, phosphate test, phosphorus levels, kidney phosphorus, hypophosphatemia, hyperphosphatemia" />
-  <meta name="author" content="LabPlain" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phosphorus Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your phosphorus result mean? Plain-English guide to normal ranges, high and low phosphorus levels, symptoms, causes, kidney connections, and what to ask your doctor.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://labplain.co/phosphorus">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #f5f7fb;
-      --text: #172033;
-      --muted: #5f6b85;
-      --line: #d9dfeb;
-      --card: #ffffff;
-      --accent: #183153;
-      --accent-light: #edf3ff;
-      --success: #e8f7ee;
-      --warn: #fff4e5;
-      --amber: #b7791f;
-      --danger: #fdecec;
-      --danger-text: #a12626;
-      --radius: 22px;
-      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'DM Sans', sans-serif;
-      line-height: 1.7;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 24px;
-    }
-
-    .topbar {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 24px;
-    }
-
-    .topbar a {
-      color: var(--muted);
-    }
-
-    .hero {
-      padding: 24px 0 8px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--accent-light);
-      color: var(--accent);
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-family: 'DM Mono', monospace;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(42px, 6vw, 68px);
-      line-height: 1.02;
-      margin: 0 0 20px;
-      letter-spacing: -1px;
-    }
-
-    .subhead {
-      font-size: 20px;
-      max-width: 760px;
-      color: var(--muted);
-      margin-bottom: 32px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 24px;
-      margin-bottom: 36px;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 28px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(15, 23, 42, 0.04);
-    }
-
-    .card h2,
-    .card h3 {
-      margin-top: 0;
-      color: var(--accent);
-    }
-
-    .range {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      margin-top: 18px;
-      padding: 18px;
-      border-radius: 18px;
-      background: var(--accent-light);
-    }
-
-    .range strong {
-      display: block;
-      font-size: 28px;
-      color: var(--accent);
-    }
-
-    .range span {
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .pill {
-      display: inline-block;
-      padding: 8px 12px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-family: 'DM Mono', monospace;
-      background: var(--success);
-      color: #146c43;
-    }
-
-    .section {
-      margin: 52px 0;
-    }
-
-    .section h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 42px;
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
-
-    .section-intro {
-      color: var(--muted);
-      font-size: 18px;
-      max-width: 780px;
-      margin-bottom: 28px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .symptom-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .symptom-item {
-      padding: 16px 18px;
-      border-radius: 16px;
-      background: #f8fafc;
-      border: 1px solid var(--line);
-    }
-
-    .symptom-item strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--accent);
-    }
-
-    .timing-box {
-      background: var(--warn);
-      border-radius: var(--radius);
-      padding: 24px;
-      border: 1px solid #f3d7aa;
-    }
-
-    .timing-box h3 {
-      margin-top: 0;
-      color: var(--amber);
-    }
-
-    .question-list {
-      display: grid;
-      gap: 18px;
-    }
-
-    .question {
-      background: var(--card);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .question h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 20px;
-      color: var(--accent);
-    }
-
-    .tool-cta {
-      background: linear-gradient(135deg, #183153 0%, #24497a 100%);
-      color: white;
-      border-radius: 28px;
-      padding: 42px;
-      text-align: center;
-      margin: 60px 0;
-    }
-
-    .tool-cta h2 {
-      margin-top: 0;
-      font-family: 'DM Serif Display', serif;
-      font-size: 42px;
-      color: white;
-    }
-
-    .tool-cta p {
-      color: rgba(255,255,255,0.85);
-      max-width: 680px;
-      margin: 0 auto 24px;
-      font-size: 18px;
-    }
-
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px 24px;
-      border-radius: 999px;
-      background: white;
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 16px;
-    }
-
-    .related-tests {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 28px;
-    }
-
-    .related-card {
-      background: var(--card);
-      border-radius: 18px;
-      padding: 20px;
-      box-shadow: var(--shadow);
-    }
-
-    .related-card h3 {
-      margin-top: 0;
-      margin-bottom: 8px;
-      font-size: 20px;
-    }
-
-    .disclaimer {
-      margin-top: 60px;
-      padding: 24px;
-      border-radius: 20px;
-      background: var(--danger);
-      color: var(--danger-text);
-      font-size: 14px;
-    }
-
-    footer {
-      padding: 48px 0 64px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    footer .brand {
-      font-family: 'DM Serif Display', serif;
-      font-size: 28px;
-      color: var(--accent);
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 860px) {
-      .hero-grid,
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-
-      .tool-cta {
-        padding: 28px;
-      }
-
-      .section h2 {
-        font-size: 34px;
-      }
-    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.high .range-box-label { color: var(--warn); }
+    .range-box.low .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+      <a href="/" class="logo-text">lab<span>plain</span></a>
+    </nav>
 
-  <div class="container">
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Phosphorus</p>
 
-    <div class="topbar">
-      <a href="/">Home</a> / <a href="/labs">Lab Tests</a> / Phosphorus
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Phosphorus</em> result mean?</h1>
+
+    <span class="category-tag">Kidney Health</span>
+
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+
+    <div class="card">
+      <div class="section-label">What this test measures</div>
+
+      <p>Phosphorus is a mineral your body uses to build bones and teeth, create energy, repair cells, and support normal muscle and nerve function. Most phosphorus in your body is stored in your bones, where it works closely with calcium and vitamin D.</p>
+
+      <p>The phosphorus blood test measures how much phosphorus is circulating in your bloodstream at the time of the test. Your kidneys play a major role in keeping phosphorus levels balanced by filtering excess phosphorus out through urine.</p>
+
+      <p>Doctors commonly order a phosphorus test when evaluating kidney disease, bone disorders, vitamin D problems, parathyroid gland disorders, malnutrition, or unexplained fatigue and muscle weakness.</p>
     </div>
 
-    <section class="hero">
-      <div class="eyebrow">Metabolic Panel • Kidney Health</div>
+    <div class="card">
+      <div class="section-label">Normal reference range</div>
 
-      <h1>Phosphorus Blood Test Explained</h1>
+      <div class="normal-range">Adults: 2.5–4.5 mg/dL</div>
 
-      <p class="subhead">
-        Your phosphorus level helps show how your kidneys, bones, hormones, and cells are working. High or low phosphorus can point to kidney disease, vitamin deficiencies, hormone problems, or nutrition issues.
-      </p>
+      <p class="range-note">Normal phosphorus ranges vary slightly between labs and can also differ by age. Children and teenagers often have naturally higher phosphorus levels because of bone growth.</p>
 
-      <div class="hero-grid">
-
-        <div class="card">
-          <h2>What is phosphorus?</h2>
-
-          <p>
-            Phosphorus is a mineral your body uses to build bones and teeth, make energy, repair cells, and support muscle and nerve function. Most phosphorus is stored in your bones.
-          </p>
-
-          <p>
-            A phosphorus blood test measures how much phosphorus is circulating in your blood at the time of the test.
-          </p>
-
-          <div class="range">
-            <div>
-              <span>Typical adult reference range</span>
-              <strong>2.5–4.5 mg/dL</strong>
-            </div>
-
-            <div class="pill">Varies slightly by lab</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Common reasons this test is ordered</h3>
-
-          <div class="symptom-list">
-            <div class="symptom-item">
-              <strong>Kidney disease monitoring</strong>
-              Phosphorus often rises when kidneys stop filtering properly.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Bone or calcium problems</strong>
-              Calcium, vitamin D, and phosphorus work together closely.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Muscle weakness or fatigue</strong>
-              Low phosphorus can affect energy production.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Hormone evaluation</strong>
-              Parathyroid disorders can change phosphorus levels.
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>What high phosphorus means</h2>
-
-      <p class="section-intro">
-        High phosphorus is called hyperphosphatemia. Mild elevations are sometimes temporary, but persistent high levels may suggest kidney or hormone problems.
-      </p>
-
-      <div class="two-col">
-
-        <div class="card">
-          <h3>Common causes</h3>
-
-          <div class="symptom-list">
-            <div class="symptom-item">
-              <strong>Chronic kidney disease</strong>
-              The kidneys cannot remove excess phosphorus efficiently.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Low parathyroid hormone</strong>
-              Hypoparathyroidism can increase phosphorus levels.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Too much vitamin D</strong>
-              High vitamin D increases phosphorus absorption.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Cell breakdown</strong>
-              Severe illness, injury, or chemotherapy may release phosphorus from cells.
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Possible symptoms</h3>
-
-          <div class="symptom-list">
-            <div class="symptom-item">
-              <strong>Often no symptoms</strong>
-              Mild elevations may not cause noticeable problems.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Muscle cramps</strong>
-              Calcium balance may become disrupted.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Itching</strong>
-              Common in advanced kidney disease.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Joint or bone discomfort</strong>
-              Long-term imbalance can affect bones and tissues.
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>What low phosphorus means</h2>
-
-      <p class="section-intro">
-        Low phosphorus is called hypophosphatemia. Mild cases may not cause symptoms, but severe deficiency can affect muscles, nerves, breathing, and energy production.
-      </p>
-
-      <div class="two-col">
-
-        <div class="card">
-          <h3>Common causes</h3>
-
-          <div class="symptom-list">
-            <div class="symptom-item">
-              <strong>Poor nutrition</strong>
-              Low intake or alcohol use can lower phosphorus.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Vitamin D deficiency</strong>
-              Your body may absorb less phosphorus from food.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Overactive parathyroid glands</strong>
-              High PTH can lower phosphorus levels.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Certain medications</strong>
-              Antacids and some diuretics may reduce phosphorus.
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Possible symptoms</h3>
-
-          <div class="symptom-list">
-            <div class="symptom-item">
-              <strong>Fatigue</strong>
-              Cells may struggle to produce enough energy.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Muscle weakness</strong>
-              Severe deficiency can affect muscle function.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Bone pain</strong>
-              Long-term low phosphorus may weaken bones.
-            </div>
-
-            <div class="symptom-item">
-              <strong>Confusion or numbness</strong>
-              Severe cases can affect the nervous system.
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section">
+      <p class="range-note" style="margin-top:8px;">Your doctor usually interprets phosphorus alongside calcium, vitamin D, creatinine, and kidney function tests for a more complete picture.</p>
 
       <div class="timing-box">
-        <h3>When phosphorus results matter most</h3>
-
-        <p>
-          Phosphorus results are most meaningful when reviewed alongside calcium, vitamin D, kidney function, parathyroid hormone (PTH), magnesium, and albumin.
-        </p>
-
-        <p>
-          A single phosphorus result usually does not diagnose a condition by itself. Trends over time often matter more than one isolated number.
-        </p>
+        <h3>⏰ Why phosphorus levels change</h3>
+        <p>Phosphorus levels can temporarily shift after meals, dehydration, heavy exercise, alcohol use, or illness. Certain medications and supplements can also affect results. Mild abnormalities are often repeated before making major conclusions.</p>
       </div>
+    </div>
 
-    </section>
-
-    <section class="tool-cta">
-
-      <h2>Decode any lab test instantly</h2>
-
-      <p>
-        Upload your lab results and get clear explanations in plain English — including high and low markers, possible causes, and smart next steps.
-      </p>
-
-      <a class="cta-button" href="/">
-        Open the Decoder →
-      </a>
-
-    </section>
-
-    <section class="section">
-      <h2>Next steps after an abnormal phosphorus result</h2>
+    <div class="card">
+      <div class="section-label">What your result might indicate</div>
 
       <div class="two-col">
 
-        <div class="card">
-          <h3>If your phosphorus is high</h3>
+        <div class="range-box high">
+          <div class="range-box-label">↑ If High</div>
 
-          <div class="symptom-list">
-            <div class="symptom-item">
-              Review kidney function tests like creatinine and eGFR.
-            </div>
-
-            <div class="symptom-item">
-              Ask whether calcium, vitamin D, or PTH should also be checked.
-            </div>
-
-            <div class="symptom-item">
-              Review supplements and medications with your doctor.
-            </div>
-
-            <div class="symptom-item">
-              Repeat testing may be recommended if levels stay elevated.
-            </div>
-          </div>
+          <p>High phosphorus may point to chronic kidney disease, hypoparathyroidism, excessive vitamin D intake, or conditions that cause rapid cell breakdown. Mild elevations can also happen temporarily from dehydration or diet.</p>
         </div>
 
-        <div class="card">
-          <h3>If your phosphorus is low</h3>
+        <div class="range-box low">
+          <div class="range-box-label">↓ If Low</div>
 
-          <div class="symptom-list">
-            <div class="symptom-item">
-              Evaluate nutrition, alcohol intake, and vitamin deficiencies.
-            </div>
-
-            <div class="symptom-item">
-              Review medications that may lower phosphorus.
-            </div>
-
-            <div class="symptom-item">
-              Ask whether calcium, magnesium, and vitamin D should be tested.
-            </div>
-
-            <div class="symptom-item">
-              Severe symptoms may require prompt medical evaluation.
-            </div>
-          </div>
+          <p>Low phosphorus may suggest poor nutrition, alcohol use disorder, vitamin D deficiency, overactive parathyroid glands, or certain medications like antacids and diuretics. Severe low phosphorus can affect muscles, nerves, and breathing.</p>
         </div>
 
       </div>
-    </section>
+    </div>
 
-    <section class="section">
-      <h2>Frequently asked questions</h2>
+    <div class="card">
+      <div class="section-label">Symptoms associated with abnormal phosphorus</div>
 
-      <div class="question-list">
+      <div class="symptom-grid">
 
-        <div class="question">
-          <h3>Is phosphorus the same as phosphate?</h3>
-          <p>
-            In blood testing, the terms are often used interchangeably. Most labs are measuring phosphate levels in the blood.
-          </p>
+        <div class="symptom-box high">
+          <h3>↑ High Phosphorus Symptoms</h3>
+
+          <ul class="symptom-list">
+            <li>Often no noticeable symptoms</li>
+            <li>Muscle cramps or tingling</li>
+            <li>Joint pain or bone discomfort</li>
+            <li>Itchy skin</li>
+            <li>Fatigue</li>
+            <li>Calcium imbalance symptoms</li>
+            <li>Weak bones over time</li>
+            <li>Common in advanced kidney disease</li>
+          </ul>
         </div>
 
-        <div class="question">
-          <h3>Can dehydration affect phosphorus?</h3>
-          <p>
-            Yes. Dehydration can temporarily change phosphorus levels and may affect related kidney test results too.
-          </p>
-        </div>
+        <div class="symptom-box low">
+          <h3>↓ Low Phosphorus Symptoms</h3>
 
-        <div class="question">
-          <h3>Does high phosphorus always mean kidney disease?</h3>
-          <p>
-            No. Kidney disease is a common cause, but hormone disorders, medications, supplements, and temporary illness can also raise phosphorus.
-          </p>
-        </div>
-
-        <div class="question">
-          <h3>Should I fast before a phosphorus test?</h3>
-          <p>
-            Sometimes. Your doctor or lab will tell you if fasting is needed based on the rest of your blood work.
-          </p>
+          <ul class="symptom-list">
+            <li>Muscle weakness</li>
+            <li>Severe fatigue</li>
+            <li>Bone pain</li>
+            <li>Loss of appetite</li>
+            <li>Confusion or brain fog</li>
+            <li>Numbness or tingling</li>
+            <li>Trouble breathing in severe cases</li>
+            <li>Difficulty exercising</li>
+          </ul>
         </div>
 
       </div>
-    </section>
+    </div>
 
-    <section class="section">
+    <div class="card">
+      <div class="section-label">Common causes of abnormal phosphorus</div>
 
-      <h2>Related lab tests</h2>
+      <h2>What can raise phosphorus?</h2>
 
-      <div class="related-tests">
+      <p>The most common cause of high phosphorus is chronic kidney disease. When the kidneys stop filtering properly, phosphorus builds up in the bloodstream. Other causes include hypoparathyroidism, severe infections, uncontrolled diabetes, excessive vitamin D intake, and conditions that rapidly destroy cells such as chemotherapy or major injuries.</p>
 
-        <a class="related-card" href="/calcium.html">
-          <h3>Calcium</h3>
-          <p>Works closely with phosphorus in bone and hormone balance.</p>
-        </a>
+      <p>Some people also develop mildly elevated phosphorus from dehydration, high-phosphorus supplements, or laboratory variation. A single abnormal result usually needs to be interpreted alongside other tests.</p>
 
-        <a class="related-card" href="/vitamin-d.html">
-          <h3>Vitamin D</h3>
-          <p>Helps regulate phosphorus and calcium absorption.</p>
-        </a>
+      <h2 style="margin-top:24px;">What can lower phosphorus?</h2>
 
-        <a class="related-card" href="/egfr.html">
-          <h3>eGFR</h3>
-          <p>Measures kidney filtering function.</p>
-        </a>
+      <p>Low phosphorus most commonly results from poor nutrition, alcoholism, vitamin D deficiency, digestive disorders that reduce absorption, or overactive parathyroid glands. Certain medications — especially antacids containing aluminum or calcium — can also reduce phosphorus levels over time.</p>
 
-        <a class="related-card" href="/creatinine.html">
-          <h3>Creatinine</h3>
-          <p>Common kidney marker often reviewed with phosphorus.</p>
-        </a>
+      <p>Severely low phosphorus is less common but can become dangerous because phosphorus is essential for energy production, muscle function, and normal nerve signaling.</p>
+    </div>
 
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside phosphorus</div>
+
+      <p>Phosphorus is rarely interpreted alone. Your doctor may also order:</p>
+
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>Calcium</strong> — phosphorus and calcium closely affect each other</li>
+        <li><strong>Creatinine</strong> — helps evaluate kidney function</li>
+        <li><strong>eGFR</strong> — estimates how well your kidneys are filtering blood</li>
+        <li><strong>Vitamin D</strong> — affects phosphorus absorption and balance</li>
+        <li><strong>Parathyroid Hormone (PTH)</strong> — regulates calcium and phosphorus levels</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What to do next</div>
+
+      <div class="next-steps">A single abnormal phosphorus result usually doesn't tell the whole story. Your doctor will interpret the result alongside your kidney function, calcium level, vitamin D status, medications, symptoms, and overall health history. Mild abnormalities are common and often temporary, but persistent changes may need additional testing or monitoring.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Could my phosphorus result be related to kidney function?</li>
+        <li><span class="q-num">02</span>Should my calcium, vitamin D, or parathyroid hormone levels also be checked?</li>
+        <li><span class="q-num">03</span>Could any medications or supplements be affecting this result?</li>
+        <li><span class="q-num">04</span>Do my symptoms match what you'd expect from this phosphorus level?</li>
+        <li><span class="q-num">05</span>Should I repeat the test to confirm the result?</li>
+        <li><span class="q-num">06</span>Are there any dietary changes I should make right now?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+
+      <div class="faq-item">
+        <div class="faq-q">Is phosphorus the same thing as phosphate?</div>
+        <div class="faq-a">Almost. In blood testing, the terms phosphorus and phosphate are often used interchangeably because the lab is usually measuring phosphate circulating in your blood.</div>
       </div>
 
-    </section>
+      <div class="faq-item">
+        <div class="faq-q">Does high phosphorus always mean kidney disease?</div>
+        <div class="faq-a">No. Kidney disease is one of the most common causes, but high phosphorus can also result from hormone disorders, medications, dehydration, or temporary illness. Your doctor will interpret it alongside other lab results.</div>
+      </div>
 
-    <div class="disclaimer">
-      LabPlain provides educational information only and is not medical advice. Always discuss abnormal lab results and symptoms with a licensed healthcare professional.
+      <div class="faq-item">
+        <div class="faq-q">Can diet affect phosphorus levels?</div>
+        <div class="faq-a">Yes. Foods high in phosphorus include dairy products, soda, processed foods, nuts, beans, and meats. However, diet alone usually doesn't cause major abnormalities unless kidney function is impaired or intake is extreme.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can low phosphorus be serious?</div>
+        <div class="faq-a">Yes. Severe low phosphorus can interfere with muscle function, breathing, heart rhythm, and energy production. Mild low levels are much more common and are often temporary.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Should I fast before a phosphorus blood test?</div>
+        <div class="faq-a">Sometimes. Some doctors prefer fasting because phosphorus levels can change after eating. Follow the instructions provided by your lab or healthcare provider before the test.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+
+      <div class="related">
+        <a href="/calcium" class="related-chip">Calcium →</a>
+        <a href="/creatinine" class="related-chip">Creatinine →</a>
+        <a href="/egfr" class="related-chip">eGFR →</a>
+        <a href="/vitamin-d" class="related-chip">Vitamin D →</a>
+        <a href="/magnesium" class="related-chip">Magnesium →</a>
+        <a href="/bun" class="related-chip">BUN →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any lab test instantly</h3>
+      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+      <a href="/">Open the Decoder →</a>
     </div>
 
     <footer>
-      <div class="brand">LabPlain</div>
-      <div>Understand your labs. No medical degree required.</div>
+      <span>labplain.co</span>
+      <span>Understand your labs. No medical degree required.</span>
     </footer>
 
   </div>
-
 </body>
 </html>
