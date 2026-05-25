@@ -2,476 +2,266 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>INR Blood Test – What Your Results Mean | LabPlain</title>
-  <meta name="description" content="Understand what your INR blood test means, including normal ranges, causes of high or low INR, symptoms, medications, bleeding risk, and what to ask your doctor." />
+  <meta name="description" content="What does your INR result mean? Plain-English guide to normal ranges, high and low values, bleeding risk, symptoms, causes, and what to ask your doctor.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://labplain.co/inr">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #f5f7fb;
-      --card: #ffffff;
-      --text: #111827;
-      --muted: #6b7280;
-      --border: #dbe3ef;
-      --accent: #163b65;
-      --accent-light: #edf4ff;
-      --warn: #b91c1c;
-      --amber: #b45309;
-      --success: #166534;
-      --radius: 20px;
-      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-
-```
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'DM Sans', sans-serif;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
-
-.container {
-  width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 24px;
-}
-
-.breadcrumbs {
-  font-size: 14px;
-  color: var(--muted);
-  margin-bottom: 20px;
-}
-
-.breadcrumbs a {
-  color: var(--muted);
-  text-decoration: none;
-}
-
-.hero {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 40px;
-  box-shadow: var(--shadow);
-  margin-bottom: 28px;
-}
-
-.category {
-  display: inline-block;
-  background: var(--accent-light);
-  color: var(--accent);
-  font-size: 13px;
-  font-weight: 700;
-  padding: 8px 12px;
-  border-radius: 999px;
-  margin-bottom: 18px;
-}
-
-h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 56px;
-  line-height: 1.05;
-  margin: 0 0 18px;
-  letter-spacing: -1px;
-}
-
-h2 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 38px;
-  line-height: 1.15;
-  margin-top: 0;
-  margin-bottom: 18px;
-}
-
-h3 {
-  font-size: 24px;
-  margin-top: 0;
-}
-
-p {
-  margin: 0 0 18px;
-  color: #1f2937;
-}
-
-.disclaimer {
-  background: #fff8e8;
-  border: 1px solid #f4d58d;
-  color: #7c5800;
-  border-radius: 16px;
-  padding: 18px;
-  font-size: 15px;
-  margin-top: 24px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  margin-bottom: 28px;
-}
-
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 32px;
-  box-shadow: var(--shadow);
-}
-
-.range-box {
-  background: var(--accent-light);
-  border: 1px solid #cddcf5;
-  border-radius: 16px;
-  padding: 20px;
-  margin: 18px 0;
-  font-family: 'DM Mono', monospace;
-  font-size: 15px;
-}
-
-.timing-box {
-  background: #f8fafc;
-  border: 1px dashed #cbd5e1;
-  border-radius: 16px;
-  padding: 18px;
-  margin-top: 20px;
-}
-
-.symptom-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 24px;
-}
-
-.symptom-list {
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 20px;
-  background: #fafcff;
-}
-
-.symptom-list.high {
-  border-color: #fecaca;
-  background: #fff7f7;
-}
-
-.symptom-list.low {
-  border-color: #bfdbfe;
-  background: #f7fbff;
-}
-
-ul {
-  margin: 0;
-  padding-left: 18px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-.question-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.question-list li {
-  padding: 18px 0;
-  border-bottom: 1px solid var(--border);
-  font-weight: 500;
-}
-
-.faq-item {
-  border-top: 1px solid var(--border);
-  padding: 24px 0;
-}
-
-.related-tests {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 18px;
-}
-
-.related-tests a {
-  text-decoration: none;
-  color: var(--accent);
-  background: var(--accent-light);
-  border-radius: 999px;
-  padding: 10px 14px;
-  font-weight: 600;
-}
-
-.tool-cta {
-  background: linear-gradient(135deg, #163b65 0%, #0f2744 100%);
-  color: white;
-  border-radius: 28px;
-  padding: 40px;
-  margin-top: 36px;
-  text-align: center;
-}
-
-.tool-cta h2 {
-  color: white;
-  margin-bottom: 12px;
-}
-
-.tool-cta p {
-  color: rgba(255,255,255,0.82);
-}
-
-.cta-button {
-  display: inline-block;
-  margin-top: 18px;
-  background: white;
-  color: var(--accent);
-  padding: 14px 22px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-footer {
-  text-align: center;
-  color: var(--muted);
-  font-size: 14px;
-  padding: 40px 20px 60px;
-}
-
-@media (max-width: 768px) {
-  .grid,
-  .symptom-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero,
-  .card,
-  .tool-cta {
-    padding: 24px;
-  }
-
-  h1 {
-    font-size: 42px;
-  }
-
-  h2 {
-    font-size: 30px;
-  }
-}
-```
-
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.high .range-box-label { color: var(--warn); }
+    .range-box.low .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="breadcrumbs">
-      <a href="/">Home</a> › <a href="/">Lab Tests</a> › INR
-    </div>
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+      <a href="/" class="logo-text">lab<span>plain</span></a>
+    </nav>
 
 ```
-<section class="hero">
-  <div class="category">Blood Clotting</div>
-  <h1>What does your<br>INR result mean?</h1>
-  <p>The INR (International Normalized Ratio) measures how quickly your blood clots. Doctors commonly use it to monitor warfarin (Coumadin) therapy, evaluate bleeding risk, and assess liver function or clotting disorders.</p>
+<p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; INR</p>
 
-  <div class="disclaimer">
-    ⚠️ Educational only. LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.
+<h1>What does your<br><em style="font-style:italic;color:var(--accent)">INR</em> result mean?</h1>
+
+<span class="category-tag">Blood Clotting</span>
+
+<div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+
+<div class="card">
+  <div class="section-label">What this test measures</div>
+  <p>INR stands for International Normalized Ratio. It's a standardized measurement based on your prothrombin time (PT) test, which evaluates how quickly your blood forms clots.</p>
+  <p>Your body constantly balances clotting and bleeding. If blood clots too easily, dangerous clots can form in the legs, lungs, heart, or brain. If blood clots too slowly, even minor injuries can lead to excessive bleeding.</p>
+  <p>Doctors most commonly use INR to monitor warfarin (Coumadin) therapy. It's also used when evaluating liver disease, clotting disorders, unexplained bleeding, or before certain surgeries and medical procedures.</p>
+</div>
+
+<div class="card">
+  <div class="section-label">Normal reference range</div>
+  <div class="normal-range">Typical INR (not on blood thinners): 0.8–1.1 &nbsp;|&nbsp; Common warfarin target: 2.0–3.0</div>
+  <p class="range-note">People taking warfarin intentionally maintain a higher INR because the medication slows blood clotting to reduce the risk of strokes or dangerous clots. Some conditions — especially mechanical heart valves — may require even higher target ranges.</p>
+  <p class="range-note" style="margin-top:8px;">Reference ranges vary slightly between laboratories. Always compare your result to the range printed on your own lab report and follow your doctor's target range if you take blood thinners.</p>
+
+  <div class="timing-box">
+    <h3>💊 Why INR changes quickly</h3>
+    <p>INR can shift rapidly due to medications, antibiotics, illness, alcohol use, dietary vitamin K intake, missed warfarin doses, or changes in liver function. Even small medication adjustments can significantly change clotting levels.</p>
   </div>
-</section>
-
-<div class="grid">
-  <section class="card">
-    <h2>What this test measures</h2>
-    <p>INR is a standardized calculation based on your prothrombin time (PT) blood test. It helps doctors compare clotting results consistently between laboratories.</p>
-
-    <p>Your blood needs to clot properly — too slowly increases bleeding risk, while too quickly raises the risk of dangerous blood clots, strokes, or pulmonary embolisms.</p>
-
-    <p>INR is most commonly monitored in people taking warfarin, a blood thinner prescribed for conditions like atrial fibrillation, deep vein thrombosis (DVT), artificial heart valves, or prior blood clots.</p>
-  </section>
-
-  <section class="card">
-    <h2>Normal reference range</h2>
-
-    <div class="range-box">
-      Typical INR (not on blood thinners): 0.8–1.1<br><br>
-      Common therapeutic range on warfarin: 2.0–3.0<br><br>
-      Mechanical heart valve targets may be higher: 2.5–3.5
-    </div>
-
-    <p>An INR above your target range means your blood is clotting more slowly than expected. An INR below target means your blood may clot too quickly.</p>
-
-    <div class="timing-box">
-      <strong>💊 Important:</strong> INR results can change rapidly due to medications, diet, illness, alcohol use, antibiotics, or missed warfarin doses.
-    </div>
-  </section>
 </div>
 
-<div class="grid">
-  <section class="card">
-    <h2>What your result might indicate</h2>
+<div class="card">
+  <div class="section-label">What your result might indicate</div>
 
-    <h3>↑ If High</h3>
-    <p>A high INR means your blood is taking longer to clot. This increases bleeding risk. Mild elevations may result from warfarin dosing changes, while very high INR levels can become dangerous.</p>
-
-    <h3>↓ If Low</h3>
-    <p>A low INR suggests blood may clot more easily than intended. In people taking warfarin, this may increase the risk of strokes, DVTs, or pulmonary embolisms.</p>
-  </section>
-
-  <section class="card">
-    <h2>Symptoms associated with abnormal INR</h2>
-
-    <div class="symptom-grid">
-      <div class="symptom-list high">
-        <h3>↑ High INR Symptoms</h3>
-        <ul>
-          <li>Easy bruising</li>
-          <li>Nosebleeds</li>
-          <li>Bleeding gums</li>
-          <li>Blood in urine or stool</li>
-          <li>Heavy menstrual bleeding</li>
-          <li>Severe headaches or dizziness</li>
-          <li>Unusual bleeding after cuts</li>
-          <li>Black or tarry stools</li>
-        </ul>
-      </div>
-
-      <div class="symptom-list low">
-        <h3>↓ Low INR Symptoms</h3>
-        <ul>
-          <li>Leg swelling or pain</li>
-          <li>Chest pain</li>
-          <li>Shortness of breath</li>
-          <li>Stroke-like symptoms</li>
-          <li>Sudden numbness or weakness</li>
-          <li>Calf tenderness</li>
-          <li>Warmth or redness in a limb</li>
-          <li>Recurrent blood clots</li>
-        </ul>
-      </div>
+  <div class="two-col">
+    <div class="range-box high">
+      <div class="range-box-label">↑ If High</div>
+      <p>A high INR means your blood is clotting more slowly than expected. This raises the risk of bruising and bleeding. Causes include excessive warfarin effect, liver disease, vitamin K deficiency, medication interactions, or severe illness.</p>
     </div>
-  </section>
-</div>
 
-<div class="grid">
-  <section class="card">
-    <h2>What can raise INR?</h2>
-
-    <p>The most common reason for a high INR is taking too much warfarin or changes in how your body processes the medication.</p>
-
-    <p>Other causes include liver disease, vitamin K deficiency, alcohol use, antibiotics, poor nutrition, severe illness, heart failure, and interactions with medications or supplements.</p>
-
-    <p>Even dietary changes can matter. Eating significantly less vitamin K-rich foods — like spinach, kale, or broccoli — may raise INR in people taking warfarin.</p>
-  </section>
-
-  <section class="card">
-    <h2>What can lower INR?</h2>
-
-    <p>A low INR usually means warfarin is not working strongly enough. Missing doses is one of the most common causes.</p>
-
-    <p>Eating more vitamin K-rich foods than usual can also lower INR. Some medications and supplements may reduce warfarin effectiveness as well.</p>
-
-    <p>Doctors may adjust your medication dose if your INR remains below target consistently.</p>
-  </section>
-</div>
-
-<div class="grid">
-  <section class="card">
-    <h2>Tests often ordered alongside INR</h2>
-
-    <p>Doctors rarely interpret INR completely alone. Related tests often include:</p>
-
-    <ul>
-      <li>PT (Prothrombin Time)</li>
-      <li>aPTT (Activated Partial Thromboplastin Time)</li>
-      <li>CBC (Complete Blood Count)</li>
-      <li>Liver function tests (ALT, AST, bilirubin)</li>
-      <li>Platelet count</li>
-      <li>Fibrinogen testing</li>
-    </ul>
-
-    <div class="related-tests">
-      <a href="/platelets.html">Platelets →</a>
-      <a href="/alt.html">ALT →</a>
-      <a href="/ast.html">AST →</a>
-      <a href="/bilirubin.html">Bilirubin →</a>
-      <a href="/albumin.html">Albumin →</a>
-      <a href="/crp.html">CRP →</a>
+    <div class="range-box low">
+      <div class="range-box-label">↓ If Low</div>
+      <p>A low INR means blood may clot too quickly. In people taking warfarin, this can increase the risk of strokes, deep vein thrombosis (DVT), pulmonary embolism, or other dangerous clotting events.</p>
     </div>
-  </section>
-
-  <section class="card">
-    <h2>What to do next</h2>
-
-    <p>If your INR is outside your target range, do not change medications on your own unless your doctor specifically instructed you to.</p>
-
-    <p>Your healthcare provider may repeat testing, adjust your warfarin dose, review your diet, or check for medication interactions.</p>
-
-    <p>Seek urgent medical attention for severe bleeding, vomiting blood, black stools, severe headaches, sudden weakness, chest pain, or signs of stroke.</p>
-  </section>
+  </div>
 </div>
 
-<section class="card">
-  <h2>Questions to ask your doctor</h2>
+<div class="card">
+  <div class="section-label">Symptoms associated with abnormal INR</div>
 
-  <ul class="question-list">
-    <li>01 What is my target INR range based on my condition?</li>
-    <li>02 Could any medications or supplements be affecting my INR?</li>
-    <li>03 Do I need to change my warfarin dose?</li>
-    <li>04 How often should my INR be checked?</li>
-    <li>05 Could changes in my diet affect my INR level?</li>
-    <li>06 What symptoms should make me seek emergency care?</li>
+  <div class="symptom-grid">
+    <div class="symptom-box high">
+      <h3>↑ High INR Symptoms</h3>
+      <ul class="symptom-list">
+        <li>Easy bruising</li>
+        <li>Nosebleeds</li>
+        <li>Bleeding gums</li>
+        <li>Blood in urine or stool</li>
+        <li>Heavy menstrual bleeding</li>
+        <li>Black or tarry stools</li>
+        <li>Severe headaches or dizziness</li>
+        <li>Prolonged bleeding after cuts</li>
+      </ul>
+    </div>
+
+    <div class="symptom-box low">
+      <h3>↓ Low INR Symptoms</h3>
+      <ul class="symptom-list">
+        <li>Leg swelling or pain</li>
+        <li>Chest pain</li>
+        <li>Shortness of breath</li>
+        <li>Stroke-like symptoms</li>
+        <li>Sudden numbness or weakness</li>
+        <li>Warmth or redness in a limb</li>
+        <li>Recurrent blood clots</li>
+        <li>Calf tenderness</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="section-label">Common causes of abnormal INR</div>
+
+  <h2>What can raise INR?</h2>
+  <p>The most common cause of high INR is taking too much warfarin or becoming more sensitive to it. Antibiotics, alcohol use, liver disease, poor nutrition, vitamin K deficiency, heart failure, and interactions with supplements or medications can also raise INR.</p>
+  <p>Even diet changes matter. Suddenly eating fewer vitamin K-rich foods like spinach, kale, or broccoli may increase INR in people taking warfarin.</p>
+
+  <h2 style="margin-top:24px;">What can lower INR?</h2>
+  <p>Low INR often happens when warfarin isn't working strongly enough. Missing doses is one of the most common reasons. Increasing vitamin K intake, starting certain medications, or inconsistent medication timing can also lower INR.</p>
+  <p>Doctors may adjust medication dosing if INR remains consistently below the target range.</p>
+</div>
+
+<div class="card">
+  <div class="section-label">Tests often ordered alongside INR</div>
+  <p>INR is rarely interpreted completely alone. Your doctor may also order:</p>
+
+  <ul class="symptom-list" style="margin-top:12px;">
+    <li><strong>PT (Prothrombin Time)</strong> — the underlying clotting test used to calculate INR</li>
+    <li><strong>aPTT</strong> — evaluates another part of the clotting system</li>
+    <li><strong>CBC (Complete Blood Count)</strong> — checks for anemia or platelet problems</li>
+    <li><strong>Liver function tests</strong> — liver disease can strongly affect clotting</li>
+    <li><strong>Platelet count</strong> — low platelets increase bleeding risk</li>
   </ul>
-</section>
+</div>
 
-<section class="card" style="margin-top: 28px;">
-  <h2>Frequently asked questions</h2>
+<div class="card">
+  <div class="section-label">What to do next</div>
+
+  <div class="next-steps">A single abnormal INR result doesn't always mean something dangerous, but it should never be ignored — especially if you're taking warfarin. Your doctor may repeat testing, adjust medication doses, review your diet, or check for drug interactions. Seek urgent medical care for severe bleeding, vomiting blood, black stools, chest pain, sudden weakness, or stroke-like symptoms.</div>
+</div>
+
+<div class="card">
+  <div class="section-label">Questions to ask your doctor</div>
+
+  <ul class="questions-list">
+    <li><span class="q-num">01</span>What is my personal target INR range based on my condition?</li>
+    <li><span class="q-num">02</span>Could any medications or supplements be affecting my INR?</li>
+    <li><span class="q-num">03</span>Do I need to adjust my warfarin dose?</li>
+    <li><span class="q-num">04</span>How often should my INR be checked?</li>
+    <li><span class="q-num">05</span>Should I change anything about my diet or alcohol intake?</li>
+    <li><span class="q-num">06</span>What symptoms mean I should seek emergency medical care?</li>
+  </ul>
+</div>
+
+<div class="card">
+  <div class="section-label">Frequently asked questions</div>
 
   <div class="faq-item">
-    <h3>What INR level is considered dangerous?</h3>
-    <p>Very high INR levels — especially above 4.5 or 5 — can significantly increase bleeding risk. The exact danger depends on your symptoms, medications, and medical history.</p>
+    <div class="faq-q">What INR level is considered dangerous?</div>
+    <div class="faq-a">Very high INR levels — especially above 4.5 or 5 — significantly increase bleeding risk. The exact danger depends on your symptoms, medications, and overall health history.</div>
   </div>
 
   <div class="faq-item">
-    <h3>Can foods affect INR?</h3>
-    <p>Yes. Foods rich in vitamin K, such as spinach, kale, and broccoli, can lower INR in people taking warfarin. Consistency matters more than completely avoiding these foods.</p>
+    <div class="faq-q">Can foods affect INR?</div>
+    <div class="faq-a">Yes. Foods high in vitamin K, including spinach, kale, and broccoli, can lower INR in people taking warfarin. Consistency matters more than completely avoiding these foods.</div>
   </div>
 
   <div class="faq-item">
-    <h3>Does alcohol affect INR?</h3>
-    <p>Yes. Alcohol can interfere with how your liver processes warfarin and may raise bleeding risk, especially with heavy drinking.</p>
+    <div class="faq-q">Can antibiotics raise INR?</div>
+    <div class="faq-a">Yes. Many antibiotics interact with warfarin and may unexpectedly raise INR, increasing bleeding risk. Always tell your doctor when starting a new medication.</div>
   </div>
 
   <div class="faq-item">
-    <h3>Why do I need regular INR testing on warfarin?</h3>
-    <p>Warfarin dosing can be affected by diet, illness, medications, and even stress. Regular INR monitoring helps keep your blood clotting within a safe range.</p>
+    <div class="faq-q">Why do people on warfarin need regular INR testing?</div>
+    <div class="faq-a">Warfarin dosing is sensitive to diet, illness, medications, liver function, and even alcohol use. Regular monitoring helps keep blood clotting within a safe therapeutic range.</div>
   </div>
 
   <div class="faq-item">
-    <h3>Can antibiotics change INR results?</h3>
-    <p>Yes. Many antibiotics interact with warfarin and can raise INR unexpectedly. Always tell your doctor if you start a new medication.</p>
+    <div class="faq-q">Does alcohol affect INR?</div>
+    <div class="faq-a">Yes. Alcohol can interfere with how the liver processes warfarin and may raise bleeding risk, especially with heavy or binge drinking.</div>
   </div>
-</section>
+</div>
 
-<section class="tool-cta">
-  <h2>Decode any lab test instantly</h2>
+<div class="card">
+  <div class="section-label">Related lab tests</div>
+
+  <div class="related">
+    <a href="/platelets" class="related-chip">Platelets →</a>
+    <a href="/alt" class="related-chip">ALT →</a>
+    <a href="/ast" class="related-chip">AST →</a>
+    <a href="/bilirubin" class="related-chip">Bilirubin →</a>
+    <a href="/albumin" class="related-chip">Albumin →</a>
+    <a href="/crp" class="related-chip">CRP →</a>
+  </div>
+</div>
+
+<div class="tool-cta">
+  <h3>Decode any lab test instantly</h3>
   <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-  <a class="cta-button" href="/">Open the Decoder →</a>
-</section>
+  <a href="/">Open the Decoder →</a>
+</div>
 
 <footer>
-  <p><strong>labplain.co</strong></p>
-  <p>Understand your labs. No medical degree required.</p>
-  <p>Not a substitute for professional medical advice.</p>
+  <span>labplain.co</span>
+  <span>Not a substitute for professional medical advice.</span>
 </footer>
 ```
 
