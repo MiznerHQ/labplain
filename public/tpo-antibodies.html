@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TPO Antibodies (Thyroid Peroxidase) – LabPlain</title>
-  <meta name="description" content="What does your TPO Antibodies (Thyroid Peroxidase) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
+  <title>TPO Antibodies Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What do TPO antibody results mean? Plain-English guide to normal ranges, high values, symptoms, causes like Hashimoto's and Graves' disease, and what to ask your doctor.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://labplain.co/tpo-antibodies">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +12,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
     nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
@@ -26,27 +29,56 @@
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
     .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
     .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
+    .range-box.low .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -55,39 +87,149 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; TPO Antibodies (Thyroid Peroxidase)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">TPO Antibodies (Thyroid Peroxidase)</em> result mean?</h1>
-    <span class="category-tag">Thyroid</span>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; TPO Antibodies</p>
+    <h1>What do your<br><em style="font-style:italic;color:var(--accent)">TPO Antibody</em> results mean?</h1>
+    <span class="category-tag">Thyroid · Autoimmune</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>TPO Antibodies (Thyroid Peroxidase)</strong> test measures antibodies that mistakenly attack thyroid tissue — a marker of autoimmune thyroid disease.</p>
+      <p>TPO stands for thyroid peroxidase — an enzyme your thyroid gland uses to produce thyroid hormones. The TPO antibody test measures whether your immune system is producing antibodies that mistakenly attack this enzyme.</p>
+      <p>In a healthy immune system, antibodies only target foreign invaders like bacteria and viruses. In autoimmune thyroid disease, the immune system gets confused and attacks the thyroid's own proteins. Elevated TPO antibodies are the hallmark finding in Hashimoto's thyroiditis (the most common cause of hypothyroidism) and are also found in Graves' disease (the most common cause of hyperthyroidism).</p>
+      <p>Doctors order this test when evaluating unexplained thyroid problems, a goiter (enlarged thyroid), or symptoms that suggest an autoimmune thyroid condition — even when TSH and other thyroid hormone levels look normal.</p>
     </div>
 
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Below 35 IU/mL</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+      <div class="normal-range">Negative: &lt; 9 IU/mL &nbsp;|&nbsp; Borderline: 9–35 IU/mL &nbsp;|&nbsp; Positive: &gt; 35 IU/mL</div>
+      <p class="range-note">Cutoffs vary by laboratory — always use the reference range on your specific lab report. Some labs report results simply as "negative" or "positive" rather than a number. A positive result means TPO antibodies were detected above the threshold considered normal for that lab's assay.</p>
+      <p class="range-note" style="margin-top:8px;">Having detectable TPO antibodies doesn't automatically mean you have a thyroid disease or that you'll develop one. About 10% of the general population has low-level TPO antibodies with no symptoms and normal thyroid function. Context and trends over time matter.</p>
+      <div class="timing-box">
+        <h3>📌 Positive vs. elevated — what's the difference?</h3>
+        <p>Many labs simply report TPO antibodies as positive or negative. If your result is positive, the key question is how positive — mildly elevated antibodies with normal TSH may be monitored, while very high antibodies with abnormal TSH are more likely to prompt treatment. Your doctor will look at the full picture.</p>
+      </div>
     </div>
 
     <div class="card">
       <div class="section-label">What your result might indicate</div>
       <div class="two-col">
         <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>High TPO antibodies suggest your immune system is attacking your thyroid. This is the hallmark of Hashimoto's thyroiditis and Graves' disease.</p>
+          <div class="range-box-label">↑ If Elevated (Positive)</div>
+          <p>Elevated TPO antibodies most often indicate Hashimoto's thyroiditis or Graves' disease. They may also be found in other autoimmune conditions. A positive result does not always mean your thyroid is currently malfunctioning — it means your immune system is targeting thyroid tissue.</p>
         </div>
         <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Low or undetectable TPO antibodies is the normal, healthy result.</p>
+          <div class="range-box-label">✓ If Negative / Normal</div>
+          <p>A negative result makes autoimmune thyroid disease less likely, though it doesn't completely rule it out. Some people with Hashimoto's are "seronegative" — meaning they have the condition but don't produce detectable antibodies on standard tests.</p>
         </div>
       </div>
     </div>
 
     <div class="card">
+      <div class="section-label">Symptoms associated with TPO antibody conditions</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ Hashimoto's (Underactive Thyroid)</h3>
+          <ul class="symptom-list">
+            <li>Fatigue and sluggishness</li>
+            <li>Weight gain despite normal diet</li>
+            <li>Cold intolerance</li>
+            <li>Constipation</li>
+            <li>Dry skin and hair loss</li>
+            <li>Depression or brain fog</li>
+            <li>Slow heart rate</li>
+            <li>Puffy face or goiter</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>↑ Graves' Disease (Overactive Thyroid)</h3>
+          <ul class="symptom-list">
+            <li>Unintentional weight loss</li>
+            <li>Rapid or irregular heartbeat</li>
+            <li>Heat intolerance and sweating</li>
+            <li>Anxiety and irritability</li>
+            <li>Tremor in hands or fingers</li>
+            <li>Frequent bowel movements</li>
+            <li>Bulging eyes (exophthalmos)</li>
+            <li>Enlarged thyroid (goiter)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of elevated TPO antibodies</div>
+      <h2>Hashimoto's thyroiditis</h2>
+      <p>This is by far the most common cause of elevated TPO antibodies. In Hashimoto's, the immune system slowly destroys thyroid tissue over years or decades. TPO antibodies are present in about 95% of people with Hashimoto's. The condition progresses slowly — many people have elevated antibodies for years before their thyroid function actually becomes abnormal. Once the thyroid can no longer compensate, TSH rises and hypothyroidism develops.</p>
+      <h2 style="margin-top:24px;">Graves' disease</h2>
+      <p>Graves' disease is the leading cause of hyperthyroidism. While it's primarily identified by TSH receptor antibodies (TRAb), about 75% of people with Graves' disease also have elevated TPO antibodies. If your doctor suspects Graves', they'll likely order both antibody tests along with T3, T4, and a radioactive iodine uptake scan.</p>
+      <h2 style="margin-top:24px;">Other associations</h2>
+      <p>TPO antibodies are also seen at higher rates in people with type 1 diabetes, rheumatoid arthritis, lupus, and other autoimmune diseases. Having one autoimmune condition increases the likelihood of developing others. Postpartum thyroiditis — a temporary thyroid inflammation after pregnancy — is also strongly associated with TPO antibodies.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside TPO antibodies</div>
+      <p>TPO antibodies are always interpreted alongside other thyroid tests. Your doctor may also order:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>TSH (Thyroid-Stimulating Hormone)</strong> — the primary screening test for thyroid function; elevated in hypothyroidism, suppressed in hyperthyroidism</li>
+        <li><strong>Free T4</strong> — measures active thyroid hormone; low in hypothyroidism, high in hyperthyroidism</li>
+        <li><strong>Free T3</strong> — the most biologically active thyroid hormone; often ordered when hyperthyroidism is suspected</li>
+        <li><strong>Thyroglobulin antibodies (TgAb)</strong> — another autoimmune marker found in Hashimoto's; sometimes ordered alongside TPO antibodies</li>
+        <li><strong>TSH receptor antibodies (TRAb)</strong> — specific to Graves' disease; ordered when hyperthyroidism is found</li>
+        <li><strong>Thyroid ultrasound</strong> — imaging to assess thyroid size, texture, and look for nodules</li>
+      </ul>
+    </div>
+
+    <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">Having TPO antibodies doesn't always mean you have symptoms now — but your doctor may want to monitor your TSH regularly over time.</div>
+      <div class="next-steps">A positive TPO antibody result is a piece of the puzzle — not a complete diagnosis. If your thyroid function tests (TSH, Free T4) are currently normal, your doctor may recommend monitoring with annual bloodwork rather than starting treatment. If thyroid function is also abnormal, treatment decisions will follow. Hashimoto's with hypothyroidism is treated with levothyroxine (a synthetic thyroid hormone), while Graves' disease has several treatment options including medications, radioactive iodine, and surgery. The right path depends on your full picture — don't try to interpret this result in isolation.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>My TPO antibodies are elevated — does that mean I have Hashimoto's or another autoimmune thyroid disease?</li>
+        <li><span class="q-num">02</span>My thyroid function looks normal right now — how often should I be retested?</li>
+        <li><span class="q-num">03</span>Should I also be tested for thyroglobulin antibodies or TSH receptor antibodies?</li>
+        <li><span class="q-num">04</span>Is a thyroid ultrasound recommended to look at the structure of my thyroid?</li>
+        <li><span class="q-num">05</span>Are there dietary or lifestyle changes that could reduce thyroid antibody levels?</li>
+        <li><span class="q-num">06</span>Should I be referred to an endocrinologist for ongoing management?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can I have elevated TPO antibodies and a completely normal thyroid?</div>
+        <div class="faq-a">Yes — this is actually common. Many people have elevated TPO antibodies for years, sometimes decades, before their thyroid function becomes abnormal. The antibodies indicate immune activity against the thyroid, but the thyroid can compensate for a long time. Regular monitoring is key so you catch any functional changes early.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does a high TPO antibody number mean more severe disease?</div>
+        <div class="faq-a">Not necessarily. The absolute level of TPO antibodies doesn't reliably predict how severe the thyroid disease will be or how quickly it will progress. What matters more is whether your actual thyroid hormone levels are affected. Very high antibodies may prompt closer monitoring, but the number alone isn't a reliable severity indicator.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can TPO antibody levels go down over time?</div>
+        <div class="faq-a">Yes, in some people they do — particularly after treatment of Graves' disease or with selenium supplementation, which has some evidence for modestly reducing TPO antibody levels in Hashimoto's. However, antibody levels fluctuate naturally, and a lower reading on one test doesn't always mean the underlying autoimmune process has resolved.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is Hashimoto's disease serious?</div>
+        <div class="faq-a">Hashimoto's is a manageable chronic condition. The main risk is that the progressive immune attack on the thyroid eventually causes hypothyroidism — but once diagnosed, hypothyroidism is highly treatable with daily levothyroxine. With appropriate treatment and monitoring, most people with Hashimoto's live completely normal lives.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is there a connection between TPO antibodies and pregnancy?</div>
+        <div class="faq-a">Yes, and it's important. Women with positive TPO antibodies before pregnancy have a higher risk of miscarriage, premature birth, and postpartum thyroiditis (a temporary thyroid inflammation after delivery). If you're pregnant or planning to become pregnant and have positive TPO antibodies, make sure your OB and endocrinologist are aware so thyroid function can be monitored closely throughout pregnancy.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/tsh" class="related-chip">TSH →</a>
+        <a href="/free-t4" class="related-chip">Free T4 →</a>
+        <a href="/free-t3" class="related-chip">Free T3 →</a>
+        <a href="/ferritin" class="related-chip">Ferritin →</a>
+        <a href="/crp" class="related-chip">CRP →</a>
+        <a href="/cortisol" class="related-chip">Cortisol →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
