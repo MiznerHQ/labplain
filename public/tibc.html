@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TIBC (Total Iron Binding Capacity) – LabPlain</title>
-  <meta name="description" content="What does your TIBC (Total Iron Binding Capacity) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
+  <title>TIBC Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your TIBC result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://labplain.co/tibc">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +12,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
     nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
@@ -26,27 +29,56 @@
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
     .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
     .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
+    .range-box.low .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -55,20 +87,27 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; TIBC (Total Iron Binding Capacity)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">TIBC (Total Iron Binding Capacity)</em> result mean?</h1>
-    <span class="category-tag">Iron & Blood</span>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; TIBC</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">TIBC</em> result mean?</h1>
+    <span class="category-tag">Iron Studies</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>TIBC (Total Iron Binding Capacity)</strong> test measures how much iron your blood proteins could carry if fully loaded — it reflects how hungry your blood is for iron.</p>
+      <p>TIBC stands for Total Iron-Binding Capacity. It measures how well your blood can carry iron — specifically, how much iron your transferrin (the main iron-transport protein) could theoretically hold if it were fully loaded. Think of transferrin as a fleet of delivery trucks: TIBC tells you the total cargo capacity of the fleet, not how much is currently being carried.</p>
+      <p>Your liver produces transferrin. When iron stores in your body are low, your liver ramps up transferrin production to grab every available iron molecule — so TIBC goes up. When iron stores are high (or when the liver is damaged and can't produce transferrin normally), TIBC falls.</p>
+      <p>TIBC is almost always ordered as part of an iron panel alongside serum iron, ferritin, and transferrin saturation. Alone it tells you little; together these four numbers paint a detailed picture of your iron status.</p>
     </div>
 
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">240–450 mcg/dL</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+      <div class="normal-range">Adults: 250–370 mcg/dL &nbsp;|&nbsp; (45–66 µmol/L in SI units)</div>
+      <p class="range-note">Ranges vary slightly between labs. Some labs report TIBC directly; others calculate it from transferrin levels (1 g/L transferrin ≈ 25 mcg/dL TIBC). Always use the reference range on your own lab report.</p>
+      <p class="range-note" style="margin-top:8px;">Women, particularly those who are pregnant, tend to have higher TIBC than men. Pregnancy dramatically increases TIBC as iron demand rises.</p>
+      <div class="timing-box">
+        <h3>🔬 TIBC vs. Transferrin Saturation</h3>
+        <p>Transferrin saturation = (Serum Iron ÷ TIBC) × 100. A normal saturation is 20–50%. Low saturation with high TIBC is the classic iron-deficiency pattern. High saturation with low TIBC points toward iron overload. Your doctor uses both numbers together.</p>
+      </div>
     </div>
 
     <div class="card">
@@ -76,18 +115,120 @@
       <div class="two-col">
         <div class="range-box high">
           <div class="range-box-label">↑ If High</div>
-          <p>High TIBC means your body is actively seeking more iron — a classic sign of iron deficiency.</p>
+          <p>High TIBC means your body is producing more transferrin to hunt for iron — a classic sign of iron-deficiency anemia. It can also be elevated in pregnancy, with oral contraceptive use, or from blood loss. The liver is making more "trucks" because the iron supply is running low.</p>
         </div>
         <div class="range-box low">
           <div class="range-box-label">↓ If Low</div>
-          <p>Low TIBC can occur with iron overload, inflammation, or liver disease.</p>
+          <p>Low TIBC can indicate iron overload (hemochromatosis), chronic inflammatory disease, liver disease, malnutrition, or nephrotic syndrome (protein loss through the kidneys). When iron stores are plentiful or the liver is damaged, fewer transferrin molecules are made.</p>
         </div>
       </div>
     </div>
 
     <div class="card">
+      <div class="section-label">Symptoms associated with abnormal TIBC</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High TIBC Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Fatigue and weakness</li>
+            <li>Pale skin or pale inner eyelids</li>
+            <li>Shortness of breath on exertion</li>
+            <li>Cold hands and feet</li>
+            <li>Brittle nails or hair loss</li>
+            <li>Restless leg syndrome</li>
+            <li>Frequent headaches</li>
+            <li>Craving ice or non-food items (pica)</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>↓ Low TIBC Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Joint pain (hemochromatosis)</li>
+            <li>Fatigue and low energy</li>
+            <li>Abdominal pain or swelling</li>
+            <li>Skin bronzing or darkening</li>
+            <li>Decreased sex drive</li>
+            <li>Irregular heartbeat</li>
+            <li>Signs of liver disease (jaundice, swelling)</li>
+            <li>May be asymptomatic early on</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal TIBC</div>
+      <h2>What causes high TIBC?</h2>
+      <p>The most common cause of elevated TIBC is iron-deficiency anemia — the body's response to depleted iron stores is to produce more transferrin to maximize iron capture. This is especially common in women with heavy menstrual periods, people with poor dietary iron intake, vegetarians and vegans, pregnant women (whose iron demands roughly double), and anyone with chronic blood loss from gastrointestinal sources like ulcers or colorectal polyps.</p>
+      <p>Oral contraceptives can mildly elevate TIBC without indicating iron deficiency. Pregnancy physiologically raises TIBC significantly and is entirely normal.</p>
+      <h2 style="margin-top:24px;">What causes low TIBC?</h2>
+      <p>Low TIBC paired with high serum iron and high ferritin is the hallmark pattern of hereditary hemochromatosis — a genetic condition where the body absorbs too much iron. It can also be low in chronic inflammatory conditions (rheumatoid arthritis, inflammatory bowel disease, chronic infections) because inflammation suppresses transferrin production. Liver cirrhosis, malnutrition, and protein-losing kidney disease (nephrotic syndrome) can all reduce transferrin and therefore TIBC as well.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside TIBC</div>
+      <p>TIBC is one piece of the iron panel. Your doctor will almost always look at it together with:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>Serum Iron</strong> — the actual amount of iron circulating in your blood right now</li>
+        <li><strong>Ferritin</strong> — reflects your long-term iron stores; the most sensitive marker for iron deficiency</li>
+        <li><strong>Transferrin Saturation</strong> — the percentage of transferrin that is actually carrying iron (serum iron ÷ TIBC × 100)</li>
+        <li><strong>Complete Blood Count (CBC)</strong> — checks for anemia; a low hemoglobin or MCV confirms iron-deficiency anemia</li>
+        <li><strong>Reticulocyte count</strong> — measures how actively your bone marrow is producing new red blood cells</li>
+        <li><strong>Liver function tests</strong> — relevant when iron overload or liver disease is suspected</li>
+      </ul>
+    </div>
+
+    <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">TIBC is most helpful when paired with serum iron and ferritin to give a complete picture of your iron status.</div>
+      <div class="next-steps">An abnormal TIBC result almost never stands alone — its meaning depends entirely on your serum iron, ferritin, and transferrin saturation. Don't try to interpret TIBC in isolation. Your doctor will look at the full iron panel pattern alongside your symptoms, diet, and medical history to determine whether you need iron supplementation, further testing for hemochromatosis, or investigation of an underlying inflammatory or liver condition.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>What do my serum iron, ferritin, and transferrin saturation show alongside my TIBC — what's the full picture?</li>
+        <li><span class="q-num">02</span>Is my result consistent with iron-deficiency anemia, iron overload, or something else?</li>
+        <li><span class="q-num">03</span>If I'm iron deficient, what's the likely source — diet, absorption, or blood loss?</li>
+        <li><span class="q-num">04</span>Do I need an iron supplement, and if so, what type and dose?</li>
+        <li><span class="q-num">05</span>Should I be tested for hereditary hemochromatosis (HFE gene mutation)?</li>
+        <li><span class="q-num">06</span>How soon should I recheck my iron panel after starting treatment?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Is high TIBC always a sign of iron deficiency?</div>
+        <div class="faq-a">Not always, but it's the most common cause. Pregnancy and oral contraceptive use can also raise TIBC without true iron deficiency. That's why ferritin is the better standalone marker for iron stores — a low ferritin is a much more specific indicator of depleted iron than a high TIBC alone.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between TIBC and serum iron?</div>
+        <div class="faq-a">Serum iron measures the iron actually circulating in your blood at the moment of the draw — it fluctuates day-to-day and even hour-to-hour. TIBC measures the theoretical maximum the transport protein could carry. Together they tell you how full or empty the iron-transport system is.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I eat before a TIBC blood test?</div>
+        <div class="faq-a">Serum iron (usually drawn at the same time) is affected by recent meals — eating beforehand can falsely elevate serum iron. Most labs prefer a morning fasting draw for the full iron panel. Check with your doctor's office, but fasting is generally recommended for the most accurate results.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does it take for TIBC to normalize after treating iron deficiency?</div>
+        <div class="faq-a">With oral iron supplementation, serum iron and transferrin saturation improve within days to weeks. Ferritin — which reflects stored iron — takes longer, often 3–6 months to fully replenish. TIBC should fall back toward normal as iron stores rebuild. Most doctors recheck the iron panel at 3 months to confirm response.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is hemochromatosis and how does TIBC relate to it?</div>
+        <div class="faq-a">Hereditary hemochromatosis is a genetic disorder where the intestines absorb too much iron, and the excess accumulates in organs like the liver, heart, and pancreas over decades. The classic iron panel pattern is high serum iron, high ferritin, high transferrin saturation, and low TIBC. It's one of the most common genetic conditions in people of Northern European descent and is very treatable if caught early — typically with regular therapeutic phlebotomy (blood removal).</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/ferritin" class="related-chip">Ferritin →</a>
+        <a href="/iron" class="related-chip">Iron →</a>
+        <a href="/hemoglobin" class="related-chip">Hemoglobin →</a>
+        <a href="/hematocrit" class="related-chip">Hematocrit →</a>
+        <a href="/albumin" class="related-chip">Albumin →</a>
+        <a href="/crp" class="related-chip">CRP →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
@@ -95,7 +236,6 @@
       <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
       <a href="/">Open the Decoder →</a>
     </div>
-
     <footer>
       <span>labplain.co</span>
       <span>Not a substitute for professional medical advice.</span>
