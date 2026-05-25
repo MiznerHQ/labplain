@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uric Acid – LabPlain</title>
-  <meta name="description" content="What does your Uric Acid result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
+  <title>Uric Acid Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your uric acid result mean? Plain-English guide to normal ranges, high and low values, gout, kidney stones, causes, and what to ask your doctor.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://labplain.co/uric-acid">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +12,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
     nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
@@ -26,27 +29,56 @@
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
     .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
     .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
+    .range-box.low .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -57,18 +89,25 @@
     </nav>
     <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Uric Acid</p>
     <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Uric Acid</em> result mean?</h1>
-    <span class="category-tag">Kidney</span>
+    <span class="category-tag">Metabolic</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>Uric Acid</strong> test measures uric acid in your blood — a byproduct of breaking down purines found in certain foods.</p>
+      <p>Uric acid is a waste product your body makes when it breaks down purines — natural compounds found in many foods and in your own cells. Normally, uric acid dissolves in the blood, passes through the kidneys, and leaves the body in urine. When your body produces too much or your kidneys excrete too little, uric acid builds up in the bloodstream.</p>
+      <p>That buildup is called hyperuricemia. When uric acid levels stay elevated long enough, it can crystallize and deposit in joints — causing gout — or in the kidneys — causing kidney stones. A serum uric acid blood test measures how much is currently circulating in your blood.</p>
+      <p>Doctors order this test when evaluating gout, kidney stones, kidney disease, or conditions that involve rapid cell turnover (like certain cancers or their treatments).</p>
     </div>
 
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">3.5–7.2 mg/dL (men); 2.6–6.0 mg/dL (women)</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+      <div class="normal-range">Men: 3.4–7.0 mg/dL &nbsp;|&nbsp; Women: 2.4–6.0 mg/dL</div>
+      <p class="range-note">Reference ranges differ between men and women because estrogen helps the kidneys excrete uric acid more efficiently — so women naturally run lower. After menopause, women's levels rise and approach men's. Results above 7.0 mg/dL (men) or 6.0 mg/dL (women) are considered elevated.</p>
+      <p class="range-note" style="margin-top:8px;">Labs may define ranges slightly differently. Always compare your result to the reference range printed on your specific lab report, not a generic internet number.</p>
+      <div class="timing-box">
+        <h3>💧 Hydration and diet matter</h3>
+        <p>Dehydration, fasting, and a high-purine meal the day before testing can temporarily raise uric acid levels. If your result is borderline, your doctor may ask you to repeat the test under more controlled conditions.</p>
+      </div>
     </div>
 
     <div class="card">
@@ -76,18 +115,117 @@
       <div class="two-col">
         <div class="range-box high">
           <div class="range-box-label">↑ If High</div>
-          <p>High uric acid can lead to gout — painful crystal deposits in joints — and is also linked to kidney stones and cardiovascular risk.</p>
+          <p>Elevated uric acid (hyperuricemia) may point to gout, kidney disease, dehydration, a high-purine diet, metabolic syndrome, or certain medications. High levels alone don't always cause symptoms — some people have elevated uric acid for years with no problems.</p>
         </div>
         <div class="range-box low">
           <div class="range-box-label">↓ If Low</div>
-          <p>Low uric acid is rarely a concern on its own.</p>
+          <p>Low uric acid (hypouricemia) is less common and usually not a health concern on its own. It can occur with certain liver conditions, rare genetic disorders (like Fanconi syndrome), or with medications such as high-dose aspirin or certain diuretics.</p>
         </div>
       </div>
     </div>
 
     <div class="card">
+      <div class="section-label">Symptoms associated with abnormal uric acid</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High Uric Acid Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Sudden, intense joint pain (especially big toe)</li>
+            <li>Swollen, red, warm joints</li>
+            <li>Tenderness that worsens with touch</li>
+            <li>Flaking or peeling skin over affected joint</li>
+            <li>Tophi (uric acid lumps under skin)</li>
+            <li>Kidney stone pain (flank, back, groin)</li>
+            <li>Nausea or blood in urine (with stones)</li>
+            <li>Frequent or painful urination</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>↓ Low Uric Acid Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Often no symptoms at all</li>
+            <li>Fatigue (if related to underlying condition)</li>
+            <li>Muscle weakness (rare genetic causes)</li>
+            <li>Signs of kidney dysfunction</li>
+            <li>Neurological symptoms (rare, genetic)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal uric acid</div>
+      <h2>What can raise uric acid?</h2>
+      <p>Diet is a major driver — foods high in purines include red meat, organ meats (liver, kidney), shellfish, anchovies, sardines, and beer (especially dark beer). Fructose-sweetened beverages like soda have also been strongly linked to elevated uric acid. Beyond diet, the kidneys failing to excrete uric acid efficiently — due to kidney disease, dehydration, or genetics — is the most common underlying cause.</p>
+      <p>Certain medications raise uric acid levels, particularly diuretics (water pills) used for blood pressure, low-dose aspirin, niacin, and some immunosuppressants. Rapid cell breakdown from chemotherapy, radiation, or conditions like psoriasis can also flood the blood with purines and spike uric acid suddenly.</p>
+      <h2 style="margin-top:24px;">What can lower uric acid?</h2>
+      <p>Low uric acid is uncommon. It can result from rare genetic disorders that affect purine metabolism, liver disease (since uric acid is produced partly in the liver), or medications like high-dose aspirin and certain diuretics at specific doses. In most cases, low uric acid is an incidental finding and not clinically significant on its own.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside uric acid</div>
+      <p>Uric acid is rarely looked at in isolation. Your doctor may also order:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>BMP or CMP (Basic/Comprehensive Metabolic Panel)</strong> — checks kidney function, electrolytes, and glucose alongside uric acid</li>
+        <li><strong>Creatinine and BUN</strong> — key kidney function markers that help explain why uric acid may be elevated</li>
+        <li><strong>CBC (Complete Blood Count)</strong> — can detect blood disorders or rapid cell turnover</li>
+        <li><strong>Joint fluid analysis (arthrocentesis)</strong> — gold standard for confirming gout by identifying uric acid crystals under a microscope</li>
+        <li><strong>24-hour urine uric acid</strong> — determines whether the problem is overproduction or under-excretion</li>
+        <li><strong>Lipid panel</strong> — gout and high uric acid often co-occur with metabolic syndrome and high triglycerides</li>
+      </ul>
+    </div>
+
+    <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">If you've had gout attacks or kidney stones, ask about dietary changes (reducing red meat, shellfish, alcohol) and whether medication is appropriate.</div>
+      <div class="next-steps">An elevated uric acid result is a signal worth paying attention to, but it doesn't automatically mean you have gout or that you'll develop it. Many people have high uric acid with no symptoms. What matters is the trend over time, your symptoms, your kidney function, and your risk factors. Work with your doctor to understand whether lifestyle changes, medication, or simply monitoring is the right path for you.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Is my uric acid level high enough to require treatment, or should we just monitor it?</li>
+        <li><span class="q-num">02</span>Do I have signs of gout, kidney stones, or kidney damage related to this result?</li>
+        <li><span class="q-num">03</span>Could any of my current medications be contributing to elevated uric acid?</li>
+        <li><span class="q-num">04</span>What dietary changes would make the biggest difference in my specific case?</li>
+        <li><span class="q-num">05</span>Should I check a 24-hour urine uric acid to see if I'm overproducing or under-excreting?</li>
+        <li><span class="q-num">06</span>If I do need medication (like allopurinol), what are the risks and benefits?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can you have gout with a normal uric acid level?</div>
+        <div class="faq-a">Yes — and this surprises many people. During an acute gout attack, uric acid can temporarily drop to normal as crystals are being deposited in the joints. A normal blood level during a flare doesn't rule out gout. Joint fluid analysis, which looks for uric acid crystals directly, is the definitive test.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does high uric acid always cause gout?</div>
+        <div class="faq-a">No. Many people have persistently elevated uric acid (hyperuricemia) and never develop gout or kidney stones. However, the higher and more prolonged the elevation, the greater the risk. Other factors like genetics, kidney function, and hydration also play a role in whether symptoms develop.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is beer really that much worse than other alcohol for uric acid?</div>
+        <div class="faq-a">Yes — beer is particularly problematic because it contains both alcohol (which reduces uric acid excretion) and purines from the brewing process. Wine has less of an effect, and spirits are somewhere in between. But all alcohol raises uric acid to some degree, and people prone to gout are generally advised to minimize alcohol intake overall.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the uric acid target if I'm being treated for gout?</div>
+        <div class="faq-a">Most guidelines recommend keeping uric acid below 6.0 mg/dL to prevent crystal formation and reduce gout flares. For people with frequent attacks or tophi (uric acid deposits under the skin), a target below 5.0 mg/dL is often recommended. Your doctor will set a specific target based on your history.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can drinking more water lower my uric acid?</div>
+        <div class="faq-a">Hydration helps the kidneys filter and excrete uric acid more efficiently, so staying well-hydrated is consistently recommended for people with elevated levels. It won't dramatically lower very high uric acid on its own, but it's a low-effort step that helps — and may reduce kidney stone risk significantly.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/creatinine" class="related-chip">Creatinine →</a>
+        <a href="/bun" class="related-chip">BUN →</a>
+        <a href="/egfr" class="related-chip">eGFR →</a>
+        <a href="/triglycerides" class="related-chip">Triglycerides →</a>
+        <a href="/calcium" class="related-chip">Calcium →</a>
+        <a href="/potassium" class="related-chip">Potassium →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
