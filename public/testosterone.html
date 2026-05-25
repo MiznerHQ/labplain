@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testosterone (Total) – LabPlain</title>
-  <meta name="description" content="What does your Testosterone (Total) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
+  <title>Testosterone Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your testosterone result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://labplain.co/testosterone">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +12,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
     nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
@@ -26,27 +29,56 @@
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
     .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
     .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
+    .range-box.low .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -55,20 +87,27 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Testosterone (Total)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Testosterone (Total)</em> result mean?</h1>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Testosterone</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Testosterone</em> result mean?</h1>
     <span class="category-tag">Hormones</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>Testosterone (Total)</strong> test measures the primary male sex hormone, which plays a role in muscle mass, libido, energy, and mood in both men and women.</p>
+      <p>Testosterone is the primary sex hormone in males, though it plays important roles in females too. In men, it's produced mainly by the testicles and is responsible for developing male reproductive tissue, maintaining muscle mass and bone density, regulating sex drive, and producing red blood cells. In women, it's made in smaller amounts by the ovaries and adrenal glands.</p>
+      <p>A testosterone blood test measures the total amount of testosterone circulating in your blood. Most testosterone is bound to proteins (primarily sex hormone-binding globulin, or SHBG) and is inactive — only a small fraction is "free" testosterone that your body can actually use. Some panels measure both total and free testosterone.</p>
+      <p>Doctors order this test to evaluate low sex drive, erectile dysfunction, infertility, delayed or early puberty, unexplained fatigue, or symptoms that suggest a hormonal imbalance. It's also used to monitor testosterone replacement therapy.</p>
     </div>
 
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">300–1,000 ng/dL (men); 15–70 ng/dL (women)</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+      <div class="normal-range">Men: 300–1,000 ng/dL &nbsp;|&nbsp; Women: 15–70 ng/dL</div>
+      <p class="range-note">These are general reference ranges — your lab's printed range takes priority. Values vary by age: men's testosterone peaks in their 20s and gradually declines about 1–2% per year after 30. Women's levels also decline with age and drop significantly after menopause.</p>
+      <p class="range-note" style="margin-top:8px;">Results may be reported in ng/dL or nmol/L depending on the lab. To convert: 1 ng/dL ≈ 0.035 nmol/L.</p>
+      <div class="timing-box">
+        <h3>⏰ Why morning draws matter</h3>
+        <p>Testosterone levels follow a daily rhythm, peaking between 7–10 AM and dropping by 20–30% by afternoon. For accurate results, most doctors request a morning blood draw — ideally before 10 AM. An afternoon result that appears borderline low may actually be normal.</p>
+      </div>
     </div>
 
     <div class="card">
@@ -76,18 +115,122 @@
       <div class="two-col">
         <div class="range-box high">
           <div class="range-box-label">↑ If High</div>
-          <p>High testosterone in men is rarely a concern from natural causes. In women, it can indicate PCOS or adrenal issues.</p>
+          <p>Elevated testosterone in men may indicate anabolic steroid use, certain tumors of the testicles or adrenal glands, or congenital adrenal hyperplasia. In women, high testosterone can signal polycystic ovary syndrome (PCOS), adrenal disorders, or ovarian tumors.</p>
         </div>
         <div class="range-box low">
           <div class="range-box-label">↓ If Low</div>
-          <p>Low testosterone in men can cause fatigue, reduced libido, muscle loss, and mood changes. It's increasingly common with age.</p>
+          <p>Low testosterone (hypogonadism) in men may result from aging, obesity, type 2 diabetes, pituitary disorders, testicular damage, or certain medications. In women, low testosterone can cause fatigue, low libido, and reduced bone density, though it's less commonly diagnosed.</p>
         </div>
       </div>
     </div>
 
     <div class="card">
+      <div class="section-label">Symptoms associated with abnormal testosterone</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High Testosterone Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Acne or oily skin</li>
+            <li>Aggressive behavior or mood swings</li>
+            <li>Increased body or facial hair (women)</li>
+            <li>Irregular or absent periods (women)</li>
+            <li>Enlarged clitoris (women)</li>
+            <li>Testicular shrinkage (men on exogenous T)</li>
+            <li>Sleep apnea</li>
+            <li>Elevated red blood cell count</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>↓ Low Testosterone Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Low sex drive (libido)</li>
+            <li>Erectile dysfunction (men)</li>
+            <li>Fatigue and low energy</li>
+            <li>Loss of muscle mass</li>
+            <li>Increased body fat, especially abdominal</li>
+            <li>Depressed mood or irritability</li>
+            <li>Reduced bone density</li>
+            <li>Difficulty concentrating or brain fog</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal testosterone</div>
+      <h2>What can raise testosterone?</h2>
+      <p>The most common cause of elevated testosterone in otherwise healthy adults is exogenous testosterone — meaning testosterone taken as medication or anabolic steroids. Outside of that, testosterone-secreting tumors of the adrenal glands or gonads are a rare but serious cause. In women, polycystic ovary syndrome (PCOS) is the most frequent reason for elevated testosterone, affecting roughly 1 in 10 women of reproductive age.</p>
+      <p>Congenital adrenal hyperplasia (CAH), a genetic condition affecting how the adrenal glands produce hormones, can also cause elevated androgens including testosterone in both sexes.</p>
+      <h2 style="margin-top:24px;">What can lower testosterone?</h2>
+      <p>In men, the most common cause is age-related decline — testosterone drops gradually after age 30, and by age 70 many men have levels well below the peak range. Obesity is strongly associated with low testosterone because fat tissue converts testosterone into estrogen. Other contributors include type 2 diabetes, sleep apnea (especially untreated), chronic stress, opioid medications, and conditions affecting the pituitary gland or testicles directly.</p>
+      <p>In women, low testosterone most often reflects natural aging and menopause, or surgical removal of the ovaries.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside testosterone</div>
+      <p>Testosterone rarely tells the whole story on its own. Your doctor may also order:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>Free testosterone</strong> — measures the biologically active fraction not bound to proteins; more useful than total testosterone in some cases</li>
+        <li><strong>LH (Luteinizing Hormone)</strong> — helps determine if low testosterone originates in the testicles or in the pituitary gland</li>
+        <li><strong>FSH (Follicle-Stimulating Hormone)</strong> — evaluated alongside LH to assess the hypothalamic-pituitary-gonadal axis</li>
+        <li><strong>SHBG (Sex Hormone-Binding Globulin)</strong> — high SHBG can make total testosterone look normal while free testosterone is actually low</li>
+        <li><strong>Estradiol</strong> — important in men with low testosterone, since excess estrogen can suppress testosterone production</li>
+        <li><strong>Complete blood count (CBC)</strong> — testosterone affects red blood cell production; polycythemia is a risk with TRT</li>
+        <li><strong>PSA (Prostate-Specific Antigen)</strong> — monitored in men on testosterone replacement therapy</li>
+      </ul>
+    </div>
+
+    <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">Total testosterone doesn't tell the whole story. Ask your doctor about free testosterone, which measures the active, usable portion.</div>
+      <div class="next-steps">A single testosterone result — especially one that's borderline — rarely leads to a diagnosis on its own. Your doctor will look at your symptoms, repeat the test on a different day (ideally morning), and often order additional hormone panels before recommending treatment. If you're experiencing significant symptoms of low or high testosterone, ask specifically about free testosterone and SHBG, not just the total number.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Is my result total testosterone or free testosterone — and does my free level look normal?</li>
+        <li><span class="q-num">02</span>Was this drawn in the morning? Should we repeat it to confirm?</li>
+        <li><span class="q-num">03</span>Could my SHBG level be affecting how we interpret this result?</li>
+        <li><span class="q-num">04</span>What's causing my testosterone to be low or high — is it coming from the testicles/ovaries or the pituitary?</li>
+        <li><span class="q-num">05</span>Do my symptoms actually match what you'd expect from this result?</li>
+        <li><span class="q-num">06</span>If testosterone replacement therapy is an option, what are the risks and monitoring requirements?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between total and free testosterone?</div>
+        <div class="faq-a">Total testosterone measures all testosterone in your blood — both the portion bound to proteins (inactive) and the free fraction (active). Free testosterone is the only form your cells can actually use. Some men have normal total testosterone but low free testosterone due to high SHBG levels, meaning their bodies have less usable hormone than the total number suggests.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is 300 ng/dL really "low" for a man?</div>
+        <div class="faq-a">Technically, 300 ng/dL sits at the bottom of most reference ranges — it's not flagged as abnormal on a lab report. But whether it causes symptoms depends on the individual. Some men feel fine at 300; others feel significant fatigue, low libido, and mood issues. The number alone doesn't determine treatment — symptoms matter just as much.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can women have testosterone problems too?</div>
+        <div class="faq-a">Yes. In women, high testosterone is most commonly linked to PCOS — a hormonal condition affecting the ovaries — and can cause irregular periods, excess hair growth, and acne. Low testosterone in women can contribute to fatigue and low libido, though it's less commonly evaluated and treated than in men.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does testosterone replacement therapy have risks?</div>
+        <div class="faq-a">Yes. TRT can raise red blood cell counts (increasing clot risk), suppress natural sperm production (affecting fertility), cause acne and hair loss, and requires PSA monitoring in men over 40. It's generally appropriate when levels are genuinely low and symptoms are present — not simply for optimization in men with normal levels.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can lifestyle changes raise low testosterone?</div>
+        <div class="faq-a">For men with low testosterone driven by lifestyle factors — obesity, poor sleep, sedentary habits, chronic stress — meaningful improvements are possible without medication. Weight loss, resistance training, quality sleep (7–9 hours), and stress reduction have all been shown to raise testosterone levels. These won't fix structural problems like testicular damage or pituitary disorders, but they're worth addressing first.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/estradiol" class="related-chip">Estradiol →</a>
+        <a href="/lh" class="related-chip">LH →</a>
+        <a href="/fsh" class="related-chip">FSH →</a>
+        <a href="/prolactin" class="related-chip">Prolactin →</a>
+        <a href="/shbg" class="related-chip">SHBG →</a>
+        <a href="/psa" class="related-chip">PSA →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
