@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WBC (White Blood Cell Count) – LabPlain</title>
-  <meta name="description" content="What does your WBC (White Blood Cell Count) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
+  <title>WBC (White Blood Cell Count) – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your WBC result mean? Plain-English guide to normal ranges, high and low white blood cell counts, symptoms, causes, and what to ask your doctor.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://labplain.co/wbc">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,11 +12,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
     nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
@@ -26,27 +29,56 @@
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
     .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
     .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
     .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
+    .range-box.low .range-box-label { color: var(--accent); }
     .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
     .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -55,39 +87,147 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; WBC (White Blood Cell Count)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">WBC (White Blood Cell Count)</em> result mean?</h1>
-    <span class="category-tag">Blood Count</span>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; WBC</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">WBC Count</em> result mean?</h1>
+    <span class="category-tag">Complete Blood Count</span>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>WBC (White Blood Cell Count)</strong> test counts the white blood cells in your blood — these are your immune system's front-line fighters.</p>
+      <p>Your WBC count measures the total number of white blood cells — your immune system's frontline defenders — circulating in your bloodstream. White blood cells are produced in your bone marrow and exist for one purpose: to identify and destroy threats like bacteria, viruses, fungi, and abnormal cells.</p>
+      <p>There are five main types of white blood cells: neutrophils (the most common, first responders to bacterial infection), lymphocytes (which fight viruses and produce antibodies), monocytes (which clean up cellular debris), eosinophils (which respond to allergies and parasites), and basophils (which trigger inflammatory responses). A standard CBC reports your total WBC count; a differential breaks it down by type.</p>
+      <p>Doctors order a WBC count as part of routine bloodwork, to investigate symptoms like fever or fatigue, to monitor immune-suppressing medications, or to screen for blood disorders.</p>
     </div>
 
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">4,500–11,000 cells/mcL</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
+      <div class="normal-range">Adults: 4,500 – 11,000 cells/µL &nbsp;|&nbsp; Also written as 4.5–11.0 × 10³/µL</div>
+      <p class="range-note">Children have naturally higher WBC counts than adults, and ranges vary significantly by age. Pregnant women also have elevated WBC levels, which is completely normal. Always compare your result to the reference range printed on your specific lab report.</p>
+      <p class="range-note" style="margin-top:8px;">A single WBC reading is a snapshot in time. Your count naturally fluctuates throughout the day, rises after exercise or stress, and responds to anything happening in your body. Trends over time are more meaningful than any one number.</p>
+      <div class="timing-box">
+        <h3>🩸 Part of the CBC panel</h3>
+        <p>The WBC count is almost always ordered as part of a Complete Blood Count (CBC), which also measures red blood cells, hemoglobin, hematocrit, and platelets. Your doctor interprets WBC in context of the full CBC — an abnormal WBC alongside abnormal RBC or platelets tells a very different story than an isolated WBC change.</p>
+      </div>
     </div>
 
     <div class="card">
       <div class="section-label">What your result might indicate</div>
       <div class="two-col">
         <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>A high WBC often means your immune system is actively fighting something — an infection, inflammation, stress, or rarely a blood disorder.</p>
+          <div class="range-box-label">↑ If High (Leukocytosis)</div>
+          <p>A high WBC count usually signals your immune system is actively fighting something — infection, inflammation, or physical stress. Less commonly, it can indicate a blood disorder or medication side effect. Context and symptoms matter enormously here.</p>
         </div>
         <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>A low WBC can mean your immune system is suppressed, which may be due to certain medications, viral infections, or bone marrow issues.</p>
+          <div class="range-box-label">↓ If Low (Leukopenia)</div>
+          <p>A low WBC count means your immune system may be weakened, leaving you more vulnerable to infections. Causes include viral illnesses, autoimmune conditions, bone marrow problems, and certain medications including chemotherapy.</p>
         </div>
       </div>
     </div>
 
     <div class="card">
+      <div class="section-label">Symptoms associated with abnormal WBC</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High WBC Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Fever or chills</li>
+            <li>Signs of active infection (sore throat, cough, pain)</li>
+            <li>Fatigue and body aches</li>
+            <li>Unexplained weight loss</li>
+            <li>Night sweats</li>
+            <li>Swollen lymph nodes</li>
+            <li>Easy bruising or bleeding</li>
+            <li>Bone pain (in blood disorders)</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>↓ Low WBC Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Frequent or severe infections</li>
+            <li>Infections that won't clear up</li>
+            <li>Mouth sores or ulcers</li>
+            <li>Fever without obvious cause</li>
+            <li>Extreme fatigue</li>
+            <li>Pale skin or pallor</li>
+            <li>Easy bruising</li>
+            <li>Slow wound healing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal WBC</div>
+      <h2>What can raise your WBC?</h2>
+      <p>The most common cause of a high WBC is a bacterial infection — your bone marrow ramps up white blood cell production to fight it. Viral infections can also raise WBC, though they more often lower it. Other causes include physical or emotional stress (even vigorous exercise or anxiety), inflammatory conditions like rheumatoid arthritis or IBD, corticosteroid medications like prednisone, smoking, and allergic reactions.</p>
+      <p>In rare cases, a very high WBC — especially above 30,000 cells/µL — can indicate leukemia or other blood cancers. However, this is uncommon, and most elevated WBC counts have benign explanations. Your doctor will consider the full clinical picture before any serious diagnosis.</p>
+      <h2 style="margin-top:24px;">What can lower your WBC?</h2>
+      <p>A low WBC most commonly results from viral infections (HIV, hepatitis, influenza), autoimmune diseases where the body attacks its own white blood cells, bone marrow disorders, or medications — particularly chemotherapy, immunosuppressants, and some antibiotics or seizure medications. Severe nutritional deficiencies (B12, folate) can also suppress white blood cell production. Very low WBC counts (below 2,000) significantly increase infection risk and typically require prompt medical evaluation.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Understanding the WBC differential</div>
+      <p>When your WBC is abnormal, your doctor will often order a WBC differential — a breakdown of each cell type. This is far more informative than the total count alone:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>High neutrophils</strong> — typically bacterial infection or physical stress</li>
+        <li><strong>High lymphocytes</strong> — viral infection, or in some cases leukemia</li>
+        <li><strong>High eosinophils</strong> — allergies, asthma, or parasitic infection</li>
+        <li><strong>Low neutrophils (neutropenia)</strong> — high infection risk; common with chemotherapy</li>
+        <li><strong>Blasts present</strong> — immature cells that may indicate leukemia; requires urgent follow-up</li>
+      </ul>
+    </div>
+
+    <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">A single abnormal WBC result isn't always cause for alarm. Your doctor will likely look at the full differential (breakdown of WBC types) for more detail.</div>
+      <div class="next-steps">A mildly abnormal WBC in someone who feels well and has no concerning symptoms is often benign and warrants repeat testing before further workup. If you have symptoms like fever, significant fatigue, night sweats, or unexplained weight loss alongside an abnormal WBC, that combination is more meaningful and warrants prompt follow-up. Your doctor will interpret your WBC in context of your other CBC values, symptoms, and history — don't draw conclusions from the number alone.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Is my WBC count just mildly abnormal, or is the level itself a concern?</li>
+        <li><span class="q-num">02</span>Do you want to run a WBC differential to see which cell types are affected?</li>
+        <li><span class="q-num">03</span>Could any medications I'm taking be affecting my white blood cell count?</li>
+        <li><span class="q-num">04</span>Should we repeat the CBC in a few weeks to see if this is a trend or a one-time finding?</li>
+        <li><span class="q-num">05</span>Do my symptoms match what you'd expect from this result?</li>
+        <li><span class="q-num">06</span>At what point would you refer me to a hematologist?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can a cold or flu cause an abnormal WBC?</div>
+        <div class="faq-a">Yes. Viral infections commonly alter WBC counts — they often cause a temporary drop (leukopenia) early in the illness, then a rebound as your immune system recovers. Bacterial infections typically raise WBC. This is actually useful diagnostic information your doctor uses to help distinguish viral from bacterial illness.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Should I be worried if my WBC is slightly high with no symptoms?</div>
+        <div class="faq-a">A mildly elevated WBC in someone who feels fine is usually not alarming. Common benign causes include recent stress, strenuous exercise before the blood draw, smoking, or a mild infection you weren't even aware of. Your doctor will likely recommend a repeat CBC in a few weeks rather than ordering extensive testing right away.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is neutropenia and why does it matter?</div>
+        <div class="faq-a">Neutropenia means your neutrophil count (a type of white blood cell) is dangerously low — typically below 1,500 cells/µL. Since neutrophils are your first line of defense against bacterial infection, neutropenia significantly raises your risk of serious infections. It's most commonly seen in patients receiving chemotherapy and requires careful monitoring and sometimes preventive antibiotics.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can high WBC mean cancer?</div>
+        <div class="faq-a">In the vast majority of cases, no. Most elevated WBC counts are caused by infections, inflammation, medications, or stress. Leukemia and other blood cancers can cause high WBC, but they typically produce very high counts (often above 30,000) along with other abnormal CBC findings and symptoms. A routine mildly elevated WBC without other findings is rarely leukemia — but if your doctor is concerned, they'll order further testing to rule it out.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does it take for WBC to return to normal after an infection?</div>
+        <div class="faq-a">For most acute infections, WBC returns to normal within 1–3 weeks of recovery. After chemotherapy, WBC typically hits its lowest point (the nadir) about 7–14 days after treatment, then recovers over the following weeks. Your doctor will track this with repeat CBC tests.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/rbc" class="related-chip">RBC →</a>
+        <a href="/hemoglobin" class="related-chip">Hemoglobin →</a>
+        <a href="/hematocrit" class="related-chip">Hematocrit →</a>
+        <a href="/platelets" class="related-chip">Platelets →</a>
+        <a href="/crp" class="related-chip">CRP →</a>
+        <a href="/ferritin" class="related-chip">Ferritin →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
