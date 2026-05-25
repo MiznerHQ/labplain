@@ -1,346 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Albumin Blood Test: What Your Results Mean | Labplain</title>
-  <meta name="description" content="Understand your albumin blood test results. Learn what low or high albumin levels mean, what causes abnormal results, and when to talk to your doctor." />
-  <link rel="canonical" href="https://labplain.co/albumin" />
-  <link rel="icon" href="/favicon.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Albumin Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your albumin result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://labplain.co/albumin">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --navy: #0a1628;
-      --navy-mid: #112240;
-      --navy-light: #1a3a6b;
-      --accent: #4a90d9;
-      --accent-light: #e8f2fc;
-      --text: #1a1a2e;
-      --text-muted: #5a6a80;
-      --white: #ffffff;
-      --border: #dce8f5;
-      --success: #2e7d52;
-      --warning: #b85c00;
-      --danger: #c0392b;
-      --card-bg: #f8fbff;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f4f8fd; color: var(--text); line-height: 1.7; }
-
-    header {
-      background: var(--navy);
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header a { text-decoration: none; }
-    .logo { color: var(--white); font-size: 1.4rem; font-weight: 800; letter-spacing: -0.5px; }
-    .logo span { color: var(--accent); }
-    .tagline { color: #7aa8d4; font-size: 0.78rem; margin-top: 2px; }
-
-    .hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-      color: var(--white);
-      padding: 52px 24px 44px;
-      text-align: center;
-    }
-    .hero h1 { font-size: clamp(1.7rem, 4vw, 2.6rem); font-weight: 800; margin-bottom: 12px; }
-    .hero p { font-size: 1.1rem; color: #a8c8e8; max-width: 640px; margin: 0 auto 28px; }
-    .range-badge {
-      display: inline-block;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 50px;
-      padding: 8px 24px;
-      font-size: 0.95rem;
-      color: #e0eefa;
-    }
-    .range-badge strong { color: #fff; }
-
-    .container { max-width: 820px; margin: 0 auto; padding: 0 20px; }
-
-    section { margin: 40px auto; max-width: 820px; padding: 0 20px; }
-
-    h2 {
-      font-size: 1.45rem;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 16px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid var(--accent-light);
-    }
-    h3 { font-size: 1.1rem; font-weight: 700; color: var(--navy-mid); margin-bottom: 8px; }
-    p { margin-bottom: 14px; color: #2c3e55; }
-
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin-top: 8px;
-    }
-    .card {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 20px;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 8px rgba(10,22,40,0.06);
-    }
-    .card.low { border-left: 4px solid var(--danger); }
-    .card.normal { border-left: 4px solid var(--success); }
-    .card.high { border-left: 4px solid var(--warning); }
-
-    .result-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 6px;
-    }
-    .low .result-label { color: var(--danger); }
-    .normal .result-label { color: var(--success); }
-    .high .result-label { color: var(--warning); }
-
-    .result-range { font-size: 1.3rem; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
-    .result-desc { font-size: 0.88rem; color: var(--text-muted); }
-
-    .symptom-list, .cause-list, .related-list {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
-      margin-top: 8px;
-    }
-    .symptom-list li, .cause-list li, .related-list li {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 10px 14px;
-      font-size: 0.92rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #2c3e55;
-    }
-    .symptom-list li::before { content: "⚠️"; font-size: 0.85rem; }
-    .cause-list li::before { content: "🔍"; font-size: 0.85rem; }
-    .related-list li::before { content: "🧪"; font-size: 0.85rem; }
-
-    .info-box {
-      background: var(--accent-light);
-      border-left: 4px solid var(--accent);
-      border-radius: 0 10px 10px 0;
-      padding: 18px 20px;
-      margin: 20px 0;
-      font-size: 0.95rem;
-      color: #1a2f4a;
-    }
-    .info-box strong { color: var(--navy); }
-
-    .faq-item {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 18px 20px;
-      margin-bottom: 12px;
-    }
-    .faq-item h3 { color: var(--accent); margin-bottom: 8px; font-size: 1rem; }
-    .faq-item p { margin: 0; font-size: 0.93rem; }
-
-    .doctor-questions {
-      background: var(--navy);
-      color: var(--white);
-      border-radius: 14px;
-      padding: 28px;
-      margin-top: 8px;
-    }
-    .doctor-questions h2 { color: var(--white); border-bottom-color: rgba(255,255,255,0.15); }
-    .doctor-questions ol { padding-left: 20px; }
-    .doctor-questions li {
-      margin-bottom: 10px;
-      font-size: 0.95rem;
-      color: #c8ddf0;
-      line-height: 1.6;
-    }
-
-    .disclaimer {
-      background: #fff8e1;
-      border: 1px solid #f0d060;
-      border-radius: 10px;
-      padding: 16px 20px;
-      font-size: 0.85rem;
-      color: #5a4a00;
-      margin: 32px 20px;
-      max-width: 820px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    footer {
-      background: var(--navy);
-      color: #7aa8d4;
-      text-align: center;
-      padding: 28px 20px;
-      font-size: 0.85rem;
-      margin-top: 48px;
-    }
-    footer a { color: var(--accent); text-decoration: none; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.high .range-box-label { color: var(--warn); }
+    .range-box.low .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+      <a href="/" class="logo-text">lab<span>plain</span></a>
+    </nav>
 
-<header>
-  <a href="/">
-    <div class="logo">Lab<span>plain</span></div>
-    <div class="tagline">Understand your labs. No medical degree required.</div>
-  </a>
-</header>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Albumin</p>
 
-<div class="hero">
-  <h1>Albumin Blood Test</h1>
-  <p>Albumin is the most abundant protein in your blood. Your results reveal important information about your liver, kidneys, and overall nutritional health.</p>
-  <div class="range-badge">Normal Range: <strong>3.4 – 5.4 g/dL</strong></div>
-</div>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Albumin</em> result mean?</h1>
 
-<section>
-  <h2>What Do Your Results Mean?</h2>
-  <div class="cards-grid">
-    <div class="card low">
-      <div class="result-label">Low</div>
-      <div class="result-range">Below 3.4 g/dL</div>
-      <div class="result-desc">May indicate liver disease, kidney problems, malnutrition, or chronic inflammation. Requires follow-up.</div>
+    <span class="category-tag">Liver Function</span>
+
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+
+    <div class="card">
+      <div class="section-label">What this test measures</div>
+      <p>Albumin is the most abundant protein in your blood. It's made by your liver and acts like a transport and balancing protein — helping carry hormones, vitamins, medications, and other substances throughout your body.</p>
+
+      <p>Albumin also helps keep fluid inside your blood vessels. Without enough albumin, fluid can leak into surrounding tissues and cause swelling in the legs, abdomen, or lungs.</p>
+
+      <p>Doctors commonly check albumin as part of a comprehensive metabolic panel (CMP) or liver function tests. Low albumin may point to liver disease, kidney disease, malnutrition, inflammation, or chronic illness.</p>
     </div>
-    <div class="card normal">
-      <div class="result-label">Normal</div>
-      <div class="result-range">3.4 – 5.4 g/dL</div>
-      <div class="result-desc">Your albumin level is within the healthy range. Your liver and kidneys are likely doing their job.</div>
+
+    <div class="card">
+      <div class="section-label">Normal reference range</div>
+
+      <div class="normal-range">3.5–5.0 g/dL</div>
+
+      <p class="range-note">Albumin ranges vary slightly between laboratories. Always compare your result to the reference range printed on your specific lab report.</p>
+
+      <p class="range-note" style="margin-top:8px;">Mild abnormalities are common and don't automatically mean something serious. Your doctor will interpret albumin alongside other tests like total protein, AST, ALT, bilirubin, creatinine, and urine protein.</p>
+
+      <div class="timing-box">
+        <h3>🧪 Why albumin matters</h3>
+        <p>Albumin is often used as a general marker of liver function, nutrition, hydration, and overall health. A low level can develop slowly over time and may reflect chronic illness rather than a sudden problem.</p>
+      </div>
     </div>
-    <div class="card high">
-      <div class="result-label">High</div>
-      <div class="result-range">Above 5.4 g/dL</div>
-      <div class="result-desc">Usually caused by dehydration. Rarely serious on its own, but worth discussing with your doctor.</div>
+
+    <div class="card">
+      <div class="section-label">What your result might indicate</div>
+
+      <div class="two-col">
+        <div class="range-box high">
+          <div class="range-box-label">↑ If High</div>
+          <p>High albumin is usually caused by dehydration, where the blood becomes more concentrated. It is rarely due to a liver problem and is often temporary.</p>
+        </div>
+
+        <div class="range-box low">
+          <div class="range-box-label">↓ If Low</div>
+          <p>Low albumin may suggest liver disease, kidney disease, malnutrition, inflammation, digestive disorders, or chronic illness. Very low levels can lead to swelling and fluid retention.</p>
+        </div>
+      </div>
     </div>
+
+    <div class="card">
+      <div class="section-label">Symptoms associated with abnormal albumin</div>
+
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High Albumin Symptoms</h3>
+
+          <ul class="symptom-list">
+            <li>Increased thirst</li>
+            <li>Dry mouth</li>
+            <li>Dizziness</li>
+            <li>Dark urine</li>
+            <li>Fatigue from dehydration</li>
+            <li>Headache</li>
+            <li>Reduced urination</li>
+            <li>Rapid heartbeat</li>
+          </ul>
+        </div>
+
+        <div class="symptom-box low">
+          <h3>↓ Low Albumin Symptoms</h3>
+
+          <ul class="symptom-list">
+            <li>Swelling in the legs or feet</li>
+            <li>Fluid buildup in the abdomen</li>
+            <li>Fatigue or weakness</li>
+            <li>Muscle loss</li>
+            <li>Poor healing</li>
+            <li>Loss of appetite</li>
+            <li>Foamy urine (kidney disease)</li>
+            <li>Shortness of breath from fluid retention</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal albumin</div>
+
+      <h2>What can raise albumin?</h2>
+
+      <p>The most common cause of high albumin is dehydration. When you lose fluids through sweating, vomiting, diarrhea, or not drinking enough water, the concentration of albumin in your blood rises.</p>
+
+      <p>High albumin is usually not considered dangerous by itself and often returns to normal once hydration improves.</p>
+
+      <h2 style="margin-top:24px;">What can lower albumin?</h2>
+
+      <p>Low albumin can happen when the liver isn't producing enough protein, the kidneys are leaking protein into the urine, or the body isn't absorbing enough nutrients. Common causes include cirrhosis, chronic kidney disease, nephrotic syndrome, inflammatory bowel disease, malnutrition, cancer, severe infections, and chronic inflammation.</p>
+
+      <p>Hospitalized patients and older adults commonly develop low albumin during serious illness or recovery from surgery.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside albumin</div>
+
+      <p>Albumin is usually interpreted alongside other liver, kidney, and nutrition markers. Your doctor may also order:</p>
+
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>Total protein</strong> — measures all proteins in the blood</li>
+        <li><strong>ALT and AST</strong> — liver enzymes that help evaluate liver damage</li>
+        <li><strong>Bilirubin</strong> — helps assess liver and bile duct function</li>
+        <li><strong>Creatinine and eGFR</strong> — evaluate kidney function</li>
+        <li><strong>Urine protein or microalbumin</strong> — checks whether protein is leaking through the kidneys</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What to do next</div>
+
+      <div class="next-steps">A mildly abnormal albumin level is common and often reflects hydration, nutrition, or an underlying chronic condition rather than an emergency. Your doctor will look at your full lab panel, symptoms, medications, and medical history before deciding whether additional testing is needed.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Could dehydration or diet have affected my albumin level?</li>
+        <li><span class="q-num">02</span>Do my liver or kidney tests suggest a larger problem?</li>
+        <li><span class="q-num">03</span>Should I have urine testing to check for protein loss?</li>
+        <li><span class="q-num">04</span>Could medications or inflammation be lowering my albumin?</li>
+        <li><span class="q-num">05</span>Do I need repeat testing to monitor this over time?</li>
+        <li><span class="q-num">06</span>Would dietary or nutrition changes help improve my level?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+
+      <div class="faq-item">
+        <div class="faq-q">Is low albumin serious?</div>
+        <div class="faq-a">It can be. Mildly low albumin is common and may simply reflect illness, inflammation, or poor nutrition. Very low albumin can lead to swelling and may signal significant liver, kidney, or digestive disease.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can dehydration cause high albumin?</div>
+        <div class="faq-a">Yes. Dehydration is the most common reason albumin appears elevated on blood tests. Once fluid levels normalize, albumin often returns to normal as well.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can diet affect albumin levels?</div>
+        <div class="faq-a">Yes. Severe malnutrition, low protein intake, or conditions that prevent nutrient absorption can lower albumin over time. However, mildly low albumin is usually caused by illness or inflammation rather than diet alone.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What organs are most connected to albumin?</div>
+        <div class="faq-a">The liver produces albumin, while the kidneys help prevent it from leaking into the urine. That's why albumin is commonly used to evaluate both liver and kidney health.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can inflammation lower albumin?</div>
+        <div class="faq-a">Yes. Chronic inflammation, infections, autoimmune diseases, and cancer can all lower albumin levels because the body shifts resources away from producing normal proteins during illness.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+
+      <div class="related">
+        <a href="/alt" class="related-chip">ALT →</a>
+        <a href="/alp" class="related-chip">ALP →</a>
+        <a href="/bilirubin" class="related-chip">Bilirubin →</a>
+        <a href="/creatinine" class="related-chip">Creatinine →</a>
+        <a href="/ast" class="related-chip">AST →</a>
+        <a href="/total-protein" class="related-chip">Total Protein →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any lab test instantly</h3>
+      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>labplain.co</span>
+      <span>Understand your labs. No medical degree required.</span>
+    </footer>
   </div>
-</section>
-
-<section>
-  <h2>What Is Albumin?</h2>
-  <p>Albumin is a protein made by your liver. It makes up about 60% of total protein in your blood and performs several essential jobs: it carries hormones, vitamins, and drugs through your bloodstream, helps maintain the right fluid balance between your blood vessels and surrounding tissue, and acts as a general indicator of your body's nutritional status and liver function.</p>
-  <p>Because albumin is produced by the liver and filtered by the kidneys, abnormal levels are often one of the first signs that something is off with either organ — even before symptoms appear.</p>
-  <div class="info-box">
-    <strong>Why it's tested:</strong> Albumin is routinely included in a Comprehensive Metabolic Panel (CMP). Doctors also order it specifically when evaluating liver disease, kidney disease, malnutrition, or unexplained swelling.
-  </div>
-</section>
-
-<section>
-  <h2>Symptoms of Low Albumin</h2>
-  <p>Low albumin (hypoalbuminemia) can cause noticeable symptoms, especially when levels drop significantly:</p>
-  <ul class="symptom-list">
-    <li>Swelling in legs, ankles, or feet (edema)</li>
-    <li>Puffy face or abdomen</li>
-    <li>Fatigue and weakness</li>
-    <li>Poor wound healing</li>
-    <li>Muscle wasting or weakness</li>
-    <li>Unexplained weight loss</li>
-    <li>Fluid buildup in the belly (ascites)</li>
-    <li>Frequent infections</li>
-  </ul>
-  <div class="info-box" style="margin-top:20px;">
-    <strong>Why the swelling?</strong> Albumin helps keep fluid inside your blood vessels. When albumin is low, fluid leaks out into surrounding tissues — causing visible puffiness and swelling.
-  </div>
-</section>
-
-<section>
-  <h2>Common Causes of Low Albumin</h2>
-  <ul class="cause-list">
-    <li>Liver disease (cirrhosis, hepatitis)</li>
-    <li>Kidney disease / nephrotic syndrome</li>
-    <li>Malnutrition or poor protein intake</li>
-    <li>Inflammatory conditions (Crohn's, lupus)</li>
-    <li>Burns or major trauma</li>
-    <li>Celiac disease or malabsorption</li>
-    <li>Congestive heart failure</li>
-    <li>Thyroid disorders</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Common Causes of High Albumin</h2>
-  <p>High albumin is much less common and is rarely a sign of serious disease. The most frequent cause is:</p>
-  <ul class="cause-list">
-    <li>Dehydration (most common)</li>
-    <li>High-protein diet</li>
-    <li>Prolonged use of a tourniquet during blood draw</li>
-    <li>Certain medications (steroids, insulin)</li>
-  </ul>
-  <p style="margin-top:14px;">If your albumin is high, your doctor will likely ask about your fluid intake and recheck after adequate hydration.</p>
-</section>
-
-<section>
-  <h2>Frequently Asked Questions</h2>
-
-  <div class="faq-item">
-    <h3>Can I have low albumin without symptoms?</h3>
-    <p>Yes. Mild decreases in albumin often cause no noticeable symptoms and are discovered only through routine blood work. Significant symptoms typically appear when albumin drops below 2.5 g/dL.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Does eating more protein raise my albumin?</h3>
-    <p>If low albumin is caused by poor nutrition, increasing dietary protein can help — but it takes weeks to months for levels to recover. If the cause is liver or kidney disease, diet alone won't fix the underlying problem.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Is albumin the same as total protein?</h3>
-    <p>No. Total protein measures all proteins in your blood (albumin plus globulins). Albumin is tested separately and is a more sensitive marker for liver function and nutritional status.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>Can medications affect my albumin level?</h3>
-    <p>Yes. Corticosteroids, insulin, and anabolic steroids can raise albumin. Estrogens and certain diuretics may lower it. Always tell your doctor about all medications and supplements you're taking.</p>
-  </div>
-
-  <div class="faq-item">
-    <h3>How long does it take for albumin levels to change?</h3>
-    <p>Albumin has a half-life of about 20 days, meaning changes in production or loss take weeks to show up in test results. This makes it a marker of longer-term nutritional status rather than acute changes.</p>
-  </div>
-</section>
-
-<section>
-  <h2>Related Tests Your Doctor May Order</h2>
-  <ul class="related-list">
-    <li>Total Protein</li>
-    <li>ALT (liver enzyme)</li>
-    <li>AST (liver enzyme)</li>
-    <li>ALP (alkaline phosphatase)</li>
-    <li>Bilirubin</li>
-    <li>Creatinine (kidney function)</li>
-    <li>BUN (blood urea nitrogen)</li>
-    <li>Prealbumin (faster indicator)</li>
-    <li>Urinalysis (protein in urine)</li>
-    <li>CRP (inflammation marker)</li>
-  </ul>
-</section>
-
-<section class="doctor-questions">
-  <h2>Questions to Ask Your Doctor</h2>
-  <ol>
-    <li>What's causing my albumin to be outside the normal range?</li>
-    <li>Do I need additional liver or kidney tests to find the cause?</li>
-    <li>Should I change my diet or protein intake?</li>
-    <li>How quickly do you expect my levels to normalize?</li>
-    <li>Are any of my medications affecting my albumin?</li>
-    <li>When should I come back for a follow-up test?</li>
-  </ol>
-</section>
-
-<div class="disclaimer">
-  <strong>Medical Disclaimer:</strong> This content is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your doctor or qualified healthcare provider with questions about your lab results or medical condition.
-</div>
-
-<footer>
-  <p>&copy; 2025 <a href="/">Labplain.co</a> — Understand your labs. No medical degree required.</p>
-  <p style="margin-top:8px;"><a href="/">← Back to all lab tests</a></p>
-</footer>
-
 </body>
 </html>
