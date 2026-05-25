@@ -1,242 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ferritin Blood Test: What Your Levels Mean | Labplain</title>
-  <meta name="description" content="Learn what ferritin levels mean, why they matter for iron stores, and what high or low results could indicate about your health." />
-  <link rel="canonical" href="https://labplain.co/ferritin" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferritin Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your ferritin result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://labplain.co/ferritin">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.7; }
-    header { background: #0f172a; padding: 16px 24px; display: flex; align-items: center; gap: 12px; }
-    header a { text-decoration: none; display: flex; align-items: center; gap: 12px; }
-    header img { height: 36px; }
-    header span { color: #fff; font-size: 1.3rem; font-weight: 700; letter-spacing: -0.5px; }
-    .hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); color: #fff; padding: 56px 24px 48px; text-align: center; }
-    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 16px; }
-    .hero p { font-size: 1.1rem; color: #94a3b8; max-width: 600px; margin: 0 auto; }
-    .container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
-    section { background: #fff; border-radius: 16px; padding: 36px; margin: 28px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-    h2 { font-size: 1.5rem; font-weight: 700; color: #0f172a; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 3px solid #3b82f6; display: inline-block; }
-    h3 { font-size: 1.1rem; font-weight: 600; color: #1e3a5f; margin: 20px 0 8px; }
-    p { margin-bottom: 14px; color: #334155; }
-    ul { padding-left: 20px; margin-bottom: 14px; }
-    li { margin-bottom: 8px; color: #334155; }
-    .range-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 16px; }
-    .range-card { border-radius: 12px; padding: 20px; text-align: center; }
-    .range-card .label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-    .range-card .value { font-size: 1.4rem; font-weight: 800; margin-bottom: 4px; }
-    .range-card .desc { font-size: 0.82rem; }
-    .low { background: #eff6ff; color: #1d4ed8; }
-    .normal { background: #f0fdf4; color: #166534; }
-    .high { background: #fef2f2; color: #991b1b; }
-    .borderline { background: #fffbeb; color: #92400e; }
-    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 16px; }
-    .symptom-box { border-radius: 12px; padding: 20px; }
-    .symptom-box h3 { margin-top: 0; font-size: 1rem; }
-    .symptom-box.low-box { background: #eff6ff; border-left: 4px solid #3b82f6; }
-    .symptom-box.high-box { background: #fef2f2; border-left: 4px solid #ef4444; }
-    .faq-item { border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 14px; }
-    .faq-item strong { display: block; color: #0f172a; margin-bottom: 8px; font-size: 1rem; }
-    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 16px; }
-    .related-card { background: #f1f5f9; border-radius: 10px; padding: 16px; text-align: center; text-decoration: none; color: #1e3a5f; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
-    .related-card:hover { background: #dbeafe; }
-    .doctor-list { list-style: none; padding: 0; }
-    .doctor-list li { background: #f8fafc; border-left: 4px solid #3b82f6; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; color: #1e293b; font-style: italic; }
-    .disclaimer { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 12px; padding: 20px; margin: 28px 0; font-size: 0.88rem; color: #78350f; }
-    footer { background: #0f172a; color: #64748b; text-align: center; padding: 32px 24px; font-size: 0.88rem; margin-top: 48px; }
-    footer a { color: #94a3b8; text-decoration: none; margin: 0 10px; }
-    @media (max-width: 600px) { .symptom-grid { grid-template-columns: 1fr; } section { padding: 24px 18px; } }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
+    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 15px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.high .range-box-label { color: var(--warn); }
+    .range-box.low .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+      <a href="/" class="logo-text">lab<span>plain</span></a>
+    </nav>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Ferritin</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Ferritin</em> result mean?</h1>
+    <span class="category-tag">Iron Studies</span>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
-<header>
-  <a href="/">
-    <img src="/logo.png" alt="Labplain logo" />
-    <span>Labplain</span>
-  </a>
-</header>
+    <div class="card">
+      <div class="section-label">What this test measures</div>
+      <p>Ferritin is a protein that stores iron inside your cells and releases it when your body needs it. A ferritin blood test measures how much iron your body has in reserve — making it one of the most important markers for diagnosing iron-deficiency anemia and iron overload.</p>
+      <p>Unlike serum iron, which reflects iron currently circulating in your blood, ferritin shows your <strong>total iron stores</strong>. You can have normal serum iron but critically depleted ferritin — meaning your reserves are nearly gone. This is why doctors often order ferritin alongside the full iron panel.</p>
+      <p>Ferritin is also an acute-phase reactant, meaning it rises during inflammation, infection, liver disease, and certain cancers — so a high result doesn't always mean too much iron. Context matters enormously.</p>
+    </div>
 
-<div class="hero">
-  <h1>Ferritin Blood Test</h1>
-  <p>Your body's iron storage protein — and a critical clue for fatigue, anemia, and inflammation.</p>
-</div>
+    <div class="card">
+      <div class="section-label">Normal reference range</div>
+      <div class="normal-range">Women: 12–150 ng/mL &nbsp;|&nbsp; Men: 24–336 ng/mL</div>
+      <p class="range-note">Ranges vary by lab and age. Many functional medicine practitioners consider optimal ferritin to be 50–100 ng/mL for women and 100–200 ng/mL for men — even if your result is technically "in range," you may have symptoms if ferritin falls below 30 ng/mL.</p>
+      <p class="range-note" style="margin-top:8px;">Always compare your result to the reference range printed on your specific lab report.</p>
+    </div>
 
-<div class="container">
-
-  <section>
-    <h2>What Is Ferritin?</h2>
-    <p>Ferritin is a protein that stores iron inside your cells and releases it when your body needs it. A ferritin blood test measures how much iron your body has in reserve — making it one of the most important markers for diagnosing iron-deficiency anemia and iron overload.</p>
-    <p>Unlike serum iron, which reflects iron currently circulating in your blood, ferritin shows your <strong>total iron stores</strong>. You can have normal serum iron but critically depleted ferritin — meaning your reserves are nearly gone. This is why doctors often check ferritin alongside other iron studies.</p>
-    <p>Ferritin is also an acute-phase reactant, meaning it rises during inflammation, infection, liver disease, and certain cancers — so high ferritin doesn't always mean too much iron. Context matters enormously.</p>
-  </section>
-
-  <section>
-    <h2>Ferritin Reference Ranges</h2>
-    <p>Ranges vary by lab, age, and sex. These are standard adult reference values:</p>
-    <div class="range-grid">
-      <div class="range-card low">
-        <div class="label">Low</div>
-        <div class="value">&lt;12 ng/mL</div>
-        <div class="desc">Iron deficiency — stores depleted</div>
-      </div>
-      <div class="range-card borderline">
-        <div class="label">Low-Normal</div>
-        <div class="value">12–30 ng/mL</div>
-        <div class="desc">Suboptimal — may cause symptoms</div>
-      </div>
-      <div class="range-card normal">
-        <div class="label">Normal (Women)</div>
-        <div class="value">12–150 ng/mL</div>
-        <div class="desc">Adequate iron stores</div>
-      </div>
-      <div class="range-card normal">
-        <div class="label">Normal (Men)</div>
-        <div class="value">24–336 ng/mL</div>
-        <div class="desc">Adequate iron stores</div>
-      </div>
-      <div class="range-card high">
-        <div class="label">High</div>
-        <div class="value">&gt;300–500+ ng/mL</div>
-        <div class="desc">Possible iron overload or inflammation</div>
+    <div class="card">
+      <div class="section-label">What your result might indicate</div>
+      <div class="two-col">
+        <div class="range-box low">
+          <div class="range-box-label">↓ If Low (&lt;12 ng/mL)</div>
+          <p>Iron stores are depleted. Even results between 12–30 ng/mL can cause fatigue, hair loss, and restless legs in many people. Your doctor will likely look for the cause — diet, blood loss, or malabsorption.</p>
+        </div>
+        <div class="range-box high">
+          <div class="range-box-label">↑ If High (&gt;300–500 ng/mL)</div>
+          <p>Possible iron overload, inflammation, liver disease, or other conditions. A single high result doesn't confirm iron overload — your doctor will check for inflammation markers and may order genetic testing.</p>
+        </div>
       </div>
     </div>
-    <p style="margin-top:16px; font-size:0.88rem; color:#64748b;">Note: Many functional medicine practitioners consider optimal ferritin to be 50–100 ng/mL for women and 100–200 ng/mL for men. Always interpret with your full iron panel.</p>
-  </section>
 
-  <section>
-    <h2>Symptoms by Ferritin Level</h2>
-    <div class="symptom-grid">
-      <div class="symptom-box low-box">
-        <h3>🔵 Low Ferritin Symptoms</h3>
-        <ul>
-          <li>Persistent fatigue and weakness</li>
-          <li>Hair thinning or hair loss</li>
-          <li>Restless legs syndrome (especially at night)</li>
-          <li>Brittle nails or spoon-shaped nails</li>
-          <li>Shortness of breath on exertion</li>
-          <li>Brain fog, difficulty concentrating</li>
-          <li>Cold hands and feet</li>
-          <li>Pale inner eyelids or skin</li>
-        </ul>
+    <div class="card">
+      <div class="section-label">Symptoms associated with abnormal ferritin</div>
+      <div class="symptom-grid">
+        <div class="symptom-box low">
+          <h3>↓ Low Ferritin Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Persistent fatigue and weakness</li>
+            <li>Hair thinning or hair loss</li>
+            <li>Restless legs syndrome at night</li>
+            <li>Brittle or spoon-shaped nails</li>
+            <li>Shortness of breath on exertion</li>
+            <li>Brain fog, difficulty concentrating</li>
+            <li>Cold hands and feet</li>
+            <li>Pale inner eyelids or skin</li>
+          </ul>
+        </div>
+        <div class="symptom-box high">
+          <h3>↑ High Ferritin Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Joint pain (knuckles and hips)</li>
+            <li>Fatigue and weakness</li>
+            <li>Abdominal pain</li>
+            <li>Bronze or gray skin discoloration</li>
+            <li>Reduced libido</li>
+            <li>Heart palpitations</li>
+            <li>Elevated blood sugar</li>
+            <li>Often asymptomatic early on</li>
+          </ul>
+        </div>
       </div>
-      <div class="symptom-box high-box">
-        <h3>🔴 High Ferritin Symptoms</h3>
-        <ul>
-          <li>Joint pain (especially knuckles and hips)</li>
-          <li>Fatigue and weakness</li>
-          <li>Abdominal pain</li>
-          <li>Bronze or gray skin discoloration</li>
-          <li>Reduced libido or sexual dysfunction</li>
-          <li>Heart palpitations or irregular heartbeat</li>
-          <li>Elevated blood sugar</li>
-          <li>Often asymptomatic early on</li>
-        </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal ferritin</div>
+      <h2>What can lower ferritin?</h2>
+      <p>The most common cause in women of reproductive age is heavy menstrual periods — chronic blood loss that outpaces iron intake. Other causes include inadequate dietary iron (vegetarian and vegan diets are high risk), GI blood loss from ulcers, polyps, or Crohn's disease, malabsorption conditions like celiac disease, pregnancy, and frequent blood donation without iron supplementation.</p>
+      <h2 style="margin-top:24px;">What can raise ferritin?</h2>
+      <p>Hereditary hemochromatosis is the most serious cause — a genetic condition causing excessive iron absorption, most common in people of Northern European descent. But high ferritin is also seen in chronic inflammation (rheumatoid arthritis, lupus, IBD), liver disease, metabolic syndrome, alcoholism, multiple blood transfusions, and certain cancers including leukemia and lymphoma. Elevated ferritin from inflammation is not the same as iron overload and is treated differently.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside ferritin</div>
+      <p>Ferritin is most meaningful when interpreted with the full iron panel:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>Serum iron</strong> — iron actively circulating in your blood right now</li>
+        <li><strong>TIBC (Total Iron Binding Capacity)</strong> — measures how much iron your blood could carry; rises when iron is low</li>
+        <li><strong>Transferrin saturation</strong> — the percentage of iron-binding sites that are actually filled; key for diagnosing hemochromatosis</li>
+        <li><strong>CBC (Complete Blood Count)</strong> — checks for anemia and red blood cell size</li>
+        <li><strong>CRP or ESR</strong> — inflammation markers that help distinguish true iron overload from inflammation-driven high ferritin</li>
+        <li><strong>Liver panel</strong> — liver disease is a major cause of elevated ferritin</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What to do next</div>
+      <div class="next-steps">A single ferritin result is rarely the whole story. Low ferritin is common and very treatable — but identifying the cause matters as much as supplementing iron. High ferritin requires investigation before treatment, since inflammation and true iron overload are managed very differently. Don't panic over a single number. Only your doctor can interpret your result in the context of your full health picture.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Is my ferritin optimal for my age and sex, or just technically within the lab's reference range?</li>
+        <li><span class="q-num">02</span>Should we check the full iron panel — serum iron, TIBC, and transferrin saturation — alongside ferritin?</li>
+        <li><span class="q-num">03</span>Could inflammation be causing my high ferritin rather than true iron overload?</li>
+        <li><span class="q-num">04</span>If my ferritin is low, what form and dose of iron supplement do you recommend?</li>
+        <li><span class="q-num">05</span>Do I need genetic testing for hereditary hemochromatosis?</li>
+        <li><span class="q-num">06</span>How often should we recheck ferritin while I'm being treated?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can I have iron deficiency if my ferritin is "in range"?</div>
+        <div class="faq-a">Yes. Labs define normal as 12 ng/mL and above, but many people experience fatigue and hair loss when ferritin falls below 30–50 ng/mL. If you have symptoms and low-normal ferritin, it's worth a conversation with your doctor.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">My ferritin is high but I feel fine. Should I be worried?</div>
+        <div class="faq-a">High ferritin is often asymptomatic in early stages. Your doctor will likely check inflammation markers, liver function, and may order genetic testing for hemochromatosis. High ferritin from inflammation is different from true iron overload — the cause determines the treatment.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between ferritin and serum iron?</div>
+        <div class="faq-a">Serum iron measures what's circulating in your blood right now. Ferritin measures your stored reserves. You can have normal serum iron but very low ferritin — meaning reserves are nearly gone. That's why the full iron panel tells a more complete story than either test alone.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I raise low ferritin?</div>
+        <div class="faq-a">Dietary iron (red meat, liver, dark leafy greens, lentils), iron supplements, and treating the underlying cause. Pairing iron-rich foods or supplements with vitamin C improves absorption. Avoid calcium, coffee, and tea close to iron intake. Severe deficiency may require IV iron infusions.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does ferritin go up during illness or infection?</div>
+        <div class="faq-a">Yes. Ferritin is an acute-phase reactant and can spike dramatically during acute infections, inflammatory flares, or serious illness. A high result after recent illness may not reflect your true iron status — your doctor may recommend retesting after recovery.</div>
       </div>
     </div>
-  </section>
 
-  <section>
-    <h2>Common Causes of Abnormal Ferritin</h2>
-
-    <h3>Causes of Low Ferritin</h3>
-    <ul>
-      <li><strong>Inadequate dietary iron:</strong> Vegetarian and vegan diets are high risk; plant-based iron (non-heme) is absorbed less efficiently than meat-based iron.</li>
-      <li><strong>Heavy menstrual periods:</strong> The most common cause in women of reproductive age — chronic blood loss exceeds iron intake.</li>
-      <li><strong>GI blood loss:</strong> Ulcers, polyps, celiac disease, Crohn's, or colon cancer can cause slow, invisible blood loss that drains iron stores.</li>
-      <li><strong>Malabsorption:</strong> Celiac disease, atrophic gastritis, or post-bariatric surgery impairs iron absorption.</li>
-      <li><strong>Pregnancy:</strong> Increased iron demands for the fetus can deplete maternal stores.</li>
-      <li><strong>Frequent blood donation:</strong> Donors who give repeatedly without iron supplementation are at risk.</li>
-    </ul>
-
-    <h3>Causes of High Ferritin</h3>
-    <ul>
-      <li><strong>Hereditary hemochromatosis:</strong> A genetic condition causing excessive iron absorption — the most common serious genetic disease in people of Northern European descent.</li>
-      <li><strong>Chronic inflammation:</strong> Rheumatoid arthritis, lupus, IBD, and other inflammatory conditions elevate ferritin as an acute-phase response — not true iron overload.</li>
-      <li><strong>Liver disease:</strong> Hepatitis, fatty liver disease, and cirrhosis cause ferritin to leak from damaged liver cells into the bloodstream.</li>
-      <li><strong>Metabolic syndrome and obesity:</strong> Associated with elevated ferritin even without true iron overload.</li>
-      <li><strong>Alcoholism:</strong> Increases ferritin through both liver damage and increased iron absorption.</li>
-      <li><strong>Multiple blood transfusions:</strong> Each unit of blood delivers additional iron.</li>
-      <li><strong>Certain cancers:</strong> Leukemia, lymphoma, and some solid tumors can dramatically elevate ferritin.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="faq-item">
-      <strong>Can I have iron deficiency if my ferritin is "in range"?</strong>
-      <p>Yes. Labs define "normal" as 12 ng/mL and above, but many people experience symptoms of iron deficiency — especially fatigue and hair loss — when ferritin falls below 30–50 ng/mL. If your ferritin is low-normal and you have symptoms, it's worth discussing with your doctor.</p>
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/hemoglobin" class="related-chip">Hemoglobin →</a>
+        <a href="/tibc" class="related-chip">TIBC →</a>
+        <a href="/creatinine" class="related-chip">Creatinine →</a>
+        <a href="/cortisol" class="related-chip">Cortisol →</a>
+        <a href="/glucose" class="related-chip">Glucose →</a>
+        <a href="/tsh" class="related-chip">TSH →</a>
+      </div>
     </div>
 
-    <div class="faq-item">
-      <strong>My ferritin is high but I feel fine. Should I be worried?</strong>
-      <p>High ferritin often has no symptoms in early stages. It's important to determine the cause — your doctor will likely check for inflammation markers, liver function, and may order genetic testing for hemochromatosis. High ferritin from inflammation is different from true iron overload, which requires treatment.</p>
+    <div class="tool-cta">
+      <h3>Decode any lab test instantly</h3>
+      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+      <a href="/">Open the Decoder →</a>
     </div>
 
-    <div class="faq-item">
-      <strong>What's the difference between ferritin and serum iron?</strong>
-      <p>Serum iron measures the iron actively circulating in your blood right now. Ferritin measures your stored reserves. You can have normal serum iron but very low ferritin (your reserves are nearly gone), or high serum iron but low ferritin (rapid turnover). That's why doctors often order the full iron panel together.</p>
-    </div>
-
-    <div class="faq-item">
-      <strong>How do I raise low ferritin?</strong>
-      <p>Dietary iron (red meat, liver, dark leafy greens, lentils), iron supplements, and treating the underlying cause (e.g., stopping GI bleeding). Pairing iron-rich foods with vitamin C improves absorption. Avoid calcium, coffee, and tea near iron intake. Severe deficiency may require IV iron infusions.</p>
-    </div>
-
-    <div class="faq-item">
-      <strong>How do I lower high ferritin?</strong>
-      <p>Treatment depends on the cause. True iron overload (hemochromatosis) is treated with therapeutic phlebotomy — regular blood draws to remove excess iron. Inflammation-related high ferritin requires treating the underlying condition. Reducing alcohol intake and dietary red meat may help modestly.</p>
-    </div>
-
-    <div class="faq-item">
-      <strong>Does ferritin go up with infection or illness?</strong>
-      <p>Yes. Ferritin is an acute-phase reactant and can spike dramatically during acute infections, severe illness, or inflammatory flares. A high ferritin result after a recent illness may not reflect your true iron status — retest after recovery if your doctor recommends it.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Related Tests to Ask About</h2>
-    <p>Ferritin is most meaningful when interpreted with the full iron panel and related markers:</p>
-    <div class="related-grid">
-      <a href="/hemoglobin" class="related-card">Hemoglobin</a>
-      <a href="/tibc" class="related-card">TIBC</a>
-      <a href="/transferrin-saturation" class="related-card">Transferrin Saturation</a>
-      <a href="/crp" class="related-card">CRP (Inflammation)</a>
-      <a href="/cbc" class="related-card">Complete Blood Count</a>
-      <a href="/liver-panel" class="related-card">Liver Panel</a>
-    </div>
-  </section>
-
-  <section>
-    <h2>Questions to Ask Your Doctor</h2>
-    <ul class="doctor-list">
-      <li>"My ferritin is [X] — is that optimal for someone my age and sex, or just technically in range?"</li>
-      <li>"Should we check the full iron panel — serum iron, TIBC, and transferrin saturation — alongside ferritin?"</li>
-      <li>"Could inflammation be causing my high ferritin rather than true iron overload?"</li>
-      <li>"If my ferritin is low, should I start supplements, and what form and dose do you recommend?"</li>
-      <li>"Do I need to be tested for hereditary hemochromatosis given my ferritin level and family history?"</li>
-      <li>"How often should we recheck ferritin while I'm being treated?"</li>
-    </ul>
-  </section>
-
-  <div class="disclaimer">
-    <strong>⚠️ Medical Disclaimer:</strong> This content is for educational purposes only and does not constitute medical advice. Ferritin levels must be interpreted in the context of your full lab panel, symptoms, and medical history by a qualified healthcare provider. Do not start or stop any treatment based on this information alone.
+    <footer>
+      <span>labplain.co</span>
+      <span>Not a substitute for professional medical advice.</span>
+    </footer>
   </div>
-
-</div>
-
-<footer>
-  <p>&copy; 2025 Labplain. Understand your labs. No medical degree required.</p>
-  <p style="margin-top:10px;">
-    <a href="/">Home</a>
-    <a href="/privacy">Privacy Policy</a>
-    <a href="/terms">Terms of Use</a>
-    <a href="/contact">Contact</a>
-  </p>
-</footer>
-
 </body>
 </html>
