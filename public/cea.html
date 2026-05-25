@@ -1,430 +1,249 @@
-```html
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CEA Blood Test – What Your Results Mean | LabPlain</title>
-  <meta name="description" content="Understand your CEA blood test results in plain English. Learn what high or low carcinoembryonic antigen levels may mean, common causes, symptoms, and next steps." />
+  <meta name="description" content="What does your CEA result mean? Plain-English guide to carcinoembryonic antigen levels, cancer markers, elevated values, symptoms, causes, and what to ask your doctor.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://labplain.co/cea">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --text: #0f172a;
-      --muted: #475569;
-      --border: #e2e8f0;
-      --accent: #0f3d75;
-      --warn: #dc2626;
-      --amber: #d97706;
-      --success: #15803d;
-      --mono: 'DM Mono', monospace;
-      --sans: 'DM Sans', sans-serif;
-      --serif: 'DM Serif Display', serif;
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      line-height: 1.7;
-      padding: 24px;
-    }
-
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    .breadcrumb {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 28px;
-    }
-
-    .breadcrumb a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    h1 {
-      font-family: var(--serif);
-      font-size: 56px;
-      line-height: 1.05;
-      margin: 0 0 12px;
-      letter-spacing: -1px;
-    }
-
-    h2 {
-      font-size: 30px;
-      margin-top: 0;
-    }
-
-    h3 {
-      font-size: 22px;
-      margin-top: 0;
-    }
-
-    .category {
-      display: inline-block;
-      font-family: var(--mono);
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 6px 10px;
-      background: #dbeafe;
-      color: var(--accent);
-      border-radius: 999px;
-      margin-bottom: 18px;
-    }
-
-    .notice {
-      background: #fef3c7;
-      border: 1px solid #fde68a;
-      color: #92400e;
-      padding: 16px 18px;
-      border-radius: 14px;
-      margin: 24px 0 36px;
-      font-size: 15px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 32px;
-      margin-bottom: 24px;
-      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
-    }
-
-    .range {
-      font-size: 18px;
-      font-weight: 700;
-      margin: 16px 0;
-      color: var(--accent);
-    }
-
-    .timing-box {
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      padding: 18px;
-      border-radius: 16px;
-      margin-top: 22px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .symptom-list {
-      padding-left: 18px;
-      margin: 0;
-    }
-
-    .symptom-list li {
-      margin-bottom: 10px;
-    }
-
-    .high {
-      border-top: 5px solid var(--warn);
-    }
-
-    .low {
-      border-top: 5px solid var(--success);
-    }
-
-    .question-list {
-      padding-left: 0;
-      list-style: none;
-      counter-reset: item;
-    }
-
-    .question-list li {
-      counter-increment: item;
-      padding-left: 56px;
-      position: relative;
-      margin-bottom: 18px;
-    }
-
-    .question-list li::before {
-      content: counter(item, decimal-leading-zero);
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-family: var(--mono);
-      color: var(--accent);
-      font-size: 14px;
-    }
-
-    .faq-item {
-      border-top: 1px solid var(--border);
-      padding: 24px 0;
-    }
-
-    .faq-item:first-child {
-      border-top: none;
-      padding-top: 0;
-    }
-
-    .related-tests {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .related-tests a {
-      text-decoration: none;
-      padding: 12px 16px;
-      background: #eff6ff;
-      color: var(--accent);
-      border-radius: 999px;
-      font-weight: 500;
-    }
-
-    .tool-cta {
-      background: linear-gradient(135deg, #0f3d75, #1d4ed8);
-      color: white;
-      padding: 36px;
-      border-radius: 28px;
-      margin-top: 36px;
-      text-align: center;
-    }
-
-    .tool-cta h2 {
-      margin-bottom: 12px;
-    }
-
-    .tool-cta a {
-      display: inline-block;
-      margin-top: 16px;
-      background: white;
-      color: var(--accent);
-      padding: 14px 22px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    footer {
-      text-align: center;
-      color: var(--muted);
-      margin: 50px 0 20px;
-      font-size: 14px;
-    }
-
-    @media (max-width: 640px) {
-      body {
-        padding: 18px;
-      }
-
-      h1 {
-        font-size: 42px;
-      }
-
-      .card,
-      .tool-cta {
-        padding: 24px;
-      }
-    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.high .range-box-label { color: var(--warn); }
+    .range-box.low .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="/">Home</a> › <a href="/">Lab Tests</a> › CEA
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+      <a href="/" class="logo-text">lab<span>plain</span></a>
+    </nav>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; CEA</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">CEA</em> result mean?</h1>
+    <span class="category-tag">Cancer Markers</span>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+
+```
+<div class="card">
+  <div class="section-label">What this test measures</div>
+  <p>CEA stands for carcinoembryonic antigen — a protein that may appear in higher amounts in certain cancers and some non-cancerous conditions. Doctors most commonly use the CEA blood test to monitor cancers like colorectal cancer, especially after treatment.</p>
+  <p>CEA is not considered a reliable cancer screening test for the general population because many non-cancer conditions can also raise it. Instead, doctors usually use it to track treatment response or watch for cancer recurrence over time.</p>
+  <p>Smoking can also increase CEA levels, which is why doctors interpret results differently for smokers versus non-smokers.</p>
+</div>
+
+<div class="card">
+  <div class="section-label">Normal reference range</div>
+  <div class="normal-range">Non-smokers: &lt; 3 ng/mL &nbsp;|&nbsp; Smokers: &lt; 5 ng/mL</div>
+  <p class="range-note">CEA ranges vary slightly between laboratories, testing methods, and whether a person smokes. Mild elevations are relatively common and do not automatically indicate cancer.</p>
+  <p class="range-note" style="margin-top:8px;">Doctors usually care more about the trend over time than one isolated CEA result.</p>
+  <div class="timing-box">
+    <h3>⏰ Why repeat testing matters</h3>
+    <p>CEA is often repeated over weeks or months to monitor whether levels are rising, stable, or falling. A changing trend usually provides more useful information than a single measurement.</p>
+  </div>
+</div>
+
+<div class="card">
+  <div class="section-label">What your result might indicate</div>
+  <div class="two-col">
+    <div class="range-box high">
+      <div class="range-box-label">↑ If High</div>
+      <p>Elevated CEA may occur in colorectal cancer, lung cancer, pancreatic cancer, breast cancer, liver disease, smoking, COPD, inflammatory bowel disease, or infections. Higher values usually prompt additional testing.</p>
     </div>
-
-    <div class="category">Cancer Markers</div>
-
-    <h1>What does your<br>CEA result mean?</h1>
-
-    <div class="notice">
-      ⚠️ Educational only. LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.
+    <div class="range-box low">
+      <div class="range-box-label">↓ If Low</div>
+      <p>Low or normal CEA levels are generally reassuring. However, some cancers never produce significant CEA, so a normal result cannot completely rule out cancer.</p>
     </div>
+  </div>
+</div>
 
-    <section class="card">
-      <h2>What this test measures</h2>
-      <p>CEA stands for carcinoembryonic antigen — a protein that can appear in higher amounts in certain cancers and some non-cancerous conditions. Doctors most commonly use the CEA blood test to monitor cancers like colorectal cancer, especially after treatment.</p>
-
-      <p>CEA is not considered a reliable screening test for cancer in the general population because many non-cancer conditions can also raise it. Instead, doctors usually use it to track how well treatment is working or to watch for cancer recurrence over time.</p>
-
-      <p>Smoking can also increase CEA levels, which is why doctors interpret results differently for smokers versus non-smokers.</p>
-
-      <div class="range">
-        Typical reference range:<br>
-        Non-smokers: &lt; 3 ng/mL &nbsp;|&nbsp; Smokers: &lt; 5 ng/mL
-      </div>
-
-      <p>Reference ranges vary between labs. Always compare your result to the range printed on your specific lab report.</p>
-
-      <div class="timing-box">
-        <strong>⏰ Important:</strong> A single CEA result usually matters less than the trend over time. Doctors often compare multiple tests to see whether levels are rising, stable, or falling.
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>What your result might indicate</h2>
-
-      <div class="two-col">
-        <div class="card high">
-          <h3>↑ If High</h3>
-          <p>Elevated CEA levels may occur in colorectal cancer, lung cancer, pancreatic cancer, breast cancer, or cancers that have spread. However, non-cancer conditions like smoking, liver disease, inflammation, COPD, or infections can also raise CEA.</p>
-        </div>
-
-        <div class="card low">
-          <h3>↓ If Low</h3>
-          <p>Low or normal CEA levels are generally reassuring. However, some cancers never produce significant CEA, so a normal result does not completely rule out cancer.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Symptoms associated with abnormal CEA</h2>
-
-      <div class="two-col">
-        <div>
-          <h3>Possible symptoms linked to elevated CEA</h3>
-          <ul class="symptom-list">
-            <li>Unexplained weight loss</li>
-            <li>Persistent fatigue</li>
-            <li>Changes in bowel habits</li>
-            <li>Blood in the stool</li>
-            <li>Persistent cough</li>
-            <li>Abdominal pain</li>
-            <li>Loss of appetite</li>
-            <li>Shortness of breath</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Important context</h3>
-          <ul class="symptom-list">
-            <li>Many people with mildly elevated CEA have no symptoms at all</li>
-            <li>Smoking alone can raise levels</li>
-            <li>Inflammation and liver disease may affect results</li>
-            <li>Doctors usually interpret CEA alongside imaging and other tests</li>
-            <li>Trends over time matter more than one isolated number</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Common causes of abnormal CEA</h2>
-
-      <h3>What can raise CEA?</h3>
-      <p>The most concerning cause of significantly elevated CEA is cancer — especially colorectal cancer. Other cancers associated with higher CEA include pancreatic, lung, breast, stomach, and ovarian cancer.</p>
-
-      <p>However, non-cancer conditions are also common causes. Smoking is one of the biggest reasons for mild elevation. Liver disease, inflammatory bowel disease, pancreatitis, COPD, pneumonia, and infections may also increase CEA levels.</p>
-
-      <h3>What can lower CEA?</h3>
-      <p>CEA itself is not something doctors usually try to lower directly. If elevated levels decrease after surgery, chemotherapy, or radiation, it may suggest treatment is working. Quitting smoking may also reduce mildly elevated levels over time.</p>
-    </section>
-
-    <section class="card">
-      <h2>Tests often ordered alongside CEA</h2>
-
-      <p>CEA is rarely interpreted alone. Your doctor may also order:</p>
-
+<div class="card">
+  <div class="section-label">Symptoms associated with abnormal CEA</div>
+  <div class="symptom-grid">
+    <div class="symptom-box high">
+      <h3>↑ High CEA Symptoms</h3>
       <ul class="symptom-list">
-        <li>Colonoscopy — to evaluate the colon directly</li>
-        <li>CA 19-9 — another tumor marker often used for pancreatic cancer</li>
-        <li>CT scan or PET scan — to look for tumors or recurrence</li>
-        <li>CBC (Complete Blood Count) — checks for anemia or infection</li>
-        <li>Liver function tests — because liver disease can affect CEA</li>
-        <li>Biopsy — confirms whether abnormal tissue is cancerous</li>
+        <li>Unexplained weight loss</li>
+        <li>Persistent fatigue</li>
+        <li>Changes in bowel habits</li>
+        <li>Blood in the stool</li>
+        <li>Persistent cough</li>
+        <li>Abdominal pain</li>
+        <li>Loss of appetite</li>
+        <li>Shortness of breath</li>
       </ul>
-    </section>
+    </div>
+    <div class="symptom-box low">
+      <h3>Normal or Low CEA Context</h3>
+      <ul class="symptom-list">
+        <li>Many people with mild elevation have no symptoms</li>
+        <li>Smoking alone may increase CEA</li>
+        <li>Inflammation and liver disease can affect results</li>
+        <li>Doctors interpret CEA alongside scans and exams</li>
+        <li>Trends over time matter more than one result</li>
+        <li>Normal CEA does not fully exclude cancer</li>
+        <li>Some cancers never produce much CEA</li>
+        <li>Follow-up testing is often needed</li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-    <section class="card">
-      <h2>What to do next</h2>
+<div class="card">
+  <div class="section-label">Common causes of abnormal CEA</div>
+  <h2>What can raise CEA?</h2>
+  <p>The most concerning cause of significantly elevated CEA is cancer — especially colorectal cancer. Other cancers associated with higher CEA include pancreatic, lung, breast, stomach, and ovarian cancer.</p>
+  <p>However, non-cancer conditions are also common causes. Smoking is one of the biggest reasons for mild elevation. Liver disease, inflammatory bowel disease, pancreatitis, COPD, pneumonia, and infections may also increase CEA levels.</p>
+  <h2 style="margin-top:24px;">What can lower CEA?</h2>
+  <p>CEA itself is not something doctors usually try to lower directly. If elevated levels decrease after surgery, chemotherapy, or radiation, it may suggest treatment is working. Quitting smoking may also reduce mildly elevated levels over time.</p>
+</div>
 
-      <p>A mildly elevated CEA level does not automatically mean cancer. Doctors interpret the result alongside your symptoms, smoking history, imaging results, medical history, and previous CEA levels.</p>
+<div class="card">
+  <div class="section-label">Tests often ordered alongside CEA</div>
+  <p>CEA is rarely interpreted in isolation. Your doctor may also order:</p>
+  <ul class="symptom-list" style="margin-top:12px;">
+    <li><strong>Colonoscopy</strong> — examines the colon directly for abnormal growths or cancer</li>
+    <li><strong>CA 19-9</strong> — another tumor marker often used alongside CEA</li>
+    <li><strong>CT scan or PET scan</strong> — imaging to look for tumors or recurrence</li>
+    <li><strong>CBC (Complete Blood Count)</strong> — checks for anemia or infection</li>
+    <li><strong>Liver function tests</strong> — liver disease can affect CEA levels</li>
+  </ul>
+</div>
 
-      <p>If your doctor is monitoring cancer treatment, the overall trend matters most. Rising levels over time may prompt further testing, while falling levels after treatment are often reassuring.</p>
+<div class="card">
+  <div class="section-label">What to do next</div>
+  <div class="next-steps">A single abnormal CEA result is rarely enough to diagnose anything by itself. Doctors interpret CEA alongside symptoms, imaging, smoking history, medical history, and prior CEA results. Do not panic over one number. Only your healthcare provider can interpret your specific result in context of your full health picture.</div>
+</div>
 
-      <p>Do not panic over a single abnormal number. Only your healthcare provider can interpret your specific result in context of your full health picture.</p>
-    </section>
+<div class="card">
+  <div class="section-label">Questions to ask your doctor</div>
+  <ul class="questions-list">
+    <li><span class="q-num">01</span>Was my CEA level only mildly elevated or significantly high?</li>
+    <li><span class="q-num">02</span>Could smoking or another non-cancer condition explain this result?</li>
+    <li><span class="q-num">03</span>How does this compare to my previous CEA tests?</li>
+    <li><span class="q-num">04</span>Do I need imaging or a colonoscopy?</li>
+    <li><span class="q-num">05</span>Should my CEA be repeated in the future?</li>
+    <li><span class="q-num">06</span>Are there additional tumor markers or blood tests I should have?</li>
+  </ul>
+</div>
 
-    <section class="card">
-      <h2>Questions to ask your doctor</h2>
+<div class="card">
+  <div class="section-label">Frequently asked questions</div>
+  <div class="faq-item">
+    <div class="faq-q">Does a high CEA level always mean cancer?</div>
+    <div class="faq-a">No. Smoking, liver disease, inflammation, COPD, infections, and other non-cancer conditions can also raise CEA. Doctors rarely diagnose cancer based on CEA alone.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can smoking affect CEA results?</div>
+    <div class="faq-a">Yes. Smokers naturally tend to have higher CEA levels than non-smokers, which is why labs often use different reference ranges.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What CEA level is considered concerning?</div>
+    <div class="faq-a">There is no single cutoff that guarantees cancer. Very high levels are generally more concerning than mild elevations, but trends over time and additional testing are more important.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Why would my doctor repeat the test?</div>
+    <div class="faq-a">Doctors often repeat CEA to monitor trends over time. Rising levels may prompt additional testing, while falling levels after treatment are often reassuring.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Can CEA be normal even if cancer is present?</div>
+    <div class="faq-a">Yes. Some cancers do not produce much CEA, so a normal result does not completely rule out cancer.</div>
+  </div>
+</div>
 
-      <ol class="question-list">
-        <li>Was my CEA level only mildly elevated or significantly high?</li>
-        <li>Could smoking or another non-cancer condition explain this result?</li>
-        <li>How does this compare to my previous CEA tests?</li>
-        <li>Do I need imaging or a colonoscopy?</li>
-        <li>Are there other tumor markers or blood tests I should have?</li>
-        <li>How often should my CEA be rechecked?</li>
-      </ol>
-    </section>
+<div class="card">
+  <div class="section-label">Related lab tests</div>
+  <div class="related">
+    <a href="/crp" class="related-chip">CRP →</a>
+    <a href="/ferritin" class="related-chip">Ferritin →</a>
+    <a href="/albumin" class="related-chip">Albumin →</a>
+    <a href="/alt" class="related-chip">ALT →</a>
+    <a href="/bilirubin" class="related-chip">Bilirubin →</a>
+    <a href="/cbc" class="related-chip">CBC →</a>
+  </div>
+</div>
 
-    <section class="card">
-      <h2>Frequently asked questions</h2>
+<div class="tool-cta">
+  <h3>Decode any lab test instantly</h3>
+  <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+  <a href="/">Open the Decoder →</a>
+</div>
 
-      <div class="faq-item">
-        <h3>Does a high CEA level always mean cancer?</h3>
-        <p>No. Smoking, liver disease, inflammation, infections, COPD, and other non-cancer conditions can also raise CEA. That's why doctors rarely diagnose cancer based on CEA alone.</p>
-      </div>
+<footer>
+  <span>labplain.co</span>
+  <span>Not a substitute for professional medical advice.</span>
+</footer>
+```
 
-      <div class="faq-item">
-        <h3>Can smoking affect CEA results?</h3>
-        <p>Yes. Smokers naturally tend to have higher CEA levels than non-smokers, which is why labs often use different reference ranges.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>What CEA level is considered concerning?</h3>
-        <p>There is no single cutoff that guarantees cancer. Very high levels are generally more concerning than mild elevations, but trends over time and other testing are more important than one isolated result.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Why would my doctor repeat the test?</h3>
-        <p>Doctors often repeat CEA to see whether levels are rising, stable, or falling. Trends over time provide more useful information than a single measurement.</p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Can CEA be normal even if cancer is present?</h3>
-        <p>Yes. Some cancers do not produce much CEA, so a normal result does not completely rule out cancer.</p>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Related lab tests</h2>
-
-      <div class="related-tests">
-        <a href="/crp.html">CRP →</a>
-        <a href="/cbc.html">CBC →</a>
-        <a href="/ferritin.html">Ferritin →</a>
-        <a href="/albumin.html">Albumin →</a>
-        <a href="/alt.html">ALT →</a>
-        <a href="/bilirubin.html">Bilirubin →</a>
-      </div>
-    </section>
-
-    <section class="tool-cta">
-      <h2>Decode any lab test instantly</h2>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </section>
-
-    <footer>
-      <strong>labplain.co</strong><br>
-      Understand your labs. No medical degree required.<br><br>
-      Not a substitute for professional medical advice.
-    </footer>
   </div>
 </body>
 </html>
-```
