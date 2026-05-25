@@ -1,105 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estradiol (E2) – LabPlain</title>
-  <meta name="description" content="What does your Estradiol (E2) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/estradiol">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estradiol (E2) Levels Explained | Labplain</title>
+  <meta name="description" content="What does your estradiol (E2) level mean? Learn what's normal, what causes high or low estradiol, symptoms to watch for, and when to talk to your doctor." />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.7; }
+    header { background: #1e3a5f; color: white; padding: 1rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
+    header a { color: white; text-decoration: none; font-size: 1.3rem; font-weight: 700; letter-spacing: -0.5px; }
+    header span { font-size: 0.85rem; opacity: 0.75; }
+    .hero { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8e 100%); color: white; padding: 3rem 1.5rem 2.5rem; text-align: center; }
+    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 0.75rem; }
+    .hero p { font-size: 1.05rem; opacity: 0.88; max-width: 600px; margin: 0 auto; }
+    .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .card { background: white; border-radius: 12px; padding: 1.75rem; margin-bottom: 1.5rem; box-shadow: 0 1px 6px rgba(0,0,0,0.07); border: 1px solid #e2e8f0; }
+    .card h2 { font-size: 1.25rem; color: #1e3a5f; margin-bottom: 1rem; font-weight: 700; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+    .card h3 { font-size: 1rem; color: #2d5a8e; margin: 1rem 0 0.4rem; font-weight: 600; }
+    .card p { color: #475569; margin-bottom: 0.75rem; }
+    .card ul { padding-left: 1.25rem; color: #475569; }
+    .card ul li { margin-bottom: 0.4rem; }
+    .range-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+    .range-table th { background: #1e3a5f; color: white; padding: 0.6rem 0.75rem; text-align: left; font-size: 0.85rem; }
+    .range-table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid #e2e8f0; font-size: 0.9rem; color: #334155; }
+    .range-table tr:last-child td { border-bottom: none; }
+    .range-table tr:nth-child(even) td { background: #f8fafc; }
+    .badge { display: inline-block; padding: 0.25rem 0.65rem; border-radius: 20px; font-size: 0.78rem; font-weight: 600; margin-right: 0.35rem; margin-bottom: 0.35rem; }
+    .badge-low { background: #dbeafe; color: #1e40af; }
+    .badge-normal { background: #dcfce7; color: #166534; }
+    .badge-high { background: #fee2e2; color: #991b1b; }
+    .faq-item { border-bottom: 1px solid #e2e8f0; padding: 1rem 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 600; color: #1e3a5f; margin-bottom: 0.4rem; }
+    .faq-a { color: #475569; }
+    .question-list { list-style: none; padding: 0; }
+    .question-list li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; color: #475569; border-bottom: 1px solid #f1f5f9; }
+    .question-list li:before { content: "❓"; position: absolute; left: 0; }
+    .question-list li:last-child { border-bottom: none; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.75rem; margin-top: 0.5rem; }
+    .related-link { background: #f0f6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 0.65rem 0.85rem; text-decoration: none; color: #1e3a5f; font-size: 0.9rem; font-weight: 500; transition: background 0.2s; }
+    .related-link:hover { background: #dbeafe; }
+    footer { background: #1e3a5f; color: rgba(255,255,255,0.7); text-align: center; padding: 2rem 1.5rem; font-size: 0.85rem; margin-top: 3rem; }
+    footer a { color: rgba(255,255,255,0.9); margin: 0 0.5rem; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Estradiol (E2)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Estradiol (E2)</em> result mean?</h1>
-    <span class="category-tag">Hormones</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
-    <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>The <strong>Estradiol (E2)</strong> test measures the primary form of estrogen — the main female sex hormone that regulates the menstrual cycle, bone density, and more.</p>
-    </div>
+<header>
+  <a href="/">Labplain</a>
+  <span>/ Estradiol (E2)</span>
+</header>
 
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Varies by menstrual phase; post-menopausal: below 30 pg/mL</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
-    </div>
+<div class="hero">
+  <h1>Estradiol (E2) Levels Explained</h1>
+  <p>What your estradiol result actually means — normal ranges, symptoms of imbalance, causes, and questions to ask your doctor.</p>
+</div>
 
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>High estradiol can be associated with hormonal imbalances, PCOS, or hormone-secreting tumors. In men, it can cause feminizing effects.</p>
-        </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Low estradiol in women of reproductive age can affect bone density, mood, and menstrual regularity. It's expected post-menopause.</p>
-        </div>
-      </div>
-    </div>
+<div class="container">
 
-    <div class="card">
-      <div class="section-label">What to do next</div>
-      <div class="next-steps">Estradiol levels are highly context-dependent. Always share where you are in your menstrual cycle when discussing results with your doctor.</div>
-    </div>
-
-    <div class="tool-cta">
-      <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
-
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
-    </footer>
+  <!-- What is it -->
+  <div class="card">
+    <h2>What Is Estradiol?</h2>
+    <p>Estradiol (E2) is the most potent and abundant form of estrogen in the body. It's produced primarily by the ovaries in people with female anatomy, and in smaller amounts by the adrenal glands and fat tissue in everyone. In males, small amounts are also made from testosterone.</p>
+    <p>Estradiol plays a central role in reproductive health, bone density, cardiovascular health, mood regulation, and many other body systems. Its levels naturally fluctuate throughout the menstrual cycle, during pregnancy, and change significantly at menopause.</p>
   </div>
+
+  <!-- Normal Ranges -->
+  <div class="card">
+    <h2>Normal Estradiol Ranges</h2>
+    <p>Results are typically reported in picograms per milliliter (pg/mL). Ranges vary by sex, age, and menstrual phase.</p>
+
+    <h3>People with Female Anatomy</h3>
+    <table class="range-table">
+      <tr><th>Phase / Life Stage</th><th>Normal Range (pg/mL)</th></tr>
+      <tr><td>Follicular phase (early cycle)</td><td>19 – 144</td></tr>
+      <tr><td>Mid-cycle peak (ovulation)</td><td>64 – 357</td></tr>
+      <tr><td>Luteal phase (after ovulation)</td><td>56 – 214</td></tr>
+      <tr><td>Postmenopausal</td><td>&lt; 10 – 40</td></tr>
+      <tr><td>Pregnancy (first trimester)</td><td>188 – 2497</td></tr>
+    </table>
+
+    <h3>People with Male Anatomy</h3>
+    <table class="range-table">
+      <tr><th>Group</th><th>Normal Range (pg/mL)</th></tr>
+      <tr><td>Adult males</td><td>10 – 40</td></tr>
+    </table>
+
+    <h3>Children (prepubertal)</h3>
+    <table class="range-table">
+      <tr><th>Group</th><th>Normal Range (pg/mL)</th></tr>
+      <tr><td>Both sexes (prepubertal)</td><td>&lt; 20</td></tr>
+    </table>
+
+    <p style="margin-top:1rem; font-size:0.85rem; color:#64748b;">⚠️ Lab reference ranges vary. Always compare your result to your lab's specific range printed on your report.</p>
+  </div>
+
+  <!-- High Estradiol -->
+  <div class="card">
+    <h2>What Does High Estradiol Mean?</h2>
+    <span class="badge badge-high">Above Range</span>
+    <p>Elevated estradiol (hyperestrogenism) can occur in both males and females and has many possible causes.</p>
+
+    <h3>Symptoms of High Estradiol</h3>
+    <ul>
+      <li>In females: heavy or irregular periods, breast tenderness, bloating, mood swings, headaches</li>
+      <li>In males: gynecomastia (breast tissue growth), erectile dysfunction, reduced libido, fatigue</li>
+      <li>In both: weight gain (especially hips/thighs), fluid retention, difficulty sleeping</li>
+    </ul>
+
+    <h3>Common Causes</h3>
+    <ul>
+      <li>Obesity (fat tissue converts androgens to estrogen)</li>
+      <li>Ovarian cysts or tumors</li>
+      <li>Estrogen-producing adrenal tumors</li>
+      <li>Liver disease (reduces estrogen breakdown)</li>
+      <li>Estrogen-containing medications or hormone therapy</li>
+      <li>Certain supplements (phytoestrogens, DHEA)</li>
+      <li>Early puberty in children</li>
+      <li>Hyperthyroidism</li>
+    </ul>
+  </div>
+
+  <!-- Low Estradiol -->
+  <div class="card">
+    <h2>What Does Low Estradiol Mean?</h2>
+    <span class="badge badge-low">Below Range</span>
+    <p>Low estradiol is most common in postmenopausal individuals, but can occur at any age.</p>
+
+    <h3>Symptoms of Low Estradiol</h3>
+    <ul>
+      <li>Hot flashes and night sweats</li>
+      <li>Vaginal dryness and painful intercourse</li>
+      <li>Irregular or absent periods</li>
+      <li>Low libido</li>
+      <li>Mood changes, depression, irritability</li>
+      <li>Difficulty concentrating ("brain fog")</li>
+      <li>Bone loss (osteoporosis risk increases)</li>
+      <li>Dry skin and hair thinning</li>
+    </ul>
+
+    <h3>Common Causes</h3>
+    <ul>
+      <li>Menopause or perimenopause</li>
+      <li>Premature ovarian insufficiency (POI)</li>
+      <li>Hypothalamic amenorrhea (from excessive exercise, low body weight, or stress)</li>
+      <li>Pituitary gland disorders (low FSH/LH)</li>
+      <li>Polycystic ovary syndrome (PCOS) — can cause low or high estradiol</li>
+      <li>Eating disorders (anorexia, restrictive diets)</li>
+      <li>Turner syndrome</li>
+      <li>Chemotherapy or radiation</li>
+    </ul>
+  </div>
+
+  <!-- Why the test is ordered -->
+  <div class="card">
+    <h2>Why Is Estradiol Tested?</h2>
+    <p>Doctors order this test in many different situations:</p>
+    <ul>
+      <li>Evaluating irregular, heavy, or absent menstrual periods</li>
+      <li>Investigating infertility in people of reproductive age</li>
+      <li>Monitoring fertility treatments (IVF, IUI) — E2 levels guide medication dosing</li>
+      <li>Assessing menopausal status and hormone replacement therapy (HRT)</li>
+      <li>Diagnosing early or delayed puberty</li>
+      <li>Evaluating gynecomastia in males</li>
+      <li>Monitoring gender-affirming hormone therapy</li>
+      <li>Investigating suspected estrogen-producing tumors</li>
+    </ul>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Why does my estradiol change throughout the month?</div>
+      <div class="faq-a">Estradiol naturally rises and falls during the menstrual cycle. It peaks just before ovulation (mid-cycle) to trigger the egg's release, then drops. A single result must be interpreted in the context of where you are in your cycle — what's "high" at mid-cycle is normal, but "high" during the follicular phase could signal a problem.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can stress affect my estradiol levels?</div>
+      <div class="faq-a">Yes. Chronic stress raises cortisol, which can suppress the hormones (FSH, LH) that signal the ovaries to produce estradiol. This is one reason why extreme stress can disrupt or halt menstrual cycles.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Do males need estradiol?</div>
+      <div class="faq-a">Absolutely. Males naturally produce small amounts of estradiol, which is essential for bone density, cardiovascular health, brain function, and regulating libido. Both too much and too little estradiol is a problem in males.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What's the difference between estradiol and estrogen?</div>
+      <div class="faq-a">Estrogen is a category of hormones. The three main types are estradiol (E2), estrone (E1), and estriol (E3). Estradiol is the dominant and most potent form during reproductive years. Estrone becomes more prominent after menopause. Estriol is mainly produced during pregnancy.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can I have normal periods with low estradiol?</div>
+      <div class="faq-a">It's less common, but yes — some individuals have periods even when estradiol is lower than typical. However, consistently low estradiol often leads to irregular cycles, light periods, or amenorrhea (no periods) over time.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Does birth control affect estradiol test results?</div>
+      <div class="faq-a">Yes. Hormonal contraceptives suppress your natural estradiol production by preventing ovulation. If you're on the pill or another hormonal method, your measured estradiol levels will likely be lower than they'd be off contraception.</div>
+    </div>
+  </div>
+
+  <!-- Related tests -->
+  <div class="card">
+    <h2>Related Lab Tests</h2>
+    <p>Estradiol is rarely interpreted alone. It's usually reviewed alongside:</p>
+    <div class="related-grid">
+      <a class="related-link" href="/fsh.html">FSH</a>
+      <a class="related-link" href="/lh.html">LH</a>
+      <a class="related-link" href="/progesterone.html">Progesterone</a>
+      <a class="related-link" href="/testosterone.html">Testosterone</a>
+      <a class="related-link" href="/tsh.html">TSH (Thyroid)</a>
+      <a class="related-link" href="/amh.html">AMH</a>
+      <a class="related-link" href="/prolactin.html">Prolactin</a>
+      <a class="related-link" href="/cortisol.html">Cortisol</a>
+    </div>
+  </div>
+
+  <!-- Questions to ask -->
+  <div class="card">
+    <h2>Questions to Ask Your Doctor</h2>
+    <ul class="question-list">
+      <li>My result was [X] — is that concerning given where I am in my cycle?</li>
+      <li>Should I retest at a specific point in my cycle for a more meaningful result?</li>
+      <li>Could my symptoms (hot flashes, irregular periods, etc.) be explained by my estradiol level?</li>
+      <li>Do I need FSH and LH tested alongside this?</li>
+      <li>If my level is low, would hormone replacement therapy be appropriate for me?</li>
+      <li>Could any medications or supplements I'm taking be affecting my result?</li>
+      <li>Should I see an endocrinologist or reproductive endocrinologist for follow-up?</li>
+    </ul>
+  </div>
+
+  <!-- Disclaimer -->
+  <div class="card" style="background:#f0f6ff; border-color:#bfdbfe;">
+    <h2 style="color:#1e40af;">A Note on This Information</h2>
+    <p style="color:#1e40af;">Labplain explains lab results in plain language — we're not a substitute for medical advice. Your result must be interpreted by your doctor alongside your symptoms, history, and other tests. If you're concerned about your estradiol level, please talk to a healthcare provider.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2025 Labplain · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
+  <p style="margin-top:0.5rem;">For informational purposes only. Not medical advice.</p>
+</footer>
+
 </body>
 </html>
