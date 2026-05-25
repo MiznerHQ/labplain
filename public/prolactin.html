@@ -1,105 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prolactin – LabPlain</title>
-  <meta name="description" content="What does your Prolactin result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/prolactin">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prolactin Blood Test: High vs Low Levels Explained | LabPlain</title>
+  <meta name="description" content="Understand prolactin blood test results, symptoms, causes of high or low prolactin, normal ranges, and when to worry." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+    :root{
+      --bg:#07111f;
+      --panel:#0f1b2e;
+      --panel-2:#13233b;
+      --text:#edf3ff;
+      --muted:#9fb0cc;
+      --accent:#4da3ff;
+      --accent-soft:#173252;
+      --warn:#ff7a7a;
+      --amber:#ffcc66;
+      --green:#7ee787;
+      --border:#223555;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:20px;
+      --max:1100px;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#07111f 0%,#0b1730 100%);
+      color:var(--text);
+      font-family:"DM Sans",sans-serif;
+      line-height:1.7;
+    }
+
+    a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    .wrap{
+      width:min(92%,var(--max));
+      margin:auto;
+    }
+
+    header{
+      padding:72px 0 40px;
+    }
+
+    .eyebrow{
+      font-family:"DM Mono",monospace;
+      color:var(--accent);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.8rem;
+      margin-bottom:18px;
+    }
+
+    h1{
+      font-family:"DM Serif Display",serif;
+      font-size:clamp(2.8rem,6vw,5rem);
+      line-height:1.02;
+      margin:0 0 24px;
+      max-width:900px;
+    }
+
+    .sub{
+      max-width:760px;
+      font-size:1.15rem;
+      color:var(--muted);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:28px;
+      margin-top:44px;
+    }
+
+    @media (max-width:900px){
+      .hero-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    .card{
+      background:rgba(15,27,46,.92);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .card h2{
+      margin-top:0;
+      font-size:1.5rem;
+      font-family:"DM Serif Display",serif;
+    }
+
+    .range{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      margin-top:22px;
+      flex-wrap:wrap;
+    }
+
+    .range div{
+      flex:1;
+      min-width:160px;
+      background:var(--panel-2);
+      border-radius:16px;
+      padding:18px;
+      border:1px solid var(--border);
+    }
+
+    .range span{
+      display:block;
+      font-family:"DM Mono",monospace;
+      font-size:.78rem;
+      color:var(--muted);
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+
+    .range strong{
+      font-size:1.2rem;
+    }
+
+    main{
+      padding-bottom:80px;
+    }
+
+    section{
+      margin:28px 0;
+    }
+
+    h2{
+      font-family:"DM Serif Display",serif;
+      font-size:2rem;
+      margin-bottom:16px;
+    }
+
+    h3{
+      margin-top:28px;
+      margin-bottom:10px;
+      font-size:1.15rem;
+    }
+
+    p{
+      color:#d7e3f7;
+    }
+
+    ul{
+      padding-left:20px;
+    }
+
+    li{
+      margin:10px 0;
+      color:#d7e3f7;
+    }
+
+    .symptom-list{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+      margin-top:22px;
+    }
+
+    .symptom{
+      background:var(--panel-2);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+    }
+
+    .symptom strong{
+      display:block;
+      margin-bottom:8px;
+      color:white;
+    }
+
+    .tool-cta{
+      margin-top:42px;
+      background:linear-gradient(135deg,#173252 0%,#102847 100%);
+      border:1px solid #29507d;
+      border-radius:28px;
+      padding:34px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .tool-cta h3{
+      margin:0 0 8px;
+      font-size:1.8rem;
+      font-family:"DM Serif Display",serif;
+    }
+
+    .tool-cta p{
+      margin:0;
+      color:#c9daf5;
+    }
+
+    .cta-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:16px 24px;
+      border-radius:14px;
+      background:var(--accent);
+      color:#08111d;
+      font-weight:700;
+      min-width:220px;
+      transition:.2s ease;
+    }
+
+    .cta-btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .note{
+      border-left:4px solid var(--amber);
+      padding-left:16px;
+      margin-top:18px;
+      color:#ffe7b3;
+    }
+
+    footer{
+      border-top:1px solid var(--border);
+      margin-top:70px;
+      padding:34px 0 60px;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .footer-brand{
+      font-family:"DM Serif Display",serif;
+      font-size:1.5rem;
+    }
+
+    .footer-tag{
+      color:var(--muted);
+      margin-top:6px;
+    }
+
+    .mono{
+      font-family:"DM Mono",monospace;
+      color:var(--muted);
+      font-size:.9rem;
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Prolactin</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Prolactin</em> result mean?</h1>
-    <span class="category-tag">Hormones</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
-    <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>The <strong>Prolactin</strong> test measures a hormone made by the pituitary gland that stimulates breast milk production — it's elevated during pregnancy and breastfeeding.</p>
-    </div>
+  <header class="wrap">
+    <div class="eyebrow">Hormone Test Decoder</div>
 
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Below 20 ng/mL (non-pregnant women); below 15 ng/mL (men)</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
-    </div>
+    <h1>Prolactin Blood Test: What High or Low Prolactin Really Means</h1>
 
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>High prolactin outside of pregnancy can cause irregular periods, breast milk production when not nursing, and in men, reduced libido. A common cause is a benign pituitary tumor called a prolactinoma.</p>
+    <p class="sub">
+      A prolactin blood test measures the level of prolactin hormone in your bloodstream. High prolactin can affect periods, fertility, breast milk production, testosterone, libido, and headaches. Here's what your results may actually mean.
+    </p>
+
+    <div class="hero-grid">
+      <div class="card">
+        <h2>Typical Prolactin Reference Range</h2>
+
+        <p>
+          Normal prolactin ranges vary by lab, sex, pregnancy status, medications, and time of day. Levels are naturally higher during pregnancy, stress, sleep, and breastfeeding.
+        </p>
+
+        <div class="range">
+          <div>
+            <span>Adult Women</span>
+            <strong>4–23 ng/mL</strong>
+          </div>
+
+          <div>
+            <span>Adult Men</span>
+            <strong>3–15 ng/mL</strong>
+          </div>
+
+          <div>
+            <span>Pregnancy</span>
+            <strong>Much higher</strong>
+          </div>
         </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Low prolactin is rarely a concern.</p>
-        </div>
+
+        <p class="note">
+          Slightly elevated prolactin is common and does not automatically mean a pituitary tumor.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Common Reasons Doctors Order It</h2>
+
+        <ul>
+          <li>Irregular or missing periods</li>
+          <li>Unexpected breast milk production</li>
+          <li>Infertility workups</li>
+          <li>Low testosterone symptoms</li>
+          <li>Erectile dysfunction</li>
+          <li>Headaches or vision changes</li>
+          <li>Suspected pituitary disorders</li>
+        </ul>
       </div>
     </div>
+  </header>
 
-    <div class="card">
-      <div class="section-label">What to do next</div>
-      <div class="next-steps">Prolactin can be temporarily elevated by stress, recent exercise, or even the blood draw itself. Mildly elevated results are often rechecked in a calm, fasted state.</div>
+  <main class="wrap">
+
+    <section class="card">
+      <h2>What Does High Prolactin Mean?</h2>
+
+      <p>
+        High prolactin is called <strong>hyperprolactinemia</strong>. Mild elevations are common and sometimes temporary. Larger elevations may point to hormone imbalance, medications, thyroid problems, or pituitary gland conditions.
+      </p>
+
+      <h3>Common Causes of High Prolactin</h3>
+
+      <ul>
+        <li>Pregnancy or breastfeeding</li>
+        <li>Stress or poor sleep</li>
+        <li>Pituitary adenoma (prolactinoma)</li>
+        <li>Hypothyroidism</li>
+        <li>Antidepressants or antipsychotic medications</li>
+        <li>Birth control pills</li>
+        <li>Chest wall irritation or injury</li>
+        <li>Kidney disease</li>
+      </ul>
+
+      <div class="symptom-list">
+        <div class="symptom">
+          <strong>Women</strong>
+          Missing periods, infertility, breast discharge, low libido
+        </div>
+
+        <div class="symptom">
+          <strong>Men</strong>
+          Low testosterone, erectile dysfunction, low sex drive
+        </div>
+
+        <div class="symptom">
+          <strong>Neurologic Symptoms</strong>
+          Headaches or vision changes with very high levels
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>What Does Low Prolactin Mean?</h2>
+
+      <p>
+        Low prolactin is usually less concerning than high prolactin and often causes no symptoms at all. In some cases, it may reflect pituitary dysfunction or medication effects.
+      </p>
+
+      <h3>Possible Causes of Low Prolactin</h3>
+
+      <ul>
+        <li>Dopamine-enhancing medications</li>
+        <li>Pituitary gland dysfunction</li>
+        <li>Severe illness or hormonal imbalance</li>
+        <li>Postpartum pituitary injury (rare)</li>
+      </ul>
+
+      <p>
+        Doctors usually interpret prolactin together with other hormones like TSH, LH, FSH, estrogen, or testosterone.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>When Is Prolactin Considered Dangerous?</h2>
+
+      <p>
+        Mild elevations are often harmless. Doctors become more concerned when prolactin levels are very high, symptoms are severe, or imaging suggests a pituitary mass.
+      </p>
+
+      <div class="symptom-list">
+        <div class="symptom">
+          <strong>Usually Mild</strong>
+          Slightly above normal after stress, exercise, or poor sleep
+        </div>
+
+        <div class="symptom">
+          <strong>Moderate Concern</strong>
+          Persistent elevation with fertility or hormone symptoms
+        </div>
+
+        <div class="symptom">
+          <strong>Needs Evaluation</strong>
+          Very high prolactin plus headaches or vision problems
+        </div>
+      </div>
+
+      <p class="note">
+        Prolactin levels can temporarily rise from stress before the blood draw itself.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>How To Prepare For a Prolactin Blood Test</h2>
+
+      <ul>
+        <li>Avoid intense exercise before testing</li>
+        <li>Try to reduce stress before the blood draw</li>
+        <li>Morning testing is often preferred</li>
+        <li>Tell your doctor about all medications</li>
+        <li>Some doctors recommend fasting beforehand</li>
+      </ul>
+
+      <p>
+        Because prolactin changes throughout the day, your doctor may repeat the test if the result is borderline abnormal.
+      </p>
+    </section>
+
+    <section class="tool-cta">
+      <div>
+        <h3>Decode any lab test instantly</h3>
+        <p>
+          Upload your bloodwork and get a plain-English explanation of your results, reference ranges, and possible next steps.
+        </p>
+      </div>
+
+      <a class="cta-btn" href="/">
+        Open the Decoder →
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>
+        <div class="footer-brand">LabPlain</div>
+        <div class="footer-tag">
+          Understand your labs. No medical degree required.
+        </div>
+      </div>
+
+      <div class="mono">
+        labplain.co
+      </div>
     </div>
+  </footer>
 
-    <div class="tool-cta">
-      <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
-
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
-    </footer>
-  </div>
 </body>
 </html>
