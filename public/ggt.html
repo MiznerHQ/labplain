@@ -1,105 +1,742 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GGT (Gamma-Glutamyl Transferase) – LabPlain</title>
-  <meta name="description" content="What does your GGT (Gamma-Glutamyl Transferase) result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/ggt">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GGT Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your GGT result mean? Plain-English guide to normal ranges, high and low values, liver health, alcohol use, symptoms, and what to ask your doctor. No medical jargon." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://labplain.co/ggt" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+
+    :root {
+      --bg: #FFFFFF;
+      --ink: #0D1B2A;
+      --muted: #6B7A8D;
+      --accent: #185FA5;
+      --accent-light: #E6F1FB;
+      --accent-border: #B5D4F4;
+
+      --warn: #993C1D;
+      --warn-light: #FAECE7;
+      --warn-border: #F5C4B3;
+
+      --success-light: #EAF3DE;
+      --success-border: #C0DD97;
+      --success-text: #27500A;
+
+      --amber: #92400E;
+      --amber-light: #FEF3C7;
+      --amber-border: #F59E0B;
+
+      --border: #DDE3EC;
+      --white: #FFFFFF;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-mark svg {
+      width: 18px;
+      height: 18px;
+      fill: white;
+    }
+
+    .logo-text {
+      font-family: 'DM Mono', monospace;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .logo-text span {
+      color: var(--accent);
+    }
+
+    .breadcrumb {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-family: 'DM Mono', monospace;
+    }
+
+    .breadcrumb a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(20px, 3vw, 26px);
+      line-height: 1.2;
+      letter-spacing: -0.3px;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .category-tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+
+    .disclaimer {
+      background: var(--amber-light);
+      border: 1px solid var(--amber-border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 36px;
+      font-size: 13px;
+      color: var(--amber);
+      line-height: 1.5;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--ink);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .normal-range {
+      font-family: 'DM Mono', monospace;
+      font-size: 16px;
+      color: var(--accent);
+      font-weight: 500;
+      background: var(--accent-light);
+      padding: 14px 18px;
+      border-radius: 10px;
+      border: 1px solid var(--accent-border);
+      margin-bottom: 12px;
+    }
+
+    .range-note {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-top: 8px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .range-box {
+      padding: 16px;
+      border-radius: 10px;
+    }
+
+    .range-box.high {
+      background: var(--warn-light);
+      border: 1px solid var(--warn-border);
+    }
+
+    .range-box.low {
+      background: var(--accent-light);
+      border: 1px solid var(--accent-border);
+    }
+
+    .range-box-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .range-box.high .range-box-label {
+      color: var(--warn);
+    }
+
+    .range-box.low .range-box-label {
+      color: var(--accent);
+    }
+
+    .range-box p {
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .symptom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 4px;
+    }
+
+    .symptom-box {
+      padding: 16px;
+      border-radius: 10px;
+    }
+
+    .symptom-box.high {
+      background: var(--warn-light);
+      border: 1px solid var(--warn-border);
+    }
+
+    .symptom-box.low {
+      background: var(--accent-light);
+      border: 1px solid var(--accent-border);
+    }
+
+    .symptom-box h3 {
+      font-size: 13px;
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .symptom-box.high h3 {
+      color: var(--warn);
+    }
+
+    .symptom-box.low h3 {
+      color: var(--accent);
+    }
+
+    .symptom-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .symptom-list li {
+      font-size: 14px;
+      color: var(--ink);
+      line-height: 1.6;
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .symptom-list li:last-child {
+      border-bottom: none;
+    }
+
+    .symptom-list li::before {
+      content: "→ ";
+      color: var(--muted);
+    }
+
+    .timing-box {
+      background: var(--amber-light);
+      border: 1px solid var(--amber-border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-top: 16px;
+    }
+
+    .timing-box h3 {
+      font-size: 14px;
+      color: var(--amber);
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .timing-box p {
+      font-size: 14px;
+      color: #78350F;
+      line-height: 1.65;
+    }
+
+    .next-steps {
+      background: var(--success-light);
+      border: 1px solid var(--success-border);
+      border-radius: 10px;
+      padding: 20px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--success-text);
+    }
+
+    .questions-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 8px;
+    }
+
+    .questions-list li {
+      font-size: 15px;
+      color: var(--ink);
+      line-height: 1.65;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 10px;
+    }
+
+    .questions-list li:last-child {
+      border-bottom: none;
+    }
+
+    .q-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 500;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .faq-item {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .faq-a {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .tool-cta {
+      background: var(--accent);
+      color: white;
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    .tool-cta h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: white;
+    }
+
+    .tool-cta p {
+      font-size: 14px;
+      opacity: 0.85;
+      margin-bottom: 18px;
+      color: white;
+    }
+
+    .tool-cta a {
+      display: inline-block;
+      background: white;
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+    }
+
+    .related {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .related-chip {
+      display: block;
+      padding: 12px 16px;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      color: var(--ink);
+      font-family: 'DM Mono', monospace;
+      transition: border-color 0.15s;
+    }
+
+    .related-chip:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    @media (max-width: 480px) {
+      .two-col,
+      .symptom-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
+
     <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24">
+          <path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/>
+        </svg>
+      </div>
+
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; GGT (Gamma-Glutamyl Transferase)</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">GGT (Gamma-Glutamyl Transferase)</em> result mean?</h1>
-    <span class="category-tag">Liver</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+
+    <p class="breadcrumb">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/tests">Lab Tests</a> &rsaquo;
+      GGT
+    </p>
+
+    <h1>
+      What does your<br />
+      <em style="font-style:italic;color:var(--accent)">GGT</em> result mean?
+    </h1>
+
+    <span class="category-tag">Liver Health</span>
+
+    <div class="disclaimer">
+      ⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.
+    </div>
 
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>The <strong>GGT (Gamma-Glutamyl Transferase)</strong> test measures an enzyme sensitive to liver stress, especially from alcohol use — it's often the first liver marker to rise.</p>
+
+      <p>
+        GGT (Gamma-Glutamyl Transferase) is an enzyme found mainly in the liver, bile ducts, and pancreas. Your body uses it to help move amino acids and other substances across cells.
+      </p>
+
+      <p>
+        Doctors most commonly use GGT as a marker of liver health and bile duct function. When the liver or bile ducts become irritated, inflamed, or blocked, GGT levels often rise in the bloodstream.
+      </p>
+
+      <p>
+        GGT is especially useful because it can help determine whether an elevated alkaline phosphatase (ALP) result is coming from the liver versus the bones. It’s also commonly associated with alcohol-related liver stress.
+      </p>
     </div>
 
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">9–48 U/L</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
-    </div>
 
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>Elevated GGT is strongly associated with alcohol consumption, fatty liver, and certain medications. It's a sensitive but non-specific marker.</p>
-        </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Low GGT has no clinical significance.</p>
-        </div>
+      <div class="normal-range">
+        Men: 8–61 U/L &nbsp;|&nbsp; Women: 5–36 U/L
+      </div>
+
+      <p class="range-note">
+        Normal ranges vary slightly between labs and often differ by sex and age. Always compare your result to the range listed on your own lab report.
+      </p>
+
+      <p class="range-note" style="margin-top:8px;">
+        Mild elevations are common and do not automatically mean serious liver disease. Doctors interpret GGT alongside other liver tests like ALT, AST, ALP, and bilirubin.
+      </p>
+
+      <div class="timing-box">
+        <h3>🍺 Alcohol can temporarily raise GGT</h3>
+
+        <p>
+          Regular alcohol use is one of the most common reasons for elevated GGT. Even moderate drinking can increase levels in some people. GGT may stay elevated for several weeks after stopping alcohol.
+        </p>
       </div>
     </div>
 
     <div class="card">
+      <div class="section-label">What your result might indicate</div>
+
+      <div class="two-col">
+
+        <div class="range-box high">
+          <div class="range-box-label">↑ If High</div>
+
+          <p>
+            High GGT may suggest liver inflammation, bile duct problems, alcohol-related liver stress, fatty liver disease, medication side effects, or hepatitis. Mild elevations are very common and often require follow-up testing for context.
+          </p>
+        </div>
+
+        <div class="range-box low">
+          <div class="range-box-label">↓ If Low</div>
+
+          <p>
+            Low GGT is usually not considered medically significant. In most cases, a low result simply reflects normal liver function and does not require treatment or further evaluation.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Symptoms associated with abnormal GGT</div>
+
+      <div class="symptom-grid">
+
+        <div class="symptom-box high">
+          <h3>↑ High GGT Symptoms</h3>
+
+          <ul class="symptom-list">
+            <li>Fatigue or low energy</li>
+            <li>Yellowing of the skin or eyes</li>
+            <li>Dark urine</li>
+            <li>Abdominal pain or swelling</li>
+            <li>Nausea or loss of appetite</li>
+            <li>Itchy skin</li>
+            <li>Heavy alcohol use history</li>
+            <li>Unexplained elevated liver enzymes</li>
+          </ul>
+        </div>
+
+        <div class="symptom-box low">
+          <h3>↓ Low GGT Symptoms</h3>
+
+          <ul class="symptom-list">
+            <li>Usually no symptoms</li>
+            <li>Typically considered normal</li>
+            <li>Not associated with disease in most cases</li>
+            <li>May reflect healthy liver function</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal GGT</div>
+
+      <h2>What can raise GGT?</h2>
+
+      <p>
+        The most common causes of elevated GGT are alcohol use, fatty liver disease, obesity, and medications that stress the liver. Certain prescription drugs — including anti-seizure medications, statins, and some antibiotics — can increase GGT levels.
+      </p>
+
+      <p>
+        Liver conditions like hepatitis, cirrhosis, bile duct obstruction, gallstones, and liver tumors can also cause significant elevations. In many people, GGT rises before symptoms appear.
+      </p>
+
+      <p>
+        Diabetes, heart failure, smoking, and metabolic syndrome are also linked with higher GGT levels.
+      </p>
+
+      <h2 style="margin-top:24px;">What can lower GGT?</h2>
+
+      <p>
+        Low GGT levels are generally not concerning. Unlike many other lab tests, doctors rarely investigate a low GGT result because it usually has no clinical significance.
+      </p>
+
+      <p>
+        In some cases, healthier lifestyle habits — including weight loss, reducing alcohol intake, exercising regularly, and improving diet — can help bring elevated GGT back toward the normal range over time.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside GGT</div>
+
+      <p>
+        GGT is usually interpreted as part of a broader liver panel. Your doctor may also order:
+      </p>
+
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>ALT (Alanine Aminotransferase)</strong> — helps detect liver cell injury</li>
+        <li><strong>AST (Aspartate Aminotransferase)</strong> — another liver enzyme linked to inflammation</li>
+        <li><strong>ALP (Alkaline Phosphatase)</strong> — helps evaluate bile duct problems</li>
+        <li><strong>Bilirubin</strong> — measures how the liver processes waste products</li>
+        <li><strong>Albumin</strong> — checks how well the liver is producing proteins</li>
+        <li><strong>Hepatitis testing</strong> — screens for viral liver infections</li>
+      </ul>
+    </div>
+
+    <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">GGT is particularly useful because it helps doctors understand whether an elevated ALP is coming from the liver or from bone. It's also used to monitor alcohol-related liver stress.</div>
+
+      <div class="next-steps">
+        A high GGT result does not automatically mean severe liver disease. Mild elevations are common and can be caused by alcohol, medications, obesity, or temporary liver irritation. Your doctor will look at your full liver panel, symptoms, medical history, and lifestyle factors before deciding whether additional testing is needed.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>How elevated is my GGT compared to the normal range?</li>
+
+        <li><span class="q-num">02</span>Do my other liver tests suggest a liver or bile duct problem?</li>
+
+        <li><span class="q-num">03</span>Could alcohol or medications be contributing to this result?</li>
+
+        <li><span class="q-num">04</span>Do I need imaging like an ultrasound of my liver or gallbladder?</li>
+
+        <li><span class="q-num">05</span>Should I repeat the test after lifestyle changes or avoiding alcohol?</li>
+
+        <li><span class="q-num">06</span>Could fatty liver disease explain my elevated GGT?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+
+      <div class="faq-item">
+        <div class="faq-q">Does high GGT always mean liver disease?</div>
+
+        <div class="faq-a">
+          No. Mildly elevated GGT is common and can result from alcohol use, medications, obesity, or temporary liver irritation. Doctors interpret GGT alongside other liver tests before diagnosing a condition.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How long does it take GGT to return to normal?</div>
+
+        <div class="faq-a">
+          If alcohol or temporary liver stress is the cause, GGT levels often improve within several weeks to a few months after lifestyle changes. The timeline depends on the underlying cause and overall liver health.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can medications raise GGT?</div>
+
+        <div class="faq-a">
+          Yes. Certain medications — including anti-seizure drugs, statins, antibiotics, and some pain medications — can increase GGT levels by stressing the liver.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Is GGT related to alcohol use?</div>
+
+        <div class="faq-a">
+          Very often. GGT is one of the liver enzymes most strongly associated with alcohol use. Chronic drinking can cause persistent elevations, even before symptoms develop.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can fatty liver cause high GGT?</div>
+
+        <div class="faq-a">
+          Yes. Nonalcoholic fatty liver disease (NAFLD) is one of the most common causes of elevated GGT, especially in people with obesity, diabetes, or metabolic syndrome.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+
+      <div class="related">
+        <a href="/alt" class="related-chip">ALT →</a>
+        <a href="/ast" class="related-chip">AST →</a>
+        <a href="/alp" class="related-chip">ALP →</a>
+        <a href="/bilirubin" class="related-chip">Bilirubin →</a>
+        <a href="/albumin" class="related-chip">Albumin →</a>
+        <a href="/creatinine" class="related-chip">Creatinine →</a>
+      </div>
     </div>
 
     <div class="tool-cta">
       <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+
+      <p>
+        Use our free AI-powered tool to look up any blood test in plain English.
+      </p>
+
       <a href="/">Open the Decoder →</a>
     </div>
 
     <footer>
       <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
+      <span>Understand your labs. No medical degree required.</span>
     </footer>
+
   </div>
 </body>
 </html>
