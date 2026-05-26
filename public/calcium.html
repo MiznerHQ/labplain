@@ -1,123 +1,527 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calcium Blood Test – What Your Results Mean | LabPlain</title>
-  <meta name="description" content="What does your calcium blood test result mean? Plain-English guide to normal ranges, high and low calcium levels, symptoms, causes, and what to ask your doctor.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/calcium">
+  <meta name="description" content="What does your calcium result mean? Plain-English guide to normal ranges, high and low calcium levels, symptoms, causes, and questions to ask your doctor.">
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://labplain.co/calcium" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
-      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
-      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
-      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
-      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
-      --border: #DDE3EC; --white: #FFFFFF;
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
-    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    p + p { margin-top: 14px; }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
-    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; }
-    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
-    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: var(--accent); }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
-    .symptom-box { padding: 16px; border-radius: 10px; }
-    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
-    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
-    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
-    .symptom-box.high h3 { color: var(--warn); }
-    .symptom-box.low h3 { color: var(--accent); }
-    .symptom-list { list-style: none; padding: 0; }
-    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
-    .symptom-list li:last-child { border-bottom: none; }
-    .symptom-list li::before { content: "→ "; color: var(--muted); }
-    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
-    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
-    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
-    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
-    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
-    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
-    .questions-list li:last-child { border-bottom: none; }
-    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
-    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
-    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
-    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
-    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
+
+    :root {
+      --bg: #FFFFFF;
+      --ink: #0D1B2A;
+      --muted: #6B7A8D;
+      --accent: #185FA5;
+      --accent-light: #E6F1FB;
+      --accent-border: #B5D4F4;
+      --warn: #993C1D;
+      --warn-light: #FAECE7;
+      --warn-border: #F5C4B3;
+      --success-light: #EAF3DE;
+      --success-border: #C0DD97;
+      --success-text: #27500A;
+      --amber: #92400E;
+      --amber-light: #FEF3C7;
+      --amber-border: #F59E0B;
+      --border: #DDE3EC;
+      --white: #FFFFFF;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-mark svg {
+      width: 18px;
+      height: 18px;
+      fill: white;
+    }
+
+    .logo-text {
+      font-family: 'DM Mono', monospace;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .logo-text span {
+      color: var(--accent);
+    }
+
+    .breadcrumb {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-family: 'DM Mono', monospace;
+    }
+
+    .breadcrumb a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(20px, 3vw, 26px);
+      line-height: 1.2;
+      letter-spacing: -0.3px;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .category-tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+
+    .disclaimer {
+      background: var(--amber-light);
+      border: 1px solid var(--amber-border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 36px;
+      font-size: 13px;
+      color: var(--amber);
+      line-height: 1.5;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--ink);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .normal-range {
+      font-family: 'DM Mono', monospace;
+      font-size: 16px;
+      color: var(--accent);
+      font-weight: 500;
+      background: var(--accent-light);
+      padding: 14px 18px;
+      border-radius: 10px;
+      border: 1px solid var(--accent-border);
+      margin-bottom: 12px;
+    }
+
+    .range-note {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-top: 8px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .range-box {
+      padding: 16px;
+      border-radius: 10px;
+    }
+
+    .range-box.high {
+      background: var(--warn-light);
+      border: 1px solid var(--warn-border);
+    }
+
+    .range-box.low {
+      background: var(--accent-light);
+      border: 1px solid var(--accent-border);
+    }
+
+    .range-box-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .range-box.high .range-box-label {
+      color: var(--warn);
+    }
+
+    .range-box.low .range-box-label {
+      color: var(--accent);
+    }
+
+    .range-box p {
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .symptom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 4px;
+    }
+
+    .symptom-box {
+      padding: 16px;
+      border-radius: 10px;
+    }
+
+    .symptom-box.high {
+      background: var(--warn-light);
+      border: 1px solid var(--warn-border);
+    }
+
+    .symptom-box.low {
+      background: var(--accent-light);
+      border: 1px solid var(--accent-border);
+    }
+
+    .symptom-box h3 {
+      font-size: 13px;
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .symptom-box.high h3 {
+      color: var(--warn);
+    }
+
+    .symptom-box.low h3 {
+      color: var(--accent);
+    }
+
+    .symptom-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .symptom-list li {
+      font-size: 14px;
+      color: var(--ink);
+      line-height: 1.6;
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .symptom-list li:last-child {
+      border-bottom: none;
+    }
+
+    .symptom-list li::before {
+      content: "→ ";
+      color: var(--muted);
+    }
+
+    .timing-box {
+      background: var(--amber-light);
+      border: 1px solid var(--amber-border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-top: 16px;
+    }
+
+    .timing-box h3 {
+      font-size: 14px;
+      color: var(--amber);
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .timing-box p {
+      font-size: 14px;
+      color: #78350F;
+      line-height: 1.65;
+    }
+
+    .next-steps {
+      background: var(--success-light);
+      border: 1px solid var(--success-border);
+      border-radius: 10px;
+      padding: 20px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--success-text);
+    }
+
+    .questions-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 8px;
+    }
+
+    .questions-list li {
+      font-size: 15px;
+      color: var(--ink);
+      line-height: 1.65;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 10px;
+    }
+
+    .questions-list li:last-child {
+      border-bottom: none;
+    }
+
+    .q-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 500;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .faq-item {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .faq-a {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .tool-cta {
+      background: var(--accent);
+      color: white;
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    .tool-cta h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: white;
+    }
+
+    .tool-cta p {
+      font-size: 14px;
+      opacity: 0.85;
+      margin-bottom: 18px;
+      color: white;
+    }
+
+    .tool-cta a {
+      display: inline-block;
+      background: white;
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+    }
+
+    .related {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .related-chip {
+      display: block;
+      padding: 12px 16px;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      color: var(--ink);
+      font-family: 'DM Mono', monospace;
+      transition: border-color 0.15s;
+    }
+
+    .related-chip:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    @media (max-width: 480px) {
+      .two-col,
+      .symptom-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
+
     <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24">
+          <path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/>
+        </svg>
+      </div>
+
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
 
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Calcium</p>
+    <p class="breadcrumb">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/tests">Lab Tests</a> &rsaquo;
+      Calcium
+    </p>
 
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Calcium</em> result mean?</h1>
+    <h1>
+      What does your<br>
+      <em style="font-style:italic;color:var(--accent)">Calcium</em> result mean?
+    </h1>
 
     <span class="category-tag">Minerals</span>
 
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+    <div class="disclaimer">
+      ⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.
+    </div>
 
     <div class="card">
       <div class="section-label">What this test measures</div>
 
-      <p>A calcium blood test measures the amount of calcium circulating in your bloodstream. Calcium is one of the most important minerals in the body — essential for strong bones and teeth, but also critical for muscle contraction, nerve signaling, blood clotting, and heart rhythm.</p>
+      <p>Calcium is one of the most important minerals in your body. While most people think of calcium as something that keeps bones strong, it also plays a critical role in muscle contraction, nerve signaling, heart rhythm, and blood clotting.</p>
 
-      <p>About 99% of your body's calcium is stored in bones and teeth. The remaining 1% circulates in the blood and tissues, where it helps your body function normally. Your body tightly controls calcium levels using hormones from the parathyroid glands, vitamin D, and the kidneys.</p>
+      <p>About 99% of your body's calcium is stored in your bones and teeth. The remaining 1% circulates in your blood, where even small changes can affect how your muscles, nerves, and heart function.</p>
 
-      <p>Doctors commonly order calcium testing as part of a comprehensive metabolic panel (CMP) or when investigating symptoms like fatigue, muscle cramps, kidney stones, abnormal heart rhythms, or bone problems.</p>
+      <p>A calcium blood test measures the amount of calcium circulating in your bloodstream. Doctors commonly order it as part of a routine metabolic panel or when investigating symptoms related to the bones, kidneys, thyroid, parathyroid glands, or nervous system.</p>
     </div>
 
     <div class="card">
       <div class="section-label">Normal reference range</div>
 
-      <div class="normal-range">Total Calcium: 8.5–10.5 mg/dL</div>
+      <div class="normal-range">
+        Total Calcium: 8.5–10.5 mg/dL
+      </div>
 
-      <p class="range-note">Normal ranges vary slightly between laboratories depending on the equipment and testing methods used. Always compare your result to the reference range printed on your specific lab report.</p>
+      <p class="range-note">
+        Reference ranges vary slightly between laboratories. Always compare your result to the range listed on your own lab report.
+      </p>
 
-      <p class="range-note" style="margin-top:8px;">Calcium levels can also be affected by albumin, a blood protein that binds calcium. If albumin is abnormal, your doctor may calculate a "corrected calcium" level or order an ionized calcium test for a more accurate picture.</p>
+      <p class="range-note" style="margin-top:8px;">
+        Calcium levels are also affected by albumin — a protein in your blood. If albumin is low, your "total calcium" may appear low even when the biologically active calcium is normal.
+      </p>
 
       <div class="timing-box">
-        <h3>🩸 Total vs ionized calcium</h3>
-        <p>Most standard blood tests measure total calcium, which includes calcium attached to proteins and free calcium. Ionized calcium measures only the biologically active form and may be more accurate in critically ill patients or when albumin levels are abnormal.</p>
+        <h3>🧪 Total calcium vs ionized calcium</h3>
+
+        <p>
+          Most routine tests measure total calcium, which includes calcium attached to proteins. In certain situations, your doctor may order ionized calcium, which measures the "free" active calcium in your blood and gives a more accurate picture of calcium balance.
+        </p>
       </div>
     </div>
 
@@ -125,15 +529,23 @@
       <div class="section-label">What your result might indicate</div>
 
       <div class="two-col">
+
         <div class="range-box high">
           <div class="range-box-label">↑ If High</div>
-          <p>High calcium levels (hypercalcemia) may be caused by overactive parathyroid glands, certain cancers, dehydration, excessive vitamin D supplementation, or some medications. Mild elevations may not cause symptoms, but severe elevations can become dangerous.</p>
+
+          <p>
+            High calcium (hypercalcemia) may be caused by overactive parathyroid glands, certain cancers, dehydration, excess vitamin D, or some medications. Mild elevations are sometimes discovered incidentally on routine blood work.
+          </p>
         </div>
 
         <div class="range-box low">
           <div class="range-box-label">↓ If Low</div>
-          <p>Low calcium levels (hypocalcemia) may result from vitamin D deficiency, kidney disease, low magnesium, hypoparathyroidism, or poor nutrition. Significant low calcium can affect muscles, nerves, and heart function.</p>
+
+          <p>
+            Low calcium (hypocalcemia) may result from vitamin D deficiency, kidney disease, low magnesium, hypoparathyroidism, or poor nutrition. Significant low calcium can affect muscles, nerves, and heart rhythm.
+          </p>
         </div>
+
       </div>
     </div>
 
@@ -141,18 +553,19 @@
       <div class="section-label">Symptoms associated with abnormal calcium</div>
 
       <div class="symptom-grid">
+
         <div class="symptom-box high">
           <h3>↑ High Calcium Symptoms</h3>
 
           <ul class="symptom-list">
-            <li>Excessive thirst and frequent urination</li>
+            <li>Frequent urination and excessive thirst</li>
             <li>Kidney stones</li>
-            <li>Nausea or constipation</li>
-            <li>Abdominal pain</li>
+            <li>Constipation</li>
+            <li>Nausea or abdominal pain</li>
             <li>Fatigue and weakness</li>
             <li>Confusion or brain fog</li>
             <li>Bone pain</li>
-            <li>Abnormal heart rhythms</li>
+            <li>Irregular heart rhythm</li>
           </ul>
         </div>
 
@@ -163,13 +576,14 @@
             <li>Muscle cramps or spasms</li>
             <li>Tingling in fingers or around the mouth</li>
             <li>Numbness</li>
-            <li>Fatigue and weakness</li>
-            <li>Muscle twitching</li>
+            <li>Fatigue</li>
+            <li>Anxiety or irritability</li>
             <li>Seizures in severe cases</li>
-            <li>Dry skin or brittle nails</li>
             <li>Abnormal heart rhythms</li>
+            <li>Brittle nails or dry skin</li>
           </ul>
         </div>
+
       </div>
     </div>
 
@@ -178,47 +592,50 @@
 
       <h2>What can raise calcium?</h2>
 
-      <p>The most common cause of high calcium is hyperparathyroidism — a condition where one or more parathyroid glands produce too much parathyroid hormone (PTH). Certain cancers can also raise calcium, especially cancers involving the bones or hormone-producing tumors.</p>
+      <p>The most common cause of high calcium is hyperparathyroidism — when the parathyroid glands release too much parathyroid hormone (PTH). Certain cancers can also raise calcium levels, especially cancers involving the bones.</p>
 
-      <p>Other causes include dehydration, excessive calcium or vitamin D supplements, prolonged bed rest, certain medications like thiazide diuretics, and rare endocrine disorders. Mild elevations are sometimes found incidentally during routine blood work.</p>
+      <p>Other causes include dehydration, excessive calcium or vitamin D supplements, prolonged immobility, and medications such as thiazide diuretics or lithium.</p>
 
       <h2 style="margin-top:24px;">What can lower calcium?</h2>
 
-      <p>Low calcium is commonly caused by vitamin D deficiency, chronic kidney disease, low magnesium levels, or hypoparathyroidism — where the parathyroid glands don't produce enough hormone to regulate calcium properly.</p>
+      <p>Low calcium is commonly caused by vitamin D deficiency, chronic kidney disease, low magnesium, or hypoparathyroidism — when the parathyroid glands don't produce enough hormone.</p>
 
-      <p>Low calcium can also occur in severe illness, pancreatitis, malnutrition, alcoholism, or after major surgery. Some medications, including bisphosphonates and certain chemotherapy drugs, may also lower calcium levels.</p>
+      <p>Critical illness, pancreatitis, malnutrition, and some medications can also lower calcium levels. Sometimes the calcium itself isn't the main problem — it's a clue pointing toward another underlying condition.</p>
     </div>
 
     <div class="card">
       <div class="section-label">Tests often ordered alongside calcium</div>
 
-      <p>Calcium levels are usually interpreted alongside other lab tests, including:</p>
+      <p>Calcium is rarely interpreted alone. Your doctor may also order:</p>
 
       <ul class="symptom-list" style="margin-top:12px;">
-        <li><strong>Parathyroid Hormone (PTH)</strong> — helps determine whether the parathyroid glands are causing the problem</li>
-        <li><strong>Vitamin D</strong> — low vitamin D is a common cause of low calcium</li>
-        <li><strong>Albumin</strong> — used to calculate corrected calcium levels</li>
-        <li><strong>Magnesium</strong> — magnesium helps regulate calcium balance</li>
-        <li><strong>Phosphorus</strong> — calcium and phosphorus are closely linked in bone metabolism</li>
+        <li><strong>Albumin</strong> — helps determine if low protein levels are affecting total calcium</li>
+        <li><strong>Ionized calcium</strong> — measures the active form of calcium</li>
+        <li><strong>Parathyroid hormone (PTH)</strong> — evaluates parathyroid gland function</li>
+        <li><strong>Vitamin D</strong> — vitamin D deficiency commonly affects calcium balance</li>
+        <li><strong>Magnesium</strong> — low magnesium can contribute to low calcium</li>
+        <li><strong>Phosphorus</strong> — works closely with calcium in bone and mineral balance</li>
       </ul>
     </div>
 
     <div class="card">
       <div class="section-label">What to do next</div>
 
-      <div class="next-steps">A mildly abnormal calcium level doesn't always mean something serious. Dehydration, supplements, medications, and temporary illnesses can all affect calcium levels. Your doctor will usually interpret your result alongside albumin, kidney function, vitamin D, and parathyroid hormone levels before deciding whether further testing is needed.</div>
+      <div class="next-steps">
+        A mildly abnormal calcium result doesn't automatically mean something serious. Calcium levels can shift because of hydration status, supplements, medications, and protein levels in the blood. Your doctor will interpret the result alongside your symptoms, kidney function, albumin, and related hormone levels before deciding whether further testing is needed.
+      </div>
     </div>
 
     <div class="card">
       <div class="section-label">Questions to ask your doctor</div>
 
       <ul class="questions-list">
-        <li><span class="q-num">01</span>Is my calcium level only mildly abnormal or significantly outside the normal range?</li>
-        <li><span class="q-num">02</span>Should my calcium be corrected based on my albumin level?</li>
-        <li><span class="q-num">03</span>Do I need a parathyroid hormone (PTH) test or vitamin D test?</li>
+        <li><span class="q-num">01</span>Is my calcium level significantly abnormal or only slightly outside the range?</li>
+        <li><span class="q-num">02</span>Should my calcium be corrected for albumin?</li>
+        <li><span class="q-num">03</span>Do I need additional testing like PTH or vitamin D?</li>
         <li><span class="q-num">04</span>Could supplements or medications be affecting my calcium level?</li>
-        <li><span class="q-num">05</span>Do my symptoms fit with high or low calcium?</li>
-        <li><span class="q-num">06</span>Should my calcium level be repeated or monitored over time?</li>
+        <li><span class="q-num">05</span>Do my symptoms match what you'd expect from this result?</li>
+        <li><span class="q-num">06</span>Should I repeat the test to confirm the result?</li>
       </ul>
     </div>
 
@@ -226,28 +643,43 @@
       <div class="section-label">Frequently asked questions</div>
 
       <div class="faq-item">
-        <div class="faq-q">Does high calcium always mean cancer?</div>
-        <div class="faq-a">No. The most common cause of high calcium is hyperparathyroidism, not cancer. Mild elevations are often caused by benign conditions, dehydration, or supplements. Your doctor will look at the overall pattern of your labs and symptoms before drawing conclusions.</div>
+        <div class="faq-q">Does a high calcium level always mean cancer?</div>
+
+        <div class="faq-a">
+          No. While some cancers can cause high calcium, the most common cause is primary hyperparathyroidism — an overactive parathyroid gland. Mild elevations are often unrelated to cancer.
+        </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-q">Can dehydration affect calcium levels?</div>
-        <div class="faq-a">Yes. Dehydration can temporarily raise calcium levels because the blood becomes more concentrated. Rehydration may normalize mildly elevated results.</div>
+
+        <div class="faq-a">
+          Yes. Dehydration can temporarily concentrate calcium in the blood and make levels appear elevated. Your doctor may repeat testing once you're properly hydrated.
+        </div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-q">Should I stop taking calcium supplements if my level is high?</div>
-        <div class="faq-a">Don't stop prescribed supplements without talking to your doctor first. However, excessive calcium supplementation can contribute to high calcium levels, so your doctor may review your dose and any vitamin D supplements you're taking.</div>
+        <div class="faq-q">Should I stop taking calcium supplements before testing?</div>
+
+        <div class="faq-a">
+          Follow your doctor's instructions. Large doses of calcium supplements can affect results, especially if taken shortly before the blood draw.
+        </div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-q">What's the difference between total calcium and ionized calcium?</div>
-        <div class="faq-a">Total calcium measures all calcium in the blood, including calcium attached to proteins. Ionized calcium measures only the active form your body actually uses. Ionized calcium is sometimes more accurate in people with abnormal protein levels or critical illness.</div>
+        <div class="faq-q">What's the difference between calcium and vitamin D?</div>
+
+        <div class="faq-a">
+          Calcium is the mineral itself, while vitamin D helps your body absorb and regulate calcium. You can have normal calcium but low vitamin D, or vice versa.
+        </div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-q">Can low vitamin D cause low calcium?</div>
-        <div class="faq-a">Yes. Vitamin D helps your body absorb calcium from food. If vitamin D is too low, calcium absorption drops, which can eventually lead to low calcium levels.</div>
+        <div class="faq-q">Can low calcium be dangerous?</div>
+
+        <div class="faq-a">
+          Severe low calcium can be serious because calcium is essential for muscle and heart function. Very low levels may cause muscle spasms, seizures, or dangerous heart rhythm problems and require prompt treatment.
+        </div>
       </div>
     </div>
 
@@ -256,17 +688,21 @@
 
       <div class="related">
         <a href="/vitamin-d" class="related-chip">Vitamin D →</a>
-        <a href="/albumin" class="related-chip">Albumin →</a>
         <a href="/magnesium" class="related-chip">Magnesium →</a>
         <a href="/phosphorus" class="related-chip">Phosphorus →</a>
         <a href="/creatinine" class="related-chip">Creatinine →</a>
-        <a href="/alp" class="related-chip">ALP →</a>
+        <a href="/albumin" class="related-chip">Albumin →</a>
+        <a href="/potassium" class="related-chip">Potassium →</a>
       </div>
     </div>
 
     <div class="tool-cta">
       <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+
+      <p>
+        Use our free AI-powered tool to look up any blood test in plain English.
+      </p>
+
       <a href="/">Open the Decoder →</a>
     </div>
 
@@ -274,6 +710,7 @@
       <span>labplain.co</span>
       <span>Understand your labs. No medical degree required.</span>
     </footer>
+
   </div>
 </body>
 </html>
