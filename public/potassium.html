@@ -1,105 +1,720 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Potassium – LabPlain</title>
-  <meta name="description" content="What does your Potassium result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/potassium">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Potassium Blood Test – What Your Results Mean | LabPlain</title>
+<meta name="description" content="What does your potassium result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://labplain.co/potassium">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--bg: #FFFFFF;
+--ink: #0D1B2A;
+--muted: #6B7A8D;
+--accent: #185FA5;
+--accent-light: #E6F1FB;
+--accent-border: #B5D4F4;
+--warn: #993C1D;
+--warn-light: #FAECE7;
+--warn-border: #F5C4B3;
+--success-light: #EAF3DE;
+--success-border: #C0DD97;
+--success-text: #27500A;
+--amber: #92400E;
+--amber-light: #FEF3C7;
+--amber-border: #F59E0B;
+--border: #DDE3EC;
+--white: #FFFFFF;
+}
+
+body {
+background: var(--bg);
+color: var(--ink);
+font-family: 'DM Sans', sans-serif;
+min-height: 100vh;
+}
+
+.wrap {
+max-width: 720px;
+margin: 0 auto;
+padding: 40px 24px 80px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 40px;
+}
+
+.logo-mark {
+width: 32px;
+height: 32px;
+background: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo-mark svg {
+width: 18px;
+height: 18px;
+fill: white;
+}
+
+.logo-text {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+text-decoration: none;
+}
+
+.logo-text span {
+color: var(--accent);
+}
+
+.breadcrumb {
+font-size: 13px;
+color: var(--muted);
+margin-bottom: 20px;
+font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+color: var(--accent);
+text-decoration: none;
+}
+
+h1 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(28px, 5vw, 42px);
+line-height: 1.15;
+letter-spacing: -0.5px;
+margin-bottom: 8px;
+}
+
+h2 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(20px, 3vw, 26px);
+line-height: 1.2;
+letter-spacing: -0.3px;
+margin-bottom: 12px;
+color: var(--ink);
+}
+
+h3 {
+font-family: 'DM Sans', sans-serif;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+color: var(--ink);
+}
+
+.category-tag {
+display: inline-block;
+background: var(--accent-light);
+color: var(--accent);
+font-family: 'DM Mono', monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 4px 12px;
+border-radius: 20px;
+margin-bottom: 24px;
+}
+
+.disclaimer {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 14px 18px;
+margin-bottom: 36px;
+font-size: 13px;
+color: var(--amber);
+line-height: 1.5;
+}
+
+.card {
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 14px;
+padding: 28px;
+margin-bottom: 20px;
+}
+
+.section-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 10px;
+}
+
+p {
+font-size: 16px;
+line-height: 1.75;
+color: var(--ink);
+}
+
+p + p {
+margin-top: 14px;
+}
+
+.normal-range {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+color: var(--accent);
+font-weight: 500;
+background: var(--accent-light);
+padding: 14px 18px;
+border-radius: 10px;
+border: 1px solid var(--accent-border);
+margin-bottom: 12px;
+}
+
+.range-note {
+font-size: 13px;
+color: var(--muted);
+line-height: 1.6;
+margin-top: 8px;
+}
+
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+
+.range-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.range-box.high {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.range-box.low {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.range-box-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.range-box.high .range-box-label {
+color: var(--warn);
+}
+
+.range-box.low .range-box-label {
+color: var(--accent);
+}
+
+.range-box p {
+font-size: 14px;
+line-height: 1.65;
+}
+
+.symptom-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+margin-top: 4px;
+}
+
+.symptom-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.symptom-box.high {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.symptom-box.low {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.symptom-box h3 {
+font-size: 13px;
+font-family: 'DM Mono', monospace;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 10px;
+}
+
+.symptom-box.high h3 {
+color: var(--warn);
+}
+
+.symptom-box.low h3 {
+color: var(--accent);
+}
+
+.symptom-list {
+list-style: none;
+padding: 0;
+}
+
+.symptom-list li {
+font-size: 14px;
+color: var(--ink);
+line-height: 1.6;
+padding: 4px 0;
+border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+border-bottom: none;
+}
+
+.symptom-list li::before {
+content: "→ ";
+color: var(--muted);
+}
+
+.timing-box {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 18px 20px;
+margin-top: 16px;
+}
+
+.timing-box h3 {
+font-size: 14px;
+color: var(--amber);
+font-family: 'DM Mono', monospace;
+letter-spacing: 0.5px;
+margin-bottom: 8px;
+}
+
+.timing-box p {
+font-size: 14px;
+color: #78350F;
+line-height: 1.65;
+}
+
+.next-steps {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+border-radius: 10px;
+padding: 20px;
+font-size: 15px;
+line-height: 1.7;
+color: var(--success-text);
+}
+
+.questions-list {
+list-style: none;
+padding: 0;
+margin-top: 8px;
+}
+
+.questions-list li {
+font-size: 15px;
+color: var(--ink);
+line-height: 1.65;
+padding: 10px 0;
+border-bottom: 1px solid var(--border);
+display: flex;
+gap: 10px;
+}
+
+.questions-list li:last-child {
+border-bottom: none;
+}
+
+.q-num {
+font-family: 'DM Mono', monospace;
+font-size: 12px;
+color: var(--accent);
+font-weight: 500;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+.faq-item {
+padding: 18px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-q {
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+margin-bottom: 8px;
+}
+
+.faq-a {
+font-size: 15px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+.tool-cta {
+background: var(--accent);
+color: white;
+border-radius: 12px;
+padding: 28px;
+margin-top: 32px;
+text-align: center;
+}
+
+.tool-cta h3 {
+font-family: 'DM Serif Display', serif;
+font-size: 24px;
+margin-bottom: 8px;
+color: white;
+}
+
+.tool-cta p {
+font-size: 14px;
+opacity: 0.85;
+margin-bottom: 18px;
+color: white;
+}
+
+.tool-cta a {
+display: inline-block;
+background: white;
+color: var(--accent);
+font-weight: 500;
+text-decoration: none;
+padding: 12px 28px;
+border-radius: 8px;
+font-family: 'DM Mono', monospace;
+font-size: 14px;
+}
+
+.related {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 12px;
+margin-top: 4px;
+}
+
+.related-chip {
+display: block;
+padding: 12px 16px;
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+color: var(--ink);
+font-family: 'DM Mono', monospace;
+transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+
+footer {
+margin-top: 60px;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+font-size: 12px;
+color: var(--muted);
+font-family: 'DM Mono', monospace;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+@media (max-width: 480px) {
+.two-col,
+.symptom-grid {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Potassium</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Potassium</em> result mean?</h1>
-    <span class="category-tag">Electrolytes</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
-    <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>The <strong>Potassium</strong> test measures an electrolyte critical for heart rhythm, muscle contractions, and nerve signals.</p>
-    </div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">3.5–5.0 mEq/L</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
-    </div>
+<nav>
+<div class="logo-mark">
+<svg viewBox="0 0 24 24">
+<path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/>
+</svg>
+</div>
 
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>High potassium (hyperkalemia) can affect heart rhythm and is particularly important to monitor for people with kidney disease or on certain medications.</p>
-        </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Low potassium (hypokalemia) can cause muscle weakness, cramps, and heart irregularities. It's often linked to diuretic use or vomiting.</p>
-        </div>
-      </div>
-    </div>
+<a href="/" class="logo-text">lab<span>plain</span></a>
+</nav>
 
-    <div class="card">
-      <div class="section-label">What to do next</div>
-      <div class="next-steps">Potassium is one of the most closely watched electrolytes because even small changes can affect the heart. Report any muscle cramps or palpitations to your doctor.</div>
-    </div>
+<p class="breadcrumb">
+<a href="/">Home</a> &rsaquo;
+<a href="/tests">Lab Tests</a> &rsaquo;
+Potassium
+</p>
 
-    <div class="tool-cta">
-      <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
+<h1>
+What does your<br>
+<em style="font-style:italic;color:var(--accent)">Potassium</em> result mean?
+</h1>
 
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
-    </footer>
-  </div>
+<span class="category-tag">Electrolytes</span>
+
+<div class="disclaimer">
+⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.
+</div>
+
+<div class="card">
+<div class="section-label">What this test measures</div>
+
+<p>Potassium is an essential mineral and electrolyte that helps your nerves, muscles, and heart function properly. Most of the potassium in your body lives inside your cells, where it helps regulate electrical signals and fluid balance.</p>
+
+<p>Your kidneys carefully control potassium levels by filtering excess potassium into your urine. Even small changes in potassium can affect how your muscles contract and how your heart beats, which is why doctors take abnormal potassium levels seriously.</p>
+
+<p>A potassium blood test is commonly ordered as part of a basic metabolic panel (BMP) or comprehensive metabolic panel (CMP). Doctors use it to evaluate kidney function, dehydration, heart rhythm problems, high blood pressure, medication side effects, and symptoms like weakness or muscle cramps.</p>
+</div>
+
+<div class="card">
+<div class="section-label">Normal reference range</div>
+
+<div class="normal-range">
+3.5–5.1 mmol/L
+</div>
+
+<p class="range-note">
+Potassium levels are tightly regulated by the body, so even a mild abnormality may matter clinically — especially if you have kidney disease, heart disease, or take medications that affect potassium balance.
+</p>
+
+<p class="range-note" style="margin-top:8px;">
+Reference ranges vary slightly between labs. Always compare your result to the range printed on your own lab report.
+</p>
+
+<div class="timing-box">
+<h3>⚠️ One important testing detail</h3>
+<p>
+Potassium results can appear falsely high if the blood sample was difficult to draw, shaken too much, or sat too long before processing. This is called hemolysis, where potassium leaks out of blood cells into the sample tube. Doctors often repeat mildly high potassium tests to confirm the result is real.
+</p>
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">What your result might indicate</div>
+
+<div class="two-col">
+
+<div class="range-box high">
+<div class="range-box-label">↑ If High</div>
+<p>
+High potassium (hyperkalemia) may result from kidney disease, dehydration, certain blood pressure medications, uncontrolled diabetes, or adrenal disorders. Severely elevated potassium can affect the heart and become dangerous if not treated promptly.
+</p>
+</div>
+
+<div class="range-box low">
+<div class="range-box-label">↓ If Low</div>
+<p>
+Low potassium (hypokalemia) is commonly caused by vomiting, diarrhea, diuretics ("water pills"), poor nutrition, or excessive sweating. Low levels can lead to muscle weakness, cramps, and abnormal heart rhythms.
+</p>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">Symptoms associated with abnormal potassium</div>
+
+<div class="symptom-grid">
+
+<div class="symptom-box high">
+<h3>↑ High Potassium Symptoms</h3>
+
+<ul class="symptom-list">
+<li>Muscle weakness</li>
+<li>Numbness or tingling</li>
+<li>Fatigue</li>
+<li>Nausea</li>
+<li>Slow or irregular heartbeat</li>
+<li>Chest pain or palpitations</li>
+<li>Shortness of breath</li>
+<li>In severe cases, dangerous heart rhythm changes</li>
+</ul>
+</div>
+
+<div class="symptom-box low">
+<h3>↓ Low Potassium Symptoms</h3>
+
+<ul class="symptom-list">
+<li>Muscle cramps or twitching</li>
+<li>Weakness and fatigue</li>
+<li>Constipation</li>
+<li>Heart palpitations</li>
+<li>Dizziness</li>
+<li>Frequent urination</li>
+<li>Tingling sensations</li>
+<li>In severe cases, paralysis or arrhythmias</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">Common causes of abnormal potassium</div>
+
+<h2>What can raise potassium?</h2>
+
+<p>
+The most common cause of high potassium is reduced kidney function. When the kidneys can't remove potassium efficiently, levels build up in the bloodstream. Certain medications — especially ACE inhibitors, ARBs, spironolactone, and potassium supplements — can also increase potassium.
+</p>
+
+<p>
+Other causes include dehydration, uncontrolled diabetes, adrenal gland disorders like Addison's disease, severe infections, and conditions that rapidly break down muscle tissue or blood cells. Sometimes the result is falsely elevated because of issues with the blood draw itself.
+</p>
+
+<h2 style="margin-top:24px;">What can lower potassium?</h2>
+
+<p>
+Low potassium is most commonly caused by losing too much potassium through vomiting, diarrhea, or heavy sweating. Diuretic medications are another major cause because they increase potassium loss in urine.
+</p>
+
+<p>
+Poor dietary intake, eating disorders, alcoholism, laxative overuse, and certain hormonal conditions can also contribute. In some cases, potassium shifts temporarily from the bloodstream into cells after insulin use or intense exercise.
+</p>
+</div>
+
+<div class="card">
+<div class="section-label">Tests often ordered alongside potassium</div>
+
+<p>
+Potassium is rarely interpreted by itself. Your doctor may also order:
+</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+<li><strong>Sodium</strong> — another key electrolyte involved in fluid balance</li>
+<li><strong>Creatinine</strong> — evaluates kidney function, a major regulator of potassium</li>
+<li><strong>BUN (Blood Urea Nitrogen)</strong> — another marker of kidney health and hydration</li>
+<li><strong>Magnesium</strong> — low magnesium can make potassium abnormalities harder to correct</li>
+<li><strong>Glucose (fasting)</strong> — uncontrolled diabetes can affect potassium balance</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="section-label">What to do next</div>
+
+<div class="next-steps">
+A mildly abnormal potassium result is common and doesn't always mean something serious — but significantly high or low potassium should never be ignored because potassium directly affects heart function. Your doctor will interpret the result alongside your kidney function, medications, symptoms, and whether the sample may have been affected during collection.
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">Questions to ask your doctor</div>
+
+<ul class="questions-list">
+<li><span class="q-num">01</span>Could this result be affected by the blood draw or sample handling?</li>
+
+<li><span class="q-num">02</span>Are any of my medications raising or lowering my potassium?</li>
+
+<li><span class="q-num">03</span>Do my kidney function results help explain this potassium level?</li>
+
+<li><span class="q-num">04</span>Should I change my diet or avoid potassium-rich foods?</li>
+
+<li><span class="q-num">05</span>Do I need repeat testing or an ECG to check my heart rhythm?</li>
+
+<li><span class="q-num">06</span>How serious is this level, and when should I seek urgent care?</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="section-label">Frequently asked questions</div>
+
+<div class="faq-item">
+<div class="faq-q">Can dehydration affect potassium levels?</div>
+<div class="faq-a">
+Yes. Dehydration can concentrate potassium in the bloodstream and sometimes cause elevated levels. Severe dehydration can also affect kidney function, making potassium abnormalities more likely.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">What foods are high in potassium?</div>
+<div class="faq-a">
+Bananas are famous for potassium, but many foods contain more — including potatoes, avocados, spinach, beans, tomatoes, oranges, and yogurt. Whether you should limit or increase potassium depends entirely on your specific health condition and lab results.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Can potassium levels affect the heart?</div>
+<div class="faq-a">
+Absolutely. Potassium plays a major role in the electrical signals that control your heartbeat. Very high or very low potassium can cause dangerous heart rhythm abnormalities, which is why severe potassium imbalances may require urgent treatment.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Why would my doctor repeat a potassium test?</div>
+<div class="faq-a">
+Potassium tests are commonly repeated because false elevations happen fairly often due to blood draw issues or sample handling. A repeat test helps confirm whether the abnormality is real before making treatment decisions.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Can medications affect potassium?</div>
+<div class="faq-a">
+Yes. Many medications can change potassium levels, including diuretics, blood pressure medications, steroids, insulin, antibiotics, and potassium supplements. Always tell your doctor about every prescription, supplement, and over-the-counter medication you're taking.
+</div>
+</div>
+
+</div>
+
+<div class="card">
+<div class="section-label">Related lab tests</div>
+
+<div class="related">
+<a href="/sodium" class="related-chip">Sodium →</a>
+<a href="/creatinine" class="related-chip">Creatinine →</a>
+<a href="/bun" class="related-chip">BUN →</a>
+<a href="/magnesium" class="related-chip">Magnesium →</a>
+<a href="/glucose" class="related-chip">Glucose →</a>
+<a href="/calcium" class="related-chip">Calcium →</a>
+</div>
+</div>
+
+<div class="tool-cta">
+<h3>Decode any lab test instantly</h3>
+<p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+<a href="/">Open the Decoder →</a>
+</div>
+
+<footer>
+<span>labplain.co</span>
+<span>Understand your labs. No medical degree required.</span>
+</footer>
+
+</div>
+
 </body>
 </html>
