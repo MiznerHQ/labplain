@@ -1,258 +1,736 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fasting Blood Glucose Test – What Your Results Mean | LabPlain</title>
-  <meta name="description" content="What does your fasting glucose result mean? Plain-English guide to normal ranges, prediabetes, diabetes, hypoglycemia, HbA1c, and what to ask your doctor.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/glucose">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glucose Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your glucose result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://labplain.co/glucose" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
-      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
-      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
-      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
-      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
-      --border: #DDE3EC; --white: #FFFFFF;
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
-    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    p + p { margin-top: 14px; }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 15px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
-    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; }
-    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
-    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: var(--accent); }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
-    .symptom-box { padding: 16px; border-radius: 10px; }
-    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
-    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
-    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
-    .symptom-box.high h3 { color: var(--warn); }
-    .symptom-box.low h3 { color: var(--accent); }
-    .symptom-list { list-style: none; padding: 0; }
-    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
-    .symptom-list li:last-child { border-bottom: none; }
-    .symptom-list li::before { content: "→ "; color: var(--muted); }
-    .info-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
-    .info-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
-    .info-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
-    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
-    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
-    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
-    .questions-list li:last-child { border-bottom: none; }
-    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
-    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
-    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
-    .glucose-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
-    .glucose-table th { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); padding: 8px 12px; text-align: left; border-bottom: 2px solid var(--border); }
-    .glucose-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--ink); line-height: 1.5; }
-    .glucose-table tr:last-child td { border-bottom: none; }
-    .glucose-table tr td:first-child { font-family: 'DM Mono', monospace; font-weight: 500; color: var(--accent); }
-    .glucose-table tr.warn td { background: var(--warn-light); }
-    .glucose-table tr.warn td:first-child { color: var(--warn); }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
-    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
-    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
+
+    :root {
+      --bg: #FFFFFF;
+      --ink: #0D1B2A;
+      --muted: #6B7A8D;
+      --accent: #185FA5;
+      --accent-light: #E6F1FB;
+      --accent-border: #B5D4F4;
+      --warn: #993C1D;
+      --warn-light: #FAECE7;
+      --warn-border: #F5C4B3;
+      --success-light: #EAF3DE;
+      --success-border: #C0DD97;
+      --success-text: #27500A;
+      --amber: #92400E;
+      --amber-light: #FEF3C7;
+      --amber-border: #F59E0B;
+      --border: #DDE3EC;
+      --white: #FFFFFF;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-mark svg {
+      width: 18px;
+      height: 18px;
+      fill: white;
+    }
+
+    .logo-text {
+      font-family: 'DM Mono', monospace;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .logo-text span {
+      color: var(--accent);
+    }
+
+    .breadcrumb {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-family: 'DM Mono', monospace;
+    }
+
+    .breadcrumb a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(20px, 3vw, 26px);
+      line-height: 1.2;
+      letter-spacing: -0.3px;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .category-tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+
+    .disclaimer {
+      background: var(--amber-light);
+      border: 1px solid var(--amber-border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 36px;
+      font-size: 13px;
+      color: var(--amber);
+      line-height: 1.5;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 20px;
+    }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--ink);
+    }
+
+    p + p {
+      margin-top: 14px;
+    }
+
+    .normal-range {
+      font-family: 'DM Mono', monospace;
+      font-size: 16px;
+      color: var(--accent);
+      font-weight: 500;
+      background: var(--accent-light);
+      padding: 14px 18px;
+      border-radius: 10px;
+      border: 1px solid var(--accent-border);
+      margin-bottom: 12px;
+    }
+
+    .range-note {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-top: 8px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .range-box {
+      padding: 16px;
+      border-radius: 10px;
+    }
+
+    .range-box.high {
+      background: var(--warn-light);
+      border: 1px solid var(--warn-border);
+    }
+
+    .range-box.low {
+      background: var(--accent-light);
+      border: 1px solid var(--accent-border);
+    }
+
+    .range-box-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .range-box.high .range-box-label {
+      color: var(--warn);
+    }
+
+    .range-box.low .range-box-label {
+      color: var(--accent);
+    }
+
+    .range-box p {
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .symptom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 4px;
+    }
+
+    .symptom-box {
+      padding: 16px;
+      border-radius: 10px;
+    }
+
+    .symptom-box.high {
+      background: var(--warn-light);
+      border: 1px solid var(--warn-border);
+    }
+
+    .symptom-box.low {
+      background: var(--accent-light);
+      border: 1px solid var(--accent-border);
+    }
+
+    .symptom-box h3 {
+      font-size: 13px;
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .symptom-box.high h3 {
+      color: var(--warn);
+    }
+
+    .symptom-box.low h3 {
+      color: var(--accent);
+    }
+
+    .symptom-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .symptom-list li {
+      font-size: 14px;
+      color: var(--ink);
+      line-height: 1.6;
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .symptom-list li:last-child {
+      border-bottom: none;
+    }
+
+    .symptom-list li::before {
+      content: "→ ";
+      color: var(--muted);
+    }
+
+    .timing-box {
+      background: var(--amber-light);
+      border: 1px solid var(--amber-border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-top: 16px;
+    }
+
+    .timing-box h3 {
+      font-size: 14px;
+      color: var(--amber);
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .timing-box p {
+      font-size: 14px;
+      color: #78350F;
+      line-height: 1.65;
+    }
+
+    .next-steps {
+      background: var(--success-light);
+      border: 1px solid var(--success-border);
+      border-radius: 10px;
+      padding: 20px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--success-text);
+    }
+
+    .questions-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 8px;
+    }
+
+    .questions-list li {
+      font-size: 15px;
+      color: var(--ink);
+      line-height: 1.65;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 10px;
+    }
+
+    .questions-list li:last-child {
+      border-bottom: none;
+    }
+
+    .q-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 500;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .faq-item {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .faq-a {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .tool-cta {
+      background: var(--accent);
+      color: white;
+      border-radius: 12px;
+      padding: 28px;
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    .tool-cta h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: white;
+    }
+
+    .tool-cta p {
+      font-size: 14px;
+      opacity: 0.85;
+      margin-bottom: 18px;
+      color: white;
+    }
+
+    .tool-cta a {
+      display: inline-block;
+      background: white;
+      color: var(--accent);
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+    }
+
+    .related {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .related-chip {
+      display: block;
+      padding: 12px 16px;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      color: var(--ink);
+      font-family: 'DM Mono', monospace;
+      transition: border-color 0.15s;
+    }
+
+    .related-chip:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    @media (max-width: 480px) {
+      .two-col,
+      .symptom-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="wrap">
+
     <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24">
+          <path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/>
+        </svg>
+      </div>
+
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Fasting Glucose</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Fasting Glucose</em> result mean?</h1>
-    <span class="category-tag">Diabetes / Metabolic</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+
+    <p class="breadcrumb">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/tests">Lab Tests</a> &rsaquo;
+      Glucose
+    </p>
+
+    <h1>
+      What does your<br>
+      <em style="font-style:italic;color:var(--accent)">Glucose</em> result mean?
+    </h1>
+
+    <span class="category-tag">Metabolism</span>
+
+    <div class="disclaimer">
+      ⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.
+    </div>
+
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>Fasting blood glucose measures the amount of sugar (glucose) in your blood after you haven't eaten for at least 8 hours. Glucose is your body's primary fuel source — every cell depends on it for energy. After you eat, glucose enters your bloodstream and your pancreas releases insulin to help cells absorb it. When this system works well, blood sugar stays within a healthy range.</p>
-      <p>The fasting glucose test captures your baseline blood sugar level — free from the temporary spike that follows a meal. It's one of the most important screening tools for diabetes and prediabetes, and it's also used to monitor people who already have diabetes to see how well their blood sugar is being controlled.</p>
-      <p>This test is typically included in a Basic Metabolic Panel (BMP) or Comprehensive Metabolic Panel (CMP), or ordered on its own as part of a diabetes screening.</p>
+
+      <p>
+        A glucose blood test measures the amount of sugar (glucose) circulating in your bloodstream. Glucose is your body's primary source of energy — every cell in your body depends on it, especially your brain.
+      </p>
+
+      <p>
+        After you eat carbohydrates like bread, fruit, pasta, or sweets, your body breaks them down into glucose. A hormone called insulin then helps move that glucose from your blood into your cells where it's used for energy.
+      </p>
+
+      <p>
+        Doctors order glucose tests to screen for or monitor diabetes, prediabetes, hypoglycemia (low blood sugar), and other metabolic conditions. It's one of the most common blood tests because blood sugar affects nearly every organ system in the body.
+      </p>
     </div>
+
     <div class="card">
       <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Normal: 70–99 mg/dL &nbsp;|&nbsp; Prediabetes: 100–125 mg/dL &nbsp;|&nbsp; Diabetes: 126+ mg/dL</div>
-      <p class="range-note">These are fasting ranges — meaning you should not have eaten for at least 8 hours before the test. A non-fasting glucose result is interpreted differently and is less useful for diagnosing diabetes.</p>
-      <div class="info-box">
-        <h3>⏰ Did you fast properly?</h3>
-        <p>Even a small snack or sugary drink before the test can significantly raise your result. Water is fine. Black coffee can also slightly affect results. If you didn't fast for the full 8 hours, let your doctor know — they may want to repeat the test.</p>
+
+      <div class="normal-range">
+        Fasting glucose: 70–99 mg/dL &nbsp;|&nbsp; Prediabetes: 100–125 mg/dL &nbsp;|&nbsp; Diabetes: 126+ mg/dL
+      </div>
+
+      <p class="range-note">
+        These ranges apply to a fasting glucose test — meaning you haven't eaten for at least 8 hours before the blood draw. Eating shortly before the test can temporarily raise glucose levels.
+      </p>
+
+      <p class="range-note" style="margin-top:8px;">
+        Some labs use slightly different reference ranges. Always compare your result to the range listed on your specific lab report.
+      </p>
+
+      <div class="timing-box">
+        <h3>⏰ Fasting matters</h3>
+
+        <p>
+          For a fasting glucose test, even coffee with sugar or cream can affect the result. Water is usually allowed. If you weren't truly fasting, your doctor may repeat the test or order an A1C test for a longer-term picture of blood sugar control.
+        </p>
       </div>
     </div>
-    <div class="card">
-      <div class="section-label">Glucose levels at a glance</div>
-      <p>Here's how fasting glucose results are categorized by the American Diabetes Association:</p>
-      <table class="glucose-table">
-        <thead>
-          <tr><th>Fasting Glucose</th><th>Category</th><th>What it means</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Below 70 mg/dL</td><td>Hypoglycemia</td><td>Low blood sugar — may need immediate attention depending on symptoms</td></tr>
-          <tr><td>70–99 mg/dL</td><td>Normal</td><td>Healthy fasting blood sugar</td></tr>
-          <tr><td>100–125 mg/dL</td><td>Prediabetes</td><td>Higher than normal — lifestyle changes can reverse this</td></tr>
-          <tr class="warn"><td>126+ mg/dL</td><td>Diabetes (tentative)</td><td>Requires confirmation with a second test on a different day</td></tr>
-        </tbody>
-      </table>
-    </div>
+
     <div class="card">
       <div class="section-label">What your result might indicate</div>
+
       <div class="two-col">
+
         <div class="range-box high">
           <div class="range-box-label">↑ If High</div>
-          <p>Elevated fasting glucose suggests your body isn't managing blood sugar efficiently — either your pancreas isn't producing enough insulin or your cells aren't responding to it properly. A single elevated result doesn't confirm diabetes; a second test is needed.</p>
+
+          <p>
+            High glucose may suggest prediabetes, diabetes, insulin resistance, severe stress, infection, or side effects from medications like steroids. Persistent elevations usually require follow-up testing.
+          </p>
         </div>
+
         <div class="range-box low">
           <div class="range-box-label">↓ If Low</div>
-          <p>Low blood sugar (hypoglycemia) can result from fasting too long, diabetes medications, excessive alcohol, or certain medical conditions. Mild cases are common; severe hypoglycemia can be dangerous and requires prompt treatment.</p>
+
+          <p>
+            Low glucose may result from skipping meals, diabetes medications, excessive alcohol use, hormone disorders, or certain liver conditions. Very low blood sugar can become dangerous if untreated.
+          </p>
         </div>
+
       </div>
     </div>
+
     <div class="card">
-      <div class="section-label">Symptoms of abnormal blood sugar</div>
+      <div class="section-label">Symptoms associated with abnormal glucose</div>
+
       <div class="symptom-grid">
+
         <div class="symptom-box high">
-          <h3>↑ High Blood Sugar Symptoms</h3>
+          <h3>↑ High Glucose Symptoms</h3>
+
           <ul class="symptom-list">
-            <li>Increased thirst and dry mouth</li>
-            <li>Frequent urination, especially at night</li>
-            <li>Unexplained fatigue</li>
+            <li>Increased thirst</li>
+            <li>Frequent urination</li>
             <li>Blurred vision</li>
-            <li>Slow-healing cuts or wounds</li>
+            <li>Fatigue or low energy</li>
+            <li>Slow wound healing</li>
             <li>Frequent infections</li>
-            <li>Tingling or numbness in hands/feet</li>
+            <li>Increased hunger</li>
             <li>Unexplained weight loss</li>
           </ul>
         </div>
+
         <div class="symptom-box low">
-          <h3>↓ Low Blood Sugar Symptoms</h3>
+          <h3>↓ Low Glucose Symptoms</h3>
+
           <ul class="symptom-list">
             <li>Shakiness or trembling</li>
             <li>Sweating</li>
-            <li>Dizziness or lightheadedness</li>
+            <li>Dizziness</li>
             <li>Rapid heartbeat</li>
+            <li>Confusion or brain fog</li>
             <li>Irritability or anxiety</li>
-            <li>Hunger or nausea</li>
-            <li>Confusion or difficulty concentrating</li>
-            <li>Pale skin</li>
+            <li>Weakness</li>
+            <li>Fainting in severe cases</li>
           </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal glucose</div>
+
+      <h2>What can raise glucose?</h2>
+
+      <p>
+        The most common cause of persistently high glucose is diabetes or prediabetes, where the body either doesn't produce enough insulin or becomes resistant to its effects. Obesity, physical inactivity, genetics, and poor diet all increase risk.
+      </p>
+
+      <p>
+        Glucose can also rise temporarily during illness, surgery, infections, or major stress because stress hormones push extra sugar into the bloodstream. Certain medications — especially corticosteroids — can raise glucose as well.
+      </p>
+
+      <h2 style="margin-top:24px;">What can lower glucose?</h2>
+
+      <p>
+        Low blood sugar is most commonly caused by diabetes medications like insulin or sulfonylureas. Skipping meals, drinking alcohol on an empty stomach, prolonged exercise, and severe illness can also cause glucose to drop.
+      </p>
+
+      <p>
+        Less commonly, low glucose may be related to hormone deficiencies, liver disease, or rare insulin-producing tumors called insulinomas.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside glucose</div>
+
+      <p>
+        Glucose is often interpreted alongside other metabolic and diabetes-related tests. Your doctor may also order:
+      </p>
+
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>Hemoglobin A1C</strong> — shows average blood sugar over the past 2–3 months</li>
+        <li><strong>Insulin</strong> — helps evaluate insulin resistance or low insulin production</li>
+        <li><strong>C-peptide</strong> — measures how much insulin your body is making naturally</li>
+        <li><strong>Lipid panel</strong> — cholesterol and triglycerides often rise alongside insulin resistance</li>
+        <li><strong>Comprehensive metabolic panel (CMP)</strong> — checks liver, kidney, and electrolyte health</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What to do next</div>
+
+      <div class="next-steps">
+        A single abnormal glucose result doesn't automatically mean you have diabetes. Your doctor will look at whether you were fasting, your symptoms, medications, lifestyle factors, and whether the result has been consistently abnormal over time. Follow-up testing is very common before making a diagnosis.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Was this a fasting glucose test, and does that affect how you interpret the result?</li>
+
+        <li><span class="q-num">02</span>Do I need an A1C test or repeat glucose test?</li>
+
+        <li><span class="q-num">03</span>Could any medications or recent illness have affected my blood sugar?</li>
+
+        <li><span class="q-num">04</span>Does this result suggest prediabetes or diabetes?</li>
+
+        <li><span class="q-num">05</span>What lifestyle changes would make the biggest difference for my glucose levels?</li>
+
+        <li><span class="q-num">06</span>Should I monitor my blood sugar at home?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+
+      <div class="faq-item">
+        <div class="faq-q">What happens if I accidentally ate before a fasting glucose test?</div>
+
+        <div class="faq-a">
+          Eating before the test can temporarily raise your blood sugar and make the result harder to interpret. Your doctor may recommend repeating the test while fasting or ordering an A1C test instead.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can stress raise blood sugar?</div>
+
+        <div class="faq-a">
+          Yes. Physical and emotional stress trigger hormones like cortisol and adrenaline, which can temporarily increase blood glucose levels — even in people without diabetes.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between glucose and A1C?</div>
+
+        <div class="faq-a">
+          A glucose test measures your blood sugar at a single moment in time. Hemoglobin A1C reflects your average blood sugar over roughly the past 2–3 months, making it better for identifying long-term patterns.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can prediabetes be reversed?</div>
+
+        <div class="faq-a">
+          Often, yes. Weight loss, exercise, healthier eating habits, and improved sleep can significantly improve insulin sensitivity and lower blood sugar levels before full diabetes develops.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Is low blood sugar dangerous?</div>
+
+        <div class="faq-a">
+          It can be. Mild hypoglycemia may cause shakiness or sweating, but severe low blood sugar can lead to confusion, seizures, or loss of consciousness if not treated quickly.
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="section-label">Understanding prediabetes</div>
-      <h2>Prediabetes is reversible</h2>
-      <p>A fasting glucose between 100–125 mg/dL means you have prediabetes — blood sugar that's higher than normal but not yet high enough to be classified as type 2 diabetes. This is a critical window. Research consistently shows that lifestyle interventions at this stage can prevent or significantly delay the progression to type 2 diabetes.</p>
-      <p>The most effective changes include losing 5–7% of body weight if overweight, doing 150 minutes of moderate exercise per week (like brisk walking), reducing refined carbohydrates and sugary drinks, and improving sleep quality. In some cases, doctors also prescribe metformin as a preventive measure.</p>
-      <p>Prediabetes often has no symptoms — which is why routine screening matters. If caught early, many people bring their glucose back into the normal range entirely through lifestyle changes.</p>
-    </div>
-    <div class="card">
-      <div class="section-label">Glucose vs. HbA1c — what's the difference?</div>
-      <p>Fasting glucose gives you a snapshot of your blood sugar right now. HbA1c (glycated hemoglobin) shows your average blood sugar over the past 2–3 months. Together they give a much more complete picture.</p>
-      <ul class="symptom-list" style="margin-top:12px;">
-        <li><strong>Fasting glucose</strong> — point-in-time measurement, affected by recent diet, stress, illness</li>
-        <li><strong>HbA1c</strong> — long-term average, not affected by what you ate yesterday</li>
-        <li><strong>Oral glucose tolerance test (OGTT)</strong> — measures how your blood sugar responds to a sugary drink over 2 hours; used to diagnose gestational diabetes</li>
-        <li><strong>Random glucose</strong> — taken any time of day without fasting; mainly used when diabetes symptoms are severe</li>
-      </ul>
-    </div>
-    <div class="card">
-      <div class="section-label">What can raise fasting glucose?</div>
-      <p>Beyond diet and diabetes, several factors can temporarily or chronically elevate fasting glucose. Stress — both physical and emotional — triggers cortisol release, which raises blood sugar. Poor sleep consistently elevates fasting glucose even in healthy people. Certain medications raise blood sugar as a side effect, including corticosteroids, some antipsychotics, and certain blood pressure medications.</p>
-      <p>Chronic conditions that contribute to high glucose include polycystic ovary syndrome (PCOS), Cushing's syndrome, pancreatitis, and hypothyroidism. If your glucose is elevated but you don't have obvious risk factors for diabetes, your doctor may investigate these possibilities.</p>
-    </div>
-    <div class="card">
-      <div class="section-label">What to do next</div>
-      <div class="next-steps">A single fasting glucose result needs context. If it's in the prediabetes or diabetes range, your doctor will likely order a repeat test and an HbA1c before making any diagnosis. Don't panic — elevated glucose is one of the most manageable findings in medicine, especially when caught early. Focus on what you can control: diet, exercise, sleep, and stress. Only your doctor can interpret your specific result in context of your full health picture.</div>
-    </div>
-    <div class="card">
-      <div class="section-label">Questions to ask your doctor</div>
-      <ul class="questions-list">
-        <li><span class="q-num">01</span>Should we also check my HbA1c to see my 3-month average?</li>
-        <li><span class="q-num">02</span>Is my result in the normal, prediabetes, or diabetes range?</li>
-        <li><span class="q-num">03</span>How confident are you that I fasted properly before this test?</li>
-        <li><span class="q-num">04</span>What specific diet and exercise changes would have the biggest impact on my numbers?</li>
-        <li><span class="q-num">05</span>Should I be monitoring my blood sugar at home?</li>
-        <li><span class="q-num">06</span>Are any of my medications affecting my blood sugar?</li>
-        <li><span class="q-num">07</span>How often should I be retesting?</li>
-      </ul>
-    </div>
-    <div class="card">
-      <div class="section-label">Frequently asked questions</div>
-      <div class="faq-item">
-        <div class="faq-q">Can one high glucose result diagnose diabetes?</div>
-        <div class="faq-a">No. According to the American Diabetes Association, a diabetes diagnosis requires either two separate fasting glucose readings of 126 mg/dL or higher, or one fasting glucose of 126+ confirmed by another type of test (like HbA1c or a glucose tolerance test). A single elevated reading on its own is not enough for a diagnosis.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What should I eat to lower my fasting glucose?</div>
-        <div class="faq-a">The most effective dietary changes are reducing refined carbohydrates (white bread, white rice, sugary drinks, pastries), increasing fiber intake (vegetables, legumes, whole grains), eating protein and healthy fats with meals to slow glucose absorption, and avoiding eating within 2–3 hours of bedtime. A registered dietitian can create a personalized plan based on your specific results and lifestyle.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Is 105 mg/dL fasting glucose bad?</div>
-        <div class="faq-a">A result of 105 mg/dL falls in the prediabetes range (100–125 mg/dL). It's not an emergency, but it is a meaningful signal that your blood sugar regulation needs attention. The good news is that at this level, lifestyle changes alone are often enough to bring glucose back into the normal range before it progresses further.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Can stress cause high fasting glucose?</div>
-        <div class="faq-a">Yes. When you're stressed, your body releases cortisol and adrenaline, which signal the liver to release stored glucose into the bloodstream. This is a survival mechanism — your body is preparing for "fight or flight." Chronic psychological stress can persistently elevate fasting glucose even without any dietary cause. Managing stress through exercise, sleep, and relaxation techniques can meaningfully improve blood sugar control.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Does coffee affect fasting glucose?</div>
-        <div class="faq-a">Black coffee can slightly raise blood sugar in some people due to caffeine's effect on insulin sensitivity. The effect is usually small and temporary, but if you're borderline prediabetic and testing for the first time, your doctor may ask you to skip coffee before the draw for the most accurate baseline result.</div>
-      </div>
-    </div>
+
     <div class="card">
       <div class="section-label">Related lab tests</div>
+
       <div class="related">
-        <a href="/cortisol" class="related-chip">Cortisol →</a>
-        <a href="/hemoglobin" class="related-chip">Hemoglobin →</a>
-        <a href="/creatinine" class="related-chip">Creatinine →</a>
+        <a href="/a1c" class="related-chip">A1C →</a>
         <a href="/triglycerides" class="related-chip">Triglycerides →</a>
+        <a href="/cortisol" class="related-chip">Cortisol →</a>
+        <a href="/creatinine" class="related-chip">Creatinine →</a>
         <a href="/tsh" class="related-chip">TSH →</a>
         <a href="/ferritin" class="related-chip">Ferritin →</a>
       </div>
     </div>
+
     <div class="tool-cta">
       <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+
+      <p>
+        Use our free AI-powered tool to look up any blood test in plain English.
+      </p>
+
       <a href="/">Open the Decoder →</a>
     </div>
+
     <footer>
       <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
+      <span>Understand your labs. No medical degree required.</span>
     </footer>
+
   </div>
 </body>
 </html>
