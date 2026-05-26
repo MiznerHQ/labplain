@@ -1,105 +1,709 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Platelet Count – LabPlain</title>
-  <meta name="description" content="What does your Platelet Count result mean? Plain-English explanation of normal ranges, high and low values, and what to ask your doctor. No medical jargon.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/platelets">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --cream: #F7F4EF; --ink: #1A1A18; --muted: #7A7A72;
-      --accent: #2E6B4F; --accent-light: #EAF3EE; --warn: #B85C2A;
-      --warn-light: #FDF0E8; --border: #DDD9D0; --white: #FFFFFF;
-    }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 24px 28px; margin-top: 32px; text-align: center; }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 16px; }
-    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Platelets Blood Test – What Your Results Mean | LabPlain</title>
+<meta name="description" content="What does your platelet count mean? Plain-English guide to normal ranges, high and low platelets, symptoms, causes, and what to ask your doctor.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://labplain.co/platelets">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--bg: #FFFFFF;
+--ink: #0D1B2A;
+--muted: #6B7A8D;
+--accent: #185FA5;
+--accent-light: #E6F1FB;
+--accent-border: #B5D4F4;
+--warn: #993C1D;
+--warn-light: #FAECE7;
+--warn-border: #F5C4B3;
+--success-light: #EAF3DE;
+--success-border: #C0DD97;
+--success-text: #27500A;
+--amber: #92400E;
+--amber-light: #FEF3C7;
+--amber-border: #F59E0B;
+--border: #DDE3EC;
+--white: #FFFFFF;
+}
+
+body {
+background: var(--bg);
+color: var(--ink);
+font-family: 'DM Sans', sans-serif;
+min-height: 100vh;
+}
+
+.wrap {
+max-width: 720px;
+margin: 0 auto;
+padding: 40px 24px 80px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 40px;
+}
+
+.logo-mark {
+width: 32px;
+height: 32px;
+background: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo-mark svg {
+width: 18px;
+height: 18px;
+fill: white;
+}
+
+.logo-text {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+text-decoration: none;
+}
+
+.logo-text span {
+color: var(--accent);
+}
+
+.breadcrumb {
+font-size: 13px;
+color: var(--muted);
+margin-bottom: 20px;
+font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+color: var(--accent);
+text-decoration: none;
+}
+
+h1 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(28px, 5vw, 42px);
+line-height: 1.15;
+letter-spacing: -0.5px;
+margin-bottom: 8px;
+}
+
+h2 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(20px, 3vw, 26px);
+line-height: 1.2;
+letter-spacing: -0.3px;
+margin-bottom: 12px;
+color: var(--ink);
+}
+
+h3 {
+font-family: 'DM Sans', sans-serif;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+color: var(--ink);
+}
+
+.category-tag {
+display: inline-block;
+background: var(--accent-light);
+color: var(--accent);
+font-family: 'DM Mono', monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 4px 12px;
+border-radius: 20px;
+margin-bottom: 24px;
+}
+
+.disclaimer {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 14px 18px;
+margin-bottom: 36px;
+font-size: 13px;
+color: var(--amber);
+line-height: 1.5;
+}
+
+.card {
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 14px;
+padding: 28px;
+margin-bottom: 20px;
+}
+
+.section-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 10px;
+}
+
+p {
+font-size: 16px;
+line-height: 1.75;
+color: var(--ink);
+}
+
+p + p {
+margin-top: 14px;
+}
+
+.normal-range {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+color: var(--accent);
+font-weight: 500;
+background: var(--accent-light);
+padding: 14px 18px;
+border-radius: 10px;
+border: 1px solid var(--accent-border);
+margin-bottom: 12px;
+}
+
+.range-note {
+font-size: 13px;
+color: var(--muted);
+line-height: 1.6;
+margin-top: 8px;
+}
+
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+
+.range-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.range-box.high {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.range-box.low {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.range-box-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.range-box.high .range-box-label {
+color: var(--warn);
+}
+
+.range-box.low .range-box-label {
+color: var(--accent);
+}
+
+.range-box p {
+font-size: 14px;
+line-height: 1.65;
+}
+
+.symptom-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+margin-top: 4px;
+}
+
+.symptom-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.symptom-box.high {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.symptom-box.low {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.symptom-box h3 {
+font-size: 13px;
+font-family: 'DM Mono', monospace;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 10px;
+}
+
+.symptom-box.high h3 {
+color: var(--warn);
+}
+
+.symptom-box.low h3 {
+color: var(--accent);
+}
+
+.symptom-list {
+list-style: none;
+padding: 0;
+}
+
+.symptom-list li {
+font-size: 14px;
+color: var(--ink);
+line-height: 1.6;
+padding: 4px 0;
+border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+border-bottom: none;
+}
+
+.symptom-list li::before {
+content: "→ ";
+color: var(--muted);
+}
+
+.timing-box {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 18px 20px;
+margin-top: 16px;
+}
+
+.timing-box h3 {
+font-size: 14px;
+color: var(--amber);
+font-family: 'DM Mono', monospace;
+letter-spacing: 0.5px;
+margin-bottom: 8px;
+}
+
+.timing-box p {
+font-size: 14px;
+color: #78350F;
+line-height: 1.65;
+}
+
+.next-steps {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+border-radius: 10px;
+padding: 20px;
+font-size: 15px;
+line-height: 1.7;
+color: var(--success-text);
+}
+
+.questions-list {
+list-style: none;
+padding: 0;
+margin-top: 8px;
+}
+
+.questions-list li {
+font-size: 15px;
+color: var(--ink);
+line-height: 1.65;
+padding: 10px 0;
+border-bottom: 1px solid var(--border);
+display: flex;
+gap: 10px;
+}
+
+.questions-list li:last-child {
+border-bottom: none;
+}
+
+.q-num {
+font-family: 'DM Mono', monospace;
+font-size: 12px;
+color: var(--accent);
+font-weight: 500;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+.faq-item {
+padding: 18px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-q {
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+margin-bottom: 8px;
+}
+
+.faq-a {
+font-size: 15px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+.tool-cta {
+background: var(--accent);
+color: white;
+border-radius: 12px;
+padding: 28px;
+margin-top: 32px;
+text-align: center;
+}
+
+.tool-cta h3 {
+font-family: 'DM Serif Display', serif;
+font-size: 24px;
+margin-bottom: 8px;
+color: white;
+}
+
+.tool-cta p {
+font-size: 14px;
+opacity: 0.85;
+margin-bottom: 18px;
+color: white;
+}
+
+.tool-cta a {
+display: inline-block;
+background: white;
+color: var(--accent);
+font-weight: 500;
+text-decoration: none;
+padding: 12px 28px;
+border-radius: 8px;
+font-family: 'DM Mono', monospace;
+font-size: 14px;
+}
+
+.related {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 12px;
+margin-top: 4px;
+}
+
+.related-chip {
+display: block;
+padding: 12px 16px;
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+color: var(--ink);
+font-family: 'DM Mono', monospace;
+transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+
+footer {
+margin-top: 60px;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+font-size: 12px;
+color: var(--muted);
+font-family: 'DM Mono', monospace;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+@media (max-width: 480px) {
+.two-col,
+.symptom-grid {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <nav>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
-    </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Platelet Count</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Platelet Count</em> result mean?</h1>
-    <span class="category-tag">Blood Count</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>The <strong>Platelet Count</strong> test counts the tiny cell fragments that help your blood clot when you have a cut or injury.</p>
-    </div>
+<nav>
+<div class="logo-mark">
+<svg viewBox="0 0 24 24">
+<path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/>
+</svg>
+</div>
+<a href="/" class="logo-text">lab<span>plain</span></a>
+</nav>
 
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">150,000–400,000 per mcL</div>
-      <p style="margin-top:12px;font-size:14px;color:var(--muted)">Reference ranges can vary slightly between labs. Always compare your result to the range printed on your own lab report.</p>
-    </div>
+<p class="breadcrumb">
+<a href="/">Home</a> &rsaquo;
+<a href="/tests">Lab Tests</a> &rsaquo;
+Platelets
+</p>
 
-    <div class="card">
-      <div class="section-label">What your result might indicate</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ If High</div>
-          <p>High platelets can follow surgery, infection, or iron deficiency. Very high counts may increase clotting risk.</p>
-        </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ If Low</div>
-          <p>Low platelets mean your blood may take longer to clot. This can cause easy bruising or bleeding that's hard to stop.</p>
-        </div>
-      </div>
-    </div>
+<h1>What does your<br><em style="font-style:italic;color:var(--accent)">Platelet Count</em> result mean?</h1>
 
-    <div class="card">
-      <div class="section-label">What to do next</div>
-      <div class="next-steps">If platelets are significantly outside the normal range, your doctor will likely want to investigate further and may refer you to a hematologist.</div>
-    </div>
+<span class="category-tag">Blood Cells</span>
 
-    <div class="tool-cta">
-      <h3>Decode any lab test instantly</h3>
-      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
-      <a href="/">Open the Decoder →</a>
-    </div>
+<div class="disclaimer">
+⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.
+</div>
 
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
-    </footer>
-  </div>
+<div class="card">
+<div class="section-label">What this test measures</div>
+
+<p>Platelets are tiny blood cells that help your body stop bleeding. When you cut yourself or injure a blood vessel, platelets rush to the area, stick together, and form a clot to seal the damage.</p>
+
+<p>Your platelet count is part of a Complete Blood Count (CBC) test and measures how many platelets are circulating in your blood. Having too few platelets can increase bleeding risk, while having too many can raise the risk of abnormal blood clots.</p>
+
+<p>Doctors order platelet tests to investigate unexplained bruising, bleeding, clotting problems, infections, inflammatory conditions, and certain bone marrow disorders. Platelet counts are also commonly monitored during chemotherapy and other medical treatments.</p>
+</div>
+
+<div class="card">
+<div class="section-label">Normal reference range</div>
+
+<div class="normal-range">
+150,000–450,000 platelets per microliter (mcL)
+</div>
+
+<p class="range-note">
+Some labs may report platelet counts slightly differently, but most healthy adults fall within this general range. Mild variations are common and don't always indicate a medical problem.
+</p>
+
+<p class="range-note" style="margin-top:8px;">
+Doctors interpret platelet counts alongside your symptoms, medical history, medications, and other CBC results like hemoglobin and white blood cells.
+</p>
+
+<div class="timing-box">
+<h3>🩸 Platelets can change temporarily</h3>
+<p>
+Platelet counts can temporarily rise or fall due to infections, inflammation, surgery, heavy exercise, pregnancy, or even dehydration. A single abnormal result often leads to repeat testing before any diagnosis is made.
+</p>
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">What your result might indicate</div>
+
+<div class="two-col">
+
+<div class="range-box high">
+<div class="range-box-label">↑ If High</div>
+<p>
+High platelets (thrombocytosis) may occur from infection, inflammation, iron deficiency, recent surgery, smoking, or certain bone marrow disorders. Mild elevations are often temporary and reactive rather than dangerous.
+</p>
+</div>
+
+<div class="range-box low">
+<div class="range-box-label">↓ If Low</div>
+<p>
+Low platelets (thrombocytopenia) may increase bleeding risk and can result from viral infections, autoimmune conditions, medications, liver disease, alcohol use, or bone marrow problems.
+</p>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">Symptoms associated with abnormal platelets</div>
+
+<div class="symptom-grid">
+
+<div class="symptom-box high">
+<h3>↑ High Platelet Symptoms</h3>
+
+<ul class="symptom-list">
+<li>Headaches or dizziness</li>
+<li>Chest pain</li>
+<li>Numbness or tingling</li>
+<li>Blood clots</li>
+<li>Blurred vision</li>
+<li>Fatigue</li>
+<li>Burning pain in hands or feet</li>
+<li>Sometimes no symptoms at all</li>
+</ul>
+</div>
+
+<div class="symptom-box low">
+<h3>↓ Low Platelet Symptoms</h3>
+
+<ul class="symptom-list">
+<li>Easy bruising</li>
+<li>Nosebleeds</li>
+<li>Bleeding gums</li>
+<li>Tiny red or purple skin spots (petechiae)</li>
+<li>Heavy menstrual bleeding</li>
+<li>Blood in urine or stool</li>
+<li>Prolonged bleeding from cuts</li>
+<li>Severe fatigue</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">Common causes of abnormal platelets</div>
+
+<h2>What can raise platelets?</h2>
+
+<p>
+The most common reason for high platelets is a temporary "reactive" response to another condition. Infections, inflammation, recent surgery, iron deficiency, trauma, and recovery from blood loss can all cause platelet counts to rise.
+</p>
+
+<p>
+Less commonly, persistently high platelets may result from bone marrow disorders such as essential thrombocythemia, where the body produces too many platelets without an obvious trigger.
+</p>
+
+<h2 style="margin-top:24px;">What can lower platelets?</h2>
+
+<p>
+Low platelets can happen when the body destroys platelets too quickly, the bone marrow doesn't make enough, or platelets become trapped in an enlarged spleen. Common causes include viral infections, alcohol use, certain medications, autoimmune diseases like ITP (immune thrombocytopenia), liver disease, and chemotherapy.
+</p>
+
+<p>
+Severely low platelets can become dangerous because the blood may struggle to clot properly, increasing the risk of serious bleeding.
+</p>
+</div>
+
+<div class="card">
+<div class="section-label">Tests often ordered alongside platelets</div>
+
+<p>
+Platelet counts are rarely interpreted alone. Your doctor may also order:
+</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+<li><strong>Complete Blood Count (CBC)</strong> — evaluates red blood cells, white blood cells, and platelets together</li>
+<li><strong>Peripheral blood smear</strong> — lets doctors visually examine blood cells under a microscope</li>
+<li><strong>Iron studies / Ferritin</strong> — iron deficiency can raise platelet counts</li>
+<li><strong>PT/INR and PTT</strong> — clotting tests that measure how well your blood coagulates</li>
+<li><strong>Liver function tests</strong> — liver disease can lower platelets</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="section-label">What to do next</div>
+
+<div class="next-steps">
+A mildly abnormal platelet count is common and often temporary. Doctors usually interpret your platelet count alongside the rest of your CBC, your symptoms, medications, recent illnesses, and overall health. A repeat test is often the next step before any major conclusions are made.
+</div>
+</div>
+
+<div class="card">
+<div class="section-label">Questions to ask your doctor</div>
+
+<ul class="questions-list">
+<li><span class="q-num">01</span>How abnormal is my platelet count, and is it likely temporary?</li>
+<li><span class="q-num">02</span>Could a recent illness, infection, or medication explain this result?</li>
+<li><span class="q-num">03</span>Do I need repeat blood work to confirm the result?</li>
+<li><span class="q-num">04</span>Am I at increased risk for bleeding or blood clots?</li>
+<li><span class="q-num">05</span>Should I avoid certain medications like aspirin or ibuprofen?</li>
+<li><span class="q-num">06</span>Do I need referral to a hematologist?</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="section-label">Frequently asked questions</div>
+
+<div class="faq-item">
+<div class="faq-q">Can dehydration affect platelet count?</div>
+<div class="faq-a">
+Yes. Dehydration can temporarily concentrate your blood and make platelet counts appear slightly elevated. Once hydration returns to normal, the count often normalizes too.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Is a high platelet count dangerous?</div>
+<div class="faq-a">
+Sometimes, but not always. Mildly elevated platelets are often harmless and caused by temporary inflammation or infection. Very high platelet counts may increase clotting risk and require further evaluation.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">Can stress affect platelet levels?</div>
+<div class="faq-a">
+Physical stress on the body — such as illness, surgery, injury, or intense exercise — can temporarily change platelet counts. Emotional stress alone is less likely to cause major changes.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">What medications can lower platelets?</div>
+<div class="faq-a">
+Some antibiotics, chemotherapy drugs, anti-seizure medications, heparin, and heavy alcohol use can lower platelet counts. Your doctor will review your medications carefully if your count is low.
+</div>
+</div>
+
+<div class="faq-item">
+<div class="faq-q">What platelet count is considered dangerously low?</div>
+<div class="faq-a">
+Bleeding risk increases significantly when platelet counts fall below about 50,000/mcL, and serious spontaneous bleeding becomes more likely below 10,000–20,000/mcL. Very low counts require prompt medical attention.
+</div>
+</div>
+
+</div>
+
+<div class="card">
+<div class="section-label">Related lab tests</div>
+
+<div class="related">
+<a href="/hematocrit" class="related-chip">Hematocrit →</a>
+<a href="/hemoglobin" class="related-chip">Hemoglobin →</a>
+<a href="/iron" class="related-chip">Iron →</a>
+<a href="/ferritin" class="related-chip">Ferritin →</a>
+<a href="/wbc" class="related-chip">White Blood Cells →</a>
+<a href="/creatinine" class="related-chip">Creatinine →</a>
+</div>
+</div>
+
+<div class="tool-cta">
+<h3>Decode any lab test instantly</h3>
+<p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+<a href="/">Open the Decoder →</a>
+</div>
+
+<footer>
+<span>labplain.co</span>
+<span>Understand your labs. No medical degree required.</span>
+</footer>
+
+</div>
 </body>
 </html>
