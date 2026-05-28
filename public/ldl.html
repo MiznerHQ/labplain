@@ -1,203 +1,782 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LDL Cholesterol – What Your Results Mean | LabPlain</title>
-  <meta name="description" content="What does your LDL Cholesterol result mean? Plain-English guide covering normal ranges, symptoms, causes, FAQ, and questions to ask your doctor.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/ldl">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy: #0B1F3A; --navy-light: #12294D; --cream: #F7F4EF;
-      --ink: #1A1A18; --muted: #7A7A72; --border: #DDD9D0;
-      --accent: #4A90D9; --accent-light: #E8F2FB;
-      --warn: #B85C2A; --warn-light: #FDF0E8; --white: #FFFFFF;
-      --green: #2E6B4F; --green-light: #EAF3EE;
-    }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
-    header { background: var(--navy); margin: 0 -24px 40px; padding: 18px 24px; display: flex; align-items: center; gap: 12px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: white; text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .tagline { font-size: 11px; color: rgba(255,255,255,0.5); font-family: 'DM Mono', monospace; margin-left: auto; }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    h2 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 16px; color: var(--navy); }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--green); font-weight: 500; background: var(--green-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; margin-bottom: 12px; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box.low { background: #EEF3FF; border-color: #C5CEFA; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--warn); }
-    .range-box.low .range-box-label { color: #3A5BAB; }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    ul { padding-left: 20px; margin-top: 8px; }
-    ul li { font-size: 15px; line-height: 1.8; color: var(--ink); }
-    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
-    .symptom-box { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; font-size: 14px; line-height: 1.6; }
-    .symptom-box strong { display: block; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
-    .faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-q { font-weight: 500; font-size: 15px; margin-bottom: 8px; color: var(--navy); }
-    .faq-a { font-size: 14px; line-height: 1.7; color: var(--ink); }
-    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
-    .related-card { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; text-decoration: none; }
-    .related-card:hover { border-color: var(--accent); }
-    .related-card strong { display: block; font-size: 14px; color: var(--navy); margin-bottom: 4px; }
-    .related-card span { font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; }
-    .doctor-list { list-style: none; padding: 0; margin-top: 8px; }
-    .doctor-list li { padding: 10px 0 10px 28px; border-bottom: 1px solid var(--border); font-size: 15px; line-height: 1.6; position: relative; }
-    .doctor-list li:last-child { border-bottom: none; }
-    .doctor-list li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-family: 'DM Mono', monospace; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--navy); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; border: 1px solid var(--navy-light); }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.75; margin-bottom: 20px; color: white; }
-    .tool-cta a { display: inline-block; background: var(--accent); color: white; font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col, .symptom-grid, .related-grid { grid-template-columns: 1fr; } .tagline { display: none; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LDL Cholesterol Test – What Your Results Mean | LabPlain</title>
+<meta name="description" content="What does your LDL cholesterol result mean? Plain-English guide to normal ranges, high LDL, heart disease risk, medications, diet, and what to ask your doctor.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://labplain.co/ldl">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--bg: #FFFFFF;
+--ink: #0D1B2A;
+--muted: #6B7A8D;
+--accent: #185FA5;
+--accent-light: #E6F1FB;
+--accent-border: #B5D4F4;
+--warn: #993C1D;
+--warn-light: #FAECE7;
+--warn-border: #F5C4B3;
+--success-light: #EAF3DE;
+--success-border: #C0DD97;
+--success-text: #27500A;
+--amber: #92400E;
+--amber-light: #FEF3C7;
+--amber-border: #F59E0B;
+--border: #DDE3EC;
+--white: #FFFFFF;
+}
+
+body {
+background: var(--bg);
+color: var(--ink);
+font-family: 'DM Sans', sans-serif;
+min-height: 100vh;
+}
+
+.wrap {
+max-width: 720px;
+margin: 0 auto;
+padding: 40px 24px 80px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 40px;
+}
+
+.logo-mark {
+width: 32px;
+height: 32px;
+background: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo-mark svg {
+width: 18px;
+height: 18px;
+fill: white;
+}
+
+.logo-text {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+text-decoration: none;
+}
+
+.logo-text span {
+color: var(--accent);
+}
+
+.breadcrumb {
+font-size: 13px;
+color: var(--muted);
+margin-bottom: 20px;
+font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+color: var(--accent);
+text-decoration: none;
+}
+
+h1 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(28px, 5vw, 42px);
+line-height: 1.15;
+letter-spacing: -0.5px;
+margin-bottom: 8px;
+}
+
+h2 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(20px, 3vw, 26px);
+line-height: 1.2;
+letter-spacing: -0.3px;
+margin-bottom: 12px;
+color: var(--ink);
+}
+
+h3 {
+font-family: 'DM Sans', sans-serif;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+color: var(--ink);
+}
+
+.category-tag {
+display: inline-block;
+background: var(--accent-light);
+color: var(--accent);
+font-family: 'DM Mono', monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 4px 12px;
+border-radius: 20px;
+margin-bottom: 24px;
+}
+
+.disclaimer {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 14px 18px;
+margin-bottom: 36px;
+font-size: 13px;
+color: var(--amber);
+line-height: 1.5;
+}
+
+.card {
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 14px;
+padding: 28px;
+margin-bottom: 20px;
+}
+
+.section-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 10px;
+}
+
+p {
+font-size: 16px;
+line-height: 1.75;
+color: var(--ink);
+}
+
+p + p {
+margin-top: 14px;
+}
+
+.normal-range {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+color: var(--accent);
+font-weight: 500;
+background: var(--accent-light);
+padding: 14px 18px;
+border-radius: 10px;
+border: 1px solid var(--accent-border);
+margin-bottom: 12px;
+}
+
+.range-note {
+font-size: 13px;
+color: var(--muted);
+line-height: 1.6;
+margin-top: 8px;
+}
+
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+
+.range-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.range-box.high {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.range-box.low {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.range-box-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.range-box.high .range-box-label {
+color: var(--warn);
+}
+
+.range-box.low .range-box-label {
+color: var(--accent);
+}
+
+.range-box p {
+font-size: 14px;
+line-height: 1.65;
+}
+
+.symptom-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+margin-top: 4px;
+}
+
+.symptom-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.symptom-box.high {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.symptom-box.low {
+background: var(--accent-light);
+border: 1px solid var(--accent-border);
+}
+
+.symptom-box h3 {
+font-size: 13px;
+font-family: 'DM Mono', monospace;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 10px;
+}
+
+.symptom-box.high h3 {
+color: var(--warn);
+}
+
+.symptom-box.low h3 {
+color: var(--accent);
+}
+
+.symptom-list {
+list-style: none;
+padding: 0;
+}
+
+.symptom-list li {
+font-size: 14px;
+color: var(--ink);
+line-height: 1.6;
+padding: 4px 0;
+border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+border-bottom: none;
+}
+
+.symptom-list li::before {
+content: "→ ";
+color: var(--muted);
+}
+
+.next-steps {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+border-radius: 10px;
+padding: 20px;
+font-size: 15px;
+line-height: 1.7;
+color: var(--success-text);
+}
+
+.questions-list {
+list-style: none;
+padding: 0;
+margin-top: 8px;
+}
+
+.questions-list li {
+font-size: 15px;
+color: var(--ink);
+line-height: 1.65;
+padding: 10px 0;
+border-bottom: 1px solid var(--border);
+display: flex;
+gap: 10px;
+}
+
+.questions-list li:last-child {
+border-bottom: none;
+}
+
+.q-num {
+font-family: 'DM Mono', monospace;
+font-size: 12px;
+color: var(--accent);
+font-weight: 500;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+.faq-item {
+padding: 18px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-q {
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+margin-bottom: 8px;
+}
+
+.faq-a {
+font-size: 15px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+.tool-cta {
+background: var(--accent);
+color: white;
+border-radius: 12px;
+padding: 28px;
+margin-top: 32px;
+text-align: center;
+}
+
+.tool-cta h3 {
+font-family: 'DM Serif Display', serif;
+font-size: 24px;
+margin-bottom: 8px;
+color: white;
+}
+
+.tool-cta p {
+font-size: 14px;
+opacity: 0.85;
+margin-bottom: 18px;
+color: white;
+}
+
+.tool-cta a {
+display: inline-block;
+background: white;
+color: var(--accent);
+font-weight: 500;
+text-decoration: none;
+padding: 12px 28px;
+border-radius: 8px;
+font-family: 'DM Mono', monospace;
+font-size: 14px;
+}
+
+.related {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 12px;
+margin-top: 4px;
+}
+
+.related-chip {
+display: block;
+padding: 12px 16px;
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+color: var(--ink);
+font-family: 'DM Mono', monospace;
+transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+
+footer {
+margin-top: 60px;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+font-size: 12px;
+color: var(--muted);
+font-family: 'DM Mono', monospace;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+@media (max-width: 480px) {
+.two-col,
+.symptom-grid {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <header>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
-      <span class="tagline">Understand your labs. No medical degree required.</span>
-    </header>
 
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; LDL Cholesterol</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">LDL Cholesterol</em> result mean?</h1>
-    <span class="category-tag">Heart Health</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>LDL (low-density lipoprotein) is often called "bad" cholesterol because it carries cholesterol particles throughout your body and can deposit them in artery walls. Over time, this buildup — called plaque — narrows your arteries and raises the risk of heart attack and stroke. Your LDL number is one of the most important markers your doctor uses to assess cardiovascular risk.</p>
-    </div>
+<nav>
+<div class="logo-mark">
+<svg viewBox="0 0 24 24">
+<path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/>
+</svg>
+</div>
 
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Optimal: Below 100 mg/dL &nbsp;|&nbsp; Near optimal: 100–129 mg/dL</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ Borderline–Very High</div>
-          <p>130–159 mg/dL borderline high. 160–189 mg/dL high. 190+ mg/dL very high — often requires medication.</p>
-        </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ Low (Generally Good)</div>
-          <p>Very low LDL is usually positive. Levels under 40 mg/dL may rarely signal malnutrition or hyperthyroidism.</p>
-        </div>
-      </div>
-      <p style="margin-top:12px;font-size:13px;color:var(--muted)">Reference ranges vary by lab and by your personal cardiovascular risk profile. Always compare to the range on your own report.</p>
-    </div>
+<a href="/" class="logo-text">lab<span>plain</span></a>
+</nav>
 
-    <div class="card">
-      <h2>Symptoms & Signs</h2>
-      <p>High LDL has <strong>no symptoms</strong> — that's what makes it dangerous. Most people feel completely normal while plaque quietly builds in their arteries for years. Symptoms only appear if high LDL has already caused serious damage:</p>
-      <div class="symptom-grid" style="margin-top:16px;">
-        <div class="symptom-box"><strong>Chest pain (angina)</strong>Reduced blood flow to the heart from narrowed arteries.</div>
-        <div class="symptom-box"><strong>Xanthomas</strong>Yellowish fat deposits under the skin, especially around eyes or tendons — sign of very high LDL.</div>
-        <div class="symptom-box"><strong>Corneal arcus</strong>A gray-white ring around the iris — more significant in people under 45.</div>
-        <div class="symptom-box"><strong>Leg pain when walking</strong>Peripheral artery disease from plaque buildup in leg arteries.</div>
-      </div>
-    </div>
+<p class="breadcrumb">
+<a href="/">Home</a> &rsaquo;
+<a href="/tests">Lab Tests</a> &rsaquo;
+LDL Cholesterol
+</p>
 
-    <div class="card">
-      <h2>Common Causes of High LDL</h2>
-      <div class="two-col">
-        <div>
-          <div class="section-label">Lifestyle factors</div>
-          <ul>
-            <li>Diet high in saturated and trans fats</li>
-            <li>Physical inactivity</li>
-            <li>Obesity or excess weight</li>
-            <li>Smoking</li>
-            <li>Heavy alcohol use</li>
-          </ul>
-        </div>
-        <div>
-          <div class="section-label">Medical conditions</div>
-          <ul>
-            <li>Familial hypercholesterolemia (genetic)</li>
-            <li>Hypothyroidism</li>
-            <li>Type 2 diabetes</li>
-            <li>Chronic kidney disease</li>
-            <li>Certain medications (steroids, diuretics)</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<h1>
+What does your<br>
+<em style="font-style:italic;color:var(--accent)">LDL Cholesterol</em> result mean?
+</h1>
 
-    <div class="card">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-item">
-        <div class="faq-q">Is LDL the same as total cholesterol?</div>
-        <div class="faq-a">No. Total cholesterol includes LDL, HDL (good cholesterol), and VLDL. LDL is just one component — and usually the most important one for assessing heart disease risk.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Can I lower my LDL without medication?</div>
-        <div class="faq-a">Yes, for many people. A diet low in saturated fat, regular aerobic exercise, weight loss, and quitting smoking can reduce LDL by 10–30%. But if LDL is very high or you have other risk factors, medication may still be needed.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What's the difference between LDL and HDL?</div>
-        <div class="faq-a">LDL carries cholesterol to your arteries (bad). HDL carries cholesterol away from arteries back to the liver for removal (good). You want LDL low and HDL high.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">How often should LDL be checked?</div>
-        <div class="faq-a">Adults over 20 should have a full lipid panel every 4–6 years if healthy. If you have risk factors or are on cholesterol medication, your doctor may check it annually or more often.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Do statins always lower LDL?</div>
-        <div class="faq-a">Statins are very effective and lower LDL by 30–50% on average. Some people have side effects like muscle aches. There are also non-statin options (ezetimibe, PCSK9 inhibitors) if needed.</div>
-      </div>
-    </div>
+<span class="category-tag">Cholesterol</span>
 
-    <div class="card">
-      <h2>Related Tests</h2>
-      <div class="related-grid">
-        <a href="/hdl.html" class="related-card"><strong>HDL Cholesterol</strong><span>The "good" cholesterol</span></a>
-        <a href="/triglycerides.html" class="related-card"><strong>Triglycerides</strong><span>Blood fat levels</span></a>
-        <a href="/glucose.html" class="related-card"><strong>Glucose</strong><span>Blood sugar levels</span></a>
-        <a href="/creatinine.html" class="related-card"><strong>Creatinine</strong><span>Kidney function marker</span></a>
-      </div>
-    </div>
+<div class="disclaimer">
+⚠ <strong>Educational only.</strong>
+LabPlain does not provide medical advice or diagnosis.
+Always discuss your specific results with your healthcare provider.
+</div>
 
-    <div class="card">
-      <h2>Questions to Ask Your Doctor</h2>
-      <ul class="doctor-list">
-        <li>What is my target LDL based on my personal cardiovascular risk?</li>
-        <li>Should I start or adjust cholesterol medication?</li>
-        <li>Which dietary changes will have the biggest impact on my LDL?</li>
-        <li>Do I need additional heart risk tests like a coronary calcium score?</li>
-        <li>How long should I try lifestyle changes before considering medication?</li>
-        <li>Does my family history affect my LDL treatment goal?</li>
-      </ul>
-    </div>
+<div class="card">
 
-    <div class="tool-cta">
-      <h3>Decode any lab result instantly</h3>
-      <p>Paste your full lab report and get a plain-English explanation in seconds.</p>
-      <a href="/">Open the Free Decoder →</a>
-    </div>
+<div class="section-label">What this test measures</div>
 
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
-    </footer>
-  </div>
+<p>
+LDL stands for low-density lipoprotein cholesterol — often called the "bad" cholesterol. LDL carries cholesterol through your bloodstream and can deposit it into the walls of your arteries over time.
+</p>
+
+<p>
+When too much LDL builds up, plaque forms inside blood vessels. This narrows the arteries and increases the risk of heart attack, stroke, and peripheral artery disease.
+</p>
+
+<p>
+Doctors measure LDL cholesterol as part of a lipid panel to estimate cardiovascular risk and determine whether lifestyle changes or medications may be needed.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Normal reference range</div>
+
+<div class="normal-range">
+Optimal: Less than 100 mg/dL &nbsp;|&nbsp; High: 160+ mg/dL
+</div>
+
+<p class="range-note">
+LDL targets depend heavily on your overall cardiovascular risk. Someone with diabetes, previous heart disease, or multiple risk factors may need a much lower LDL goal than someone otherwise healthy.
+</p>
+
+<p class="range-note" style="margin-top:8px;">
+Some labs calculate LDL indirectly using triglycerides, while others measure it directly. Reference ranges may vary slightly between laboratories.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">What your result might indicate</div>
+
+<div class="two-col">
+
+<div class="range-box high">
+
+<div class="range-box-label">↑ If High</div>
+
+<p>
+High LDL increases the risk of plaque buildup in the arteries and cardiovascular disease. Causes include diet, obesity, smoking, diabetes, inactivity, genetics, and certain medical conditions.
+</p>
+
+</div>
+
+<div class="range-box low">
+
+<div class="range-box-label">↓ If Low</div>
+
+<p>
+Low LDL is usually considered beneficial and often occurs with healthy lifestyle changes or cholesterol-lowering medication. Extremely low LDL is uncommon and rarely dangerous on its own.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Symptoms associated with abnormal LDL</div>
+
+<div class="symptom-grid">
+
+<div class="symptom-box high">
+
+<h3>↑ High LDL Symptoms</h3>
+
+<ul class="symptom-list">
+<li>Usually causes no symptoms</li>
+<li>Chest pain or angina (advanced disease)</li>
+<li>Shortness of breath</li>
+<li>Heart attack or stroke risk</li>
+<li>Leg pain while walking</li>
+<li>Fatty deposits around eyes or tendons</li>
+<li>High blood pressure</li>
+<li>Reduced exercise tolerance</li>
+</ul>
+
+</div>
+
+<div class="symptom-box low">
+
+<h3>↓ Low LDL Findings</h3>
+
+<ul class="symptom-list">
+<li>Often associated with healthier arteries</li>
+<li>Lower heart attack risk</li>
+<li>May result from statin therapy</li>
+<li>Can occur with weight loss</li>
+<li>Common with improved diet</li>
+<li>Seen after increased exercise</li>
+<li>Usually not symptomatic</li>
+<li>Rarely requires treatment</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Common causes of abnormal LDL</div>
+
+<h2>What can raise LDL cholesterol?</h2>
+
+<p>
+The biggest contributors to high LDL are diet, genetics, and lifestyle. Diets high in saturated fat, trans fats, and heavily processed foods can raise LDL levels significantly. Smoking, obesity, physical inactivity, and poorly controlled diabetes also contribute.
+</p>
+
+<p>
+Some people inherit genetic conditions like familial hypercholesterolemia, which can cause very high LDL even with a healthy lifestyle. Hypothyroidism, kidney disease, and certain medications may also increase LDL.
+</p>
+
+<h2 style="margin-top:24px;">What can lower LDL cholesterol?</h2>
+
+<p>
+LDL often improves with lifestyle changes including weight loss, exercise, quitting smoking, and eating more fiber-rich foods. Medications such as statins, ezetimibe, and PCSK9 inhibitors can reduce LDL substantially in higher-risk patients.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Tests often ordered alongside LDL</div>
+
+<p>
+LDL cholesterol is almost always interpreted as part of a full cardiovascular assessment. Your doctor may also order:
+</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+
+<li><strong>HDL Cholesterol</strong> — the "good" cholesterol linked to heart protection</li>
+
+<li><strong>Triglycerides</strong> — another blood fat associated with metabolic health</li>
+
+<li><strong>Total Cholesterol</strong> — overall cholesterol measurement</li>
+
+<li><strong>ApoB</strong> — measures the number of atherogenic particles</li>
+
+<li><strong>Hemoglobin A1C</strong> — screens for diabetes and blood sugar control</li>
+
+<li><strong>hs-CRP</strong> — marker of inflammation associated with cardiovascular risk</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">What to do next</div>
+
+<div class="next-steps">
+A single LDL number doesn't determine your entire heart disease risk. Doctors evaluate LDL alongside blood pressure, smoking status, diabetes, age, family history, HDL, triglycerides, and overall cardiovascular risk. Mildly elevated LDL may improve significantly with lifestyle changes, while higher-risk patients may benefit from medication.
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Questions to ask your doctor</div>
+
+<ul class="questions-list">
+
+<li><span class="q-num">01</span>Is my LDL level high enough that I should consider medication?</li>
+
+<li><span class="q-num">02</span>What LDL goal should I personally aim for?</li>
+
+<li><span class="q-num">03</span>Could genetics be contributing to my cholesterol level?</li>
+
+<li><span class="q-num">04</span>Would improving my diet and exercise realistically lower my LDL?</li>
+
+<li><span class="q-num">05</span>Should I have additional heart risk testing done?</li>
+
+<li><span class="q-num">06</span>How often should I repeat my lipid panel?</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Frequently asked questions</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Is LDL really "bad" cholesterol?
+</div>
+
+<div class="faq-a">
+LDL itself isn't inherently bad — your body needs cholesterol for hormones and cell membranes. The problem occurs when LDL levels stay elevated for years and cholesterol accumulates inside artery walls.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Can diet alone lower LDL?
+</div>
+
+<div class="faq-a">
+Often yes, especially when LDL elevation is mild to moderate. Reducing saturated fats, increasing soluble fiber, losing weight, and exercising regularly can significantly improve LDL levels in many people.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+What foods help lower LDL cholesterol?
+</div>
+
+<div class="faq-a">
+Foods rich in soluble fiber — like oats, beans, lentils, fruits, and vegetables — help lower LDL. Nuts, olive oil, fatty fish, and minimally processed foods may also improve cholesterol profiles.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Do statins have side effects?
+</div>
+
+<div class="faq-a">
+Most people tolerate statins well. Possible side effects include muscle aches, fatigue, or mild liver enzyme elevations, though serious complications are uncommon. Your doctor weighs these risks against the benefit of lowering heart attack and stroke risk.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Can you have high LDL and still feel healthy?
+</div>
+
+<div class="faq-a">
+Yes. High LDL usually causes no symptoms for years while plaque slowly builds in the arteries. That's why cholesterol testing is important — many people with dangerously high LDL feel completely normal until cardiovascular disease develops.
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">Related lab tests</div>
+
+<div class="related">
+
+<a href="/hdl" class="related-chip">HDL →</a>
+
+<a href="/triglycerides" class="related-chip">Triglycerides →</a>
+
+<a href="/glucose" class="related-chip">Glucose →</a>
+
+<a href="/a1c" class="related-chip">Hemoglobin A1C →</a>
+
+<a href="/crp" class="related-chip">CRP →</a>
+
+<a href="/tsh" class="related-chip">TSH →</a>
+
+</div>
+
+</div>
+
+<div class="tool-cta">
+
+<h3>Decode any lab test instantly</h3>
+
+<p>
+Use our free AI-powered tool to look up any blood test in plain English.
+</p>
+
+<a href="/">
+Open the Decoder →
+</a>
+
+</div>
+
+<footer>
+
+<span>
+labplain.co
+</span>
+
+<span>
+Understand your labs. No medical degree required.
+</span>
+
+</footer>
+
+</div>
+
 </body>
 </html>
