@@ -1,203 +1,803 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HDL Cholesterol – What Your Results Mean | LabPlain</title>
-  <meta name="description" content="What does your HDL Cholesterol result mean? Plain-English guide covering normal ranges, symptoms, causes, FAQ, and questions to ask your doctor.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/hdl">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --navy: #0B1F3A; --navy-light: #12294D; --cream: #F7F4EF;
-      --ink: #1A1A18; --muted: #7A7A72; --border: #DDD9D0;
-      --accent: #4A90D9; --accent-light: #E8F2FB;
-      --warn: #B85C2A; --warn-light: #FDF0E8; --white: #FFFFFF;
-      --green: #2E6B4F; --green-light: #EAF3EE;
-    }
-    body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
-    header { background: var(--navy); margin: 0 -24px 40px; padding: 18px 24px; display: flex; align-items: center; gap: 12px; }
-    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 18px; height: 18px; fill: white; }
-    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: white; text-decoration: none; }
-    .logo-text span { color: var(--accent); }
-    .tagline { font-size: 11px; color: rgba(255,255,255,0.5); font-family: 'DM Mono', monospace; margin-left: auto; }
-    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
-    .breadcrumb a { color: var(--accent); text-decoration: none; }
-    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
-    h2 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 16px; color: var(--navy); }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
-    .disclaimer { background: var(--warn-light); border: 1px solid #E8C9B0; border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--warn); line-height: 1.5; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
-    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
-    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--green); font-weight: 500; background: var(--green-light); padding: 14px 18px; border-radius: 10px; border: 1px solid #C8DDD3; margin-bottom: 12px; }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .range-box { padding: 16px; border-radius: 10px; border: 1px solid var(--border); }
-    .range-box.high { background: var(--green-light); border-color: #C8DDD3; }
-    .range-box.low { background: var(--warn-light); border-color: #E8C9B0; }
-    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
-    .range-box.high .range-box-label { color: var(--green); }
-    .range-box.low .range-box-label { color: var(--warn); }
-    .range-box p { font-size: 14px; line-height: 1.65; }
-    ul { padding-left: 20px; margin-top: 8px; }
-    ul li { font-size: 15px; line-height: 1.8; color: var(--ink); }
-    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
-    .symptom-box { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; font-size: 14px; line-height: 1.6; }
-    .symptom-box strong { display: block; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
-    .faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-q { font-weight: 500; font-size: 15px; margin-bottom: 8px; color: var(--navy); }
-    .faq-a { font-size: 14px; line-height: 1.7; color: var(--ink); }
-    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
-    .related-card { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; text-decoration: none; }
-    .related-card:hover { border-color: var(--accent); }
-    .related-card strong { display: block; font-size: 14px; color: var(--navy); margin-bottom: 4px; }
-    .related-card span { font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; }
-    .doctor-list { list-style: none; padding: 0; margin-top: 8px; }
-    .doctor-list li { padding: 10px 0 10px 28px; border-bottom: 1px solid var(--border); font-size: 15px; line-height: 1.6; position: relative; }
-    .doctor-list li:last-child { border-bottom: none; }
-    .doctor-list li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-family: 'DM Mono', monospace; }
-    .next-steps { background: #F0F7FF; border: 1px solid #C5DAFA; border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: #2C4A6E; }
-    .tool-cta { background: var(--navy); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; border: 1px solid var(--navy-light); }
-    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; }
-    .tool-cta p { font-size: 14px; opacity: 0.75; margin-bottom: 20px; color: white; }
-    .tool-cta a { display: inline-block; background: var(--accent); color: white; font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
-    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col, .symptom-grid, .related-grid { grid-template-columns: 1fr; } .tagline { display: none; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HDL Cholesterol Blood Test – What Your Results Mean | LabPlain</title>
+
+<meta name="description" content="What does your HDL cholesterol result mean? Plain-English guide to normal HDL levels, low vs high HDL, heart risk, symptoms, causes, and what to ask your doctor.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://labplain.co/hdl">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+:root {
+--bg: #FFFFFF;
+--ink: #0D1B2A;
+--muted: #6B7A8D;
+--accent: #185FA5;
+--accent-light: #E6F1FB;
+--accent-border: #B5D4F4;
+--warn: #993C1D;
+--warn-light: #FAECE7;
+--warn-border: #F5C4B3;
+--success-light: #EAF3DE;
+--success-border: #C0DD97;
+--success-text: #27500A;
+--amber: #92400E;
+--amber-light: #FEF3C7;
+--amber-border: #F59E0B;
+--border: #DDE3EC;
+--white: #FFFFFF;
+}
+
+body {
+background: var(--bg);
+color: var(--ink);
+font-family: 'DM Sans', sans-serif;
+min-height: 100vh;
+}
+
+.wrap {
+max-width: 720px;
+margin: 0 auto;
+padding: 40px 24px 80px;
+}
+
+nav {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-bottom: 40px;
+}
+
+.logo-mark {
+width: 32px;
+height: 32px;
+background: var(--accent);
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.logo-mark svg {
+width: 18px;
+height: 18px;
+fill: white;
+}
+
+.logo-text {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+text-decoration: none;
+}
+
+.logo-text span {
+color: var(--accent);
+}
+
+.breadcrumb {
+font-size: 13px;
+color: var(--muted);
+margin-bottom: 20px;
+font-family: 'DM Mono', monospace;
+}
+
+.breadcrumb a {
+color: var(--accent);
+text-decoration: none;
+}
+
+h1 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(28px, 5vw, 42px);
+line-height: 1.15;
+letter-spacing: -0.5px;
+margin-bottom: 8px;
+}
+
+h2 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(20px, 3vw, 26px);
+line-height: 1.2;
+letter-spacing: -0.3px;
+margin-bottom: 12px;
+color: var(--ink);
+}
+
+h3 {
+font-family: 'DM Sans', sans-serif;
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+color: var(--ink);
+}
+
+.category-tag {
+display: inline-block;
+background: var(--accent-light);
+color: var(--accent);
+font-family: 'DM Mono', monospace;
+font-size: 11px;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding: 4px 12px;
+border-radius: 20px;
+margin-bottom: 24px;
+}
+
+.disclaimer {
+background: var(--amber-light);
+border: 1px solid var(--amber-border);
+border-radius: 10px;
+padding: 14px 18px;
+margin-bottom: 36px;
+font-size: 13px;
+color: var(--amber);
+line-height: 1.5;
+}
+
+.card {
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 14px;
+padding: 28px;
+margin-bottom: 20px;
+}
+
+.section-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+font-weight: 500;
+letter-spacing: 1.8px;
+text-transform: uppercase;
+color: var(--muted);
+margin-bottom: 10px;
+}
+
+p {
+font-size: 16px;
+line-height: 1.75;
+color: var(--ink);
+}
+
+p + p {
+margin-top: 14px;
+}
+
+.normal-range {
+font-family: 'DM Mono', monospace;
+font-size: 16px;
+color: var(--accent);
+font-weight: 500;
+background: var(--accent-light);
+padding: 14px 18px;
+border-radius: 10px;
+border: 1px solid var(--accent-border);
+margin-bottom: 12px;
+}
+
+.range-note {
+font-size: 13px;
+color: var(--muted);
+line-height: 1.6;
+margin-top: 8px;
+}
+
+.two-col {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+
+.range-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.range-box.high {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+}
+
+.range-box.low {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.range-box-label {
+font-family: 'DM Mono', monospace;
+font-size: 10px;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 8px;
+}
+
+.range-box.high .range-box-label {
+color: var(--success-text);
+}
+
+.range-box.low .range-box-label {
+color: var(--warn);
+}
+
+.range-box p {
+font-size: 14px;
+line-height: 1.65;
+}
+
+.symptom-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+margin-top: 4px;
+}
+
+.symptom-box {
+padding: 16px;
+border-radius: 10px;
+}
+
+.symptom-box.high {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+}
+
+.symptom-box.low {
+background: var(--warn-light);
+border: 1px solid var(--warn-border);
+}
+
+.symptom-box h3 {
+font-size: 13px;
+font-family: 'DM Mono', monospace;
+letter-spacing: 1px;
+text-transform: uppercase;
+margin-bottom: 10px;
+}
+
+.symptom-box.high h3 {
+color: var(--success-text);
+}
+
+.symptom-box.low h3 {
+color: var(--warn);
+}
+
+.symptom-list {
+list-style: none;
+padding: 0;
+}
+
+.symptom-list li {
+font-size: 14px;
+color: var(--ink);
+line-height: 1.6;
+padding: 4px 0;
+border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.symptom-list li:last-child {
+border-bottom: none;
+}
+
+.symptom-list li::before {
+content: "→ ";
+color: var(--muted);
+}
+
+.next-steps {
+background: var(--success-light);
+border: 1px solid var(--success-border);
+border-radius: 10px;
+padding: 20px;
+font-size: 15px;
+line-height: 1.7;
+color: var(--success-text);
+}
+
+.questions-list {
+list-style: none;
+padding: 0;
+margin-top: 8px;
+}
+
+.questions-list li {
+font-size: 15px;
+color: var(--ink);
+line-height: 1.65;
+padding: 10px 0;
+border-bottom: 1px solid var(--border);
+display: flex;
+gap: 10px;
+}
+
+.questions-list li:last-child {
+border-bottom: none;
+}
+
+.q-num {
+font-family: 'DM Mono', monospace;
+font-size: 12px;
+color: var(--accent);
+font-weight: 500;
+flex-shrink: 0;
+margin-top: 2px;
+}
+
+.faq-item {
+padding: 18px 0;
+border-bottom: 1px solid var(--border);
+}
+
+.faq-item:last-child {
+border-bottom: none;
+}
+
+.faq-q {
+font-size: 16px;
+font-weight: 500;
+color: var(--ink);
+margin-bottom: 8px;
+}
+
+.faq-a {
+font-size: 15px;
+color: var(--muted);
+line-height: 1.7;
+}
+
+.tool-cta {
+background: var(--accent);
+color: white;
+border-radius: 12px;
+padding: 28px;
+margin-top: 32px;
+text-align: center;
+}
+
+.tool-cta h3 {
+font-family: 'DM Serif Display', serif;
+font-size: 24px;
+margin-bottom: 8px;
+color: white;
+}
+
+.tool-cta p {
+font-size: 14px;
+opacity: 0.85;
+margin-bottom: 18px;
+color: white;
+}
+
+.tool-cta a {
+display: inline-block;
+background: white;
+color: var(--accent);
+font-weight: 500;
+text-decoration: none;
+padding: 12px 28px;
+border-radius: 8px;
+font-family: 'DM Mono', monospace;
+font-size: 14px;
+}
+
+.related {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 12px;
+margin-top: 4px;
+}
+
+.related-chip {
+display: block;
+padding: 12px 16px;
+background: var(--white);
+border: 1.5px solid var(--border);
+border-radius: 10px;
+text-decoration: none;
+font-size: 14px;
+color: var(--ink);
+font-family: 'DM Mono', monospace;
+transition: border-color 0.15s;
+}
+
+.related-chip:hover {
+border-color: var(--accent);
+color: var(--accent);
+}
+
+footer {
+margin-top: 60px;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+font-size: 12px;
+color: var(--muted);
+font-family: 'DM Mono', monospace;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 8px;
+}
+
+@media (max-width: 480px) {
+.two-col,
+.symptom-grid {
+grid-template-columns: 1fr;
+}
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <header>
-      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
-      <a href="/" class="logo-text">lab<span>plain</span></a>
-      <span class="tagline">Understand your labs. No medical degree required.</span>
-    </header>
 
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; HDL Cholesterol</p>
-    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">HDL Cholesterol</em> result mean?</h1>
-    <span class="category-tag">Heart Health</span>
-    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+<div class="wrap">
 
-    <div class="card">
-      <div class="section-label">What this test measures</div>
-      <p>HDL (high-density lipoprotein) is known as "good" cholesterol because it works in reverse from LDL — it picks up excess cholesterol from your arteries and carries it back to the liver to be removed from the body. Higher HDL levels are generally protective against heart disease. Low HDL is an independent risk factor for heart attack and stroke, even if your LDL looks normal.</p>
-    </div>
+<nav>
+<div class="logo-mark">
+<svg viewBox="0 0 24 24">
+<path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/>
+</svg>
+</div>
 
-    <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Men: 40+ mg/dL (optimal 60+) &nbsp;|&nbsp; Women: 50+ mg/dL (optimal 60+)</div>
-      <div class="two-col">
-        <div class="range-box high">
-          <div class="range-box-label">↑ High (Protective)</div>
-          <p>60 mg/dL or above is considered cardioprotective. Very high HDL (above 100) may occasionally signal a rare genetic condition — worth discussing with your doctor.</p>
-        </div>
-        <div class="range-box low">
-          <div class="range-box-label">↓ Low (Increased Risk)</div>
-          <p>Below 40 mg/dL (men) or 50 mg/dL (women) raises cardiovascular risk. Below 35 mg/dL is considered dangerously low regardless of gender.</p>
-        </div>
-      </div>
-      <p style="margin-top:12px;font-size:13px;color:var(--muted)">Reference ranges vary by lab. Always compare to the range printed on your own lab report.</p>
-    </div>
+<a href="/" class="logo-text">lab<span>plain</span></a>
+</nav>
 
-    <div class="card">
-      <h2>Symptoms & Signs</h2>
-      <p>Low HDL has <strong>no direct symptoms</strong> on its own. Like high LDL, it silently increases cardiovascular risk over years. Symptoms only appear once damage has occurred:</p>
-      <div class="symptom-grid" style="margin-top:16px;">
-        <div class="symptom-box"><strong>Chest pain or pressure</strong>Reduced HDL allows plaque to build in coronary arteries, restricting blood flow.</div>
-        <div class="symptom-box"><strong>Shortness of breath</strong>May indicate early heart or circulatory stress from years of low HDL.</div>
-        <div class="symptom-box"><strong>Fatigue during activity</strong>Poor cardiovascular efficiency from arterial narrowing linked to low HDL.</div>
-        <div class="symptom-box"><strong>No symptoms at all</strong>Most people with low HDL feel completely normal — making routine testing essential.</div>
-      </div>
-    </div>
+<p class="breadcrumb">
+<a href="/">Home</a> &rsaquo;
+<a href="/tests">Lab Tests</a> &rsaquo;
+HDL Cholesterol
+</p>
 
-    <div class="card">
-      <h2>Common Causes of Low HDL</h2>
-      <div class="two-col">
-        <div>
-          <div class="section-label">Lifestyle factors</div>
-          <ul>
-            <li>Physical inactivity</li>
-            <li>Smoking or tobacco use</li>
-            <li>Diet high in refined carbs and sugar</li>
-            <li>Obesity, especially abdominal fat</li>
-            <li>Heavy alcohol use</li>
-          </ul>
-        </div>
-        <div>
-          <div class="section-label">Medical conditions</div>
-          <ul>
-            <li>Type 2 diabetes or insulin resistance</li>
-            <li>Metabolic syndrome</li>
-            <li>Hypothyroidism</li>
-            <li>Chronic kidney disease</li>
-            <li>Certain medications (beta-blockers, steroids)</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<h1>
+What does your<br>
+<em style="font-style:italic;color:var(--accent)">HDL Cholesterol</em> result mean?
+</h1>
 
-    <div class="card">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-item">
-        <div class="faq-q">Can you raise HDL naturally?</div>
-        <div class="faq-a">Yes. Regular aerobic exercise is the most effective way — it can raise HDL by 5–10%. Quitting smoking, losing weight, and eating healthy fats (olive oil, avocado, nuts) also help. HDL is harder to raise than LDL is to lower, but lifestyle changes do work.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Is there medication to raise HDL?</div>
-        <div class="faq-a">There's no approved drug specifically for raising HDL. Niacin raises HDL but clinical trials haven't shown it reduces heart events. Statins and fibrates modestly improve HDL as a side effect. Lifestyle changes remain the primary approach.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Can HDL be too high?</div>
-        <div class="faq-a">Very high HDL (above 80–100 mg/dL) may paradoxically increase inflammation in some people. Recent research suggests extremely high HDL may not always be protective. If your HDL is unusually high, your doctor may investigate further.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What's the HDL-to-LDL ratio?</div>
-        <div class="faq-a">Some doctors use the LDL:HDL ratio as a risk indicator. A ratio below 3.5 is generally considered healthy. A high ratio means your bad cholesterol far outweighs the good — a stronger predictor of risk than either number alone.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Does gender affect HDL levels?</div>
-        <div class="faq-a">Yes. Women naturally have higher HDL than men due to estrogen, which is why the healthy threshold is higher for women (50 mg/dL vs 40 mg/dL for men). After menopause, women's HDL levels often drop.</div>
-      </div>
-    </div>
+<span class="category-tag">Cholesterol</span>
 
-    <div class="card">
-      <h2>Related Tests</h2>
-      <div class="related-grid">
-        <a href="/ldl.html" class="related-card"><strong>LDL Cholesterol</strong><span>The "bad" cholesterol</span></a>
-        <a href="/triglycerides.html" class="related-card"><strong>Triglycerides</strong><span>Blood fat levels</span></a>
-        <a href="/glucose.html" class="related-card"><strong>Glucose</strong><span>Blood sugar levels</span></a>
-        <a href="/creatinine.html" class="related-card"><strong>Creatinine</strong><span>Kidney function marker</span></a>
-      </div>
-    </div>
+<div class="disclaimer">
+⚠ <strong>Educational only.</strong>
+LabPlain does not provide medical advice or diagnosis.
+Always discuss your specific results with your healthcare provider.
+</div>
 
-    <div class="card">
-      <h2>Questions to Ask Your Doctor</h2>
-      <ul class="doctor-list">
-        <li>Is my HDL low enough to increase my cardiovascular risk?</li>
-        <li>What's my HDL-to-LDL ratio and what does it mean for me?</li>
-        <li>Which specific lifestyle changes will raise my HDL the most?</li>
-        <li>Should I be on any medication given my full cholesterol picture?</li>
-        <li>How does my HDL interact with my other risk factors like blood pressure or diabetes?</li>
-        <li>How often should I retest to track my progress?</li>
-      </ul>
-    </div>
+<div class="card">
+<div class="section-label">What this test measures</div>
 
-    <div class="tool-cta">
-      <h3>Decode any lab result instantly</h3>
-      <p>Paste your full lab report and get a plain-English explanation in seconds.</p>
-      <a href="/">Open the Free Decoder →</a>
-    </div>
+<p>HDL stands for high-density lipoprotein. It's often called the "good cholesterol" because it helps remove excess cholesterol from your bloodstream and carries it back to the liver, where your body can process and remove it.</p>
 
-    <footer>
-      <span>labplain.co</span>
-      <span>Not a substitute for professional medical advice.</span>
-    </footer>
-  </div>
+<p>Unlike LDL ("bad cholesterol"), higher HDL levels are generally associated with lower risk of heart disease and stroke. HDL acts like a cleanup system for your arteries — helping prevent fatty plaque from building up in blood vessel walls.</p>
+
+<p>Doctors usually measure HDL as part of a lipid panel alongside LDL cholesterol, triglycerides, and total cholesterol when evaluating cardiovascular risk.</p>
+</div>
+
+<div class="card">
+<div class="section-label">Normal reference range</div>
+
+<div class="normal-range">
+Men: Above 40 mg/dL &nbsp;|&nbsp; Women: Above 50 mg/dL
+</div>
+
+<p class="range-note">
+In general, higher HDL levels are considered protective for heart health. An HDL level above 60 mg/dL is often associated with lower cardiovascular risk.
+</p>
+
+<p class="range-note">
+Very low HDL levels may increase the risk of heart disease, especially when combined with high LDL cholesterol, high triglycerides, smoking, diabetes, or high blood pressure.
+</p>
+</div>
+
+<div class="card">
+<div class="section-label">What your result might indicate</div>
+
+<div class="two-col">
+
+<div class="range-box high">
+<div class="range-box-label">↑ If High</div>
+
+<p>
+Higher HDL is usually considered beneficial and linked to lower heart disease risk. However, extremely high HDL levels may not always provide extra protection and can occasionally be linked to genetic factors or certain medical conditions.
+</p>
+</div>
+
+<div class="range-box low">
+<div class="range-box-label">↓ If Low</div>
+
+<p>
+Low HDL may increase the risk of plaque buildup in the arteries and future cardiovascular disease. Low levels are commonly associated with smoking, obesity, insulin resistance, type 2 diabetes, and lack of exercise.
+</p>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+
+<div class="section-label">
+Symptoms associated with abnormal HDL
+</div>
+
+<div class="symptom-grid">
+
+<div class="symptom-box high">
+<h3>↑ Higher HDL</h3>
+
+<ul class="symptom-list">
+<li>Usually no direct symptoms</li>
+<li>Often associated with good cardiovascular health</li>
+<li>May reflect regular exercise habits</li>
+<li>Can occur naturally due to genetics</li>
+</ul>
+</div>
+
+<div class="symptom-box low">
+<h3>↓ Low HDL</h3>
+
+<ul class="symptom-list">
+<li>Usually no noticeable symptoms</li>
+<li>Higher long-term heart disease risk</li>
+<li>More common with obesity</li>
+<li>Often linked to metabolic syndrome</li>
+<li>Can occur with smoking or inactivity</li>
+<li>May accompany high triglycerides</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+
+<div class="section-label">
+Common causes of abnormal HDL
+</div>
+
+<h2>
+What can raise HDL?
+</h2>
+
+<p>
+Regular aerobic exercise, weight loss, smoking cessation, and healthy fats from foods like olive oil, nuts, and fatty fish can help increase HDL levels. Some people also naturally have high HDL due to genetics.
+</p>
+
+<p>
+Moderate alcohol consumption has been associated with slightly higher HDL levels, though doctors generally do not recommend drinking alcohol solely to improve cholesterol numbers.
+</p>
+
+<h2 style="margin-top:24px;">
+What can lower HDL?
+</h2>
+
+<p>
+Smoking is one of the strongest lifestyle factors linked to low HDL. Other common causes include obesity, poor diet, physical inactivity, insulin resistance, type 2 diabetes, and elevated triglycerides.
+</p>
+
+<p>
+Some medications and genetic conditions can also reduce HDL levels.
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">
+Tests often ordered alongside HDL
+</div>
+
+<p>
+HDL is usually interpreted as part of a complete cardiovascular risk picture. Your doctor may also order:
+</p>
+
+<ul class="symptom-list" style="margin-top:12px;">
+
+<li>
+<strong>LDL Cholesterol</strong> — the primary "bad cholesterol" linked to plaque buildup
+</li>
+
+<li>
+<strong>Triglycerides</strong> — another blood fat associated with heart disease risk
+</li>
+
+<li>
+<strong>Total Cholesterol</strong> — combined cholesterol measurement
+</li>
+
+<li>
+<strong>ApoB</strong> — measures the number of potentially harmful cholesterol particles
+</li>
+
+<li>
+<strong>Blood Glucose or A1C</strong> — diabetes and insulin resistance often affect HDL
+</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">
+What to do next
+</div>
+
+<div class="next-steps">
+HDL is just one part of your cardiovascular risk profile. A low HDL level doesn't guarantee heart disease, and a high HDL level doesn't automatically mean you're fully protected. Doctors interpret HDL together with LDL cholesterol, triglycerides, blood pressure, diabetes status, smoking history, and family history when estimating heart risk.
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">
+Questions to ask your doctor
+</div>
+
+<ul class="questions-list">
+
+<li>
+<span class="q-num">01</span>
+How does my HDL affect my overall heart disease risk?
+</li>
+
+<li>
+<span class="q-num">02</span>
+Are my LDL cholesterol and triglycerides also concerning?
+</li>
+
+<li>
+<span class="q-num">03</span>
+What lifestyle changes would most improve my cholesterol profile?
+</li>
+
+<li>
+<span class="q-num">04</span>
+Does my HDL level suggest metabolic syndrome or insulin resistance?
+</li>
+
+<li>
+<span class="q-num">05</span>
+Should I have repeat cholesterol testing in the future?
+</li>
+
+<li>
+<span class="q-num">06</span>
+Would weight loss, exercise, or quitting smoking significantly improve my HDL?
+</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">
+Frequently asked questions
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Is higher HDL always better?
+</div>
+
+<div class="faq-a">
+Usually, yes — higher HDL is associated with lower cardiovascular risk. However, extremely high HDL levels don't always provide additional benefit and may occasionally be linked to rare genetic conditions.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Can exercise really increase HDL?
+</div>
+
+<div class="faq-a">
+Yes. Regular aerobic exercise is one of the most effective natural ways to improve HDL levels. Weight loss and smoking cessation can also help significantly.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Can you have low HDL and still be healthy?
+</div>
+
+<div class="faq-a">
+Yes. HDL is only one risk factor. Some people with lower HDL have otherwise healthy cholesterol profiles and low overall cardiovascular risk. Doctors evaluate the full picture rather than a single number.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Does diet affect HDL?
+</div>
+
+<div class="faq-a">
+Yes. Diets rich in healthy fats — especially olive oil, nuts, seeds, and fatty fish — may help improve HDL. Diets high in refined carbohydrates and trans fats may lower it.
+</div>
+
+</div>
+
+<div class="faq-item">
+
+<div class="faq-q">
+Can medications increase HDL?
+</div>
+
+<div class="faq-a">
+Some medications can modestly raise HDL, but modern cholesterol treatment focuses more heavily on lowering LDL cholesterol because that has the strongest evidence for reducing heart disease risk.
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-label">
+Related lab tests
+</div>
+
+<div class="related">
+
+<a href="/ldl" class="related-chip">LDL →</a>
+
+<a href="/triglycerides" class="related-chip">Triglycerides →</a>
+
+<a href="/glucose" class="related-chip">Glucose →</a>
+
+<a href="/a1c" class="related-chip">A1C →</a>
+
+<a href="/creatinine" class="related-chip">Creatinine →</a>
+
+<a href="/ferritin" class="related-chip">Ferritin →</a>
+
+</div>
+
+</div>
+
+<div class="tool-cta">
+
+<h3>
+Decode any lab test instantly
+</h3>
+
+<p>
+Use our free AI-powered tool to look up any blood test in plain English.
+</p>
+
+<a href="/">
+Open the Decoder →
+</a>
+
+</div>
+
+<footer>
+<span>labplain.co</span>
+<span>Understand your labs. No medical degree required.</span>
+</footer>
+
+</div>
+
 </body>
 </html>
