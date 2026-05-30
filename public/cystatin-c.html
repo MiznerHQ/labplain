@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cystatin C Blood Test – What Your Results Mean | LabPlain</title>
+    <meta name="description" content="What does your Cystatin C result mean? Plain-English guide to normal ranges, high and low values, kidney function, and what to ask your doctor. No medical jargon.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://labplain.co/cystatin-c">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style> 
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } 
+        :root { 
+            --bg: #FFFFFF; 
+            --ink: #0D1B2A; 
+            --muted: #6B7A8D; 
+            --accent: #185FA5; 
+            --accent-light: #E6F1FB; 
+            --accent-border: #B5D4F4; 
+            --warn: #993C1D; 
+            --warn-light: #FAECE7; 
+            --warn-border: #F5C4B3; 
+            --success-light: #EAF3DE; 
+            --success-border: #C0DD97; 
+            --success-text: #27500A; 
+            --amber: #92400E; 
+            --amber-light: #FEF3C7; 
+            --amber-border: #F59E0B; 
+            --border: #DDE3EC; 
+            --white: #FFFFFF; 
+        } 
+        body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; } 
+        .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; } 
+        nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; } 
+        .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; } 
+        .logo-mark svg { width: 18px; height: 18px; fill: white; } 
+        .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; } 
+        .logo-text span { color: var(--accent); } 
+        .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; } 
+        .breadcrumb a { color: var(--accent); text-decoration: none; } 
+        h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; } 
+        h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); } 
+        h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); } 
+        .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; } 
+        .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; } 
+        .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; } 
+        .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; } 
+        p { font-size: 16px; line-height: 1.75; color: var(--ink); } 
+        p + p { margin-top: 14px; } 
+        .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; } 
+        .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; } 
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; } 
+        .range-box { padding: 16px; border-radius: 10px; } 
+        .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); } 
+        .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); } 
+        .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; } 
+        .range-box.high .range-box-label { color: var(--warn); } 
+        .range-box.low .range-box-label { color: var(--accent); } 
+        .range-box p { font-size: 14px; line-height: 1.65; } 
+        .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; } 
+        .symptom-box { padding: 16px; border-radius: 10px; } 
+        .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); } 
+        .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); } 
+        .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; } 
+        .symptom-box.high h3 { color: var(--warn); } 
+        .symptom-box.low h3 { color: var(--accent); } 
+        .symptom-list { list-style: none; padding: 0; } 
+        .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); } 
+        .symptom-list li:last-child { border-bottom: none; } 
+        .symptom-list li::before { content: "→ "; color: var(--muted); } 
+        .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; } 
+        .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; } 
+        .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; } 
+        .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); } 
+        .questions-list { list-style: none; padding: 0; margin-top: 8px; } 
+        .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; } 
+        .questions-list li:last-child { border-bottom: none; } 
+        .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; } 
+        .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); } 
+        .faq-item:last-child { border-bottom: none; } 
+        .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; } 
+        .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; } 
+        .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; } 
+        .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; } 
+        .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; } 
+        .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; } 
+        .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; } 
+        .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; } 
+        .related-chip:hover { border-color: var(--accent); color: var(--accent); } 
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; } 
+        @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } } 
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav>
+            <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+            <a href="/" class="logo-text">lab<span>plain</span></a>
+        </nav>
+        
+        <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Cystatin C</p>
+        
+        <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Cystatin C</em> result mean?</h1>
+        <span class="category-tag">Kidney Function</span>
+        
+        <div class="disclaimer">
+            &#9888; <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.
+        </div>
+
+        <div class="card">
+            <div class="section-label">What this test measures</div>
+            <p>Cystatin C is a small protein produced at a constant rate by nearly all nucleated cells in your body. It is filtered out of the bloodstream exclusively by your kidneys. Because its production is steady, the amount of Cystatin C found in your blood is a direct reflection of how well your kidneys are filtering out waste products.</p>
+            <p>Traditionally, doctors have relied on a different marker called creatinine to estimate kidney health. However, creatinine levels fluctuate heavily based on your muscle mass, age, gender, and diet. Cystatin C does not have these limitations. It provides a highly stable, independent baseline of your kidney filtration rate, making it an excellent tool for verifying questionable creatinine test results.</p>
+            <p>Your doctor likely ordered a Cystatin C test to calculate a highly precise eGFR (estimated Glomerular Filtration Rate), evaluate early-stage kidney disease, or get an accurate read on your kidney health if you have a unique muscle mass or a specialized diet.</p>
+        </div>
+
+        <div class="card">
+            <div class="section-label">Normal reference range</div>
+            <div class="normal-range">Adults (18-50 years): 0.56–0.99 mg/L &nbsp;|&nbsp; Adults (Over 50): 0.59–1.14 mg/L</div>
+            <p class="range-note">Unlike many other kidney markers, Cystatin C ranges are nearly identical regardless of your biological sex or muscle density. However, normal baseline levels naturally tick upward slightly as you age due to the gradual, normal decline in kidney performance over a lifetime.</p>
+            <p class="range-note" style="margin-top:8px;">Reference values can slightly vary from one laboratory to another depending on the testing equipment. Always prioritize the exact reference intervals printed directly on your official lab summary sheet.</p>
+            
+            <div class="timing-box">
+                <h3>&#9200; Diet and Muscle independent</h3>
+                <p>Unlike standard creatinine blood draws, Cystatin C tests do not require you to fast from meat beforehand, and your physical muscle mass won't artificially skew the data. It can be drawn at any point during the day with high consistency.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">What your result might indicate</div>
+            <div class="two-col">
+                <div class="range-box high">
+                    <div class="range-box-label">&#8593; If High</div>
+                    <p>Elevated Cystatin C levels indicate that your kidneys are not filtering blood as efficiently as they should. This usually points to acute kidney injury, chronic kidney disease (CKD), or underlying health issues like poorly managed high blood pressure, diabetes, or thyroid dysfunction.</p>
+                </div>
+                <div class="range-box low">
+                    <div class="range-box-label">&#8595; If Low</div>
+                    <p>Low Cystatin C levels are rare and generally considered clinically ideal, meaning your kidneys have excellent clearance. In unique circumstances, exceptionally low values can be caused by severe hyperthyroidism or specific high-dose steroid therapies.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">Symptoms associated with abnormal kidney function</div>
+            <div class="symptom-grid">
+                <div class="symptom-box high">
+                    <h3>&#8593; High Cystatin C Symptoms</h3>
+                    <ul class="symptom-list">
+                        <li>Swelling in feet, ankles, or hands (edema)</li>
+                        <li>Changes in urination frequency or color</li>
+                        <li>Unexplained fatigue or low energy</li>
+                        <li>Shortness of breath</li>
+                        <li>Nausea or metallic taste in mouth</li>
+                        <li>Persistent itchy or dry skin</li>
+                        <li>Foamy or bubbly urine</li>
+                    </ul>
+                </div>
+                <div class="symptom-box low">
+                    <h3>&#8595; Low Cystatin C Symptoms</h3>
+                    <ul class="symptom-list">
+                        <li>Generally no symptoms (healthy kidneys)</li>
+                        <li>Rapid heart rate (if thyroid related)</li>
+                        <li>Sudden weight loss (if thyroid related)</li>
+                        <li>Heat intolerance (if thyroid related)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">Common causes of abnormal cystatin c</div>
+            <h2>What can raise Cystatin C?</h2>
+            <p>The principal cause of elevated Cystatin C is a reduction in the kidneys' ability to filter waste, commonly caused by Chronic Kidney Disease (CKD) or an Acute Kidney Injury (AKI). Long-standing conditions like hypertension (high blood pressure) and type 1 or type 2 diabetes are the primary culprits behind this slow, progressive kidney damage.</p>
+            <p>Non-kidney factors can occasionally cause modest elevations as well. An overactive thyroid gland (hyperthyroidism), systemic inflammation, or regular use of large doses of corticosteroid medications (such as prednisone) can increase cellular production of Cystatin C, even if kidney function is stable.</p>
+            
+            <h2 style="margin-top:24px;">What can lower Cystatin C?</h2>
+            <p>True, clinically problematic low levels of Cystatin C are incredibly rare. When a value registers well below the standard baseline, it is most frequently driven by an underactive thyroid (hypothyroidism), which dampens cellular metabolism and slows down the overall production rate of the protein.</p>
+        </div>
+
+        <div class="card">
+            <div class="section-label">Tests often ordered alongside cystatin c</div>
+            <p>To cross-reference and verify your exact level of kidney health, doctors rarely order Cystatin C on its own. It is typically bundled with:</p>
+            <ul class="symptom-list" style="margin-top:12px;">
+                <li><strong>Serum Creatinine</strong> — The classic muscle-waste biomarker used to compare and calculate your dual eGFR score.</li>
+                <li><strong>eGFR (Cystatin C vs Creatinine)</strong> — A mathematical calculation determining your literal percentage of operational kidney filtration.</li>
+                <li><strong>BUN (Blood Urea Nitrogen)</strong> — Tracks liver and dietary waste filtration to identify acute dehydration or protein spikes.</li>
+                <li><strong>Urinalysis / Microalbumin</strong> — A urine screening to verify if physical proteins are leaking past the kidney filters.</li>
+                <li><strong>Thyroid Panel (TSH, Free T4)</strong> — Ruled out to confirm an overactive or underactive thyroid isn't masking your true numbers.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="section-label">What to do next</div>
+            <div class="next-steps">If your Cystatin C level is flagged as high, avoid jumping to conclusions. A single high reading serves as a highly accurate warning light, but confirming a clinical trend requires follow-up verification. Your provider will look closely at your calculated eGFR, look for lifestyle factors or medications, and check your blood pressure. Do not change your diet or fluid intake drastically before discussing a clear roadmap with your medical provider.</div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">Questions to ask your doctor</div>
+            <ul class="questions-list">
+                <li><span class="q-num">01</span>What is my specific eGFR when calculated using this Cystatin C result?</li>
+                <li><span class="q-num">02</span>How does this result compare to my standard serum creatinine levels?</li>
+                <li><span class="q-num">03</span>Could a thyroid issue or a medication I am taking be skewing this protein count?</li>
+                <li><span class="q-num">04</span>Are there signs of protein or albumin spilling into my urine?</li>
+                <li><span class="q-num">05</span>Based on this baseline, do I need to make changes to my current medications or supplements?</li>
+                <li><span class="q-num">06</span>Would a referral to a nephrologist be beneficial for my long-term monitoring?</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="section-label">Frequently asked questions</div>
+            <div class="faq-item">
+                <div class="faq-q">Why did my doctor order Cystatin C instead of just checking Creatinine?</div>
+                <div class="faq-a">Creatinine can fluctuate wildly if you eat a lot of meat, work out heavily, or have a lot of muscle. Cystatin C isn't influenced by muscle or diet, giving your doctor a clearer, un-skewed look at how your kidneys are working.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can drinking more water fix high Cystatin C levels?</div>
+                <div class="faq-a">Staying hydrated is great for overall kidney health, but severe dehydration usually impacts BUN and creatinine more than Cystatin C. If Cystatin C is high, it is typically a sign of filtration health rather than just a dry day, so you should consult your doctor.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What is an eGFR based on Cystatin C?</div>
+                <div class="faq-a">eGFR stands for Estimated Glomerular Filtration Rate. It translates your Cystatin C level into a score from 0 to 100+, showing roughly what percentage of normal filtration capacity your kidneys have left. Higher scores are better.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can working out heavily cause a spike in Cystatin C?</div>
+                <div class="faq-a">No. While heavy lifting or running can cause an intense spike in a creatinine test due to temporary muscle breakdown, Cystatin C production remains completely unchanged by exercise.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">Related lab tests</div>
+            <div class="related">
+                <a href="/glucose" class="related-chip">Glucose &#8594;</a>
+                <a href="/creatinine" class="related-chip">Creatinine &#8594;</a>
+                <a href="/bun" class="related-chip">BUN &#8594;</a>
+                <a href="/hemoglobin" class="related-chip">Hemoglobin &#8594;</a>
+                <a href="/tsh" class="related-chip">TSH &#8594;</a>
+            </div>
+        </div>
+
+        <div class="tool-cta">
+            <h3>Decode any lab test instantly</h3>
+            <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+            <a href="/">Open the Decoder &#8594;</a>
+        </div>
+
+        <footer>
+            <span>labplain.co</span>
+            <span>Understand your labs. No medical degree required.</span>
+        </footer>
+    </div>
+</body>
+</html>
