@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basophils Blood Test – What Your Results Mean | LabPlain</title>
+    <meta name="description" content="What does your basophil count mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://labplain.co/basophils">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg: #FFFFFF;
+            --ink: #0D1B2A;
+            --muted: #6B7A8D;
+            --accent: #185FA5;
+            --accent-light: #E6F1FB;
+            --accent-border: #B5D4F4;
+            --warn: #993C1D;
+            --warn-light: #FAECE7;
+            --warn-border: #F5C4B3;
+            --success-light: #EAF3DE;
+            --success-border: #C0DD97;
+            --success-text: #27500A;
+            --amber: #92400E;
+            --amber-light: #FEF3C7;
+            --amber-border: #F59E0B;
+            --border: #DDE3EC;
+            --white: #FFFFFF;
+        }
+        body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+        .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+        nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+        .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        .logo-mark svg { width: 18px; height: 18px; fill: white; }
+        .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+        .logo-text span { color: var(--accent); }
+        .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+        h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+        h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+        .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+        .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+        .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+        .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+        p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+        p + p { margin-top: 14px; }
+        .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+        .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .range-box { padding: 16px; border-radius: 10px; }
+        .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+        .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+        .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+        .range-box.high .range-box-label { color: var(--warn); }
+        .range-box.low .range-box-label { color: var(--accent); }
+        .range-box p { font-size: 14px; line-height: 1.65; }
+        .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+        .symptom-box { padding: 16px; border-radius: 10px; }
+        .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+        .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+        .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+        .symptom-box.high h3 { color: var(--warn); }
+        .symptom-box.low h3 { color: var(--accent); }
+        .symptom-list { list-style: none; padding: 0; }
+        .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        .symptom-list li:last-child { border-bottom: none; }
+        .symptom-list li::before { content: "→ "; color: var(--muted); }
+        .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+        .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+        .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+        .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+        .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+        .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+        .questions-list li:last-child { border-bottom: none; }
+        .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+        .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+        .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+        .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+        .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+        .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+        .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+        .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+        .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+        .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+        @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <nav>
+        <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+        <a href="/" class="logo-text">lab<span>plain</span></a>
+    </nav>
+    
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Basophils</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Basophils</em> result mean?</h1>
+    <span class="category-tag">White Blood Cells</span>
+
+    <div class="disclaimer">
+        ⚠ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.
+    </div>
+
+    <div class="card">
+        <div class="section-label">What this test measures</div>
+        <p>
+
+[Image of basophil white blood cell]
+Basophils are a rare type of white blood cell produced in your bone marrow. They make up the smallest fraction of your immune system's white blood cell team, usually accounting for less than 1% to 2% of the total count. Despite their small numbers, they play a massive role in defending your body against parasitic infections and managing allergic reactions.</p>
+        <p>When your body encounters an allergen or a foreign invader, basophils go to work by releasing chemical signals. The most notable of these is histamine, which triggers the classic inflammatory response (like swelling, itching, and redness) to help isolate and fight threats. They also release heparin, a natural substance that prevents blood from clotting too quickly, allowing other immune cells easier access to the site of an infection.</p>
+        <p>Doctors evaluate your basophils as part of a Complete Blood Count (CBC) with differential. It helps them screen for allergic diseases, chronic inflammation, or bone marrow disorders.</p>
+    </div>
+
+    <div class="card">
+        <div class="section-label">Normal reference range</div>
+        <div class="normal-range">Absolute: 0–300 cells/µL &nbsp;|&nbsp; Percentage: 0%–2%</div>
+        <p class="range-note">Because basophils naturally circulate in very small quantities, it is completely normal for a healthy individual to have a basophil count of zero or near-zero on a standard blood test.</p>
+        <p class="range-note" style="margin-top:8px;">Reference ranges can slightly fluctuate between different laboratories. Always cross-reference your exact numbers with the specific standard range printed directly on your lab report.</p>
+        
+        <div class="timing-box">
+            <h3>🔬 Percent vs. Absolute Counts</h3>
+            <p>Your lab report might list two different basophil values. The "percentage" shows how many basophils exist relative to your other white blood cells, while the "absolute count" calculates the true number of cells in a specific volume of blood. Doctors place much more weight on the absolute count when looking for underlying issues.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="section-label">What your result might indicate</div>
+        <div class="two-col">
+            <div class="range-box high">
+                <div class="range-box-label">↑ If High (Basophilia)</div>
+                <p>An elevated basophil count usually signals that your body is dealing with active, ongoing inflammation. This is commonly triggered by severe allergic reactions, asthma, chronic skin conditions, inflammatory bowel diseases, or underlying bone marrow conditions.</p>
+            </div>
+            <div class="range-box low">
+                <div class="range-box-label">↓ If Low (Basopenia)</div>
+                <p>Because normal basophil levels can sit at zero, a low result is rarely a medical emergency on its own. However, consistently low numbers can sometimes be caused by severe stress, an overactive thyroid, or prolonged steroid use.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="section-label">Symptoms associated with abnormal basophils</div>
+        <div class="symptom-grid">
+            <div class="symptom-box high">
+                <h3>↑ High Basophil Symptoms</h3>
+                <ul class="symptom-list">
+                    <li>Persistent itching or hives</li>
+                    <li>Runny nose, watery eyes, or sneezing</li>
+                    <li>Wheezing or shortness of breath</li>
+                    <li>Joint pain or swelling</li>
+                    <li>Abdominal pain and cramping</li>
+                    <li>Unexplained weight loss or fatigue</li>
+                    <li>Enlarged spleen discomfort</li>
+                </ul>
+            </div>
+            <div class="symptom-box low">
+                <h3>↓ Low Basophil Symptoms</h3>
+                <ul class="symptom-list">
+                    <li>Symptoms are rarely caused by low basophils directly</li>
+                    <li>Racing heart or anxiety (if caused by stress)</li>
+                    <li>Heat intolerance and sweating (if thyroid related)</li>
+                    <li>Slow-healing wounds</li>
+                    <li>Frequent or prolonged infections</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="section-label">Common causes of abnormal basophils</div>
+        <h2>What can raise basophils?</h2>
+        <p>The most frequent culprits behind an elevated basophil count (basophilia) are allergies and asthma. When your body overreacts to pollen, foods, or dust, it commands basophils to flood the bloodstream. Chronic inflammatory diseases—such as Rheumatoid Arthritis, Ulcerative Colitis, or Crohn's disease—can also cause your baseline numbers to creep upward.</p>
+        <p>In rarer scenarios, significantly high basophil counts can point to myeloproliferative disorders. These are conditions where the bone marrow produces too many blood cells, such as Chronic Myelogenous Leukemia (CML), polycythemia vera, or myelofibrosis. Ongoing viral or bacterial infections can also spark temporary jumps.</p>
+        
+        <h2 style="margin-top:24px;">What can lower basophils?</h2>
+        <p>A true drop in basophils (basopenia) is harder to detect because zero is already considered a normal baseline. However, if your baseline is completely bottomed out, it may be due to severe acute stress or an illness that has temporarily exhausted your immune reserves.</p>
+        <p>Endocrine imbalances, specifically hyperthyroidism (an overactive thyroid gland), can push basophil levels down. Long-term use or high doses of corticosteroid medications like prednisone will also deliberately suppress your white blood cell counts, including basophils.</p>
+    </div>
+
+    <div class="card">
+        <div class="section-label">Tests often ordered alongside basophils</div>
+        <p>Basophils are a small part of a larger picture. To uncover a clear cause, your doctor may check:</p>
+        <ul class="symptom-list" style="margin-top:12px;">
+            <li><strong>Complete Blood Count (CBC) Differential</strong> — evaluates your neutrophils, lymphocytes, monocytes, and eosinophils to pinpoint the exact nature of an immune response.</li>
+            <li><strong>Allergy Blood Tests (IgE)</strong> — measures specific antibodies to confirm if an allergen is triggering your symptoms.</li>
+            <li><strong>C-Reactive Protein (CRP) or ESR</strong> — checks for generalized, systemic inflammation across the body.</li>
+            <li><strong>Thyroid Panel (TSH, Free T4)</strong> — rule out an overactive thyroid if low counts are suspected.</li>
+            <li><strong>Bone Marrow Biopsy</strong> — ordered only if your absolute basophil count is persistently, highly elevated to rule out marrow conditions.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="section-label">What to do next</div>
+        <div class="next-steps">An isolated, slightly out-of-range basophil number is rarely an immediate cause for alarm. Because these cells act as dynamic first-responders, fluctuations happen naturally due to minor allergies or everyday inflammation. Your healthcare provider will read your basophil count alongside your other white blood cells and physical symptoms to get a true picture. Do not stress over a single reading.</div>
+    </div>
+
+    <div class="card">
+        <div class="section-label">Questions to ask your doctor</div>
+        <ul class="questions-list">
+            <li><span class="q-num">01</span>Is my absolute basophil count elevated, or is it just the percentage?</li>
+            <li><span class="q-num">02</span>Could my seasonal allergies, asthma, or a recent cold explain these results?</li>
+            <li><span class="q-num">03</span>Are there other white blood cell counts on my CBC differential that look concerning?</li>
+            <li><span class="q-num">04</span>Do we need to run any follow-up tests for systemic inflammation or thyroid function?</li>
+            <li><span class="q-num">05</span>Could any of my current medications or supplements be shifting my white blood cell levels?</li>
+            <li><span class="q-num">06</span>Should we repeat this CBC test in a few weeks to see if the levels return to baseline?</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="section-label">Frequently asked questions</div>
+        <div class="faq-item">
+            <div class="faq-q">Can a mild allergic reaction spike my basophils?</div>
+            <div class="faq-a">Yes. Environmental allergies, food sensitivities, or even a reaction to a bug bite can cause your body to ramp up basophil production or pull them out of storage into circulation, showing up as an elevated count on your test.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">My basophil count is exactly 0. Should I be worried?</div>
+            <div class="faq-a">No. Because basophils are incredibly sparse in the bloodstream, a result of 0% or 0 cells/µL is standard and considered completely healthy by almost all clinical laboratory standards.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">What is the link between basophils and histamine?</div>
+            <div class="faq-a">Basophils act like storage units for histamine. When they encounter an allergen, they burst open or release these chemicals into your surrounding tissue, causing the common allergy symptoms like itching, swelling, or congestion.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">How long does it take for basophil levels to go back to normal?</div>
+            <div class="faq-a">If the elevation was caused by a temporary flare-up—like an acute allergic reaction or a minor infection—levels typically drop back down to normal within a few days to a couple of weeks after the trigger is gone.</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="section-label">Related lab tests</div>
+        <div class="related">
+            <a href="/glucose" class="related-chip">Glucose →</a>
+            <a href="/hemoglobin" class="related-chip">Hemoglobin →</a>
+            <a href="/creatinine" class="related-chip">Creatinine →</a>
+            <a href="/triglycerides" class="related-chip">Triglycerides →</a>
+            <a href="/tsh" class="related-chip">TSH →</a>
+            <a href="/ferritin" class="related-chip">Ferritin →</a>
+        </div>
+    </div>
+
+    <div class="tool-cta">
+        <h3>Decode any lab test instantly</h3>
+        <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+        <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+        <span>labplain.co</span>
+        <span>Understand your labs. No medical degree required.</span>
+    </footer>
+</div>
+</body>
+</html>
