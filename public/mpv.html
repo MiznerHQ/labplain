@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPV Blood Test – What Your Results Mean | LabPlain</title>
+    <meta name="description" content="What does your MPV (Mean Platelet Volume) result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://labplain.co/mpv">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style> 
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } 
+        :root { 
+            --bg: #FFFFFF; 
+            --ink: #0D1B2A; 
+            --muted: #6B7A8D; 
+            --accent: #185FA5; 
+            --accent-light: #E6F1FB; 
+            --accent-border: #B5D4F4; 
+            --warn: #993C1D; 
+            --warn-light: #FAECE7; 
+            --warn-border: #F5C4B3; 
+            --success-light: #EAF3DE; 
+            --success-border: #C0DD97; 
+            --success-text: #27500A; 
+            --amber: #92400E; 
+            --amber-light: #FEF3C7; 
+            --amber-border: #F59E0B; 
+            --border: #DDE3EC; 
+            --white: #FFFFFF; 
+        } 
+        body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; } 
+        .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; } 
+        nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; } 
+        .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; } 
+        .logo-mark svg { width: 18px; height: 18px; fill: white; } 
+        .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; } 
+        .logo-text span { color: var(--accent); } 
+        .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; } 
+        .breadcrumb a { color: var(--accent); text-decoration: none; } 
+        h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; } 
+        h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); } 
+        h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); } 
+        .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; } 
+        .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; } 
+        .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; } 
+        .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; } 
+        p { font-size: 16px; line-height: 1.75; color: var(--ink); } 
+        p + p { margin-top: 14px; } 
+        .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; } 
+        .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; } 
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; } 
+        .range-box { padding: 16px; border-radius: 10px; } 
+        .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); } 
+        .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); } 
+        .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; } 
+        .range-box.high .range-box-label { color: var(--warn); } 
+        .range-box.low .range-box-label { color: var(--accent); } 
+        .range-box p { font-size: 14px; line-height: 1.65; } 
+        .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; } 
+        .symptom-box { padding: 16px; border-radius: 10px; } 
+        .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); } 
+        .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); } 
+        .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; } 
+        .symptom-box.high h3 { color: var(--warn); } 
+        .symptom-box.low h3 { color: var(--accent); } 
+        .symptom-list { list-style: none; padding: 0; } 
+        .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); } 
+        .symptom-list li:last-child { border-bottom: none; } 
+        .symptom-list li::before { content: "→ "; color: var(--muted); } 
+        .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; } 
+        .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; } 
+        .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; } 
+        .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); } 
+        .questions-list { list-style: none; padding: 0; margin-top: 8px; } 
+        .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; } 
+        .questions-list li:last-child { border-bottom: none; } 
+        .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; } 
+        .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); } 
+        .faq-item:last-child { border-bottom: none; } 
+        .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; } 
+        .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; } 
+        .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; } 
+        .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; } 
+        .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; } 
+        .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; } 
+        .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; } 
+        .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; } 
+        .related-chip:hover { border-color: var(--accent); color: var(--accent); } 
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; } 
+        @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } } 
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav>
+            <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+            <a href="/" class="logo-text">lab<span>plain</span></a>
+        </nav>
+        
+        <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; MPV</p>
+        
+        <h1>What does your<br><em style="font-style:italic;color:var(--accent)">MPV</em> result mean?</h1>
+        <span class="category-tag">Blood Cells</span>
+        
+        <div class="disclaimer">
+            ⚠ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.
+        </div>
+        
+        <div class="card">
+            <div class="section-label">What this test measures</div>
+            <p>MPV stands for <strong>Mean Platelet Volume</strong>. This test measures the average size of your platelets, which are tiny, disk-shaped blood cells essential for normal blood clotting. When you get a cut or injury, platelets rush to the site and clump together to stop the bleeding.</p>
+            <p>Your bone marrow continuously creates new platelets. Younger platelets are naturally larger and heavier, while older platelets shrink as they circulate through your bloodstream. An MPV test tells your doctor whether your body is producing an influx of brand-new platelets or if production has slowed down.</p>
+            <p>An MPV test is almost never ordered on its own; it is calculated automatically as part of a Complete Blood Count (CBC). Doctors evaluate your MPV alongside your overall platelet count to accurately diagnose bone marrow disorders, bleeding tendencies, or bone marrow recovery patterns.</p>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Normal reference range</div>
+            <div class="normal-range">Adult Standard Range: 7.0–11.5 fL (femtoliters)</div>
+            <p class="range-note">A femtoliter (fL) is a microscopic unit used to measure the volume of a single cell. Because platelet sizes span a dynamic range, an MPV between 7.0 and 11.5 fL generally signifies a balanced, healthy balance of older and newly minted platelets circulating in your blood.</p>
+            <p class="range-note" style="margin-top:8px;">Reference ranges can differ noticeably depending on the specific equipment a lab uses. Always check the definitive reference range printed on your official laboratory handout.</p>
+            
+            <div class="timing-box">
+                <h3>📊 Context is everything</h3>
+                <p>An abnormal MPV value is impossible to interpret without looking at your total **Platelet Count**. For example, a high MPV alongside a low platelet count tells an entirely different medical story than a high MPV paired with a normal platelet count.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">What your result might indicate</div>
+            <div class="two-col">
+                <div class="range-box high">
+                    <div class="range-box-label">↑ If High</div>
+                    <p>A high MPV means your platelets are larger than average. This typically indicates that your bone marrow is working overtime to produce and release new platelets rapidly, often because old ones are being destroyed or used up quickly.</p>
+                </div>
+                <div class="range-box low">
+                    <div class="range-box-label">↓ If Low</div>
+                    <p>A low MPV means your platelets are smaller than normal. This usually implies that your bone marrow is producing fewer new platelets, allowing the older, shrunken platelets to make up the majority of your bloodstream.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Symptoms associated with abnormal MPV</div>
+            <div class="symptom-grid">
+                <div class="symptom-box high">
+                    <h3>↑ High MPV Symptoms</h3>
+                    <ul class="symptom-list">
+                        <li>Often causes zero direct symptoms</li>
+                        <li>Localized swelling or redness</li>
+                        <li>Unexplained chest tightness or pain</li>
+                        <li>Headaches or sudden dizziness</li>
+                        <li>Shortness of breath</li>
+                        <li>Increased risk of developing blood clots</li>
+                    </ul>
+                </div>
+                <div class="symptom-box low">
+                    <h3>↓ Low Cortisol Symptoms</h3>
+                    <ul class="symptom-list">
+                        <li>Easy or unexplained bruising</li>
+                        <li>Frequent or heavy nosebleeds</li>
+                        <li>Bleeding gums during routine brushing</li>
+                        <li>Heavy or prolonged menstrual cycles</li>
+                        <li>Tiny red or purple skin spots (petechiae)</li>
+                        <li>Prolonged bleeding from tiny cuts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Common causes of abnormal MPV</div>
+            <h2>What can raise MPV?</h2>
+            <p>The primary reason for a elevated MPV is an accelerated destruction or consumption of platelets, which triggers your bone marrow to release large, young platelets into circulation. This dynamic is commonly seen in immune thrombocytopenia (ITP), where the immune system mistakenly destroys its own platelets.</p>
+            <p>Other causes of a high MPV include chronic systemic inflammation, active infections, severe vitamin D deficiency, type 2 diabetes, obesity, and cardiovascular diseases. In rarer instances, it may stem from myeloproliferative disorders—a group of slow-growing bone marrow conditions.</p>
+            
+            <h2 style="margin-top:24px;">What can lower MPV?</h2>
+            <p>A low MPV generally indicates that your bone marrow production lines are running slow, resulting in fewer young, large platelets entering the blood. A primary cause is aplastic anemia or bone marrow suppression caused by toxin exposure, heavy alcohol intake, or medical treatments like chemotherapy.</p>
+            <p>Nutritional deficiencies can also restrict platelet size development; an insufficient intake of iron, vitamin B12, or folate can limit normal marrow function. Additionally, certain long-term autoimmune conditions and chronic infections can progressively suppress the marrow's production efficiency.</p>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Tests often ordered alongside MPV</div>
+            <p>An MPV is rarely interpreted in isolation. Your doctor may also order:</p>
+            <ul class="symptom-list" style="margin-top:12px;">
+                <li><strong>Platelet Count</strong> — tells you the exact number of platelets per microliter of blood.</li>
+                <li><strong>Plateletcrit (PCT)</strong> — measures the total volume of blood occupied by platelets.</li>
+                <li><strong>Complete Blood Count (CBC)</strong> — looks broadly at red cells, white cells, and hemoglobin.</li>
+                <li><strong>Vitamin B12 & Folate levels</strong> — tests for foundational bone marrow raw materials.</li>
+                <li><strong>Iron Panel</strong> — checks if an iron deficiency is impacting blood cell maturation.</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">What to do next</div>
+            <div class="next-steps">An out-of-range MPV value is rarely an emergency by itself. Because it is a relative calculation of cell size, your doctor will look at it alongside your overall platelet count, symptoms, and lifestyle factors before drawing a conclusion. Do not fixate on an isolated high or low number—let your physician evaluate your full hematology panel together.</div>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Questions to ask your doctor</div>
+            <ul class="questions-list">
+                <li><span class="q-num">01</span>Is my total platelet count normal, and how does that change the meaning of my MPV result?</li>
+                <li><span class="q-num">02</span>Could a mild underlying infection or lifestyle factor be pushing my MPV out of range?</li>
+                <li><span class="q-num">03</span>Do I have any clinical symptoms of a bleeding or clotting issue that we need to address?</li>
+                <li><span class="q-num">04</span>Are there any medications or supplements I am taking that could impact my bone marrow?</li>
+                <li><span class="q-num">05</span>Should we plan a follow-up Complete Blood Count (CBC) in a few weeks to track if this normalizes?</li>
+                <li><span class="q-num">06</span>Do my results show any patterns that warrant a consultation with a hematologist?</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Frequently asked questions</div>
+            <div class="faq-item">
+                <div class="faq-q">Can an isolated high MPV mean I have a blood disease?</div>
+                <div class="faq-a">Rarely on its own. If your total platelet count and all other blood cells are within normal target ranges, an isolated high MPV is often a benign variance or a temporary response to everyday inflammation or exercise. Your doctor will likely just monitor it over time.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can lifestyle changes affect my MPV levels?</div>
+                <div class="faq-a">Yes. Addressing chronic low-grade inflammation can help balance platelet production. Focus on getting consistent sleep, managing cardiovascular stress, quitting smoking, and eating a balanced diet rich in essential nutrients like vitamin D and B12.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What is the difference between Platelet Count and MPV?</div>
+                <div class="faq-a">Platelet count tells you the precise number of platelets you have in your blood sample. MPV tells you how large those platelets are on average. You need both numbers to accurately evaluate how your bone marrow is behaving.</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Related lab tests</div>
+            <div class="related">
+                <a href="/glucose" class="related-chip">Glucose →</a>
+                <a href="/hemoglobin" class="related-chip">Hemoglobin →</a>
+                <a href="/creatinine" class="related-chip">Creatinine →</a>
+                <a href="/triglycerides" class="related-chip">Triglycerides →</a>
+                <a href="/tsh" class="related-chip">TSH →</a>
+                <a href="/ferritin" class="related-chip">Ferritin →</a>
+            </div>
+        </div>
+        
+        <div class="tool-cta">
+            <h3>Decode any lab test instantly</h3>
+            <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+            <a href="/">Open the Decoder →</a>
+        </div>
+        
+        <footer>
+            <span>labplain.co</span>
+            <span>Understand your labs. No medical degree required.</span>
+        </footer>
+    </div>
+</body>
+</html>
