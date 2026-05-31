@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCHC Blood Test – What Your Results Mean | LabPlain</title>
+    <meta name="description" content="What does your MCHC result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://labplain.co/mchc">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg: #FFFFFF;
+            --ink: #0D1B2A;
+            --muted: #6B7A8D;
+            --accent: #185FA5;
+            --accent-light: #E6F1FB;
+            --accent-border: #B5D4F4;
+            --warn: #993C1D;
+            --warn-light: #FAECE7;
+            --warn-border: #F5C4B3;
+            --success-light: #EAF3DE;
+            --success-border: #C0DD97;
+            --success-text: #27500A;
+            --amber: #92400E;
+            --amber-light: #FEF3C7;
+            --amber-border: #F59E0B;
+            --border: #DDE3EC;
+            --white: #FFFFFF;
+        }
+        body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+        .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+        nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+        .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        .logo-mark svg { width: 18px; height: 18px; fill: white; }
+        .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+        .logo-text span { color: var(--accent); }
+        .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+        h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+        h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+        .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+        .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+        .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+        .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+        p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+        p + p { margin-top: 14px; }
+        .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+        .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .range-box { padding: 16px; border-radius: 10px; }
+        .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+        .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+        .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+        .range-box.high .range-box-label { color: var(--warn); }
+        .range-box.low .range-box-label { color: var(--accent); }
+        .range-box p { font-size: 14px; line-height: 1.65; }
+        .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+        .symptom-box { padding: 16px; border-radius: 10px; }
+        .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+        .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+        .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+        .symptom-box.high h3 { color: var(--warn); }
+        .symptom-box.low h3 { color: var(--accent); }
+        .symptom-list { list-style: none; padding: 0; }
+        .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        .symptom-list li:last-child { border-bottom: none; }
+        .symptom-list li::before { content: "→ "; color: var(--muted); }
+        .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+        .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+        .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+        .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+        .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+        .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+        .questions-list li:last-child { border-bottom: none; }
+        .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+        .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+        .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+        .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+        .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+        .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+        .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+        .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+        .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+        .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+        @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav>
+            <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+            <a href="/" class="logo-text">lab<span>plain</span></a>
+        </nav>
+        
+        <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; MCHC</p>
+        <h1>What does your<br><em style="font-style:italic;color:var(--accent)">MCHC</em> result mean?</h1>
+        <span class="category-tag">Blood Count</span>
+
+        <div class="disclaimer">
+            ⚠ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.
+        </div>
+
+        <div class="card">
+            <div class="section-label">What this test measures</div>
+            <p>MCHC stands for <strong>Mean Corpuscular Hemoglobin Concentration</strong>. It measures the average concentration of hemoglobin inside a single red blood cell. Hemoglobin is the iron-rich protein that grabs oxygen from your lungs and carries it to the rest of your body.</p>
+            <p>Think of it as a measurement of color density. Hemoglobin gives red blood cells their bright crimson look. MCHC tells your doctor whether your red blood cells have the right amount of hemoglobin packed inside them (making them standard red), too little (making them pale), or too much (making them deeply red).</p>
+            <p>An MCHC test is never ordered by itself. It is a calculated component of a standard <strong>Complete Blood Count (CBC)</strong> panel, specifically grouped under "Red Blood Cell Indices" alongside tests like MCV and MCH to figure out the root cause of conditions like anemia.</p>
+        </div>
+
+        <div class="card">
+            <div class="section-label">Normal reference range</div>
+            <div class="normal-range">Adults: 32–36 g/dL (or 320–360 g/L)</div>
+            <p class="range-note">A normal MCHC means your red blood cells contain a healthy percentage of oxygen-carrying protein, giving them their standard structural color (termed "normochromic").</p>
+            <p class="range-note" style="margin-top:8px;">Reference ranges can slightly fluctuate between different lab facilities. Always default to the specific reference range indicated directly on your physical lab report.</p>
+            
+            <div class="timing-box">
+                <h3>🧪 No Fasting Required</h3>
+                <p>Because MCHC looks at the physical makeup of your existing red blood cells, eating, fasting, or the time of day does not alter your results. You can take this test at any hour, with or without food.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">What your result might indicate</div>
+            <div class="two-col">
+                <div class="range-box high">
+                    <div class="range-box-label">↑ If High</div>
+                    <p>Elevated MCHC (hyperchromic) means cells are overly packed with hemoglobin. This is rare and usually indicates spherocytosis (a structural cell defect), severe dehydration, or certain types of autoimmune hemolytic anemia.</p>
+                </div>
+                <div class="range-box low">
+                    <div class="range-box-label">↓ If Low</div>
+                    <p>Low MCHC (hypochromic) indicates pale, diluted cells lacking enough hemoglobin. This is most commonly caused by iron deficiency anemia, long-term chronic illnesses, or genetic blood disorders like thalassemia.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">Symptoms associated with abnormal mchc</div>
+            <div class="symptom-grid">
+                <div class="symptom-box high">
+                    <h3>↑ High MCHC Symptoms</h3>
+                    <ul class="symptom-list">
+                        <li>Jaundice (yellowish skin or eyes)</li>
+                        <li>Enlarged spleen / abdominal pain</li>
+                        <li>Fatigue and weakness</li>
+                        <li>Shortness of breath during movement</li>
+                        <li>Dizziness or lightheadedness</li>
+                    </ul>
+                </div>
+                <div class="symptom-box low">
+                    <h3>↓ Low MCHC Symptoms</h3>
+                    <ul class="symptom-list">
+                        <li>Chronic fatigue and low stamina</li>
+                        <li>Unusual paleness in skin or gums</li>
+                        <li>Cold hands and feet</li>
+                        <li>Brittle nails or hair loss</li>
+                        <li>Rapid or skipping heartbeats</li>
+                        <li>Headaches and brain fog</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">Common causes of abnormal mchc</div>
+            <h2>What can raise MCHC?</h2>
+            <p>True high MCHC is relatively rare. The most frequent causes are hereditary spherocytosis—a genetic condition causing red blood cells to become fragile, round spheres rather than flexible donut shapes—and autoimmune hemolytic anemia, where your immune system mistakenly attacks its own blood cells. Severe dehydration can also falsely compress plasma volume, causing a temporary artifactual spike on your blood panel.</p>
+            <p>Additionally, if a blood sample is accidentally handled poorly or undergoes "hemolysis" (cell breakage) inside the test tube before analysis, it can trigger a falsely high reading on the lab machines.</p>
+            
+            <h2 style="margin-top:24px;">What can lower MCHC?</h2>
+            <p>The runaway primary cause of low MCHC is iron deficiency anemia. Without enough iron, your body cannot manufacture the structural core of hemoglobin, resulting in pale, empty-looking cells. Another prominent cause is thalassemia, an inherited genetic condition that causes an imbalance in your hemoglobin chains.</p>
+            <p>Chronic inflammatory states, such as long-term infections, kidney disease, or autoimmune flare-ups, can also block your body from properly utilizing stored iron, driving down your MCHC concentration over time.</p>
+        </div>
+
+        <div class="card">
+            <div class="section-label">Tests often ordered alongside MCHC</div>
+            <p>An MCHC value is rarely reviewed on its own. Your healthcare provider will inspect it side-by-side with these key markers:</p>
+            <ul class="symptom-list" style="margin-top:12px;">
+                <li><strong>MCV (Mean Corpuscular Volume)</strong> — Measures the physical size of your red blood cells to determine if they are too small or too big.</li>
+                <li><strong>MCH (Mean Corpuscular Hemoglobin)</strong> — Measures the absolute total weight of hemoglobin inside an average cell.</li>
+                <li><strong>Ferritin & Iron Panels</strong> — Evaluates your body's backup iron reserves to rule out iron deficiencies.</li>
+                <li><strong>Reticulocyte Count</strong> — Measures how fast your bone marrow is producing brand-new red blood cells.</li>
+                <li><strong>Peripheral Blood Smear</strong> — A manual microscope examination where a pathologist physically looks at the shape and color of your blood cells.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="section-label">What to do next</div>
+            <div class="next-steps">An out-of-range MCHC is essentially a structural clue pointing to a broader underlying health story, not an isolated diagnosis. Your body modifies blood production slowly based on nutrition, genetic history, and chronic stressors. Avoid stressing over a single high or low arrow. Bring your complete CBC panel to your doctor so they can cross-reference your MCHC alongside your MCV and iron levels.</div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">Questions to ask your doctor</div>
+            <ul class="questions-list">
+                <li><span class="q-num">01</span>Does my low or high MCHC point toward an iron issue, or is it likely a different form of anemia?</li>
+                <li><span class="q-num">02</span>How do my MCV and MCH numbers look when paired alongside this MCHC result?</li>
+                <li><span class="q-num">03</span>Do you recommend an iron, ferritin, or total iron-binding capacity (TIBC) test next?</li>
+                <li><span class="q-num">04</span>Could my results be an artifact of how the blood sample was collected or processed?</li>
+                <li><span class="q-num">05</span>Are there specific changes to my dietary intake or temporary supplements you'd recommend based on this?</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="section-label">Frequently asked questions</div>
+            <div class="faq-item">
+                <div class="faq-q">What is the difference between MCH and MCHC?</div>
+                <div class="faq-a">MCH measures the absolute weight of hemoglobin inside an average cell, whereas MCHC measures the relative concentration of hemoglobin relative to the total volume size of that cell. Think of MCH as the total mass of iron protein in a room, and MCHC as how packed or crowded that room actually feels.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can dehydration cause high MCHC?</div>
+                <div class="faq-a">Yes. Severe dehydration causes the liquid portion of your blood (plasma) to drop, making the concentration of hemoglobin inside your remaining cells appear artificially higher on the lab analyzer. Replenishing fluids typically resolves this type of high variance.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can a poor diet cause low MCHC?</div>
+                <div class="faq-a">Absolutely. A diet lacking in iron-rich foods (like red meat, leafy greens, or fortified cereals) restricts the basic building blocks your body needs to construct hemoglobin. Over time, this nutritional shortage forces your cells to look pale and empty, reducing your MCHC.</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="section-label">Related lab tests</div>
+            <div class="related">
+                <a href="/glucose" class="related-chip">Glucose →</a>
+                <a href="/hemoglobin" class="related-chip">Hemoglobin →</a>
+                <a href="/creatinine" class="related-chip">Creatinine →</a>
+                <a href="/triglycerides" class="related-chip">Triglycerides →</a>
+                <a href="/tsh" class="related-chip">TSH →</a>
+                <a href="/ferritin" class="related-chip">Ferritin →</a>
+            </div>
+        </div>
+
+        <div class="tool-cta">
+            <h3>Decode any lab test instantly</h3>
+            <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+            <a href="/">Open the Decoder →</a>
+        </div>
+
+        <footer>
+            <span>labplain.co</span>
+            <span>Understand your labs. No medical degree required.</span>
+        </footer>
+    </div>
+</body>
+</html>
