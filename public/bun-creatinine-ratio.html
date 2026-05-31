@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUN/Creatinine Ratio – What Your Results Mean | LabPlain</title>
+    <meta name="description" content="What does your BUN/creatinine ratio mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://labplain.co/bun-creatinine-ratio">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg: #FFFFFF;
+            --ink: #0D1B2A;
+            --muted: #6B7A8D;
+            --accent: #185FA5;
+            --accent-light: #E6F1FB;
+            --accent-border: #B5D4F4;
+            --warn: #993C1D;
+            --warn-light: #FAECE7;
+            --warn-border: #F5C4B3;
+            --success-light: #EAF3DE;
+            --success-border: #C0DD97;
+            --success-text: #27500A;
+            --amber: #92400E;
+            --amber-light: #FEF3C7;
+            --amber-border: #F59E0B;
+            --border: #DDE3EC;
+            --white: #FFFFFF;
+        }
+        body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+        .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+        nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+        .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        .logo-mark svg { width: 18px; height: 18px; fill: white; }
+        .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+        .logo-text span { color: var(--accent); }
+        .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+        h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+        h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+        .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+        .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+        .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+        .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+        p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+        p + p { margin-top: 14px; }
+        .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+        .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .range-box { padding: 16px; border-radius: 10px; }
+        .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+        .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+        .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+        .range-box.high .range-box-label { color: var(--warn); }
+        .range-box.low .range-box-label { color: var(--accent); }
+        .range-box p { font-size: 14px; line-height: 1.65; }
+        .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+        .symptom-box { padding: 16px; border-radius: 10px; }
+        .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+        .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+        .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+        .symptom-box.high h3 { color: var(--warn); }
+        .symptom-box.low h3 { color: var(--accent); }
+        .symptom-list { list-style: none; padding: 0; }
+        .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        .symptom-list li:last-child { border-bottom: none; }
+        .symptom-list li::before { content: "→ "; color: var(--muted); }
+        .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+        .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+        .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+        .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+        .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+        .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+        .questions-list li:last-child { border-bottom: none; }
+        .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+        .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+        .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+        .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+        .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+        .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+        .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+        .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+        .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+        .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+        @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <nav>
+        <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+        <a href="/" class="logo-text">lab<span>plain</span></a>
+    </nav>
+    
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; BUN/Creatinine Ratio</p>
+    
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">BUN/Creatinine Ratio</em> mean?</h1>
+    <span class="category-tag">Kidney Function</span>
+    
+    <div class="disclaimer">
+        ⚠ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.
+    </div>
+    
+    <div class="card">
+        <div class="section-label">What this test measures</div>
+        <p>The Blood Urea Nitrogen (BUN) to Creatinine ratio is a mathematical calculation that compares the levels of two different waste products in your blood. Both of these substances are normally filtered out of your body by healthy kidneys, making this ratio an invaluable tool for evaluating overall kidney performance.</p>
+        <p>BUN represents the amount of urea nitrogen in your blood, which is a byproduct of protein breakdown in your liver. Creatinine is a waste product generated by normal, everyday muscle wear and tear. Because your body processes and eliminates these two waste markers differently, comparing them helps doctors pinpoint exactly why your kidneys might be struggling.</p>
+        <p>Rather than looking at each number in isolation, doctors use this specific calculation to differentiate between direct kidney damage and external factors like dehydration, dietary changes, or poor blood flow to the kidneys.</p>
+    </div>
+    
+    <div class="card">
+        <div class="section-label">Normal reference range</div>
+        <div class="normal-range">Adult Standard Ratio: 10:1 to 20:1</div>
+        <p class="range-note">A normal result means that for every milligram of creatinine in your blood, there are between 10 and 20 milligrams of blood urea nitrogen. This balanced relationship indicates your kidneys are receiving adequate blood supply and filtering waste properly.</p>
+        <p class="range-note" style="margin-top:8px;">Optimal ranges can fluctuate based on age, gender, and dietary protein intake. Always look at the specific reference range provided on your laboratory report to accurately evaluate your result.</p>
+        
+        <div class="timing-box">
+            <h3>💡 Why context matters</h3>
+            <p>Your ratio can look perfectly fine even if both individual numbers are high, or it can look wildly abnormal if only one shifts. Interpreting this test requires looking at your actual BUN and Creatinine numbers alongside the ratio calculation to get an accurate clinical picture.</p>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="section-label">What your result might indicate</div>
+        <div class="two-col">
+            <div class="range-box high">
+                <div class="range-box-label">↑ If High (> 20:1)</div>
+                <p>A high ratio usually means that BUN has risen much faster than creatinine. This is most frequently caused by something slowing down blood flow to the kidneys—such as severe dehydration or congestive heart failure—or from an overload of protein breakdown in the body.</p>
+            </div>
+            <div class="range-box low">
+                <div class="range-box-label">↓ If Low (< 10:1)</div>
+                <p>A low ratio means either BUN is unusually low or creatinine is unusually high. This can indicate conditions like advanced liver disease (where less urea is made), severe malnutrition, a diet very low in protein, or significant muscle breakdown.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="section-label">Symptoms associated with an abnormal ratio</div>
+        <div class="symptom-grid">
+            <div class="symptom-box high">
+                <h3>↑ High Ratio Symptoms</h3>
+                <ul class="symptom-list">
+                    <li>Extreme thirst and dry mouth</li>
+                    <li>Dark-colored or concentrated urine</li>
+                    <li>Infrequent urination or low urine output</li>
+                    <li>Dizziness or lightheadedness</li>
+                    <li>Swelling in ankles, feet, or legs</li>
+                    <li>Shortness of breath</li>
+                </ul>
+            </div>
+            <div class="symptom-box low">
+                <h3>↓ Low Ratio Symptoms</h3>
+                <ul class="symptom-list">
+                    <li>Severe muscle weakness or wasting</li>
+                    <li>Chronic fatigue and low energy</li>
+                    <li>Loss of appetite or unintended weight loss</li>
+                    <li>Abdominal swelling or fluid retention</li>
+                    <li>Jaundice (yellowing of skin or eyes)</li>
+                    <li>Nausea and general malaise</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="section-label">Common causes of an abnormal ratio</div>
+        <h2>What can raise the ratio?</h2>
+        <p>The single most common culprit behind an elevated BUN/Creatinine ratio is dehydration. When your body is low on fluids, your kidneys automatically reabsorb more urea (BUN) back into the bloodstream to hold onto water, while continuing to excrete creatinine normally. This drives the ratio upward.</p>
+        <p>Other major causes include conditions that decrease overall blood flow to the kidneys, such as congestive heart failure or severe blood loss. It can also be triggered by a high-protein diet, gastrointestinal bleeding (where the body digests its own blood protein), or certain medications like corticosteroids and tetracycline antibiotics.</p>
+        
+        <h2 style="margin-top:24px;">What can lower the ratio?</h2>
+        <p>A abnormally low ratio often traces back to the liver. Because the liver is responsible for manufacturing urea, severe liver disease or liver failure prevents BUN from being produced in normal amounts, causing the ratio to plummet even if kidney function is fine.</p>
+        <p>Other common causes include long-term malnutrition or a strict low-protein diet, both of which deprive the body of the building blocks needed to make urea. Muscle damage or muscle-wasting diseases can also cause a low ratio by flooding the bloodstream with disproportionately high amounts of creatinine.</p>
+    </div>
+    
+    <div class="card">
+        <div class="section-label">Tests often ordered alongside this ratio</div>
+        <p>The BUN/Creatinine ratio is always calculated using your primary blood markers and is evaluated alongside these related kidney tests:</p>
+        <ul class="symptom-list" style="margin-top:12px;">
+            <li><strong>BUN (Blood Urea Nitrogen)</strong> — The standalone measurement of nitrogen waste in your blood.</li>
+            <li><strong>Creatinine</strong> — The standalone indicator of baseline kidney filtering efficiency.</li>
+            <li><strong>eGFR (Estimated Glomerular Filtration Rate)</strong> — Calculates exactly how many milliliters of fluid your kidneys clean per minute based on your bloodwork.</li>
+            <li><strong>Electrolyte Panel</strong> — Measures sodium, potassium, and chloride levels to check fluid balances.</li>
+            <li><strong>Urinalysis</strong> — A urine test to check for protein or blood leaking through the kidneys.</li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <div class="section-label">What to do next</div>
+        <div class="next-steps">An out-of-range ratio is highly responsive to lifestyle adjustments when caused by simple dehydration or diet. Drink plenty of water and retest before assuming there is a long-term problem. However, because a persistently abnormal ratio can point to deeper cardiovascular, kidney, or liver issues, it must be evaluated comprehensively by a doctor alongside your symptoms and medical history.</div>
+    </div>
+    
+    <div class="card">
+        <div class="section-label">Questions to ask your doctor</div>
+        <ul class="questions-list">
+            <li><span class="q-num">01</span>Does my ratio point toward simple dehydration, or is there a reason to suspect actual kidney issues?</li>
+            <li><span class="q-num">02</span>How do my standalone BUN, Creatinine, and eGFR numbers look alongside this calculation?</li>
+            <li><span class="q-num">03</span>Could my dietary habits or a high-protein routine be skewing these numbers?</li>
+            <li><span class="q-num">04</span>Are any of my current prescription medications or supplements influencing my lab values?</li>
+            <li><span class="q-num">05</span>Do I need a repeat blood test or a urinalysis to check for structural changes?</li>
+            <li><span class="q-num">06</span>Are there any lifestyle or fluid intake changes I should implement before we retest?</li>
+        </ul>
+    </div>
+    
+    <div class="card">
+        <div class="section-label">Frequently asked questions</div>
+        <div class="faq-item">
+            <div class="faq-q">Can drinking more water fix a high BUN/Creatinine ratio?</div>
+            <div class="faq-a">If the high ratio is strictly caused by dehydration, yes. Increasing your daily fluid intake will allow your kidneys to process waste normally and quickly bring the ratio back down into the 10:1 to 20:1 range.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Can a high-protein diet alter my results?</div>
+            <div class="faq-a">Absolutely. Consuming high volumes of protein foods or protein supplements increases the amount of urea your liver produces. This will raise your BUN level without changing your creatinine, leading to an elevated ratio.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">What is the difference between a high ratio and actual kidney failure?</div>
+            <div class="faq-a">A high ratio with normal creatinine usually indicates a fluid issue (like dehydration) rather than structural kidney damage. In true kidney failure, both BUN and creatinine rise dramatically together, which often keeps the ratio looking normal even though the organs are failing.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Does muscle mass affect this ratio calculation?</div>
+            <div class="faq-a">Yes. Individuals with very high muscle mass naturally produce more creatinine, which can lower their calculated ratio. Conversely, those with very low muscle mass or muscle-wasting conditions may show a higher baseline ratio.</div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="section-label">Related lab tests</div>
+        <div class="related">
+            <a href="/glucose" class="related-chip">Glucose →</a>
+            <a href="/hemoglobin" class="related-chip">Hemoglobin →</a>
+            <a href="/creatinine" class="related-chip">Creatinine →</a>
+            <a href="/triglycerides" class="related-chip">Triglycerides →</a>
+            <a href="/tsh" class="related-chip">TSH →</a>
+            <a href="/ferritin" class="related-chip">Ferritin →</a>
+        </div>
+    </div>
+    
+    <div class="tool-cta">
+        <h3>Decode any lab test instantly</h3>
+        <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+        <a href="/">Open the Decoder →</a>
+    </div>
+    
+    <footer>
+        <span>labplain.co</span>
+        <span>Understand your labs. No medical degree required.</span>
+    </footer>
+</div>
+</body>
+</html>
