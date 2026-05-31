@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DHEA-S Lab Test Explained in Plain English – LabPlain</title>
+  <meta name="description" content="What is a DHEA-S blood test? Learn what high or low DHEA-S levels may indicate in plain language—without the medical jargon.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://labplain.co/dhea-s">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #1B4B8A; --accent-light: #EAF0FA; --accent-border: #B5CEFA;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
+    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.warn { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.blue { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.warn .range-box-label { color: var(--warn); }
+    .range-box.blue .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg></div>
+      <a href="/" class="logo-text">lab<span>plain</span></a>
+    </nav>
+    
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/guides">Lab Guides</a> &rsaquo; DHEA-S</p>
+    
+    <h1>What is a<br><em style="font-style:italic;color:var(--accent)">DHEA-S Test</em>?</h1>
+    <span class="category-tag">Hormone Panel</span>
+    
+    <div class="disclaimer">⚠️ <strong>Educational reference only.</strong> LabPlain is an educational site, not a diagnostic tool. A single lab result must always be interpreted alongside clinical symptoms, medical history, and other evaluations by a qualified healthcare professional.</div>
+
+    <div class="card">
+      <div class="section-label">What this test measures</div>
+      <p>DHEA-S (Dehydroepiandrosterone Sulfate) is a blood test that measures the amount of an important precursor androgen hormone in your body. It is primarily made by your adrenal glands—the two small, triangular hats that sit on top of your kidneys—with much smaller amounts coming from the ovaries in females or testes in males.</p>
+      <p>Think of DHEA-S as a building block. Your body converts it into active male sex hormones (like testosterone) and active female sex hormones (like estrogen). Because it is almost exclusively produced by your adrenal glands, measuring its concentration is a helpful way to evaluate how well your adrenal factory is functioning.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Understanding the ranges</div>
+      <div class="two-col">
+        <div class="range-box blue">
+          <div class="range-box-label">↑ Elevated Levels</div>
+          <p>Higher concentrations may indicate overactive adrenal glands. This is often seen in conditions like Polycystic Ovary Syndrome (PCOS), adrenal tumors, or congenital adrenal hyperplasia.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">↓ Low Levels</div>
+          <p>Lower markers can be associated with underactive adrenal function (adrenal insufficiency), structural damage to the adrenal cortex, or low pituitary gland output.</p>
+        </div>
+      </div>
+      <div class="timing-box">
+        <h3>⏰ Does timing matter?</h3>
+        <p>Unlike regular DHEA or cortisol, which swing wildly up and down depending on the hour of the day, DHEA-S stays remarkably stable in your blood stream. You generally do not need to fast or time the test for a specific hour, though your doctor might want it coordinated with other hormone checks.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What the results can be associated with</div>
+      <h2>Decoding your markers</h2>
+      <p>Doctors look at DHEA-S alongside other sex hormones and adrenal compounds. Here is how physical trends track with the data:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Signs of higher levels in females</strong> — May reflect unexpected facial/body hair growth (hirsutism), severe acne, missing periods, or hair thinning.</li>
+        <li><strong>Signs of higher levels in young children</strong> — Can be associated with early puberty markers or atypical physical development.</li>
+        <li><strong>Signs of low levels overall</strong> — May mirror system-wide exhaustion, unexplained weight loss, low blood pressure, or low sex drive.</li>
+        <li><strong>Age-related decline</strong> — Levels naturally peak in your 20s and steadily decrease as a normal part of the aging process.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common accompanying lab panels</div>
+      <p>DHEA-S is rarely evaluated in isolation. Depending on what your practitioner is observing, it is regularly bundled with these tests:</p>
+      <ul class="symptom-list" style="margin-top: 12px;">
+        <li><strong>Total & Free Testosterone</strong> — To look at the broader landscape of male sex hormone conversion.</li>
+        <li><strong>Cortisol (Blood or Saliva)</strong> — To cross-reference overall adrenal output stability.</li>
+        <li><strong>ACTH (Adrenocorticotropic Hormone)</strong> — To see if the brain is properly signaling the adrenals to perform.</li>
+        <li><strong>17-Hydroxyprogesterone</strong> — Frequently checked if genetic enzyme structural conditions are suspected.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common interpretation mistakes</div>
+      <div class="two-col">
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ DHEA vs. DHEA-S Confusion</div>
+          <p>They are different. DHEA-S has an attached sulfate group that makes it stay stable in your bloodstream for long periods. Standard DHEA leaves the body quickly and changes dynamically throughout the day.</p>
+        </div>
+        <div class="range-box warn">
+          <div class="range-box-label">⚠️ Looking at standalone metrics</div>
+          <p>An isolated high or low reading does not pinpoint a specific condition. Normal limits are highly sensitive to your age and biological sex.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What to do right now</div>
+      <div class="next-steps">
+        If you have your lab panel results in front of you, match your age bracket and sex exactly against the specific reference range listed on your lab report sheet, as every testing company uses slightly different machines and calibrated thresholds. If your numbers look slightly off, do not panic—schedule a follow-up visit with your care team to crosscheck these metrics with physical symptoms.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your healthcare professional</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Do my specific DHEA-S markers align perfectly with the normal baseline for my age and sex?</li>
+        <li><span class="q-num">02</span>How do these results look when paired with my testosterone, cortisol, or thyroid panels?</li>
+        <li><span class="q-num">03</span>Could my physical symptoms be explained by these numbers, or should we look elsewhere?</li>
+        <li><span class="q-num">04</span>Are there any medications or supplements I am taking that could skew this blood metric?</li>
+        <li><span class="q-num">05</span>Do we need to consider scheduling an ultrasound or imaging scan of my adrenal glands or ovaries?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can supplements change my DHEA-S levels?</div>
+        <div class="faq-a">Yes. Taking over-the-counter DHEA supplements or specific steroid medications can directly raise your blood concentration levels. Always tell your provider about everything you take.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the main difference between an ovarian issue and an adrenal issue?</div>
+        <div class="faq-a">Because the ovaries make very little DHEA-S but produce standard testosterone and estrogen, highly elevated DHEA-S typically points the diagnostic spotlight toward the adrenal glands rather than the ovaries.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why do levels naturally go down with age?</div>
+        <div class="faq-a">It is a standard physiological progression. Adrenal production peaks during early adulthood and gradually falls by up to 80% over the course of a lifetime.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab guides</div>
+      <div class="related">
+        <a href="/cortisol" class="related-chip">Cortisol →</a>
+        <a href="/testosterone" class="related-chip">Testosterone →</a>
+        <a href="/acth" class="related-chip">ACTH →</a>
+        <a href="/tsh" class="related-chip">TSH →</a>
+        <a href="/hba1c" class="related-chip">HbA1c →</a>
+        <a href="/creatinine" class="related-chip">Creatinine →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any lab result instantly</h3>
+      <p>Use our free AI-powered tool to look up any laboratory test marker or clinical value in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>labplain.co</span>
+      <span>Understand your labs. No medical degree required.</span>
+    </footer>
+  </div>
+</body>
+</html>
