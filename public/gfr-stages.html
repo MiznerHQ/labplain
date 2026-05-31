@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eGFR Test & Kidney Disease Stages – What Your Results Mean | LabPlain</title>
+    <meta name="description" content="What does your eGFR result mean? Plain-English guide to the 5 stages of kidney disease, normal ranges, symptoms, causes, and what to ask your doctor. No medical jargon.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://labplain.co/gfr-stages">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style> 
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } 
+        :root { 
+            --bg: #FFFFFF; 
+            --ink: #0D1B2A; 
+            --muted: #6B7A8D; 
+            --accent: #185FA5; 
+            --accent-light: #E6F1FB; 
+            --accent-border: #B5D4F4; 
+            --warn: #993C1D; 
+            --warn-light: #FAECE7; 
+            --warn-border: #F5C4B3; 
+            --success-light: #EAF3DE; 
+            --success-border: #C0DD97; 
+            --success-text: #27500A; 
+            --amber: #92400E; 
+            --amber-light: #FEF3C7; 
+            --amber-border: #F59E0B; 
+            --border: #DDE3EC; 
+            --white: #FFFFFF; 
+        } 
+        body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; } 
+        .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; } 
+        nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; } 
+        .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; } 
+        .logo-mark svg { width: 18px; height: 18px; fill: white; } 
+        .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; } 
+        .logo-text span { color: var(--accent); } 
+        .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; } 
+        .breadcrumb a { color: var(--accent); text-decoration: none; } 
+        h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; } 
+        h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); } 
+        h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); } 
+        .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; } 
+        .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; } 
+        .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; } 
+        .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; } 
+        p { font-size: 16px; line-height: 1.75; color: var(--ink); } 
+        p + p { margin-top: 14px; } 
+        .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; } 
+        .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; } 
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; } 
+        .range-box { padding: 16px; border-radius: 10px; } 
+        .range-box.high { background: var(--success-light); border: 1px solid var(--success-border); } 
+        .range-box.low { background: var(--warn-light); border: 1px solid var(--warn-border); } 
+        .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; } 
+        .range-box.high .range-box-label { color: var(--success-text); } 
+        .range-box.low .range-box-label { color: var(--warn); } 
+        .range-box p { font-size: 14px; line-height: 1.65; } 
+        .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; } 
+        .symptom-box { padding: 16px; border-radius: 10px; } 
+        .symptom-box.high { background: var(--success-light); border: 1px solid var(--success-border); } 
+        .symptom-box.low { background: var(--warn-light); border: 1px solid var(--warn-border); } 
+        .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; } 
+        .symptom-box.high h3 { color: var(--success-text); } 
+        .symptom-box.low h3 { color: var(--warn); } 
+        .symptom-list { list-style: none; padding: 0; } 
+        .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); } 
+        .symptom-list li:last-child { border-bottom: none; } 
+        .symptom-list li::before { content: "→ "; color: var(--muted); } 
+        .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; } 
+        .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; } 
+        .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; } 
+        .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); } 
+        .questions-list { list-style: none; padding: 0; margin-top: 8px; } 
+        .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; } 
+        .questions-list li:last-child { border-bottom: none; } 
+        .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; } 
+        .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); } 
+        .faq-item:last-child { border-bottom: none; } 
+        .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; } 
+        .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; } 
+        .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; } 
+        .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; } 
+        .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; } 
+        .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; } 
+        .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; } 
+        .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; } 
+        .related-chip:hover { border-color: var(--accent); color: var(--accent); } 
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; } 
+        @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } } 
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav>
+            <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+            <a href="/" class="logo-text">lab<span>plain</span></a>
+        </nav>
+        
+        <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; eGFR Stages</p>
+        
+        <h1>What does your<br><em style="font-style:italic;color:var(--accent)">eGFR</em> result mean?</h1>
+        <span class="category-tag">Kidney Function</span>
+        
+        <div class="disclaimer">
+            &#9888; <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.
+        </div>
+        
+        <div class="card">
+            <div class="section-label">What this test measures</div>
+            <p>eGFR stands for <strong>Estimated Glomerular Filtration Rate</strong>. It tracks how efficiently your kidneys are filtering waste products from your bloodstream. Your kidneys contain millions of microscopic filtering units called glomeruli; your eGFR calculation directly reflects how well these filters are performing.</p>
+            <p>Instead of looking at a single metric, your doctor looks at your eGFR score alongside a chemical waste product called creatinine (and sometimes cystatin C) to estimate your overall kidney capacity. Your final eGFR score changes based on your blood results, age, and assigned biological sex.</p>
+            <p>A routine eGFR check is standard practice during annual physicals, but it's especially critical if you are managing chronic health conditions like high blood pressure or type 2 diabetes, both of which can progressively strain kidney function over time.</p>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Normal reference range</div>
+            <div class="normal-range">Normal Kidney Function: 90 mL/min/1.73m² or higher</div>
+            <p class="range-note">For adults, an eGFR reading above 90 is considered fully normal. However, a slight, progressive decline is natural as we age. A score between 60 and 89 can still be entirely healthy if there is no other evidence of structural kidney damage.</p>
+            <p class="range-note" style="margin-top:8px;">Because an eGFR is a mathematical estimate rather than a direct measurement, minor day-to-day variances are normal. Always consult the exact reference ranges provided directly on your lab printout.</p>
+            
+            <div class="timing-box">
+                <h3>&#9200; Why hydration matters</h3>
+                <p>Unlike other metabolic markers, the time of day does not change your eGFR score. However, acute dehydration will temporarily reduce your kidney blood flow, causing a false low reading on your test. Ensure you are normally hydrated before your blood draw.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">What your result might indicate</div>
+            <div class="two-col">
+                <div class="range-box high">
+                    <div class="range-box-label">&#8593; If Normal/High (90+)</div>
+                    <p>An eGFR above 90 signifies strong, healthy filtration. There is no upper ceiling limit for safety, though remarkably high scores can occasionally be triggered by high dietary protein or a surge in muscle mass.</p>
+                </div>
+                <div class="range-box low">
+                    <div class="range-box-label">&#8595; If Low (Below 60)</div>
+                    <p>A score persistently under 60 indicates reduced filtration capacity. If this reduction lasts for more than three months, it points to Chronic Kidney Disease (CKD) and requires further medical evaluation.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Understanding the 5 CKD Stages</div>
+            <p>When an eGFR result falls below normal parameters, physicians utilize a standardized 5-stage scale to classify kidney health:</p>
+            <ul class="symptom-list" style="margin-top:12px;">
+                <li><strong>Stage 1 (eGFR 90+):</strong> Normal filtration efficiency, but alternative markers (like protein in urine) indicate mild kidney stress or structural damage.</li>
+                <li><strong>Stage 2 (eGFR 60–89):</strong> A mild decrease in filtration speed. Often seen as a normal part of aging, but monitored carefully if pre-existing risk factors exist.</li>
+                <li><strong>Stage 3 (eGFR 30–59):</strong> Moderate kidney dysfunction. This stage is frequently split into 3a (45-59) and 3b (30-44). Medical management begins here to actively preserve remaining function.</li>
+                <li><strong>Stage 4 (eGFR 15–29):</strong> Severe reduction in function. The kidneys are struggling significantly to process everyday waste, necessitating close care from a nephrologist.</li>
+                <li><strong>Stage 5 (eGFR below 15):</strong> Advanced kidney failure. At this stage, the organs can no longer sustain systemic health on their own, requiring dialysis treatment or a transplant plan.</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Symptoms associated with abnormal eGFR</div>
+            <div class="symptom-grid">
+                <div class="symptom-box high">
+                    <h3>&#8593; Normal / High eGFR Symptoms</h3>
+                    <ul class="symptom-list">
+                        <li>Excellent baseline energy levels</li>
+                        <li>Normal fluid balance throughout the body</li>
+                        <li>Steady, controlled blood pressure</li>
+                        <li>Standard, clear urinary patterns</li>
+                        <li>No unprovoked physical swelling</li>
+                    </ul>
+                </div>
+                <div class="symptom-box low">
+                    <h3>&#8595; Low eGFR Symptoms (Stages 3-5)</h3>
+                    <ul class="symptom-list">
+                        <li>Swelling (edema) in the ankles, feet, or legs</li>
+                        <li>Persistent fatigue and low physical endurance</li>
+                        <li>Changes in urination frequency or foamy urine</li>
+                        <li>Dry, itchy skin or muscle cramping</li>
+                        <li>Shortness of breath or systemic fluid retention</li>
+                        <li>Metallic taste in the mouth or loss of appetite</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Common causes of abnormal filtration</div>
+            <h2>What maintains a normal eGFR?</h2>
+            <p>A consistently normal eGFR is supported by robust cardiovascular health, controlled blood sugar, and clear arterial pathways to the kidneys. Regular physical activity, a balanced diet low in heavily processed sodium, and maintaining optimal hydration all protect your delicate kidney filtration networks from premature degradation.</p>
+            
+            <h2 style="margin-top:24px;">What can lower your eGFR?</h2>
+            <p>The leading driver of a chronically declining eGFR is uncontrolled type 2 diabetes, as prolonged high blood sugar strips away the integrity of the kidney's micro-filters. Long-standing high blood pressure acts similarly by physically scarring the renal blood vessels.</p>
+            <p>Sudden, acute drops can be sparked by severe dehydration, acute kidney injuries (AKI), or the regular, unmonitored use of over-the-counter NSAID pain relievers like ibuprofen or naproxen, which limit essential blood flow to the kidneys.</p>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Tests often ordered alongside eGFR</div>
+            <p>Because an eGFR calculation relies heavily on baseline metabolic metrics, doctors cross-reference it with adjacent panels:</p>
+            <ul class="symptom-list" style="margin-top:12px;">
+                <li><strong>Creatinine</strong> — The fundamental blood waste product generated by muscle breakdown that directly calculates your eGFR.</li>
+                <li><strong>Urine Albumin-to-Creatinine Ratio (UACR)</strong> — A targeted urine test that looks for early signs of protein leaks, indicating early structural kidney strain.</li>
+                <li><strong>BUN (Blood Urea Nitrogen)</strong> — Tracks liver and muscle protein waste to evaluate how well your filtration system is purging metabolic byproducts.</li>
+                <li><strong>Serum Potassium & Phosphorus</strong> — Vital electrolytes that can spike dangerously when your kidneys lose filtration capacity.</li>
+                <li><strong>Kidney Ultrasound</strong> — An imaging tool utilized to look for physical blockages, kidney stones, or physical shrinking of the organs.</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">What to do next</div>
+            <div class="next-steps">A single isolated low eGFR reading does not mean you have chronic kidney failure. Kidney values jump around based on your hydration, food intake, and acute medications. A true medical diagnosis requires a trend of matching numbers sustained over 90 days. Keep calm, keep hydrating, and let your practitioner evaluate the multi-month trend lines.</div>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Questions to ask your doctor</div>
+            <ul class="questions-list">
+                <li><span class="q-num">01</span>Does my current eGFR result suggest a specific stage of kidney disease?</li>
+                <li><span class="q-num">02</span>Could temporary dehydration or an over-the-counter painkiller have dropped my score?</li>
+                <li><span class="q-num">03</span>Is there any trace of protein or blood showing up in my routine urine tests?</li>
+                <li><span class="q-num">04</span>Are my current blood pressure and blood sugar medications optimized to protect my kidneys?</li>
+                <li><span class="q-num">05</span>Do you recommend adjusting my diet, protein intake, or fluid intake based on this number?</li>
+                <li><span class="q-num">06</span>At what point or target score would you recommend I consult a specialist nephrologist?</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Frequently asked questions</div>
+            <div class="faq-item">
+                <div class="faq-q">Can a low eGFR score improve or bounce back?</div>
+                <div class="faq-a">Yes. If the drop was caused by an acute issue like dehydration, a recent illness, or a medication interaction, your eGFR can recover completely once those factors are resolved. Chronic decline cannot be fully reversed, but it can be successfully paused or slowed down for decades with lifestyle changes.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Why does my age affect the eGFR calculation?</div>
+                <div class="faq-a">Our kidneys naturally lose a tiny fraction of their filtering capabilities every year as we age. The mathematical formula automatically adjusts for this reality so an older adult isn't misdiagnosed with kidney disease for showing a normal, age-appropriate decline.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can a high-protein diet alter my eGFR result?</div>
+                <div class="faq-a">Yes. Consuming large amounts of cooked meat or whey protein supplements right before a blood test can temporarily boost the creatinine levels in your blood. This can lead to a falsely low eGFR score, even if your underlying kidney health is perfectly fine.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What is the difference between eGFR and a standard Creatinine test?</div>
+                <div class="faq-a">Creatinine is the raw waste molecule measured in your blood. The eGFR is the actual calculated score generated by running that raw creatinine number through a medical formula. The eGFR tells the real clinical story of your kidney health, whereas raw creatinine is harder to read on its own.</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="section-label">Related lab tests</div>
+            <div class="related">
+                <a href="/glucose" class="related-chip">Glucose &rarr;</a>
+                <a href="/bun" class="related-chip">BUN &rarr;</a>
+                <a href="/creatinine" class="related-chip">Creatinine &rarr;</a>
+                <a href="/triglycerides" class="related-chip">Triglycerides &rarr;</a>
+                <a href="/tsh" class="related-chip">TSH &rarr;</a>
+                <a href="/ferritin" class="related-chip">Ferritin &rarr;</a>
+            </div>
+        </div>
+        
+        <div class="tool-cta">
+            <h3>Decode any lab test instantly</h3>
+            <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+            <a href="/">Open the Decoder &rarr;</a>
+        </div>
+        
+        <footer>
+            <span>labplain.co</span>
+            <span>Understand your labs. No medical degree required.</span>
+        </footer>
+    </div>
+</body>
+</html>
