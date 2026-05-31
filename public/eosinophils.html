@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eosinophils Blood Test – What Your Results Mean | LabPlain</title>
+    <meta name="description" content="What does your eosinophils result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://labplain.co/eosinophils">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg: #FFFFFF;
+            --ink: #0D1B2A;
+            --muted: #6B7A8D;
+            --accent: #185FA5;
+            --accent-light: #E6F1FB;
+            --accent-border: #B5D4F4;
+            --warn: #993C1D;
+            --warn-light: #FAECE7;
+            --warn-border: #F5C4B3;
+            --success-light: #EAF3DE;
+            --success-border: #C0DD97;
+            --success-text: #27500A;
+            --amber: #92400E;
+            --amber-light: #FEF3C7;
+            --amber-border: #F59E0B;
+            --border: #DDE3EC;
+            --white: #FFFFFF;
+        }
+        body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+        .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+        nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+        .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        .logo-mark svg { width: 18px; height: 18px; fill: white; }
+        .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+        .logo-text span { color: var(--accent); }
+        .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+        h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+        h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+        .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+        .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+        .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+        .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+        p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+        p + p { margin-top: 14px; }
+        .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+        .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .range-box { padding: 16px; border-radius: 10px; }
+        .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+        .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+        .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+        .range-box.high .range-box-label { color: var(--warn); }
+        .range-box.low .range-box-label { color: var(--accent); }
+        .range-box p { font-size: 14px; line-height: 1.65; }
+        .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+        .symptom-box { padding: 16px; border-radius: 10px; }
+        .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+        .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+        .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+        .symptom-box.high h3 { color: var(--warn); }
+        .symptom-box.low h3 { color: var(--accent); }
+        .symptom-list { list-style: none; padding: 0; }
+        .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+        .symptom-list li:last-child { border-bottom: none; }
+        .symptom-list li::before { content: "→ "; color: var(--muted); }
+        .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+        .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+        .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+        .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+        .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+        .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+        .questions-list li:last-child { border-bottom: none; }
+        .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+        .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+        .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+        .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+        .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+        .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+        .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+        .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+        .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+        .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+        @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav>
+            <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+            <a href="/" class="logo-text">lab<span>plain</span></a>
+        </nav>
+        <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Eosinophils</p>
+        <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Eosinophils</em> result mean?</h1>
+        <span class="category-tag">White Blood Cells</span>
+        <div class="disclaimer">
+            ⚠ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.
+        </div>
+        <div class="card">
+            <div class="section-label">What this test measures</div>
+            <p>Eosinophils are a specialized type of white blood cell produced in your bone marrow. They serve as key tactical elements of your immune system, specifically engineered to defend your body against multicellular parasites (like worms) and to coordinate inflammatory responses, particularly during allergic reactions and asthma attacks.</p>
+            <p>Under normal conditions, eosinophils make up only a tiny fraction of your total white blood cell count. They patrol your bloodstream for a short time before migrating into tissues that interact directly with the outside environment—such as your lungs, skin, and digestive tract—where they act as sentinels.</p>
+            <p>Doctors evaluate eosinophil levels as part of a Complete Blood Count (CBC) with differential. This test is routinely ordered during regular checkups or when investigating symptoms related to allergies, unexplained skin rashes, persistent cough, or suspected parasitic infections.</p>
+        </div>
+        <div class="card">
+            <div class="section-label">Normal reference range</div>
+            <div class="normal-range">Absolute Count: 30–500 cells/mcL &nbsp;|&nbsp; Percentage: 0.0–6.0%</div>
+            <p class="range-note">Your report may display eosinophils in two ways: an <strong>Absolute Eosinophil Count (AEC)</strong>, which calculates the exact number of cells per microliter of blood, and a <strong>Percentage (%)</strong>, which shows their proportion relative to other white blood cells. The absolute count is generally the more reliable clinical marker.</p>
+            <p class="range-note" style="margin-top:8px;">Reference ranges can vary slightly between different laboratories based on their specific equipment and patient populations. Always check the baseline range printed directly on your official lab summary sheet.</p>
+            <div class="timing-box">
+                <h3>⏰ Fluctuations and Context</h3>
+                <p>Eosinophil counts naturally fluctuate slightly throughout the day and can vary based on physical stressors. Because their primary job is tissue defense, blood levels sometimes shift as these cells migrate out of circulation and directly into irritated tissues to fight off a local reaction.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="section-label">What your result might indicate</div>
+            <div class="two-col">
+                <div class="range-box high">
+                    <div class="range-box-label">↑ If High</div>
+                    <p>An elevated level (eosinophilia) typically signals that your immune system is actively fighting off an allergen or an invasive parasite. It can also point to localized respiratory inflammation like asthma, drug reactions, or underlying inflammatory skin conditions. A single high reading requires careful evaluation alongside your clinical symptoms.</p>
+                </div>
+                <div class="range-box low">
+                    <div class="range-box-label">↓ If Low</div>
+                    <p>A low or zero reading (eosinopenia) is common and usually not a cause for concern, as normal baselines can hit zero. However, persistently low levels can sometimes be caused by high-stress situations, severe systemic infections, or the use of immune-suppressing medications like corticosteroids.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="section-label">Symptoms associated with abnormal eosinophils</div>
+            <div class="symptom-grid">
+                <div class="symptom-box high">
+                    <h3>↑ High Eosinophil Symptoms</h3>
+                    <ul class="symptom-list">
+                        <li>Persistent sneezing, runny nose, or watery eyes</li>
+                        <li>Wheezing, chronic coughing, or shortness of breath</li>
+                        <li>Itchy skin rashes, hives, or eczema flare-ups</li>
+                        <li>Abdominal pain, bloating, or diarrhea</li>
+                        <li>Unexplained fevers or night sweats</li>
+                        <li>Joint pain or muscle aches</li>
+                    </ul>
+                </div>
+                <div class="symptom-box low">
+                    <h3>↓ Low Eosinophil Symptoms</h3>
+                    <ul class="symptom-list">
+                        <li>Often entirely asymptomatic on its own</li>
+                        <li>General fatigue or weakness if tied to chronic stress</li>
+                        <li>Signs of systemic infection (fever, chills)</li>
+                        <li>Symptoms matching heavy steroid medication use</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="section-label">Common causes of abnormal eosinophils</div>
+            <h2>What can raise eosinophils?</h2>
+            <p>The most frequent driver of elevated eosinophils is an allergic response. This includes seasonal environmental allergies (hay fever), food allergies, eczema, and asthma. When exposed to a trigger, your body deploys eosinophils to release chemical signals that coordinate the local allergic defense, sometimes causing tissue irritation in the process.</p>
+            <p>Other significant causes include parasitic infections (such as intestinal worms), adverse reactions to specific medications (antibiotics, NSAIDs, or anti-seizure drugs), and autoimmune disorders like lupus or inflammatory bowel disease (IBD). Rarely, very high levels are associated with specific bone marrow conditions or hypereosinophilic syndromes.</p>
+            <h2 style="margin-top:24px;">What can lower eosinophils?</h2>
+            <p>Because the normal lower bound for eosinophils in a healthy individual approaches zero cells per microliter, a low reading on its own is rarely a sign of medical dysfunction. It is a frequent incidental finding on routine screening panels.</p>
+            <p>When low numbers are clinically relevant, they are typically driven by external suppressing forces. The most common cause is corticosteroid treatment (like prednisone), which intentionally downregulates white blood cell production to manage inflammation. Severe physiological stress, major acute bacterial infections, and alcohol consumption can also temporarily depress your blood eosinophil count.</p>
+        </div>
+        <div class="card">
+            <div class="section-label">Tests often ordered alongside eosinophils</div>
+            <p>Eosinophils are rarely evaluated in a vacuum. To pinpoint the exact root cause of your results, your healthcare provider may order:</p>
+            <ul class="symptom-list" style="margin-top:12px;">
+                <li><strong>Complete Blood Count (CBC) Differential</strong> — analyzes neutrophils, lymphocytes, and monocytes to look at the whole immune landscape.</li>
+                <li><strong>Total IgE Allergy Test</strong> — measures allergy-related antibodies circulating in your bloodstream.</li>
+                <li><strong>Stool Ova and Parasite (O&P) Panel</strong> — screens for digestive tract parasites if travel history or diet suggests exposure.</li>
+                <li><strong>C-Reactive Protein (CRP) or ESR</strong> — checks for generalized systemic inflammation across the body.</li>
+                <li><strong>Skin Prick Testing</strong> — identifies specific environmental or food-based allergens triggering reactions.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="section-label">What to do next</div>
+            <div class="next-steps">An isolated out-of-range eosinophil result is simply a clue, not a final diagnosis. Minor spikes often follow an immediate seasonal allergy flare or a brief environmental exposure and clear up on their own. Your doctor will review your entire white blood cell breakdown, cross-reference it with your personal medical history, and look at your current symptoms before deciding if follow-up monitoring is necessary.</div>
+        </div>
+        <div class="card">
+            <div class="section-label">Questions to ask your doctor</div>
+            <ul class="questions-list">
+                <li><span class="q-num">01</span>Does my high eosinophil count look like it's being driven by seasonal allergies or asthma?</li>
+                <li><span class="q-num">02</span>Could any of the regular medications or supplements I am taking be causing this shift?</li>
+                <li><span class="q-num">03</span>Do you recommend a follow-up CBC test in a few weeks to see if the levels normalize on their own?</li>
+                <li><span class="q-num">04</span>Given my recent travel history and dietary habits, should we rule out any parasitic exposures?</li>
+                <li><span class="q-num">05</span>Should I consider seeing an allergist or immunologist based on these specific numbers?</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="section-label">Frequently asked questions</div>
+            <div class="faq-item">
+                <div class="faq-q">Can a common cold or flu cause high eosinophils?</div>
+                <div class="faq-a">No, common viral upper respiratory infections typically trigger a spike in lymphocytes or neutrophils instead. If your eosinophils are elevated during a respiratory illness, it is far more likely a sign of allergic asthma or allergic rhinitis mimicking or complicating a cold.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What is considered a critically high eosinophil level?</div>
+                <div class="faq-a">Mild eosinophilia is generally classified as 500 to 1,500 cells/mcL. Moderate is 1,500 to 5,000 cells/mcL. Levels above 5,000 cells/mcL are considered severe, rare, and require prompt medical investigation to prevent potential localized organ or tissue irritation.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can dietary changes or lifestyle changes lower my eosinophils naturally?</div>
+                <div class="faq-a">If your elevation is driven by a hidden food allergy or intolerance, removing that specific tracking trigger from your diet will allow your counts to drop. For environmental triggers, using air purifiers, managing dust exposure, and reducing stress can help keep immune system responses stable.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What is the difference between an absolute count and a percentage?</div>
+                <div class="faq-a">The percentage tells you what portion of your white blood cells are eosinophils, while the absolute count tells you the precise number of cells in a set volume of blood. Doctors rely heavily on the absolute count because a percentage can look high simply because other cell types (like neutrophils) dropped.</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="section-label">Related lab tests</div>
+            <div class="related">
+                <a href="/glucose" class="related-chip">Glucose →</a>
+                <a href="/hemoglobin" class="related-chip">Hemoglobin →</a>
+                <a href="/creatinine" class="related-chip">Creatinine →</a>
+                <a href="/triglycerides" class="related-chip">Triglycerides →</a>
+                <a href="/tsh" class="related-chip">TSH →</a>
+                <a href="/ferritin" class="related-chip">Ferritin →</a>
+            </div>
+        </div>
+        <div class="tool-cta">
+            <h3>Decode any lab test instantly</h3>
+            <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+            <a href="/">Open the Decoder →</a>
+        </div>
+        <footer>
+            <span>labplain.co</span>
+            <span>Understand your labs. No medical degree required.</span>
+        </footer>
+    </div>
+</body>
+</html>
