@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IGF-1 Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your IGF-1 result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
+  <meta name="robots" content="index, follow">
+  <link class="canonical" href="https://labplain.co/igf-1.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
+    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 15px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; line-height: 1.5; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.high .range-box-label { color: var(--warn); }
+    .range-box.low .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+      <a href="/" class="logo-text">lab<span>plain</span></a>
+    </nav>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; IGF-1</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">IGF-1</em> result mean?</h1>
+    <span class="category-tag">Hormones</span>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+    
+    <div class="card">
+      <div class="section-label">What this test measures</div>
+      <p>IGF-1 stands for Insulin-like Growth Factor 1. It is a hormone primarily produced by your liver in response to signals from Growth Hormone (GH), which is released by your brain's pituitary gland. As its name implies, IGF-1 plays an essential role in managing cell growth, tissue regeneration, bone development, and muscle maintenance throughout your life.</p>
+      <p>While Growth Hormone is released in short, unpredictable spikes during the day and night (making it very difficult to measure accurately with a single blood draw), IGF-1 levels remain highly stable in your bloodstream. Because of this stability, doctors use an IGF-1 test as an indirect and highly reliable snapshot of your body's overall growth hormone activity.</p>
+      <p>A healthcare provider typically orders this test if they suspect a disorder related to growth hormone production, such as an underactive pituitary gland or conditions involving an overproduction of growth hormones.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Normal reference range</div>
+      <div class="normal-range">Adults (Age 25–39): ~100–300 ng/mL &nbsp;|&nbsp; Adults (Age 40–54): ~90–250 ng/mL</div>
+      <p class="range-note">Unlike many blood markers, standard ranges for IGF-1 are deeply dependent on your age and stage of development. Levels peak dramatically during puberty when bones and tissues are growing rapidly, and then slowly drop as you age into adulthood.</p>
+      <p class="range-note" style="margin-top:8px;">Because reference ranges are highly specialized by age bracket and vary widely from lab to lab, you must compare your number against the unique reference chart provided on your official laboratory paperwork.</p>
+      <div class="timing-box">
+        <h3>📊 Age over time</h3>
+        <p>Because your age dictates what "normal" looks like, a result of 280 ng/mL might be perfectly healthy for a 30-year-old, but could be flagged as significantly elevated for an individual in their late 60s. Your doctor will interpret your results specifically against your age bracket.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What your result might indicate</div>
+      <div class="two-col">
+        <div class="range-box high">
+          <div class="range-box-label">↑ If High</div>
+          <p>An elevated IGF-1 level suggests that your body may be producing excess growth hormone. In adults, prolonged overproduction can be associated with acromegaly, a condition leading to the slow enlargement of bones and tissues. A single high reading requires more detailed clinical follow-up.</p>
+        </div>
+        <div class="range-box low">
+          <div class="range-box-label">↓ If Low</div>
+          <p>A lower-than-expected IGF-1 level can indicate an overall growth hormone deficiency or a state of undernutrition. In adults, it may point toward hypopituitarism (a sluggish pituitary gland). It can also indicate that the liver is struggling to manufacture the hormone due to lifestyle or systemic factors.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Symptoms associated with abnormal IGF-1</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High IGF-1 Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Enlargement of hands, feet, or facial features</li>
+            <li>Joint pain, swelling, or numbness (Carpal Tunnel)</li>
+            <li>Coarsening of skin or excessive sweating</li>
+            <li>Deepening of the voice</li>
+            <li>Fatigue or muscle weakness</li>
+            <li>Frequent headaches or vision issues</li>
+            <li>Unexplained gaps forming between teeth</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>↓ Low IGF-1 Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Persistent fatigue or low physical stamina</li>
+            <li>Decreased muscle mass and increased body fat</li>
+            <li>Reduced bone density or frequent fractures</li>
+            <li>Poor mood, anxiety, or lack of motivation</li>
+            <li>Slow wound healing</li>
+            <li>Disrupted sleep patterns</li>
+            <li>Changes in blood lipid levels</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal IGF-1</div>
+      <h2>What can raise IGF-1?</h2>
+      <p>The primary clinical driver behind significantly high IGF-1 levels is a non-cancerous tumor on the pituitary gland that overproduces growth hormone (a condition known as acromegaly in adults, or gigantism if it occurs in children before bone plates close). </p>
+      <p>Beyond clinical conditions, transient or mild elevations can sometimes be associated with high-protein diets, pregnancy, or the use of synthetic human growth hormone therapies.</p>
+      <h2 style="margin-top:24px;">What can lower cortisol or IGF-1?</h2>
+      <p>A low IGF-1 level is frequently associated with an underactive pituitary gland that is failing to supply adequate growth hormone. However, because the liver builds IGF-1, chronic liver disease or liver resistance can also lower your levels.</p>
+      <p>Systemic nutritional deficits—such as severe fasting, malnutrition, or anorexia—can prevent the liver from synthesizing the hormone properly. Poorly controlled diabetes, thyroid issues, or normal hormonal declines from advanced aging can also be associated with lower readings.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside IGF-1</div>
+      <p>Because IGF-1 provides a structural look at growth hormone pathways, it is routinely paired with dynamic evaluations:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>Growth Hormone (GH)</strong> — checked under specific testing protocols to assess instantaneous pituitary output</li>
+        <li><strong>Oral Glucose Tolerance Test (OGTT)</strong> — a diagnostic evaluation where sugar is consumed to see if it properly suppresses growth hormone production</li>
+        <li><strong>Growth Hormone Releasing Hormone (GHRH) Test</strong> — evaluates how well your pituitary responds to chemical messengers</li>
+        <li><strong>Comprehensive Metabolic Panel (CMP)</strong> — looks closely at kidney and liver function, as the liver creates IGF-1</li>
+        <li><strong>Prolactin and Cortisol</strong> — assesses if other hormones controlled by the pituitary gland are working in balance</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What to do next</div>
+      <div class="next-steps">An out-of-range IGF-1 result is a single piece of a larger health picture and is not a definitive diagnosis on its own. Because your age, dietary patterns, and overall metabolic status influence this hormone, your doctor will look at your numbers alongside your specific physical symptoms. Avoid jumping to conclusions before a professional clinical assessment.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Is my IGF-1 result considered normal and expected for a person of my specific age?</li>
+        <li><span class="q-num">02</span>Could my current symptoms be related to this specific high or low reading?</li>
+        <li><span class="q-num">03</span>Do you recommend a dynamic follow-up evaluation, like a glucose suppression test, to check my growth hormone stability?</li>
+        <li><span class="q-num">04</span>Could my nutritional habits, fasting, or any existing medications be skewing this data?</li>
+        <li><span class="q-num">05</span>Based on these markers, would it be helpful for me to consult with an endocrinologist?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can a single Growth Hormone test replace an IGF-1 test?</div>
+        <div class="faq-a">Generally, no. Growth hormone drops and spikes continuously throughout the day. A random blood draw could show a level near zero or a brief massive peak entirely by chance. Because IGF-1 remains incredibly steady, it acts as a reliable metric of your 24-hour growth hormone trend.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can diet or lifestyle affect my IGF-1 numbers?</div>
+        <div class="faq-a">Yes. Periods of prolonged fasting, strict low-calorie diets, or severe malnutrition can prompt your IGF-1 levels to drop significantly because your body lacks the raw materials required by the liver to synthesize the hormone. Conversely, high-protein diets may marginally bump levels upward.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the connection between IGF-1 and acromegaly?</div>
+        <div class="faq-a">Acromegaly is a rare condition occurring in adults when a benign pituitary tumor creates excessive growth hormone, which causes the liver to release high amounts of IGF-1. This causes a slow, progressive expansion of bone structures in the face, jaw, hands, and feet. Measuring IGF-1 is one of the primary tools used to screen for this condition.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does low IGF-1 always mean I need hormone replacement therapy?</div>
+        <div class="faq-a">Not necessarily. Mildly low IGF-1 can stem from aging, poor metabolic health, sleep issues, or dietary deficits. Addressing underlying issues such as sleep hygiene, proper nutrition, and liver health often helps normalize levels without requiring therapeutic hormone interventions.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/glucose.html" class="related-chip">Glucose →</a>
+        <a href="/creatinine.html" class="related-chip">Creatinine →</a>
+        <a href="/cortisol.html" class="related-chip">Cortisol →</a>
+        <a href="/tsh.html" class="related-chip">TSH →</a>
+        <a href="/ferritin.html" class="related-chip">Ferritin →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any lab test instantly</h3>
+      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>labplain.co</span>
+      <span>Not a substitute for professional medical advice.</span>
+    </footer>
+  </div>
+</body>
+</html>
