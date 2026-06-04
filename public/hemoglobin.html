@@ -1,259 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hemoglobin (Hgb) Blood Test: What Your Results Mean | LabPlain</title>
-  <meta name="description" content="Understand your hemoglobin blood test results. Learn what high and low hemoglobin means, symptoms, causes, normal ranges, and when to call your doctor." />
-  <link rel="canonical" href="https://labplain.co/hemoglobin" />
-  <link rel="icon" href="/favicon.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hemoglobin Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your hemoglobin result mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://labplain.co/hemoglobin.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
-      line-height: 1.7;
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    header {
-      background: #0f2557;
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header a { text-decoration: none; }
-    header .logo { color: #fff; font-size: 1.4rem; font-weight: 700; letter-spacing: -0.5px; }
-    header .logo span { color: #60a5fa; }
-    header .tagline { color: #93c5fd; font-size: 0.78rem; margin-top: 2px; }
-    .hero {
-      background: linear-gradient(135deg, #0f2557 0%, #1e3a8a 100%);
-      color: white;
-      padding: 48px 24px 40px;
-      text-align: center;
-    }
-    .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 12px; }
-    .hero p { font-size: 1.05rem; color: #bfdbfe; max-width: 600px; margin: 0 auto; }
-    .container { max-width: 820px; margin: 0 auto; padding: 0 20px 60px; }
-    .section { background: #fff; border-radius: 12px; padding: 32px; margin-top: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
-    .section h2 { font-size: 1.25rem; font-weight: 700; color: #0f2557; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e7ef; }
-    .section h3 { font-size: 1rem; font-weight: 700; color: #1e3a8a; margin: 18px 0 8px; }
-    .section p { margin-bottom: 12px; color: #374151; }
-    .section ul { padding-left: 20px; margin-bottom: 12px; }
-    .section ul li { margin-bottom: 7px; color: #374151; }
-    .range-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 0.93rem; }
-    .range-table th { background: #0f2557; color: #fff; padding: 10px 14px; text-align: left; }
-    .range-table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; }
-    .range-table tr:last-child td { border-bottom: none; }
-    .range-table tr:nth-child(even) td { background: #f1f5f9; }
-    .badge { display: inline-block; padding: 2px 10px; border-radius: 99px; font-size: 0.78rem; font-weight: 600; }
-    .badge-low { background: #dbeafe; color: #1d4ed8; }
-    .badge-normal { background: #dcfce7; color: #15803d; }
-    .badge-high { background: #fee2e2; color: #b91c1c; }
-    .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 8px; }
-    @media (max-width: 560px) { .card-grid { grid-template-columns: 1fr; } }
-    .card { border-radius: 10px; padding: 18px; }
-    .card-low { background: #eff6ff; border-left: 4px solid #3b82f6; }
-    .card-high { background: #fff7ed; border-left: 4px solid #f97316; }
-    .card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 10px; margin-top: 0; }
-    .card-low h3 { color: #1d4ed8; }
-    .card-high h3 { color: #c2410c; }
-    .card ul { padding-left: 18px; margin: 0; }
-    .card ul li { font-size: 0.9rem; margin-bottom: 5px; color: #374151; }
-    .faq-item { border-bottom: 1px solid #e2e8f0; padding: 16px 0; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 15px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; line-height: 1.4; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.high .range-box-label { color: var(--warn); }
+    .range-box.low .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
     .faq-item:last-child { border-bottom: none; }
-    .faq-item .q { font-weight: 700; color: #0f2557; margin-bottom: 6px; }
-    .faq-item .a { color: #374151; font-size: 0.95rem; }
-    .question-list { list-style: none; padding: 0; }
-    .question-list li { padding: 10px 14px; margin-bottom: 8px; background: #f1f5f9; border-radius: 8px; font-size: 0.94rem; color: #1e293b; }
-    .question-list li::before { content: "❓ "; }
-    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-top: 8px; }
-    .related-card { background: #f1f5f9; border-radius: 8px; padding: 14px; text-align: center; text-decoration: none; color: #0f2557; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
-    .related-card:hover { background: #dbeafe; }
-    .disclaimer { background: #fef9c3; border: 1px solid #fde047; border-radius: 10px; padding: 16px 20px; margin-top: 28px; font-size: 0.85rem; color: #713f12; }
-    .cta-box { background: linear-gradient(135deg, #0f2557, #1e3a8a); color: white; border-radius: 12px; padding: 32px; text-align: center; margin-top: 28px; }
-    .cta-box h2 { color: white; border: none; font-size: 1.2rem; margin-bottom: 10px; }
-    .cta-box p { color: #bfdbfe; margin-bottom: 20px; }
-    .cta-btn { display: inline-block; background: #60a5fa; color: #0f2557; font-weight: 700; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-size: 1rem; transition: background 0.2s; }
-    .cta-btn:hover { background: #93c5fd; }
-    footer { text-align: center; padding: 24px; font-size: 0.82rem; color: #94a3b8; }
-    footer a { color: #60a5fa; text-decoration: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+      <a href="/" class="logo-text">lab<span>plain</span></a>
+    </nav>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Hemoglobin</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Hemoglobin</em> result mean?</h1>
+    <span class="category-tag">Routine Bloodwork</span>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+    
+    <div class="card">
+      <div class="section-label">What this test measures</div>
+      <p>Hemoglobin is a vital protein found inside your red blood cells. Its main job is to act as a transport system, grabbing oxygen from your lungs and carrying it to every tissue, muscle, and organ throughout your body. On its return trip, it helps carry carbon dioxide back to your lungs so you can exhale it.</p>
+      <p>Because your body relies completely on oxygen to produce energy, your hemoglobin level is a key benchmark for your overall vitality. This test is almost always included as a primary component of a Complete Blood Count (CBC), which is ordered during routine physicals, before surgeries, or when evaluating general symptoms like fatigue.</p>
+      <p>An abnormal reading usually signals that your body has either too few red blood cells to meet its oxygen needs, or an excess of cells causing the blood to thicken.</p>
+    </div>
 
-<header>
-  <a href="/">
-    <div class="logo">Lab<span>Plain</span></div>
-    <div class="tagline">Understand your labs. No medical degree required.</div>
-  </a>
-</header>
-
-<div class="hero">
-  <h1>Hemoglobin (Hgb) Blood Test</h1>
-  <p>What your results mean, what causes abnormal levels, and when to talk to your doctor.</p>
-</div>
-
-<div class="container">
-
-  <div class="section">
-    <h2>What Is Hemoglobin?</h2>
-    <p>Hemoglobin (Hgb) is the protein inside red blood cells that carries oxygen from your lungs to every organ and tissue in your body. It also carries carbon dioxide back to your lungs to be exhaled.</p>
-    <p>Your hemoglobin level is one of the most important numbers on a complete blood count (CBC). It tells your doctor how well your blood is delivering oxygen — and whether you might be anemic or have a condition causing too many red blood cells.</p>
-    <p>Results are measured in grams per deciliter (g/dL).</p>
-  </div>
-
-  <div class="section">
-    <h2>Normal Hemoglobin Ranges</h2>
-    <p>Normal ranges vary by age and sex. Here are the standard reference values:</p>
-    <table class="range-table">
-      <thead>
-        <tr><th>Group</th><th>Normal Range</th><th>Status</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Adult men</td><td>13.5 – 17.5 g/dL</td><td><span class="badge badge-normal">Normal</span></td></tr>
-        <tr><td>Adult women</td><td>12.0 – 15.5 g/dL</td><td><span class="badge badge-normal">Normal</span></td></tr>
-        <tr><td>Pregnant women</td><td>11.0 – 14.0 g/dL</td><td><span class="badge badge-normal">Normal</span></td></tr>
-        <tr><td>Children (age 6–12)</td><td>11.5 – 15.5 g/dL</td><td><span class="badge badge-normal">Normal</span></td></tr>
-        <tr><td>Newborns</td><td>14.0 – 24.0 g/dL</td><td><span class="badge badge-normal">Normal</span></td></tr>
-        <tr><td>Below normal (anemia)</td><td>&lt; 12.0 g/dL (women) / &lt; 13.5 g/dL (men)</td><td><span class="badge badge-low">Low</span></td></tr>
-        <tr><td>Above normal (polycythemia)</td><td>&gt; 17.5 g/dL (men) / &gt; 15.5 g/dL (women)</td><td><span class="badge badge-high">High</span></td></tr>
-      </tbody>
-    </table>
-    <p style="margin-top:14px; font-size:0.88rem; color:#64748b;">Reference ranges may vary slightly between labs. Always interpret results in context with your symptoms and medical history.</p>
-  </div>
-
-  <div class="section">
-    <h2>Symptoms of Abnormal Hemoglobin</h2>
-    <p>Your symptoms depend on whether your level is too low or too high.</p>
-    <div class="card-grid">
-      <div class="card card-low">
-        <h3>⬇ Low Hemoglobin (Anemia)</h3>
-        <ul>
-          <li>Fatigue and weakness</li>
-          <li>Pale or yellowish skin</li>
-          <li>Shortness of breath</li>
-          <li>Dizziness or lightheadedness</li>
-          <li>Fast or irregular heartbeat</li>
-          <li>Cold hands and feet</li>
-          <li>Headaches</li>
-          <li>Chest pain (severe anemia)</li>
-        </ul>
-      </div>
-      <div class="card card-high">
-        <h3>⬆ High Hemoglobin (Polycythemia)</h3>
-        <ul>
-          <li>Headaches</li>
-          <li>Dizziness or blurred vision</li>
-          <li>Flushed or red skin</li>
-          <li>Fatigue</li>
-          <li>Itching (especially after a shower)</li>
-          <li>Joint pain or swelling</li>
-          <li>Numbness or tingling</li>
-          <li>Blood clots</li>
-        </ul>
+    <div class="card">
+      <div class="section-label">Normal reference range</div>
+      <div class="normal-range">Adult Males: 13.8–17.2 g/dL &nbsp;|&nbsp; Adult Females: 12.1–15.1 g/dL</div>
+      <p class="range-note">Hemoglobin is measured in grams per deciliter (g/dL). Expected baseline levels differ naturally between men and women, primarily due to the hormonal impacts on red blood cell production and menstrual blood loss. Pregnant individuals also see lower target ranges due to increased fluid volume in the body.</p>
+      <p class="range-note" style="margin-top:8px;">Reference boundaries vary across different testing facilities. Always cross-reference your exact score with the customized layout on your laboratory printout.</p>
+      
+      <div class="timing-box">
+        <h3>💧 Hydration impacts</h3>
+        <p>Your hemoglobin numbers represent a concentration within your liquid plasma. If you are severely dehydrated, your blood becomes more concentrated, which can artificially bump your hemoglobin level higher. Conversely, over-hydration can slightly dilute it.</p>
       </div>
     </div>
-  </div>
 
-  <div class="section">
-    <h2>What Causes Abnormal Hemoglobin Levels?</h2>
-    <h3>Causes of Low Hemoglobin</h3>
-    <ul>
-      <li><strong>Iron deficiency anemia</strong> — the most common cause worldwide; often from poor diet or blood loss</li>
-      <li><strong>Vitamin B12 or folate deficiency</strong> — your body can't make healthy red blood cells without them</li>
-      <li><strong>Chronic disease</strong> — kidney disease, cancer, rheumatoid arthritis, and other long-term illnesses can suppress red blood cell production</li>
-      <li><strong>Blood loss</strong> — heavy periods, GI bleeding (ulcers, colon cancer), or trauma</li>
-      <li><strong>Bone marrow disorders</strong> — aplastic anemia, leukemia, or myelodysplastic syndromes</li>
-      <li><strong>Hemolytic anemia</strong> — red blood cells are destroyed faster than they're made (autoimmune, sickle cell, G6PD deficiency)</li>
-      <li><strong>Pregnancy</strong> — blood volume expands faster than red blood cell production</li>
-      <li><strong>Hypothyroidism</strong> — low thyroid hormone slows red blood cell production</li>
-    </ul>
-    <h3>Causes of High Hemoglobin</h3>
-    <ul>
-      <li><strong>Dehydration</strong> — less plasma makes the concentration of hemoglobin appear higher</li>
-      <li><strong>Living at high altitude</strong> — less oxygen in the air triggers the body to make more red blood cells</li>
-      <li><strong>Smoking</strong> — carbon monoxide displaces oxygen, prompting more hemoglobin production</li>
-      <li><strong>Polycythemia vera</strong> — a bone marrow disorder causing overproduction of red blood cells</li>
-      <li><strong>Heart or lung disease</strong> — COPD, sleep apnea, congenital heart disease</li>
-      <li><strong>Erythropoietin misuse</strong> — EPO doping (used illicitly in endurance sports)</li>
-      <li><strong>Kidney tumors</strong> — some tumors secrete EPO, stimulating excess red blood cell production</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <div class="q">Is low hemoglobin always anemia?</div>
-      <div class="a">Low hemoglobin is the hallmark of anemia, but anemia itself is a symptom, not a diagnosis. Your doctor will run additional tests (ferritin, B12, reticulocyte count, etc.) to find the underlying cause before treating it.</div>
+    <div class="card">
+      <div class="section-label">What your result might indicate</div>
+      <div class="two-col">
+        <div class="range-box high">
+          <div class="range-box-label">↑ If High</div>
+          <p>An elevated hemoglobin level may point to dehydration, prolonged low blood oxygen levels (common in heavy smokers or those living at high altitudes), sleep apnea, or a rare bone marrow condition like polycythemia vera.</p>
+        </div>
+        <div class="range-box low">
+          <div class="range-box-label">↓ If Low</div>
+          <p>A depressed hemoglobin level usually indicates anemia. This may reflect nutritional deficiencies (like low iron or B12), chronic inflammatory diseases, active internal bleeding, or bone marrow production issues.</p>
+        </div>
+      </div>
     </div>
-    <div class="faq-item">
-      <div class="q">Can I raise my hemoglobin through diet?</div>
-      <div class="a">If iron deficiency is the cause, yes — foods like red meat, spinach, lentils, and fortified cereals can help. Eating vitamin C alongside iron-rich foods improves absorption. However, if the cause is something other than diet, food alone won't fix it.</div>
+
+    <div class="card">
+      <div class="section-label">Symptoms associated with abnormal hemoglobin</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High Hemoglobin Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Frequent headaches or dizziness</li>
+            <li>Flushed, red face or skin</li>
+            <li>Blurred vision</li>
+            <li>Itching, especially after a warm bath</li>
+            <li>Shortness of breath</li>
+            <li>Joint pain, particularly in the big toe</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>↓ Low Hemoglobin Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Persistent fatigue and muscle weakness</li>
+            <li>Pale skin, gums, or nail beds</li>
+            <li>Cold hands and feet</li>
+            <li>Dizziness, lightheadedness, or fainting</li>
+            <li>Shortness of breath during basic tasks</li>
+            <li>Fast or irregular heartbeat</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="faq-item">
-      <div class="q">How quickly does hemoglobin change with treatment?</div>
-      <div class="a">With iron supplementation, most people see measurable improvement in 2–4 weeks, and full normalization in 1–3 months. Hemoglobin from B12 or folate deficiency can improve within weeks of starting supplements.</div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal hemoglobin</div>
+      <h2>What can lower hemoglobin?</h2>
+      <p>The most common explanation for low hemoglobin is iron deficiency anemia. Your body requires iron to build hemoglobin; without it, production stalls. This is frequently linked to slow, ongoing blood loss from heavy menstrual cycles or gastrointestinal ulcers. Poor dietary intake of iron, folate, or vitamin B12 can also stall production.</p>
+      <p>Additionally, chronic illnesses like kidney disease can lower hemoglobin because the kidneys produce erythropoietin (EPO), a hormone that instructs your bone marrow to synthesize red blood cells.</p>
+      
+      <h2 style="margin-top:24px;">What can raise hemoglobin?</h2>
+      <p>When the body senses a chronic shortage of oxygen, it reacts by pumping out more red blood cells to compensate. This pattern is frequently seen in individuals with severe chronic lung diseases (like COPD), heavy smokers, or people residing at high elevations where air pressure is lower.</p>
+      <p>Less frequently, high levels can be driven by performance-enhancing drugs (like synthetic EPO) or bone marrow conditions that cause an unregulated overproduction of blood cells.</p>
     </div>
-    <div class="faq-item">
-      <div class="q">What hemoglobin level requires a blood transfusion?</div>
-      <div class="a">There's no universal cutoff — it depends on symptoms, how fast the drop occurred, and underlying conditions. Generally, transfusions are considered when hemoglobin falls below 7–8 g/dL, or higher if the person has heart disease or is symptomatic.</div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside hemoglobin</div>
+      <p>Hemoglobin is typically analyzed in tandem with other markers to paint a complete diagnostic picture. Common companion panels include:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>Hematocrit</strong> — measures the percentage of your total blood volume made up of red cells.</li>
+        <li><strong>Ferritin & Iron Panels</strong> — evaluates the baseline storage levels of iron in your body.</li>
+        <li><strong>RBC Indices (MCV, MCH, MCHC)</strong> — analyzes the physical size and color distribution of your red blood cells.</li>
+        <li><strong>Vitamin B12 & Folate</strong> — checks for essential building blocks needed to construct mature cells.</li>
+        <li><strong>Reticulocyte Count</strong> — measures the amount of young, newly formed red blood cells to see how well your marrow is working.</li>
+      </ul>
     </div>
-    <div class="faq-item">
-      <div class="q">Is slightly low hemoglobin dangerous?</div>
-      <div class="a">Mildly low hemoglobin (10–12 g/dL) is common and often manageable, but it still warrants investigation to find the cause. Severe anemia (below 7 g/dL) can stress the heart and requires prompt medical attention.</div>
+
+    <div class="card">
+      <div class="section-label">What to do next</div>
+      <div class="next-steps">A single high or low hemoglobin score provides a helpful clue, but it is not a complete diagnostic solution on its own. Slight variations just outside the standard lines are common and may naturally resolve. Your physician will review this number alongside your symptoms, physical exam, and wider blood panels before recommending specific dietary steps, iron supplements, or deeper medical evaluations.</div>
     </div>
-    <div class="faq-item">
-      <div class="q">Can hemoglobin be falsely abnormal?</div>
-      <div class="a">Yes. Dehydration can artificially raise hemoglobin, while overhydration (too much IV fluid) can lower it. Certain lab processing issues can also affect results. If your result seems inconsistent with your symptoms, repeat testing is reasonable.</div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Does my hemoglobin result indicate that I have anemia or another specific trend?</li>
+        <li><span class="q-num">02</span>Based on my cell size and other CBC markers, what appears to be driving this imbalance?</li>
+        <li><span class="q-num">03</span>Could my dietary habits, hydration levels, or current supplements be influencing this score?</li>
+        <li><span class="q-num">04</span>Do I need additional testing, like an iron panel or a stool test, to check for hidden blood loss?</li>
+        <li><span class="q-num">05</span>If an intervention or supplement is needed, how long should I wait before we re-test my levels?</li>
+      </ul>
     </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can a poor diet cause low hemoglobin levels?</div>
+        <div class="faq-a">Yes. Your bone marrow needs reliable supplies of iron, vitamin B12, and folate to manufacture healthy hemoglobin. If your regular diet lacks these nutrients, your production rates can fall over time, leading to anemia.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How does dehydration change my hemoglobin concentration?</div>
+        <div class="faq-a">When you lose fluids, the total volume of liquid plasma in your blood drops, while the total number of red cells stays the same. This can make your hemoglobin look falsely elevated on paper, even if your absolute cell count is normal.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why do reference ranges differ for men and women?</div>
+        <div class="faq-a">Adult men naturally produce higher levels of testosterone, a hormone that stimulates the production of red blood cells. Additionally, regular blood loss via menstruation lowers the baseline averages for many premenopausal women.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can exercise change my hemoglobin results?</div>
+        <div class="faq-a">Intense, long-term endurance training can cause your blood plasma volume to expand, which sometimes dilutes hemoglobin slightly. Conversely, sudden acute overexertion accompanied by heavy sweating can cause mild dehydration and temporary spikes.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/glucose.html" class="related-chip">Glucose →</a>
+        <a href="/cortisol.html" class="related-chip">Cortisol →</a>
+        <a href="/creatinine.html" class="related-chip">Creatinine →</a>
+        <a href="/triglycerides.html" class="related-chip">Triglycerides →</a>
+        <a href="/tsh.html" class="related-chip">TSH →</a>
+        <a href="/ferritin.html" class="related-chip">Ferritin →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any lab test instantly</h3>
+      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>labplain.co</span>
+      <span>Not a substitute for professional medical advice.</span>
+    </footer>
   </div>
-
-  <div class="section">
-    <h2>Related Tests to Know About</h2>
-    <p>Hemoglobin is rarely interpreted alone. These tests are commonly ordered alongside it:</p>
-    <div class="related-grid">
-      <a href="/hematocrit" class="related-card">Hematocrit</a>
-      <a href="/ferritin" class="related-card">Ferritin</a>
-      <a href="/iron" class="related-card">Serum Iron</a>
-      <a href="/b12" class="related-card">Vitamin B12</a>
-      <a href="/reticulocytes" class="related-card">Reticulocyte Count</a>
-      <a href="/cbc" class="related-card">CBC (Full Panel)</a>
-      <a href="/epo" class="related-card">Erythropoietin</a>
-      <a href="/creatinine" class="related-card">Creatinine</a>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Questions to Ask Your Doctor</h2>
-    <p>Bring this list to your next appointment:</p>
-    <ul class="question-list">
-      <li>What is causing my hemoglobin to be abnormal?</li>
-      <li>Do I need additional testing to find the root cause?</li>
-      <li>Should I start iron or vitamin supplements, and which kind?</li>
-      <li>How often should I recheck my hemoglobin?</li>
-      <li>Is my level severe enough to affect my heart or other organs?</li>
-      <li>Are there foods or medications I should avoid or add?</li>
-      <li>Could any of my current medications be causing this?</li>
-      <li>At what level should I come back in or go to the ER?</li>
-    </ul>
-  </div>
-
-  <div class="cta-box">
-    <h2>Still Confused About Your Results?</h2>
-    <p>Paste your full lab report into our free AI decoder and get a plain-English explanation in seconds.</p>
-    <a href="/" class="cta-btn">Decode My Lab Results →</a>
-  </div>
-
-  <div class="disclaimer">
-    <strong>Medical Disclaimer:</strong> This content is for informational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your doctor or a qualified healthcare provider with questions about your lab results or medical conditions.
-  </div>
-
-</div>
-
-<footer>
-  <p>&copy; 2025 LabPlain &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms">Terms of Use</a></p>
-</footer>
-
 </body>
 </html>
