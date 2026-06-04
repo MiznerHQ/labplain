@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omega-3 Index Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your Omega-3 Index result mean? Plain-English guide to optimal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://labplain.co/omega-3.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
+    }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--success-light); border: 1px solid var(--success-border); }
+    .range-box.low { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.high .range-box-label { color: var(--success-text); }
+    .range-box.low .range-box-label { color: var(--warn); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--success-light); border: 1px solid var(--success-border); }
+    .symptom-box.low { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--success-text); }
+    .symptom-box.low h3 { color: var(--warn); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
+    .questions-list li:last-child { border-bottom: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+      <a href="/" class="logo-text">lab<span>plain</span></a>
+    </nav>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Omega-3 Index</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Omega-3 Index</em> result mean?</h1>
+    <span class="category-tag">Lipids & Cardiovascular</span>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+    
+    <div class="card">
+      <div class="section-label">What this test measures</div>
+      <p>The Omega-3 Index test measures the amount of two critical omega-3 fatty acids — EPA (eicosapentaenoic acid) and DHA (docosahexaenoic acid) — inside the membranes of your red blood cells. It is expressed as a percentage of the total fatty acids present.</p>
+      <p>Unlike standard blood tests that reflect what you ate over the last 24 to 48 hours, looking at red blood cells provides a stable marker. Because red blood cells live for about 120 days, this test serves as an indicator of your long-term dietary intake and tissue levels over the past three to four months.</p>
+      <p>EPA and DHA are structural building blocks for cell membranes throughout your entire body, playing significant roles in regulating inflammation, maintaining heart rhythms, supporting brain health, and managing cellular signaling pathways. Doctors often order this profile to evaluate cardiovascular risk or to monitor the effectiveness of dietary modifications or supplementation strategies.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Normal reference range</div>
+      <div class="normal-range">Optimal Range: 8.0% or higher &nbsp;|&nbsp; Intermediate: 4.1%–7.9%</div>
+      <p class="range-note">Clinicians and cardiovascular studies generally categorize the Omega-3 Index into distinct risk zones rather than a simple "normal versus abnormal" value. An index below 4.0% is often classified as undesirable or low, representing a statistical profile historically tied to higher cardiovascular risks.</p>
+      <p class="range-note" style="margin-top:8px;">Because specific laboratory methodologies can vary, you should always cross-reference your percentage score against the exact stratification table provided on your lab report.</p>
+      <div class="timing-box">
+        <h3>⏰ Dietary Consistency Matters</h3>
+        <p>While a single meal will not significantly skew your red blood cell index, structural fatty acid tests are most informative when you maintain your regular, baseline eating habits leading up to the blood draw. If you recently initiated or stopped taking a fish oil supplement, it can take up to 4 months for your red blood cells to fully reflect that change.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What your result might indicate</div>
+      <div class="two-col">
+        <div class="range-box high">
+          <div class="range-box-label">↑ If Optimal (≥ 8%)</div>
+          <p>An optimal index suggests a high dietary intake of omega-3 rich foods or consistent utilization of bioavailable supplements. This level is traditionally associated with favorable cardiovascular markers and balanced systemic inflammatory profiles.</p>
+        </div>
+        <div class="range-box low">
+          <div class="range-box-label">↓ If Low (< 4%)</div>
+          <p>A low index typically indicates a dietary pattern minimal in cold-water seafood or omega-3 sources. This baseline may be associated with increased markers of cellular stress, altered cell membrane elasticity, or elevated cardiovascular vulnerability.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Symptoms & Signs associated with abnormal values</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ Optimal Index Signs</h3>
+          <ul class="symptom-list">
+            <li>Balanced cellular inflammatory responses</li>
+            <li>Favorable baseline heart rate variability</li>
+            <li>Efficient cognitive and neurological processing</li>
+            <li>Healthy skin moisture retention and barrier repair</li>
+            <li>Optimal cell membrane fluidity and performance</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>↓ Low Index Signs & Risks</h3>
+          <ul class="symptom-list">
+            <li>Dry, flaky, or easily irritated skin surfaces</li>
+            <li>Brittle nails and dull or thinning hair texture</li>
+            <li>Stiff, uncomfortable, or sensitive joint structures</li>
+            <li>Persistent fatigue or subjective feelings of brain fog</li>
+            <li>Increased vulnerability to minor vascular changes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal omega-3 levels</div>
+      <h2>What can optimize your index?</h2>
+      <p>The primary driver of an elevated or optimal Omega-3 Index is a diet highly focused on fatty, cold-water fish such as wild salmon, mackerel, sardines, anchovies, and herring. Consistent use of high-quality, concentrated fish oil, cod liver oil, or marine algal oil supplements can also elevate your circulating red blood cell levels over time.</p>
+      <p>Individual metabolic variations, gut absorption efficiency, and body mass index can also influence how efficiently your body integrates consumed fatty acids directly into cellular membranes.</p>
+      <h2 style="margin-top:24px;">What can lower your index?</h2>
+      <p>The most frequent cause of a low index is a standard modern diet that relies heavily on processed foods and lacks sufficient marine-based fats. Diets that prioritize grain-fed meats and highly refined vegetable oils tend to introduce high volumes of omega-6 fatty acids, which compete with omega-3s for placement within your cell membranes.</p>
+      <p>Malabsorption syndromes, chronic digestive complaints, or high baseline levels of oxidative stress can also lower or accelerate the depletion of essential fatty acids within blood structures.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside Omega-3 Index</div>
+      <p>Fatty acid markers are frequently evaluated alongside metabolic and lipid panels to build a comprehensive view of vascular health:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>Fasting Triglycerides</strong> — elevated triglycerides are closely linked with low omega-3 status and overall metabolic burden</li>
+        <li><strong>hs-CRP (High-Sensitivity C-Reactive Protein)</strong> — a classic marker used to check systemic inflammation alongside cellular fatty acid ratios</li>
+        <li><strong>Omega-6 to Omega-3 Ratio</strong> — clarifies the balance between pro-inflammatory and resolving fatty acid families in your tissues</li>
+        <li><strong>Advanced Lipid Panel (ApoB / LDL-P)</strong> — tracks actual particle counts to more precisely map out long-term cardiovascular risks</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">What to do next</div>
+      <div class="next-steps">An isolated Omega-3 Index score acts as a highly adjustable baseline marker for your metabolic health. Because fatty acid profiles are primarily reflections of nutrition rather than irreversible structural diseases, a low score can typically be adjusted over a few months through calculated dietary modifications. Always work alongside your practitioner to establish appropriate supplement dosing or dietary strategies that align cleanly with your complete medical history.</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Does my specific score put me into a higher category for cardiovascular risk considerations?</li>
+        <li><span class="q-num">02</span>What dietary additions or specific lifestyle shifts do you recommend based on this percentage?</li>
+        <li><span class="q-num">03</span>Is a targeted fish oil or marine algal supplement safe for me given my current medical history?</li>
+        <li><span class="q-num">04</span>Could any of my current prescription medications interact with high doses of omega-3 fatty acids?</li>
+        <li><span class="q-num">05</span>How long should I maintain dietary modifications before we schedule a follow-up test to track changes?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can plant sources like chia seeds or flaxseeds optimize my Omega-3 Index?</div>
+        <div class="faq-a">Plant foods contain ALA (alpha-linolenic acid), a short-chain omega-3. While healthy, your body converts ALA into the active long-chain forms (EPA and DHA) very inefficiently, typically at a rate under 5%. To directly optimize an index looking at cell membranes, marine or direct algal sources are generally more effective.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is a fasting window required before taking an Omega-3 Index test?</div>
+        <div class="faq-a">No strict fasting window is required because the test evaluates red blood cell membranes rather than free fats floating in serum. However, because it is frequently ordered alongside a fasting lipid or glucose panel, you should follow your clinician's specific fasting guidelines for the overall draw.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can an Omega-3 Index score become too high?</div>
+        <div class="faq-a">While uncommon through standard dietary choices alone, an index exceeding 12% to 15% via excessive supplementation might cause minor physiological shifts, such as extended bleeding times or mild digestive symptoms. Keeping your levels within the 8% to 11% optimal target zone is usually preferred.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the difference between this test and a standard plasma omega-3 test?</div>
+        <div class="faq-a">A plasma test measures the fats floating in your liquid blood serum, reflecting your immediate dietary choices from the past day or two. The red blood cell index maps out cellular incorporation over months, preventing short-term deviations or a recent fish dinner from masking a baseline deficiency.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/glucose.html" class="related-chip">Glucose →</a>
+        <a href="/hemoglobin.html" class="related-chip">Hemoglobin →</a>
+        <a href="/creatinine.html" class="related-chip">Creatinine →</a>
+        <a href="/triglycerides.html" class="related-chip">Triglycerides →</a>
+        <a href="/tsh.html" class="related-chip">TSH →</a>
+        <a href="/ferritin.html" class="related-chip">Ferritin →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any lab test instantly</h3>
+      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>labplain.co</span>
+      <span>Not a substitute for professional medical advice.</span>
+    </footer>
+  </div>
+</body>
+</html>
