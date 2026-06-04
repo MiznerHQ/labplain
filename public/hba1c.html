@@ -1,285 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HbA1c Test Results Explained | Labplain</title>
-  <meta name="description" content="Understand your HbA1c (hemoglobin A1c) test results. Learn what high or low levels mean, causes, symptoms, and when to talk to your doctor."/>
-  <link rel="canonical" href="https://labplain.co/hba1c.html"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lymphocytes Blood Test – What Your Results Mean | LabPlain</title>
+  <meta name="description" content="What does your lymphocyte count mean? Plain-English guide to normal ranges, high and low values, symptoms, causes, and what to ask your doctor. No medical jargon.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://labplain.co/lymphocytes.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', sans-serif; background: #f8fafc; color: #1e293b; }
-    header {
-      background: #1e3a5f;
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FFFFFF; --ink: #0D1B2A; --muted: #6B7A8D;
+      --accent: #185FA5; --accent-light: #E6F1FB; --accent-border: #B5D4F4;
+      --warn: #993C1D; --warn-light: #FAECE7; --warn-border: #F5C4B3;
+      --success-light: #EAF3DE; --success-border: #C0DD97; --success-text: #27500A;
+      --amber: #92400E; --amber-light: #FEF3C7; --amber-border: #F59E0B;
+      --border: #DDE3EC; --white: #FFFFFF;
     }
-    header a { text-decoration: none; }
-    .logo { color: #fff; font-size: 1.4rem; font-weight: 700; letter-spacing: -0.5px; }
-    .logo span { color: #60a5fa; }
-    .tagline { color: #93c5fd; font-size: 0.78rem; margin-top: 2px; }
-    nav a {
-      color: #93c5fd; text-decoration: none; margin-left: 20px;
-      font-size: 0.9rem; font-weight: 500;
-    }
-    nav a:hover { color: #fff; }
-    .hero {
-      background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%);
-      color: white; text-align: center; padding: 56px 24px 48px;
-    }
-    .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
-    .hero p { font-size: 1.1rem; color: #bfdbfe; max-width: 600px; margin: 0 auto; }
-    .container { max-width: 860px; margin: 0 auto; padding: 40px 24px; }
-    .section { background: white; border-radius: 12px; padding: 32px; margin-bottom: 28px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
-    .section h2 { font-size: 1.4rem; font-weight: 700; color: #1e3a5f; margin-bottom: 20px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
-    .section h3 { font-size: 1.1rem; font-weight: 600; color: #1e40af; margin: 20px 0 8px; }
-    .section p { line-height: 1.75; color: #374151; margin-bottom: 12px; }
-    .section ul { padding-left: 20px; }
-    .section ul li { line-height: 1.75; color: #374151; margin-bottom: 6px; }
-    .range-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-    .range-table th { background: #1e3a5f; color: white; padding: 10px 14px; text-align: left; font-size: 0.9rem; }
-    .range-table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; font-size: 0.95rem; }
-    .range-table tr:last-child td { border-bottom: none; }
-    .badge { display: inline-block; padding: 3px 10px; border-radius: 99px; font-size: 0.78rem; font-weight: 600; margin-left: 8px; }
-    .badge-green { background: #dcfce7; color: #166534; }
-    .badge-yellow { background: #fef9c3; color: #854d0e; }
-    .badge-orange { background: #ffedd5; color: #9a3412; }
-    .badge-red { background: #fee2e2; color: #991b1b; }
-    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 12px; }
-    @media (max-width: 600px) { .symptom-grid { grid-template-columns: 1fr; } }
-    .symptom-card { background: #f1f5f9; border-radius: 10px; padding: 16px; }
-    .symptom-card h4 { font-size: 0.95rem; font-weight: 700; color: #1e3a5f; margin-bottom: 8px; }
-    .symptom-card ul { padding-left: 18px; }
-    .symptom-card ul li { font-size: 0.9rem; color: #374151; margin-bottom: 4px; }
-    .faq-item { border-bottom: 1px solid #e2e8f0; padding: 16px 0; }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-item h3 { font-size: 1rem; font-weight: 600; color: #1e3a5f; margin-bottom: 6px; }
-    .faq-item p { font-size: 0.95rem; color: #374151; line-height: 1.7; margin: 0; }
-    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
-    @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
-    .related-card { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 14px 16px; text-decoration: none; display: block; }
-    .related-card h4 { font-size: 0.95rem; font-weight: 700; color: #1e40af; margin-bottom: 4px; }
-    .related-card p { font-size: 0.85rem; color: #475569; margin: 0; }
-    .questions-list { list-style: none; padding: 0; }
-    .questions-list li { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid #f1f5f9; font-size: 0.95rem; color: #374151; }
+    body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 18px; height: 18px; fill: white; }
+    .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
+    .logo-text span { color: var(--accent); }
+    .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
+    h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
+    h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
+    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+    .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    p { font-size: 16px; line-height: 1.75; color: var(--ink); }
+    p + p { margin-top: 14px; }
+    .normal-range { font-family: 'DM Mono', monospace; font-size: 15px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; line-height: 1.5; }
+    .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .range-box { padding: 16px; border-radius: 10px; }
+    .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .range-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .range-box-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .range-box.high .range-box-label { color: var(--warn); }
+    .range-box.low .range-box-label { color: var(--accent); }
+    .range-box p { font-size: 14px; line-height: 1.65; }
+    .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+    .symptom-box { padding: 16px; border-radius: 10px; }
+    .symptom-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
+    .symptom-box.low { background: var(--accent-light); border: 1px solid var(--accent-border); }
+    .symptom-box h3 { font-size: 13px; font-family: 'DM Mono', monospace; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .symptom-box.high h3 { color: var(--warn); }
+    .symptom-box.low h3 { color: var(--accent); }
+    .symptom-list { list-style: none; padding: 0; }
+    .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .symptom-list li:last-child { border-bottom: none; }
+    .symptom-list li::before { content: "→ "; color: var(--muted); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
+    .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
+    .questions-list { list-style: none; padding: 0; margin-top: 8px; }
+    .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
     .questions-list li:last-child { border-bottom: none; }
-    .questions-list li::before { content: "?"; background: #1e3a5f; color: white; border-radius: 50%; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
-    .disclaimer { background: #fefce8; border: 1px solid #fde68a; border-radius: 10px; padding: 16px 20px; font-size: 0.85rem; color: #713f12; line-height: 1.6; }
-    footer { background: #1e3a5f; color: #93c5fd; text-align: center; padding: 24px; font-size: 0.85rem; }
-    footer a { color: #60a5fa; text-decoration: none; }
+    .q-num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--accent); font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+    .faq-item { padding: 18px 0; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+    .tool-cta { background: var(--accent); color: white; border-radius: 12px; padding: 28px; margin-top: 32px; text-align: center; }
+    .tool-cta h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 8px; color: white; }
+    .tool-cta p { font-size: 14px; opacity: 0.85; margin-bottom: 18px; color: white; }
+    .tool-cta a { display: inline-block; background: white; color: var(--accent); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-family: 'DM Mono', monospace; font-size: 14px; }
+    .related { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 4px; }
+    .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
+    .related-chip:hover { border-color: var(--accent); color: var(--accent); }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <nav>
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
+      <a href="/" class="logo-text">lab<span>plain</span></a>
+    </nav>
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Lymphocytes</p>
+    <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Lymphocytes</em> result mean?</h1>
+    <span class="category-tag">White Blood Cells</span>
+    <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
+    
+    <div class="card">
+      <div class="section-label">What this test measures</div>
+      <p>Lymphocytes are a crucial type of white blood cell made in your bone marrow. They serve as the targeted intelligence and defense force of your immune system, responsible for recognizing and defending your body against specific invaders like viruses, bacteria, and foreign substances.</p>
+      <p>There are three main categories of lymphocytes, though a standard test typically counts them all together: <strong>B cells</strong> (which produce antibodies to target invaders), <strong>T cells</strong> (which coordinate the immune response and destroy infected cells), and <strong>Natural Killer (NK) cells</strong> (which attack virus-infected and abnormal cells directly).</p>
+      <p>A lymphocyte count is almost always ordered as part of a Complete Blood Count (CBC) with differential, which measures the percentages and absolute numbers of your different white blood cells to evaluate overall health or check for infections.</p>
+    </div>
 
-<header>
-  <a href="/">
-    <div class="logo">Lab<span>plain</span></div>
-    <div class="tagline">Understand your labs. No medical degree required.</div>
-  </a>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/decode">Decode My Labs</a>
-  </nav>
-</header>
-
-<div class="hero">
-  <h1>HbA1c (Hemoglobin A1c) Explained</h1>
-  <p>Your 3-month blood sugar average — decoded in plain English.</p>
-</div>
-
-<div class="container">
-
-  <!-- What Is It -->
-  <div class="section">
-    <h2>What Is HbA1c?</h2>
-    <p>HbA1c (hemoglobin A1c, or glycated hemoglobin) measures the percentage of your red blood cells that have glucose stuck to them. Because red blood cells live about 2–3 months, this test gives doctors a picture of your average blood sugar over that entire window — not just a single moment in time like a fasting glucose test.</p>
-    <p>It's the single most important test for diagnosing and monitoring diabetes and prediabetes. Unlike daily blood sugar readings that swing up and down, your A1c tells the longer story.</p>
-  </div>
-
-  <!-- Reference Ranges -->
-  <div class="section">
-    <h2>HbA1c Reference Ranges</h2>
-    <p>Results are reported as a percentage. Here's how they're interpreted:</p>
-    <table class="range-table">
-      <thead>
-        <tr><th>Result</th><th>Category</th><th>What It Means</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Below 5.7%</td>
-          <td><span class="badge badge-green">Normal</span></td>
-          <td>Blood sugar control is healthy</td>
-        </tr>
-        <tr>
-          <td>5.7% – 6.4%</td>
-          <td><span class="badge badge-yellow">Prediabetes</span></td>
-          <td>Higher than normal — lifestyle changes recommended</td>
-        </tr>
-        <tr>
-          <td>6.5% or above</td>
-          <td><span class="badge badge-red">Diabetes</span></td>
-          <td>Meets diagnostic criteria for diabetes</td>
-        </tr>
-        <tr>
-          <td>Below 7% (if diabetic)</td>
-          <td><span class="badge badge-green">Well Controlled</span></td>
-          <td>Target range for most people managing diabetes</td>
-        </tr>
-        <tr>
-          <td>Above 8% (if diabetic)</td>
-          <td><span class="badge badge-orange">Needs Attention</span></td>
-          <td>Increased risk of complications — treatment review needed</td>
-        </tr>
-      </tbody>
-    </table>
-    <p style="margin-top:14px; font-size:0.9rem; color:#64748b;">Note: Target ranges may differ for older adults, pregnant women, and people with certain conditions. Always discuss your personal target with your doctor.</p>
-  </div>
-
-  <!-- Symptoms -->
-  <div class="section">
-    <h2>Symptoms by Result Level</h2>
-    <p>High A1c often develops silently over time. Here's what you may (or may not) notice:</p>
-    <div class="symptom-grid">
-      <div class="symptom-card">
-        <h4>🟡 Prediabetes (5.7–6.4%)</h4>
-        <ul>
-          <li>Often no symptoms at all</li>
-          <li>Mild fatigue after meals</li>
-          <li>Slightly increased thirst</li>
-          <li>Weight gain (especially around the abdomen)</li>
-        </ul>
-      </div>
-      <div class="symptom-card">
-        <h4>🔴 High A1c / Diabetes (6.5%+)</h4>
-        <ul>
-          <li>Excessive thirst and frequent urination</li>
-          <li>Unexplained fatigue</li>
-          <li>Blurred vision</li>
-          <li>Slow-healing cuts or bruises</li>
-          <li>Tingling or numbness in hands/feet</li>
-          <li>Recurring infections</li>
-        </ul>
-      </div>
-      <div class="symptom-card">
-        <h4>🔵 Low A1c (Below 4%)</h4>
-        <ul>
-          <li>Rare but can indicate low blood sugar</li>
-          <li>Dizziness or shakiness</li>
-          <li>Confusion or difficulty concentrating</li>
-          <li>May occur with certain anemias (false low)</li>
-        </ul>
-      </div>
-      <div class="symptom-card">
-        <h4>✅ Normal (Below 5.7%)</h4>
-        <ul>
-          <li>Typically no symptoms</li>
-          <li>Stable energy levels</li>
-          <li>No excessive thirst or urination</li>
-        </ul>
+    <div class="card">
+      <div class="section-label">Normal reference range</div>
+      <div class="normal-range">Absolute Count: 1,000–4,800 cells/µL &nbsp;|&nbsp; Percentage: 20%–40% of total WBC</div>
+      <p class="range-note">On your lab report, you may see your lymphocytes listed as an absolute number (e.g., 2.5 x10^3/µL) or as a percentage of your total white blood cells. Doctors look closest at the absolute count, as percentages can shift simply because another type of white blood cell increased or decreased.</p>
+      <p class="range-note" style="margin-top:8px;">Normal ranges vary based on age, pregnancy, and the specific laboratory evaluating the sample. Always check the target range listed on your final laboratory printout.</p>
+      <div class="timing-box">
+        <h3>📊 Absolute vs. Percentage</h3>
+        <p>If your lymphocyte percentage looks high or low, check the absolute count. A high percentage can sometimes happen if your other white blood cells (like neutrophils) are low, even if your actual number of lymphocytes is perfectly stable and healthy.</p>
       </div>
     </div>
-  </div>
 
-  <!-- Causes -->
-  <div class="section">
-    <h2>What Causes Abnormal HbA1c?</h2>
-    <h3>Causes of High HbA1c</h3>
-    <ul>
-      <li><strong>Type 2 diabetes</strong> — by far the most common cause</li>
-      <li><strong>Type 1 diabetes</strong> — insufficient insulin production</li>
-      <li><strong>Prediabetes</strong> — insulin resistance developing over time</li>
-      <li><strong>Poor diet</strong> — high in refined carbohydrates and sugar</li>
-      <li><strong>Physical inactivity</strong> — reduces glucose uptake by muscles</li>
-      <li><strong>Obesity</strong> — especially excess abdominal fat</li>
-      <li><strong>Certain medications</strong> — steroids, antipsychotics, some blood pressure drugs</li>
-      <li><strong>Hormonal conditions</strong> — Cushing's syndrome, PCOS, hyperthyroidism</li>
-      <li><strong>Chronic stress or illness</strong> — elevates cortisol, which raises blood sugar</li>
-    </ul>
-    <h3>Causes of Falsely Abnormal Results</h3>
-    <ul>
-      <li><strong>Iron-deficiency anemia</strong> — can falsely raise A1c</li>
-      <li><strong>Hemolytic anemia or sickle cell disease</strong> — can falsely lower A1c</li>
-      <li><strong>Kidney failure or liver disease</strong> — may distort results</li>
-      <li><strong>Recent blood transfusion</strong> — resets the measurement window</li>
-      <li><strong>Certain genetic hemoglobin variants</strong> — require a different test method</li>
-    </ul>
-  </div>
-
-  <!-- FAQ -->
-  <div class="section">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h3>Do I need to fast for an HbA1c test?</h3>
-      <p>No. Because HbA1c measures a 3-month average rather than current blood sugar, fasting is not required. You can eat and drink normally before the test.</p>
+    <div class="card">
+      <div class="section-label">What your result might indicate</div>
+      <div class="two-col">
+        <div class="range-box high">
+          <div class="range-box-label">↑ If High (Lymphocytosis)</div>
+          <p>An elevated lymphocyte count usually indicates that your immune system is actively fighting off an infection, particularly a viral one. It can also occur with chronic inflammation, certain medications, or, in less common scenarios, disorders affecting the bone marrow.</p>
+        </div>
+        <div class="range-box low">
+          <div class="range-box-label">↓ If Low (Lymphopenia)</div>
+          <p>A low lymphocyte count means your body may have a harder time fighting infections. This can happen after a recent illness, during periods of physical stress, from malnutrition, auto-immune conditions, or from medications that suppress the immune system.</p>
+        </div>
+      </div>
     </div>
-    <div class="faq-item">
-      <h3>How quickly can I lower my HbA1c?</h3>
-      <p>Since A1c reflects 2–3 months of blood sugar, meaningful changes typically take at least 3 months to appear. With significant lifestyle changes — diet, exercise, and/or medication — some people can drop their A1c by 1–2 percentage points in 3–6 months.</p>
+
+    <div class="card">
+      <div class="section-label">Symptoms associated with abnormal lymphocytes</div>
+      <div class="symptom-grid">
+        <div class="symptom-box high">
+          <h3>↑ High Lymphocyte Symptoms</h3>
+          <p style="font-size:13px; color:var(--muted); margin-bottom:8px;">Symptoms usually mirror the underlying infection or inflammation:</p>
+          <ul class="symptom-list">
+            <li>Fever and chills</li>
+            <li>Sore throat or cough</li>
+            <li>Swollen lymph nodes (neck, armpits)</li>
+            <li>Fatigue and muscle aches</li>
+            <li>Unexplained night sweats</li>
+            <li>Temporary loss of appetite</li>
+          </ul>
+        </div>
+        <div class="symptom-box low">
+          <h3>↓ Low Lymphocyte Symptoms</h3>
+          <p style="font-size:13px; color:var(--muted); margin-bottom:8px;">Low levels themselves don't cause symptoms, but can lead to:</p>
+          <ul class="symptom-list">
+            <li>Frequent or unusual infections</li>
+            <li>Infections that take longer to clear</li>
+            <li>Skin rashes or sores</li>
+            <li>Unexplained joint pain</li>
+            <li>Swollen spleen or lymph nodes</li>
+            <li>General weakness and fatigue</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="faq-item">
-      <h3>What's the difference between HbA1c and a fasting glucose test?</h3>
-      <p>Fasting glucose is a snapshot of your blood sugar at a single moment. HbA1c is a 3-month average. A1c is better for diagnosing and monitoring diabetes; fasting glucose is more sensitive to daily changes.</p>
+
+    <div class="card">
+      <div class="section-label">Common causes of abnormal lymphocytes</div>
+      <h2>What can raise lymphocytes?</h2>
+      <p>The most common cause of high lymphocytes is a recent or current viral infection, such as mononucleosis (mono), the flu, COVID-19, or shingles. Your body naturally duplicates these cells rapidly to target the virus.</p>
+      <p>Other causes may include bacterial infections (like whooping cough), chronic inflammatory conditions, significant physical stress (like trauma), or medical conditions like lymphocytic leukemia or lymphoma, where the body overproduces abnormal immune cells.</p>
+      
+      <h2 style="margin-top:24px;">What can lower lymphocytes?</h2>
+      <p>A temporary dip in lymphocytes can happen during or immediately following a severe bacterial or viral infection, as these cells are used up rapidly fighting the invader. Chronic stress or intense, prolonged physical exertion can also suppress counts temporarily.</p>
+      <p>Longer-term or more severe low counts can be associated with autoimmune disorders (like lupus), undernutrition, immune-deficiency conditions (like HIV), or treatments that deliberately suppress or affect the immune system, such as chemotherapy, radiation therapy, or steroid medications like prednisone.</p>
     </div>
-    <div class="faq-item">
-      <h3>Can I have a normal A1c but still have diabetes?</h3>
-      <p>In most cases, no — but certain conditions (like hemolytic anemia or sickle cell disease) can cause falsely low A1c readings. If your doctor suspects diabetes but your A1c is low, they may order alternative testing like fructosamine.</p>
+
+    <div class="card">
+      <div class="section-label">Tests often ordered alongside lymphocytes</div>
+      <p>Because lymphocytes are part of a broader immune response, your doctor will likely interpret them alongside:</p>
+      <ul class="symptom-list" style="margin-top:12px;">
+        <li><strong>Neutrophils</strong> — the white blood cells that primarily respond to acute bacterial infections</li>
+        <li><strong>Total White Blood Count (WBC)</strong> — looks at the overall size of your immune cell workforce</li>
+        <li><strong>C-Reactive Protein (CRP) or ESR</strong> — markers that check for the presence of inflammation in the body</li>
+        <li><strong>Comprehensive Metabolic Panel (CMP)</strong> — checks liver and kidney functions to evaluate systemic health</li>
+        <li><strong>Viral Panels</strong> — specific blood tests or swabs to check for viruses like Mononucleosis, CMV, or flu</li>
+      </ul>
     </div>
-    <div class="faq-item">
-      <h3>How often should HbA1c be tested?</h3>
-      <p>For people without diabetes, every 1–3 years is typical if you're in a normal range. For people with prediabetes, annually. For people managing diabetes, every 3–6 months depending on how well blood sugar is controlled.</p>
+
+    <div class="card">
+      <div class="section-label">What to do next</div>
+      <div class="next-steps">A slight fluctuation outside the normal range is very common and often reflects your body handling an everyday cold or minor stressor. Your doctor will look at your absolute counts alongside any symptoms you have to see if further action is required. If your levels are significantly outside the normal range or stay abnormal over multiple weeks, your doctor may order a follow-up blood test to see if your levels return to your normal baseline.</div>
     </div>
+
+    <div class="card">
+      <div class="section-label">Questions to ask your doctor</div>
+      <ul class="questions-list">
+        <li><span class="q-num">01</span>Is my absolute lymphocyte count abnormal, or just the percentage?</li>
+        <li><span class="q-num">02</span>Could a recent mild illness, cold, or stress explain my current numbers?</li>
+        <li><span class="q-num">03</span>Do you recommend repeating this complete blood count in a few weeks to monitor the trend?</li>
+        <li><span class="q-num">04</span>Could any of my current daily medications or supplements be influencing these results?</li>
+        <li><span class="q-num">05</span>Are there any specific signs of infection I should look out for while my counts are at this level?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Frequently asked questions</div>
+      <div class="faq-item">
+        <div class="faq-q">Can stress alone cause abnormal lymphocyte counts?</div>
+        <div class="faq-a">Yes. High levels of physical stress, such as severe sleep deprivation, intense overtraining, severe injuries, or profound emotional stress, can alter white blood cell counts, often driving lymphocyte levels temporarily down as cortisol rises.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does it take for lymphocytes to go back to normal?</div>
+        <div class="faq-a">If the cause is a standard viral infection, your lymphocyte count typically normalizes within a few weeks to a month after you fully recover from the illness. Chronic conditions or medication effects may keep levels altered for longer.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the difference between lymphocytes and neutrophils?</div>
+        <div class="faq-a">Both are white blood cells, but they have different roles. Neutrophils act as immediate, general first-responders that primarily target bacterial threats. Lymphocytes act as a high-precision defense system that specializes in recognizing and eliminating viral infections and creating long-term immunity.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does a high lymphocyte count mean I have leukemia?</div>
+        <div class="faq-a">Not necessarily. While leukemia is a possible cause of highly elevated lymphocytes, it is statistically far less common than everyday triggers. Most high lymphocyte results are simply due to your body naturally fighting off a routine virus or infection. Your doctor can easily determine if further screening is necessary.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">Related lab tests</div>
+      <div class="related">
+        <a href="/neutrophils.html" class="related-chip">Neutrophils →</a>
+        <a href="/glucose.html" class="related-chip">Glucose →</a>
+        <a href="/hemoglobin.html" class="related-chip">Hemoglobin →</a>
+        <a href="/creatinine.html" class="related-chip">Creatinine →</a>
+        <a href="/tsh.html" class="related-chip">TSH →</a>
+        <a href="/ferritin.html" class="related-chip">Ferritin →</a>
+      </div>
+    </div>
+
+    <div class="tool-cta">
+      <h3>Decode any lab test instantly</h3>
+      <p>Use our free AI-powered tool to look up any blood test in plain English.</p>
+      <a href="/">Open the Decoder →</a>
+    </div>
+
+    <footer>
+      <span>labplain.co</span>
+      <span>Not a substitute for professional medical advice.</span>
+    </footer>
   </div>
-
-  <!-- Related Tests -->
-  <div class="section">
-    <h2>Related Lab Tests</h2>
-    <p>HbA1c is rarely ordered alone. These tests are commonly run alongside it:</p>
-    <div class="related-grid">
-      <a href="/glucose.html" class="related-card">
-        <h4>Fasting Glucose</h4>
-        <p>Real-time blood sugar snapshot — used alongside A1c for a complete picture.</p>
-      </a>
-      <a href="/triglycerides.html" class="related-card">
-        <h4>Triglycerides</h4>
-        <p>High blood sugar often raises triglycerides — commonly elevated in diabetes.</p>
-      </a>
-      <a href="/cortisol.html" class="related-card">
-        <h4>Cortisol</h4>
-        <p>Chronic high cortisol raises blood sugar and can contribute to elevated A1c.</p>
-      </a>
-      <a href="/creatinine.html" class="related-card">
-        <h4>Creatinine</h4>
-        <p>Kidney function test — diabetes is a leading cause of kidney disease.</p>
-      </a>
-    </div>
-  </div>
-
-  <!-- Doctor Questions -->
-  <div class="section">
-    <h2>Questions to Ask Your Doctor</h2>
-    <ul class="questions-list">
-      <li>What is my A1c goal, and how does it compare to where I am now?</li>
-      <li>Is my current A1c considered prediabetes or diabetes?</li>
-      <li>What specific diet or lifestyle changes would have the most impact for me?</li>
-      <li>Should I be monitoring my blood sugar at home between tests?</li>
-      <li>Do any of my current medications affect my A1c level?</li>
-      <li>How often should I be retesting, given my current results?</li>
-      <li>Are there other tests I should have done alongside my A1c?</li>
-    </ul>
-  </div>
-
-  <!-- Disclaimer -->
-  <div class="disclaimer">
-    <strong>Medical Disclaimer:</strong> This content is for educational purposes only and is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your doctor or a qualified healthcare provider with questions about your lab results or health conditions.
-  </div>
-
-</div>
-
-<footer>
-  <p>© 2025 Labplain.co · <a href="/privacy.html">Privacy Policy</a> · <a href="/terms.html">Terms</a> · Not medical advice</p>
-</footer>
-
 </body>
 </html>
