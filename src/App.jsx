@@ -380,7 +380,7 @@ export default function LabPlain() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key":"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",
+          "x-api-key":"x-api-key": process.env.REACT_APP_ANTHROPIC_KEY,
           "anthropic-version": "2023-06-01",
           "anthropic-dangerous-direct-browser-access": "true"
         },
