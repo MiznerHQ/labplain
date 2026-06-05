@@ -380,7 +380,7 @@ export default function LabPlain() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key":"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",
+          "x-api-key":"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",
           "anthropic-version": "2023-06-01",
           "anthropic-dangerous-direct-browser-access": "true"
         },
