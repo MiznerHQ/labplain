@@ -378,7 +378,7 @@ export default function LabPlain() {
     try {
       const response = await fetch("https://api.anthropic.com/v1/messages", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json" }, 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
         body: JSON.stringify({
           model: "claude-sonnet-4-20250514",
           max_tokens: 1000,
