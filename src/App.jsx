@@ -378,7 +378,12 @@ export default function LabPlain() {
     try {
       const response = await fetch("https://api.anthropic.com/v1/messages", {
         method: "POST",
-        headers: { "Content-Type": "application/json" }, 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
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": import.meta.env.VITE_ANTHROPIC_KEY,
+          "anthropic-version": "2023-06-01",
+          "anthropic-dangerous-direct-browser-access": "true"
+        },
         body: JSON.stringify({
           model: "claude-sonnet-4-20250514",
           max_tokens: 1000,
