@@ -1,7 +1,6 @@
 {
   "rewrites": [
-    { "source": "/(.*)\\.html", "destination": "/public/$1.html" },
-    { "source": "/([a-z0-9-]+)", "destination": "/public/$1.html" },
+    { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
