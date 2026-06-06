@@ -1,4 +1,367 @@
 import { useState, useRef } from "react";
+
+const STYLE = `
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #F4F7FB;
+    --white: #FFFFFF;
+    --ink: #0D1B2A;
+    --muted: #6B7A8D;
+    --accent: #185FA5;
+    --accent-light: #E6F1FB;
+    --accent-border: #B5D4F4;
+    --warn: #993C1D;
+    --warn-light: #FAECE7;
+    --warn-border: #F5C4B3;
+    --success-light: #EAF3DE;
+    --success-border: #C0DD97;
+    --success-text: #27500A;
+    --amber: #92400E;
+    --amber-light: #FEF3C7;
+    --amber-border: #F59E0B;
+    --border: #DDE3EC;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+  }
+
+  .app {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .header { margin-bottom: 48px; }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .logo-mark {
+    width: 38px;
+    height: 38px;
+    background: var(--accent);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .logo-mark svg { width: 20px; height: 20px; fill: white; }
+
+  .logo-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+  }
+
+  .logo-text span { color: var(--accent); }
+
+  .headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(30px, 6vw, 46px);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: var(--ink);
+    margin-bottom: 14px;
+  }
+
+  .headline em { font-style: italic; color: var(--accent); }
+
+  .subline {
+    font-size: 16px;
+    color: var(--muted);
+    line-height: 1.6;
+    font-weight: 300;
+    max-width: 520px;
+  }
+
+  .disclaimer {
+    background: var(--amber-light);
+    border: 1px solid var(--amber-border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 36px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .disclaimer-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .disclaimer p { font-size: 13px; color: var(--amber); line-height: 1.5; }
+
+  .search-section { margin-bottom: 36px; }
+
+  .search-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .search-row { display: flex; gap: 10px; }
+
+  .search-input {
+    flex: 1;
+    padding: 14px 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--ink);
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+
+  .search-input:focus { border-color: var(--accent); }
+  .search-input::placeholder { color: #B0BAC8; }
+
+  .search-btn {
+    padding: 14px 24px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .search-btn:hover { background: #0C447C; }
+  .search-btn:active { transform: scale(0.98); }
+  .search-btn:disabled { background: var(--border); color: var(--muted); cursor: not-allowed; transform: none; }
+
+  .quick-picks {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .quick-label {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+  }
+
+  .quick-chip {
+    padding: 6px 14px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--ink);
+    cursor: pointer;
+    font-family: 'DM Mono', monospace;
+    transition: all 0.15s;
+  }
+
+  .quick-chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-light); }
+
+  .result-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .result-header {
+    background: var(--accent-light);
+    border-bottom: 1px solid var(--accent-border);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .result-icon {
+    width: 42px;
+    height: 42px;
+    background: var(--accent);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 20px;
+  }
+
+  .result-test-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: #042C53;
+    line-height: 1.2;
+  }
+
+  .result-category {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .result-body { padding: 24px; }
+  .result-section { margin-bottom: 24px; }
+  .result-section:last-child { margin-bottom: 0; }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .section-content { font-size: 15px; line-height: 1.7; color: var(--ink); }
+
+  .range-value {
+    font-family: 'DM Mono', monospace;
+    font-size: 15px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .range-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
+
+  .range-box { padding: 12px 16px; border-radius: 8px; }
+  .range-box.high { background: var(--accent-light); border: 1px solid var(--accent-border); }
+  .range-box.low { background: var(--warn-light); border: 1px solid var(--warn-border); }
+
+  .range-box-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .range-box.high .range-box-label { color: var(--accent); }
+  .range-box.low .range-box-label { color: var(--warn); }
+  .range-box-value { font-size: 14px; color: var(--ink); line-height: 1.5; }
+
+  .what-to-do {
+    background: var(--success-light);
+    border: 1px solid var(--success-border);
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--success-text);
+  }
+
+  .loading-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .loading-spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 16px;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .loading-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+  }
+
+  .error-card {
+    background: var(--warn-light);
+    border: 1.5px solid var(--warn-border);
+    border-radius: 14px;
+    padding: 24px;
+    color: var(--warn);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .footer-brand { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); }
+  .footer-note { font-size: 12px; color: var(--muted); text-align: right; }
+  .divider { height: 1px; background: var(--border); margin: 20px 0; }
+
+  @media (max-width: 480px) {
+    .range-grid { grid-template-columns: 1fr; }
+    .search-row { flex-direction: column; }
+    .search-btn { width: 100%; }
+  }
+`;
+
+const QUICK_TESTS = ["TSH", "Ferritin", "HbA1c", "Creatinine", "ALT", "Vitamin D", "WBC", "LDL"];
+
+const SYSTEM_PROMPT = `You are LabPlain, a friendly medical lab results explainer. When given a lab test name, respond ONLY with a valid JSON object (no markdown, no backticks, no preamble) in this exact shape:
+
+{
+  "testName": "Full official test name",
+  "category": "e.g. Thyroid / Metabolic / Blood Count / etc.",
+  "emoji": "one relevant emoji",
+  "whatItMeasures": "2-3 sentences in plain English explaining what this test measures and why doctors order it.",
+  "normalRange": "The standard normal range with units (e.g. 0.4–4.0 mIU/L)",
+  "highMeans": "1-2 sentences on what a high result typically suggests (common causes, NOT a diagnosis)",
+  "lowMeans": "1-2 sentences on what a low result typically suggests (common causes, NOT a diagnosis)",
+  "whatToDo": "2-3 sentences of practical, calm advice — when to follow up with a doctor, what questions to ask, lifestyle factors that affect this test. Always end with: 'Only your doctor can interpret your specific result in context of your full health picture.'"
+}
+
+If the input is not a real lab test, return: {"error": "not_a_lab_test"}
+Keep all language plain, reassuring, and non-alarmist. Never diagnose.`;
+
 export default function LabPlain() {
   const [query, setQuery] = useState("");
   const [result, setResult] = useState(null);
