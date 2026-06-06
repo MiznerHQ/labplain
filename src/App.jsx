@@ -1,3 +1,4 @@
+import { useState, useRef } from "react";
 export default function LabPlain() {
   const [query, setQuery] = useState("");
   const [result, setResult] = useState(null);
