@@ -376,13 +376,11 @@ export default function LabPlain() {
     setError(null);
 
     try {
-      const response = await fetch("https://api.anthropic.com/v1/messages", { 
+      const response = await fetch("/api/decode", { 
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-api-key": process.env.REACT_APP_ANTHROPIC_KEY,
-          "anthropic-version": "2023-06-01",
-          "anthropic-dangerous-direct-browser-access": "true"
+        },
         },
         body: JSON.stringify({
           model: "claude-sonnet-4-20250514",
