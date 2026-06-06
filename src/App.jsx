@@ -152,7 +152,7 @@ const STYLE = `
 
   .search-btn:hover { background: #0C447C; }
   .search-btn:active { transform: scale(0.98); }
-  .search-btn:disabled { background: var(--border); color: var(--muted); cursor: not-allowed; transform: none; }
+  <button className="search-btn" onClick={handleSubmit} disabled={loading || !query.trim()}>
 
   .quick-picks {
     margin-top: 14px;
