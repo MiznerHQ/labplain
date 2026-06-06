@@ -1,4 +1,15 @@
 {
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/decode",
+      "destination": "/api/decode"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
