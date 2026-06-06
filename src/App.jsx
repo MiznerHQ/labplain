@@ -375,15 +375,13 @@ export default function LabPlain() {
     setResult(null);
     setError(null);
 
-    try {
-      const response = await fetch("/api/decode", { 
+   const response = await fetch("/api/decode", { 
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        },
         body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
+          model: "claude-3-5-sonnet-20241022",
           max_tokens: 1000,
           system: SYSTEM_PROMPT,
           messages: [{ role: "user", content: testName.trim() }],
