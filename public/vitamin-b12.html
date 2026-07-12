@@ -9,6 +9,21 @@
   <link rel="canonical" href="https://labplain.co/vitamin-b12">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Can I take B12 supplements without a prescription?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — B12 supplements are available over the counter and are generally considered safe even at high doses, because excess is excreted in urine. However, supplements won't help if you have an absorption problem like pernicious anemia. Getting tested before supplementing helps identify the root cause." } },
+      { "@type": "Question", "name": "How long does it take to correct a B12 deficiency?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the cause and severity. Blood counts typically improve within 4–8 weeks of treatment. Neurological symptoms may take months to improve and, in severe cases, may never fully resolve — which is why catching deficiency early matters." } },
+      { "@type": "Question", "name": "Is sublingual B12 better than regular oral supplements?", "acceptedAnswer": { "@type": "Answer", "text": "Sublingual (under the tongue) B12 is absorbed directly into the bloodstream without needing intrinsic factor, which may make it a better option for people with mild absorption issues. For severe pernicious anemia, intramuscular injections remain the gold standard." } },
+      { "@type": "Question", "name": "Why is my B12 high if I haven't been taking supplements?", "acceptedAnswer": { "@type": "Answer", "text": "Unexpectedly high B12 without supplementation is worth investigating. The liver stores large amounts of B12, so liver disease can cause B12 to leak into the bloodstream. Certain blood cancers and kidney disease can also elevate B12. Your doctor should rule these out rather than dismiss the result." } },
+      { "@type": "Question", "name": "Do vegans always become B12 deficient?", "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily — but deficiency is very common without supplementation, since B12 is found almost exclusively in animal products. Most nutrition guidelines recommend that vegans take a B12 supplement or eat B12-fortified foods (plant milks, nutritional yeast, cereals) consistently. It's one of the few supplements with broad consensus for a specific dietary group." } }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -21,22 +36,26 @@
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
     .logo-mark svg { width: 18px; height: 18px; fill: white; }
     .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
     .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
     h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
     h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
     .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
     p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
     .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
     .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -87,9 +106,12 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
+    <p class="tagline">Understand your labs. No medical degree required.</p>
+
     <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Vitamin B12</p>
     <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Vitamin B12</em> result mean?</h1>
     <span class="category-tag">Vitamins & Nutrients</span>
+    <p class="byline">Written by the LabPlain Editorial Team · Reviewed for accuracy · Last updated July 2026</p>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
     <div class="card">
@@ -165,12 +187,12 @@
       <div class="section-label">Tests often ordered alongside B12</div>
       <p>B12 is rarely interpreted in isolation. Your doctor may also order:</p>
       <ul class="symptom-list" style="margin-top:12px;">
-        <li><strong>Folate (Vitamin B9)</strong> — works closely with B12; deficiency causes similar anemia and is often checked at the same time</li>
+        <li><strong><a href="/folate" class="inline-link">Folate (Vitamin B9)</a></strong> — works closely with B12; deficiency causes similar anemia and is often checked at the same time</li>
         <li><strong>Complete Blood Count (CBC)</strong> — checks for large red blood cells (macrocytosis) that signal B12 or folate deficiency</li>
         <li><strong>Methylmalonic acid (MMA)</strong> — rises early in B12 deficiency, more sensitive than B12 alone</li>
-        <li><strong>Homocysteine</strong> — elevated in both B12 and folate deficiency; also a cardiovascular risk marker</li>
+        <li><strong><a href="/homocysteine" class="inline-link">Homocysteine</a></strong> — elevated in both B12 and folate deficiency; also a cardiovascular risk marker</li>
         <li><strong>Intrinsic factor antibodies</strong> — checks for pernicious anemia if absorption is suspected</li>
-        <li><strong>Ferritin / Iron</strong> — iron deficiency anemia and B12 deficiency can coexist</li>
+        <li><strong><a href="/ferritin" class="inline-link">Ferritin</a></strong> / <a href="/iron" class="inline-link">Iron</a> — iron deficiency anemia and B12 deficiency can coexist</li>
       </ul>
     </div>
 
