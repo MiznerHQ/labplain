@@ -3,12 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Total Cholesterol Blood Test – What Your Results Mean | LabPlain</title>
-  <meta name="description" content="What does your total cholesterol result mean? Plain-English guide to normal ranges, high cholesterol, symptoms, causes, and what to ask your doctor.">
+  <title>Total Cholesterol Levels Explained – LabPlain</title>
+  <meta name="description" content="What is a normal total cholesterol level? Learn what your number means, ranges by category, symptoms, causes, and what to ask your doctor.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/total-cholesterol">
+  <link rel="canonical" href="https://labplain.co/total-cholesterol.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is a normal total cholesterol level?", "acceptedAnswer": { "@type": "Answer", "text": "For most adults, a total cholesterol level below 200 mg/dL is considered desirable. 200–239 mg/dL is borderline high, and 240 mg/dL or above is considered high. Normal ranges can shift slightly with age, so your doctor will interpret your number alongside your LDL, HDL, and overall risk profile." } },
+      { "@type": "Question", "name": "Is total cholesterol the most important number on my lipid panel?", "acceptedAnswer": { "@type": "Answer", "text": "Not on its own. Many clinicians pay closer attention to your LDL-to-HDL ratio and non-HDL cholesterol, since a high total driven by high HDL looks very different from one driven by high LDL." } },
+      { "@type": "Question", "name": "Do I need to fast before a cholesterol test?", "acceptedAnswer": { "@type": "Answer", "text": "For a full lipid panel that includes triglycerides, fasting for 9–12 hours is usually recommended. For total cholesterol and HDL alone, fasting may not be required — confirm with your lab or doctor beforehand." } },
+      { "@type": "Question", "name": "How fast can I lower my cholesterol?", "acceptedAnswer": { "@type": "Answer", "text": "Diet and exercise changes typically show measurable results within 6–12 weeks. Statins, when prescribed, can lower LDL by 30–50% within 4–6 weeks. Most doctors retest after 3–6 months of lifestyle or medication changes." } },
+      { "@type": "Question", "name": "My total cholesterol is 210 — should I be on medication?", "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily based on that number alone. Medication decisions typically weigh your full risk profile: age, blood pressure, smoking status, diabetes, family history, and your LDL/HDL breakdown. Many people at this level manage it through lifestyle changes." } }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -21,24 +36,43 @@
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
     .logo-mark svg { width: 18px; height: 18px; fill: white; }
     .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
     .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
     h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
     h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
     .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
     p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
     .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
     .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .range-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 16px; }
+    .range-table th { background: var(--accent); color: #fff; padding: 10px 14px; text-align: left; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; font-weight: 500; }
+    .range-table th:first-child { border-radius: 8px 0 0 0; }
+    .range-table th:last-child { border-radius: 0 8px 0 0; }
+    .range-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+    .range-table tr:last-child td { border-bottom: none; }
+    .range-table tr:nth-child(even) td { background: #F8FAFC; }
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; }
+    .badge-green { background: var(--success-light); color: var(--success-text); }
+    .badge-yellow { background: var(--amber-light); color: var(--amber); }
+    .badge-orange { background: #FFEDD5; color: #9A3412; }
+    .badge-red { background: var(--warn-light); color: var(--warn); }
+    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
+    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
+    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .range-box { padding: 16px; border-radius: 10px; }
     .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
@@ -58,9 +92,6 @@
     .symptom-list li { font-size: 14px; color: var(--ink); line-height: 1.6; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
     .symptom-list li:last-child { border-bottom: none; }
     .symptom-list li::before { content: "→ "; color: var(--muted); }
-    .timing-box { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 18px 20px; margin-top: 16px; }
-    .timing-box h3 { font-size: 14px; color: var(--amber); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; margin-bottom: 8px; }
-    .timing-box p { font-size: 14px; color: #78350F; line-height: 1.65; }
     .next-steps { background: var(--success-light); border: 1px solid var(--success-border); border-radius: 10px; padding: 20px; font-size: 15px; line-height: 1.7; color: var(--success-text); }
     .questions-list { list-style: none; padding: 0; margin-top: 8px; }
     .questions-list li { font-size: 15px; color: var(--ink); line-height: 1.65; padding: 10px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; }
@@ -78,7 +109,8 @@
     .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
     .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid, .range-table { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .range-table { display: block; overflow-x: auto; } }
   </style>
 </head>
 <body>
@@ -87,155 +119,162 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
-    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Total Cholesterol</p>
+    <p class="tagline">Understand your labs. No medical degree required.</p>
+
+    <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Cholesterol Panel</p>
     <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Total Cholesterol</em> result mean?</h1>
     <span class="category-tag">Heart Health</span>
+    <p class="byline">Written by the LabPlain Editorial Team · Reviewed for accuracy · Last updated July 2026</p>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
+    <!-- CARD 1: What this test measures -->
     <div class="card">
       <div class="section-label">What this test measures</div>
-      <p>Total cholesterol measures the overall amount of cholesterol circulating in your blood. Cholesterol is a waxy, fat-like substance your body needs to build cells, make hormones, and produce vitamin D — but too much can increase the risk of heart disease and stroke.</p>
-      <p>Your total cholesterol number includes several different types of cholesterol: LDL ("bad" cholesterol), HDL ("good" cholesterol), and a portion of your triglycerides. While the total number matters, doctors usually interpret it alongside your HDL, LDL, and triglyceride levels to get a more complete picture of cardiovascular risk.</p>
-      <p>A cholesterol test is commonly ordered during routine physical exams, heart disease screening, diabetes monitoring, or when evaluating risk factors like high blood pressure, obesity, smoking, or family history of heart disease.</p>
+      <p>Total cholesterol is a snapshot of all the cholesterol circulating in your blood. It combines four components: <a href="/ldl.html" class="inline-link">LDL</a> ("bad" cholesterol), <a href="/hdl.html" class="inline-link">HDL</a> ("good" cholesterol), VLDL (very low-density lipoprotein), and a small amount of other lipids.</p>
+      <p>The number alone tells only part of the story — your doctor looks at all four pieces to assess your true cardiovascular risk, rather than relying on total cholesterol in isolation.</p>
+      <p>Cholesterol itself isn't harmful — your body needs it to build cell membranes, make hormones, and produce vitamin D. Problems tend to arise when LDL is too high and HDL too low, which can lead to plaque buildup in artery walls over time.</p>
     </div>
 
+    <!-- CARD 2: Normal reference range -->
     <div class="card">
-      <div class="section-label">Normal reference range</div>
-      <div class="normal-range">Desirable: Below 200 mg/dL &nbsp;|&nbsp; Borderline High: 200–239 mg/dL &nbsp;|&nbsp; High: 240+ mg/dL</div>
-      <p class="range-note">Total cholesterol is measured in milligrams per deciliter (mg/dL). Lower numbers are generally better, but your doctor will interpret the result in context of your age, sex, HDL, LDL, triglycerides, and overall cardiovascular risk.</p>
-      <p class="range-note" style="margin-top:8px;">Some labs may use slightly different reference ranges. Always compare your result to the range printed on your specific lab report.</p>
+      <div class="section-label">What is a normal total cholesterol level?</div>
+      <div class="normal-range">Below 200 mg/dL — Desirable</div>
+      <p class="range-note">Normal ranges can shift slightly with age, and children, adolescents, and people with existing heart disease may have different targets. Here's the full breakdown:</p>
+      <table class="range-table">
+        <thead>
+          <tr><th>Level (mg/dL)</th><th>Category</th><th>What it means</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Below 200</strong></td><td><span class="badge badge-green">Desirable</span></td><td>Low cardiovascular risk in most people</td></tr>
+          <tr><td><strong>200–239</strong></td><td><span class="badge badge-yellow">Borderline High</span></td><td>Moderate risk; lifestyle changes often recommended</td></tr>
+          <tr><td><strong>240–279</strong></td><td><span class="badge badge-orange">High</span></td><td>Elevated risk; medication may be discussed</td></tr>
+          <tr><td><strong>280 and above</strong></td><td><span class="badge badge-red">Very High</span></td><td>Significantly elevated; active management needed</td></tr>
+        </tbody>
+      </table>
       <div class="timing-box">
-        <h3>⏰ Does fasting matter?</h3>
-        <p>Many modern cholesterol tests no longer require fasting, especially for routine screening. However, your doctor may still ask you to fast for 9–12 hours before testing if triglycerides are also being measured or if more detailed lipid analysis is needed.</p>
+        <h3>⏰ Fasting & timing note</h3>
+        <p>For a full lipid panel that includes triglycerides, fasting for 9–12 hours is usually recommended. For total cholesterol and HDL alone, fasting may not be required — confirm with your lab or doctor beforehand.</p>
       </div>
     </div>
 
+    <!-- CARD 3: What your result might indicate -->
     <div class="card">
       <div class="section-label">What your result might indicate</div>
       <div class="two-col">
         <div class="range-box high">
           <div class="range-box-label">↑ If High</div>
-          <p>High total cholesterol may increase the risk of plaque buildup in arteries, which can lead to heart attacks, strokes, and peripheral artery disease. Causes include diet, genetics, obesity, diabetes, smoking, and low physical activity.</p>
+          <p>May reflect elevated LDL, high saturated fat intake, genetics, or an underlying condition. Risk is best understood alongside your LDL/HDL ratio, not the total number alone.</p>
         </div>
         <div class="range-box low">
           <div class="range-box-label">↓ If Low</div>
-          <p>Low total cholesterol is usually less concerning, but extremely low levels may sometimes be linked to malnutrition, liver disease, hyperthyroidism, chronic illness, or certain genetic conditions.</p>
+          <p>Uncommon, but very low levels (below 120–130 mg/dL) have been associated with certain health concerns and can sometimes point to an underlying condition worth investigating.</p>
         </div>
       </div>
     </div>
 
+    <!-- CARD 4: Symptoms -->
     <div class="card">
-      <div class="section-label">Symptoms associated with abnormal cholesterol</div>
+      <div class="section-label">Symptoms associated with abnormal total cholesterol</div>
+      <p style="margin-bottom:14px;">High cholesterol is often called a "silent" condition — most people have no symptoms at all until a serious event occurs, which is why routine testing matters so much.</p>
       <div class="symptom-grid">
         <div class="symptom-box high">
-          <h3>↑ High Cholesterol Symptoms</h3>
+          <h3>↑ High Symptoms</h3>
           <ul class="symptom-list">
-            <li>Often no symptoms at all</li>
-            <li>Chest pain or angina (advanced disease)</li>
-            <li>Shortness of breath</li>
-            <li>Fatigue with exertion</li>
-            <li>Leg pain while walking</li>
-            <li>Heart attack or stroke risk</li>
-            <li>Yellowish skin deposits (rare)</li>
-            <li>High blood pressure</li>
+            <li>Usually no symptoms at all</li>
+            <li>Xanthomas — fatty yellow deposits on elbows, knees, or tendons</li>
+            <li>Xanthelasma — yellow plaques around the eyelids</li>
+            <li>Corneal arcus — a grey-white ring around the iris</li>
+            <li>Chest pain (angina) if plaque has narrowed coronary arteries</li>
+            <li>Leg pain or cramping from peripheral artery disease</li>
           </ul>
         </div>
         <div class="symptom-box low">
-          <h3>↓ Low Cholesterol Symptoms</h3>
+          <h3>↓ Low Symptoms</h3>
           <ul class="symptom-list">
-            <li>Usually no noticeable symptoms</li>
-            <li>Possible fatigue or weakness</li>
-            <li>Weight loss</li>
-            <li>Poor nutrition</li>
-            <li>Digestive problems</li>
-            <li>Signs of liver disease</li>
-            <li>Hyperthyroid symptoms</li>
-            <li>Chronic illness symptoms</li>
+            <li>Usually no direct symptoms</li>
+            <li>May relate to an underlying condition rather than the level itself</li>
+            <li>Some research links very low levels to mood changes</li>
+            <li>Fatigue if tied to malabsorption or chronic illness</li>
+            <li>Rarely investigated unless part of another workup</li>
+            <li>Best evaluated alongside your broader health picture</li>
           </ul>
         </div>
       </div>
     </div>
 
+    <!-- CARD 5: Causes -->
     <div class="card">
-      <div class="section-label">Common causes of abnormal cholesterol</div>
-
+      <div class="section-label">Common causes of abnormal total cholesterol</div>
       <h2>What can raise total cholesterol?</h2>
-      <p>The most common causes of high cholesterol are diets high in saturated fats and trans fats, obesity, lack of exercise, smoking, diabetes, and genetics. Some people inherit a condition called familial hypercholesterolemia, which causes dangerously high cholesterol levels even with a healthy lifestyle.</p>
-
-      <p>Other causes include hypothyroidism, kidney disease, liver disease, menopause, and certain medications such as steroids, diuretics, and some birth control pills.</p>
-
+      <p>A diet high in saturated fat — red meat, full-fat dairy, tropical oils, and ultra-processed foods — is one of the most common drivers. Genetics also plays a major role: familial hypercholesterolemia can cause very high levels regardless of lifestyle. Physical inactivity, obesity (especially abdominal fat), <a href="/tsh.html" class="inline-link">hypothyroidism</a>, type 2 diabetes, kidney or liver disease, and smoking can all contribute as well.</p>
       <h2 style="margin-top:24px;">What can lower total cholesterol?</h2>
-      <p>Low cholesterol may result from malnutrition, chronic infections, liver disease, hyperthyroidism, certain cancers, or malabsorption disorders where the body struggles to absorb nutrients properly. Cholesterol-lowering medications like statins can also significantly reduce total cholesterol levels.</p>
+      <p>Malnutrition or poor fat absorption, an overactive thyroid, liver disease, and certain cancers or chronic illnesses can all push cholesterol unusually low. Aerobic exercise and dietary changes, on the other hand, are the main levers for lowering it in a healthy direction.</p>
     </div>
 
+    <!-- CARD 6: Related tests ordered alongside -->
     <div class="card">
       <div class="section-label">Tests often ordered alongside total cholesterol</div>
-      <p>Total cholesterol is usually interpreted as part of a complete lipid panel. Your doctor may also order:</p>
-
+      <p>Total cholesterol is rarely interpreted in isolation. Your doctor may also order:</p>
       <ul class="symptom-list" style="margin-top:12px;">
-        <li><strong>LDL Cholesterol</strong> — the primary "bad" cholesterol linked to plaque buildup</li>
-        <li><strong>HDL Cholesterol</strong> — the "good" cholesterol that helps remove excess cholesterol</li>
-        <li><strong>Triglycerides</strong> — another type of blood fat associated with cardiovascular risk</li>
-        <li><strong>Apolipoprotein B (ApoB)</strong> — measures the number of potentially harmful cholesterol particles</li>
-        <li><strong>Blood glucose or A1C</strong> — diabetes and cholesterol problems often occur together</li>
+        <li><strong>LDL Cholesterol</strong> — <a href="/ldl.html" class="inline-link">the main driver of cardiovascular risk</a></li>
+        <li><strong>HDL Cholesterol</strong> — <a href="/hdl.html" class="inline-link">the protective, "good" cholesterol</a></li>
+        <li><strong>Triglycerides</strong> — <a href="/triglycerides.html" class="inline-link">another key lipid marker</a></li>
+        <li><strong>Fasting Glucose</strong> — since diabetes and cholesterol issues often overlap</li>
       </ul>
+      <p style="margin-top:14px;">Some doctors will also use your numbers to estimate broader heart-disease risk through tools like an ASCVD risk calculator — a helpful starting point for conversation, though it's not a diagnosis on its own.</p>
     </div>
 
+    <!-- CARD 7: What to do next -->
     <div class="card">
       <div class="section-label">What to do next</div>
-      <div class="next-steps">A single cholesterol result doesn't determine your overall heart risk by itself. Your doctor will consider your age, blood pressure, smoking status, diabetes risk, family history, and the breakdown of your lipid panel before recommending treatment. Lifestyle changes like diet, exercise, weight management, and quitting smoking can dramatically improve cholesterol levels over time.</div>
+      <div class="next-steps">If your total cholesterol falls outside the desirable range, ask your doctor for your full lipid panel breakdown rather than focusing on the total number alone. Small, sustained changes to diet and activity often move the needle within 6–12 weeks, and most doctors will recommend retesting in <a href="/hba1c.html" class="inline-link">3–6 months</a> to track progress.</div>
     </div>
 
+    <!-- CARD 8: Questions to ask your doctor -->
     <div class="card">
       <div class="section-label">Questions to ask your doctor</div>
       <ul class="questions-list">
-        <li><span class="q-num">01</span>Is my cholesterol level high enough to increase my heart disease risk?</li>
-        <li><span class="q-num">02</span>How do my LDL, HDL, and triglyceride levels affect the interpretation of this result?</li>
-        <li><span class="q-num">03</span>Should I make lifestyle changes before considering medication?</li>
-        <li><span class="q-num">04</span>Would a statin or other cholesterol medication benefit me?</li>
-        <li><span class="q-num">05</span>Could genetics or family history be contributing to my cholesterol level?</li>
-        <li><span class="q-num">06</span>How often should I repeat my cholesterol testing?</li>
+        <li><span class="q-num">01</span>What does my full lipid panel say, and what's my actual cardiovascular risk?</li>
+        <li><span class="q-num">02</span>Should I focus on my LDL-to-HDL ratio or non-HDL cholesterol instead of the total number?</li>
+        <li><span class="q-num">03</span>Would a coronary artery calcium (CAC) scan give a clearer picture of my risk?</li>
+        <li><span class="q-num">04</span>Could an underlying condition like hypothyroidism or diabetes be contributing?</li>
+        <li><span class="q-num">05</span>At what point would you consider a statin, and what are the tradeoffs?</li>
       </ul>
     </div>
 
+    <!-- CARD 9: FAQ -->
     <div class="card">
       <div class="section-label">Frequently asked questions</div>
-
       <div class="faq-item">
-        <div class="faq-q">Is high cholesterol dangerous even if I feel fine?</div>
-        <div class="faq-a">Yes. High cholesterol usually causes no symptoms for years while plaque slowly builds up inside arteries. Many people don't realize they have high cholesterol until they experience a heart attack, stroke, or abnormal screening test.</div>
+        <div class="faq-q">What is a normal total cholesterol level?</div>
+        <div class="faq-a">For most adults, a total cholesterol level below 200 mg/dL is considered desirable. 200–239 mg/dL is borderline high, and 240 mg/dL or above is considered high. Normal ranges can shift slightly with age, so your doctor will interpret your number alongside your LDL, HDL, and overall risk profile.</div>
       </div>
-
       <div class="faq-item">
-        <div class="faq-q">Can diet really lower cholesterol?</div>
-        <div class="faq-a">Yes. Reducing saturated fats, avoiding trans fats, increasing fiber intake, losing excess weight, and exercising regularly can significantly improve cholesterol levels. However, some people with strong genetic cholesterol disorders may still need medication.</div>
+        <div class="faq-q">Is total cholesterol the most important number on my lipid panel?</div>
+        <div class="faq-a">Not on its own. Many clinicians pay closer attention to your LDL-to-HDL ratio and non-HDL cholesterol, since a high total driven by high HDL looks very different from one driven by high LDL.</div>
       </div>
-
-      <div class="faq-item">
-        <div class="faq-q">What's the difference between HDL and LDL cholesterol?</div>
-        <div class="faq-a">LDL is considered "bad" cholesterol because it contributes to plaque buildup in arteries. HDL is considered "good" cholesterol because it helps remove excess cholesterol from the bloodstream and transport it back to the liver.</div>
-      </div>
-
       <div class="faq-item">
         <div class="faq-q">Do I need to fast before a cholesterol test?</div>
-        <div class="faq-a">Not always. Many routine cholesterol tests can be done without fasting. However, your doctor may still request fasting if triglycerides need accurate measurement or if more advanced lipid testing is planned.</div>
+        <div class="faq-a">For a full lipid panel that includes triglycerides, fasting for 9–12 hours is usually recommended. For total cholesterol and HDL alone, fasting may not be required — confirm with your lab or doctor beforehand.</div>
       </div>
-
       <div class="faq-item">
-        <div class="faq-q">Can cholesterol levels improve quickly?</div>
-        <div class="faq-a">Yes. Lifestyle changes and cholesterol medications can begin improving levels within weeks, although meaningful long-term cardiovascular risk reduction usually takes months to years of consistent management.</div>
+        <div class="faq-q">How fast can I lower my cholesterol?</div>
+        <div class="faq-a">Diet and exercise changes typically show measurable results within 6–12 weeks. Statins, when prescribed, can lower LDL by 30–50% within 4–6 weeks. Most doctors retest after 3–6 months of lifestyle or medication changes.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">My total cholesterol is 210 — should I be on medication?</div>
+        <div class="faq-a">Not necessarily based on that number alone. Medication decisions typically weigh your full risk profile: age, blood pressure, smoking status, diabetes, family history, and your LDL/HDL breakdown. Many people at this level manage it through lifestyle changes.</div>
       </div>
     </div>
 
+    <!-- CARD 10: Related tests -->
     <div class="card">
       <div class="section-label">Related lab tests</div>
       <div class="related">
-        <a href="/triglycerides" class="related-chip">Triglycerides →</a>
-        <a href="/glucose" class="related-chip">Glucose →</a>
-        <a href="/crp" class="related-chip">CRP →</a>
-        <a href="/albumin" class="related-chip">Albumin →</a>
-        <a href="/alt" class="related-chip">ALT →</a>
-        <a href="/creatinine" class="related-chip">Creatinine →</a>
+        <a href="/ldl.html" class="related-chip">LDL Cholesterol →</a>
+        <a href="/hdl.html" class="related-chip">HDL Cholesterol →</a>
+        <a href="/triglycerides.html" class="related-chip">Triglycerides →</a>
+        <a href="/hba1c.html" class="related-chip">HbA1c →</a>
       </div>
     </div>
 
@@ -247,7 +286,7 @@
 
     <footer>
       <span>labplain.co</span>
-      <span>Understand your labs. No medical degree required.</span>
+      <span>Not a substitute for professional medical advice.</span>
     </footer>
   </div>
 </body>
