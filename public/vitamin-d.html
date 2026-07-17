@@ -4,11 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vitamin D Blood Test – What Your Results Mean | LabPlain</title>
-  <meta name="description" content="What does your vitamin D result mean? Plain-English guide to normal ranges, low and high levels, symptoms, causes, and what to ask your doctor. No medical jargon.">
+  <meta name="description" content="What is a normal vitamin D level? Plain-English guide to ranges by age, deficiency symptoms, causes, and what to ask your doctor.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://labplain.co/vitamin-d">
+  <link rel="canonical" href="https://labplain.co/vitamin-d.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is a normal vitamin D level?", "acceptedAnswer": { "@type": "Answer", "text": "Most labs consider 30–100 ng/mL sufficient for bone and overall health. 20–29 ng/mL is considered insufficient, and below 20 ng/mL is considered deficient. Normal ranges can shift slightly by age, lab, and season, so always compare your result to the range printed on your specific lab report." } },
+      { "@type": "Question", "name": "Can low vitamin D make you tired?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fatigue and low energy are some of the most common symptoms of vitamin D deficiency. However, many other conditions can also cause fatigue, so your doctor will interpret the result alongside your symptoms and other labs." } },
+      { "@type": "Question", "name": "Can you get enough vitamin D from sunlight alone?", "acceptedAnswer": { "@type": "Answer", "text": "Sometimes, but it depends on your location, season, skin tone, age, sunscreen use, and how much time you spend outside. Many people, especially in northern climates, still develop low levels despite occasional sun exposure." } },
+      { "@type": "Question", "name": "How long does it take to correct vitamin D deficiency?", "acceptedAnswer": { "@type": "Answer", "text": "It usually takes several weeks to months to significantly raise vitamin D levels, depending on how low they are and whether you're using supplements. Doctors often repeat testing after 2–3 months to monitor improvement." } },
+      { "@type": "Question", "name": "What's the difference between vitamin D2 and D3?", "acceptedAnswer": { "@type": "Answer", "text": "Vitamin D3 (cholecalciferol) is the form your body naturally produces from sunlight and is generally considered more effective at raising blood levels. Vitamin D2 (ergocalciferol) is plant-based and also used in some supplements and prescriptions." } }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -21,24 +36,35 @@
     }
     body { background: var(--bg); color: var(--ink); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
     .wrap { max-width: 720px; margin: 0 auto; padding: 40px 24px 80px; }
-    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 40px; }
+    nav { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .logo-mark { width: 32px; height: 32px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
     .logo-mark svg { width: 18px; height: 18px; fill: white; }
     .logo-text { font-family: 'DM Mono', monospace; font-size: 16px; font-weight: 500; color: var(--ink); text-decoration: none; }
     .logo-text span { color: var(--accent); }
+    .tagline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 32px; margin-left: 42px; }
     .breadcrumb { font-size: 13px; color: var(--muted); margin-bottom: 20px; font-family: 'DM Mono', monospace; }
     .breadcrumb a { color: var(--accent); text-decoration: none; }
     h1 { font-family: 'DM Serif Display', serif; font-size: clamp(28px, 5vw, 42px); line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 8px; }
     h2 { font-family: 'DM Serif Display', serif; font-size: clamp(20px, 3vw, 26px); line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 12px; color: var(--ink); }
     h3 { font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
-    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 24px; }
+    .category-tag { display: inline-block; background: var(--accent-light); color: var(--accent); font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+    .byline { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); margin-bottom: 20px; }
     .disclaimer { background: var(--amber-light); border: 1px solid var(--amber-border); border-radius: 10px; padding: 14px 18px; margin-bottom: 36px; font-size: 13px; color: var(--amber); line-height: 1.5; }
     .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 14px; padding: 28px; margin-bottom: 20px; }
     .section-label { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
     p { font-size: 16px; line-height: 1.75; color: var(--ink); }
     p + p { margin-top: 14px; }
+    .inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent-border); text-underline-offset: 3px; }
+    .inline-link:hover { text-decoration-color: var(--accent); }
     .normal-range { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--accent); font-weight: 500; background: var(--accent-light); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--accent-border); margin-bottom: 12px; }
     .range-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+    .range-table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 16px; }
+    .range-table th { background: var(--accent); color: #fff; padding: 10px 14px; text-align: left; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; font-weight: 500; }
+    .range-table th:first-child { border-radius: 8px 0 0 0; }
+    .range-table th:last-child { border-radius: 0 8px 0 0; }
+    .range-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+    .range-table tr:last-child td { border-bottom: none; }
+    .range-table tr:nth-child(even) td { background: #F8FAFC; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .range-box { padding: 16px; border-radius: 10px; }
     .range-box.high { background: var(--warn-light); border: 1px solid var(--warn-border); }
@@ -78,7 +104,8 @@
     .related-chip { display: block; padding: 12px 16px; background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; text-decoration: none; font-size: 14px; color: var(--ink); font-family: 'DM Mono', monospace; transition: border-color 0.15s; }
     .related-chip:hover { border-color: var(--accent); color: var(--accent); }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); font-family: 'DM Mono', monospace; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-    @media (max-width: 480px) { .two-col, .symptom-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .two-col, .symptom-grid, .range-table { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .range-table { display: block; overflow-x: auto; } }
   </style>
 </head>
 <body>
@@ -87,80 +114,66 @@
       <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V9l-6-6zm-1 11H7v-2h1v2zm0-4H7V8h1v2zm4 4h-2v-2h2v2zm0-4h-2V8h2v2zm3 4h-1v-2h1v2zm1-6h-5V4l5 5z"/></svg></div>
       <a href="/" class="logo-text">lab<span>plain</span></a>
     </nav>
+    <p class="tagline">Understand your labs. No medical degree required.</p>
 
     <p class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/tests">Lab Tests</a> &rsaquo; Vitamin D</p>
-
     <h1>What does your<br><em style="font-style:italic;color:var(--accent)">Vitamin D</em> result mean?</h1>
-
     <span class="category-tag">Vitamins</span>
-
+    <p class="byline">Written by the LabPlain Editorial Team · Reviewed for accuracy · Last updated July 2026</p>
     <div class="disclaimer">⚠️ <strong>Educational only.</strong> LabPlain does not provide medical advice or diagnosis. Always discuss your specific results with your healthcare provider.</div>
 
+    <!-- CARD 1: What this test measures -->
     <div class="card">
       <div class="section-label">What this test measures</div>
-
       <p>A vitamin D blood test measures the amount of 25-hydroxy vitamin D in your blood — the main storage form of vitamin D in your body. Vitamin D is technically a hormone, not just a vitamin, and it's essential for absorbing calcium and keeping your bones, muscles, nerves, and immune system functioning properly.</p>
-
       <p>Your body makes vitamin D when sunlight hits your skin, but you can also get it from foods and supplements. Because modern indoor lifestyles, sunscreen use, and geographic location reduce sun exposure, vitamin D deficiency has become extremely common.</p>
-
       <p>Doctors order this test when evaluating fatigue, bone pain, muscle weakness, osteoporosis risk, frequent fractures, or possible vitamin deficiencies. It's also commonly checked in people with autoimmune diseases, digestive disorders, or chronic kidney disease.</p>
     </div>
 
+    <!-- CARD 2: Normal reference range -->
     <div class="card">
-      <div class="section-label">Normal reference range</div>
-
+      <div class="section-label">What is a normal vitamin D level?</div>
       <div class="normal-range">Normal: 30–100 ng/mL &nbsp;|&nbsp; Insufficient: 20–29 ng/mL &nbsp;|&nbsp; Deficient: Below 20 ng/mL</div>
-
-      <p class="range-note">Most labs consider levels above 30 ng/mL sufficient for bone and overall health. Mild deficiency is extremely common, especially during winter months or in people with limited sun exposure.</p>
-
-      <p class="range-note" style="margin-top:8px;">Reference ranges may vary slightly between labs. Always compare your result to the range printed on your specific lab report.</p>
-
+      <p class="range-note">Most labs consider levels above 30 ng/mL sufficient for bone and overall health. Reference ranges may vary slightly between labs — always compare your result to the range printed on your specific lab report.</p>
+      <table class="range-table">
+        <thead>
+          <tr><th>Age group</th><th>Typical target range</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Children & teens</strong></td><td>20–50 ng/mL</td><td>Deficiency risk rises with limited outdoor time</td></tr>
+          <tr><td><strong>Adults (19–70)</strong></td><td>30–50 ng/mL</td><td>Most commonly targeted range for general health</td></tr>
+          <tr><td><strong>Adults 70+</strong></td><td>30–50 ng/mL</td><td>Often monitored more closely for bone health and fall risk</td></tr>
+          <tr><td><strong>Pregnant/breastfeeding</strong></td><td>30–50 ng/mL</td><td>Adequate levels support fetal bone development</td></tr>
+        </tbody>
+      </table>
       <div class="timing-box">
         <h3>☀️ Sun exposure matters</h3>
         <p>Vitamin D levels naturally fluctuate based on season, geographic location, skin tone, age, sunscreen use, and how much time you spend outdoors. Levels are often lowest during winter and highest after months of regular sun exposure.</p>
       </div>
     </div>
 
+    <!-- CARD 3: What your result might indicate -->
     <div class="card">
       <div class="section-label">What your result might indicate</div>
-
       <div class="two-col">
         <div class="range-box high">
           <div class="range-box-label">↑ If High</div>
-
           <p>High vitamin D levels usually result from taking too many supplements, not from sunlight or food. Excessively high levels can lead to high calcium levels, kidney stones, nausea, and confusion.</p>
         </div>
-
         <div class="range-box low">
           <div class="range-box-label">↓ If Low</div>
-
           <p>Low vitamin D is extremely common and may result from limited sun exposure, poor dietary intake, obesity, digestive disorders, or kidney disease. Deficiency can contribute to weak bones, muscle pain, fatigue, and fractures.</p>
         </div>
       </div>
     </div>
 
+    <!-- CARD 4: Symptoms -->
     <div class="card">
-      <div class="section-label">Symptoms associated with abnormal vitamin D</div>
-
+      <div class="section-label">Symptoms of vitamin D deficiency</div>
+      <p style="margin-bottom:14px;">Deficiency is far more common than excess — most people with low vitamin D notice non-specific symptoms that build gradually rather than sudden warning signs.</p>
       <div class="symptom-grid">
-        <div class="symptom-box high">
-          <h3>↑ High Vitamin D Symptoms</h3>
-
-          <ul class="symptom-list">
-            <li>Nausea or vomiting</li>
-            <li>Constipation</li>
-            <li>Loss of appetite</li>
-            <li>Excessive thirst</li>
-            <li>Frequent urination</li>
-            <li>Kidney stones</li>
-            <li>Confusion or weakness</li>
-            <li>High calcium levels</li>
-          </ul>
-        </div>
-
         <div class="symptom-box low">
           <h3>↓ Low Vitamin D Symptoms</h3>
-
           <ul class="symptom-list">
             <li>Fatigue or low energy</li>
             <li>Bone pain or tenderness</li>
@@ -172,107 +185,95 @@
             <li>Difficulty recovering from exercise</li>
           </ul>
         </div>
+        <div class="symptom-box high">
+          <h3>↑ High Vitamin D Symptoms</h3>
+          <ul class="symptom-list">
+            <li>Nausea or vomiting</li>
+            <li>Constipation</li>
+            <li>Loss of appetite</li>
+            <li>Excessive thirst</li>
+            <li>Frequent urination</li>
+            <li>Kidney stones</li>
+            <li>Confusion or weakness</li>
+            <li>High calcium levels</li>
+          </ul>
+        </div>
       </div>
     </div>
 
+    <!-- CARD 5: Causes -->
     <div class="card">
       <div class="section-label">Common causes of abnormal vitamin D</div>
-
       <h2>What can raise vitamin D?</h2>
-
-      <p>The most common cause of high vitamin D is over-supplementation. Unlike sunlight, supplements can push vitamin D levels dangerously high if taken in large doses for extended periods. Some people accidentally take multiple supplements containing vitamin D without realizing it.</p>
-
-      <p>Very high vitamin D levels can increase calcium absorption too much, potentially causing kidney stones, kidney damage, abnormal heart rhythms, and confusion.</p>
-
+      <p>The most common cause of high vitamin D is over-supplementation. Unlike sunlight, supplements can push vitamin D levels dangerously high if taken in large doses for extended periods. Some people accidentally take multiple supplements containing vitamin D without realizing it, which can increase calcium absorption too much and potentially cause kidney stones, kidney damage, abnormal heart rhythms, and confusion.</p>
       <h2 style="margin-top:24px;">What can lower vitamin D?</h2>
-
-      <p>Low vitamin D is usually caused by inadequate sun exposure, especially in northern climates, during winter, or in people who spend most of their time indoors. Darker skin tones naturally produce less vitamin D from sunlight, which can increase deficiency risk.</p>
-
-      <p>Other causes include obesity, malabsorption conditions like celiac disease or Crohn's disease, chronic kidney disease, liver disease, and aging. Certain medications, including steroids and some seizure medications, can also lower vitamin D levels over time.</p>
+      <p>Low vitamin D is usually caused by inadequate sun exposure, especially in northern climates, during winter, or in people who spend most of their time indoors. Darker skin tones naturally produce less vitamin D from sunlight, which can increase deficiency risk. Other causes include obesity, malabsorption conditions like <a href="/celiac.html" class="inline-link">celiac disease</a> or Crohn's disease, chronic kidney disease, liver disease, and aging. Certain medications, including steroids and some seizure medications, can also lower vitamin D levels over time.</p>
     </div>
 
+    <!-- CARD 6: Related tests ordered alongside -->
     <div class="card">
       <div class="section-label">Tests often ordered alongside vitamin D</div>
-
       <p>Vitamin D is rarely interpreted in isolation. Your doctor may also order:</p>
-
       <ul class="symptom-list" style="margin-top:12px;">
-        <li><strong>Calcium</strong> — vitamin D directly affects calcium absorption and balance</li>
+        <li><strong>Calcium</strong> — <a href="/calcium.html" class="inline-link">vitamin D directly affects calcium absorption and balance</a></li>
         <li><strong>Parathyroid hormone (PTH)</strong> — often rises when vitamin D is low</li>
         <li><strong>Phosphorus</strong> — works closely with vitamin D in bone metabolism</li>
-        <li><strong>Magnesium</strong> — required for proper vitamin D activation and function</li>
-        <li><strong>Bone density scan (DEXA)</strong> — evaluates bone strength and osteoporosis risk</li>
+        <li><strong>Magnesium</strong> — <a href="/magnesium.html" class="inline-link">required for proper vitamin D activation and function</a></li>
       </ul>
+      <p style="margin-top:14px;">A bone density scan (DEXA) may also be recommended to evaluate bone strength and osteoporosis risk if deficiency has been long-standing.</p>
     </div>
 
+    <!-- CARD 7: What to do next -->
     <div class="card">
       <div class="section-label">What to do next</div>
-
       <div class="next-steps">A mildly low vitamin D level is common and usually manageable with lifestyle changes or supplements, but the right treatment depends on how low your level is and whether you have symptoms or underlying conditions. Don't start high-dose supplements without discussing them with your doctor — too much vitamin D can be harmful.</div>
     </div>
 
+    <!-- CARD 8: Questions to ask your doctor -->
     <div class="card">
       <div class="section-label">Questions to ask your doctor</div>
-
       <ul class="questions-list">
         <li><span class="q-num">01</span>Is my vitamin D level low enough to require supplements, or can lifestyle changes help?</li>
-
         <li><span class="q-num">02</span>How much vitamin D should I safely take each day?</li>
-
         <li><span class="q-num">03</span>Could any medications or medical conditions be lowering my vitamin D?</li>
-
         <li><span class="q-num">04</span>Should my calcium or parathyroid hormone levels also be checked?</li>
-
         <li><span class="q-num">05</span>When should I repeat the blood test to see if levels improve?</li>
-
-        <li><span class="q-num">06</span>Would spending more time outdoors safely help raise my levels?</li>
       </ul>
     </div>
 
+    <!-- CARD 9: FAQ -->
     <div class="card">
       <div class="section-label">Frequently asked questions</div>
-
+      <div class="faq-item">
+        <div class="faq-q">What is a normal vitamin D level?</div>
+        <div class="faq-a">Most labs consider 30–100 ng/mL sufficient for bone and overall health. 20–29 ng/mL is considered insufficient, and below 20 ng/mL is considered deficient. Normal ranges can shift slightly by age, lab, and season, so always compare your result to the range printed on your specific lab report.</div>
+      </div>
       <div class="faq-item">
         <div class="faq-q">Can low vitamin D make you tired?</div>
-
         <div class="faq-a">Yes. Fatigue and low energy are some of the most common symptoms of vitamin D deficiency. However, many other conditions can also cause fatigue, so your doctor will interpret the result alongside your symptoms and other labs.</div>
       </div>
-
       <div class="faq-item">
         <div class="faq-q">Can you get enough vitamin D from sunlight alone?</div>
-
-        <div class="faq-a">Sometimes, but it depends on your location, season, skin tone, age, sunscreen use, and how much time you spend outside. Many people — especially in northern climates — still develop low levels despite occasional sun exposure.</div>
+        <div class="faq-a">Sometimes, but it depends on your location, season, skin tone, age, sunscreen use, and how much time you spend outside. Many people, especially in northern climates, still develop low levels despite occasional sun exposure.</div>
       </div>
-
       <div class="faq-item">
         <div class="faq-q">How long does it take to correct vitamin D deficiency?</div>
-
         <div class="faq-a">It usually takes several weeks to months to significantly raise vitamin D levels, depending on how low they are and whether you're using supplements. Doctors often repeat testing after 2–3 months to monitor improvement.</div>
       </div>
-
-      <div class="faq-item">
-        <div class="faq-q">Can too much vitamin D be dangerous?</div>
-
-        <div class="faq-a">Yes. Excessively high vitamin D levels can raise calcium levels too much and potentially cause kidney stones, kidney damage, nausea, confusion, and abnormal heart rhythms. This almost always results from excessive supplement use, not sunlight.</div>
-      </div>
-
       <div class="faq-item">
         <div class="faq-q">What's the difference between vitamin D2 and D3?</div>
-
         <div class="faq-a">Vitamin D3 (cholecalciferol) is the form your body naturally produces from sunlight and is generally considered more effective at raising blood levels. Vitamin D2 (ergocalciferol) is plant-based and also used in some supplements and prescriptions.</div>
       </div>
     </div>
 
+    <!-- CARD 10: Related tests -->
     <div class="card">
       <div class="section-label">Related lab tests</div>
-
       <div class="related">
-        <a href="/calcium" class="related-chip">Calcium →</a>
-        <a href="/magnesium" class="related-chip">Magnesium →</a>
-        <a href="/alkaline-phosphatase" class="related-chip">ALP →</a>
-        <a href="/creatinine" class="related-chip">Creatinine →</a>
-        <a href="/ferritin" class="related-chip">Ferritin →</a>
-        <a href="/tsh" class="related-chip">TSH →</a>
+        <a href="/calcium.html" class="related-chip">Calcium →</a>
+        <a href="/magnesium.html" class="related-chip">Magnesium →</a>
+        <a href="/creatinine.html" class="related-chip">Creatinine →</a>
+        <a href="/tsh.html" class="related-chip">TSH →</a>
       </div>
     </div>
 
@@ -284,7 +285,7 @@
 
     <footer>
       <span>labplain.co</span>
-      <span>Understand your labs. No medical degree required.</span>
+      <span>Not a substitute for professional medical advice.</span>
     </footer>
   </div>
 </body>
